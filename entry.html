@@ -56,6 +56,8 @@
   .client-card h3{ font-size:16px; margin-bottom:2px; }
   .client-card .handle{ font-size:11.5px; color:var(--text-dim); margin-bottom:8px; }
   .prev-note{ font-size:11px; color:var(--text-dim); margin-top:6px; }
+  .calc-helper{ background:rgba(201,168,118,0.06); border:1px dashed var(--line); border-radius:9px; padding:2px 12px 12px; margin-top:8px; }
+  .calc-note{ font-size:11px; color:var(--text-dim); margin-top:6px; line-height:1.4; }
 
   button.primary{
     width:100%; padding:14px; border-radius:10px; border:none;
@@ -257,13 +259,38 @@ function renderClients(){
         </div>
         <div>
           <label>Engagement rate (%)</label>
-          <input type="number" step="0.1" class="f-engagement" value="${existing.engagementRate ?? ''}" placeholder="e.g. 3.2">
+          <input type="number" step="0.1" class="f-engagement" value="${existing.engagementRate ?? ''}" placeholder="auto-calculated below" readonly style="opacity:0.7;">
         </div>
+      </div>
+      <div class="calc-helper">
+        <label style="margin-top:14px;">Total likes — last 5 posts</label>
+        <input type="number" class="f-likes5" placeholder="e.g. 640">
+        <label>Total comments — last 5 posts</label>
+        <input type="number" class="f-comments5" placeholder="e.g. 38">
+        <div class="calc-note">Engagement rate auto-calculates as (likes + comments) ÷ (5 × followers) × 100 — same formula every time, no manual math.</div>
       </div>
       <label>Posted this week (tap days that apply)</label>
       <div class="day-checks-slot"></div>
       <div class="prev-note">${prevNote}</div>
     `;
+
+    const followersInput = card.querySelector('.f-followers');
+    const likesInput = card.querySelector('.f-likes5');
+    const commentsInput = card.querySelector('.f-comments5');
+    const engagementInput = card.querySelector('.f-engagement');
+
+    function recalcEngagement(){
+      const followers = parseFloat(followersInput.value);
+      const likes = parseFloat(likesInput.value) || 0;
+      const comments = parseFloat(commentsInput.value) || 0;
+      if(followers > 0 && (likesInput.value !== '' || commentsInput.value !== '')){
+        const rate = ((likes + comments) / (5 * followers)) * 100;
+        engagementInput.value = rate.toFixed(2);
+      }
+    }
+    followersInput.addEventListener('input', recalcEngagement);
+    likesInput.addEventListener('input', recalcEngagement);
+    commentsInput.addEventListener('input', recalcEngagement);
     container.appendChild(card);
     renderDayChecks(client, card.querySelector('.day-checks-slot'));
   });
@@ -310,10 +337,21 @@ async function saveAll(){
     const today = todayKey();
     const cards = document.querySelectorAll('.client-card');
 
+    let skippedCount = 0;
+
     cards.forEach(card => {
       const handle = card.dataset.handle;
       const client = STATE.clients.find(c => c.handle === handle);
-      const followers = parseInt(card.querySelector('.f-followers').value, 10) || 0;
+      const followersRaw = card.querySelector('.f-followers').value.trim();
+
+      if(followersRaw === ''){
+        // Nothing entered for this client — leave whatever's already in data.json
+        // untouched instead of overwriting it with zeros.
+        skippedCount++;
+        return;
+      }
+
+      const followers = parseInt(followersRaw, 10) || 0;
       const engagementRate = parseFloat(card.querySelector('.f-engagement').value) || 0;
 
       const checkedDays = [...card.querySelectorAll('.day-check.checked')].map(el => parseInt(el.dataset.idx,10));
@@ -352,7 +390,8 @@ async function saveAll(){
     const histResult = await ghPut('history.json', STATE.history, STATE.historySha, 'Manual history update [entry form]');
     STATE.historySha = histResult.content.sha;
 
-    setStatus($('save-status'), '✓ Saved! The dashboard will show these numbers on its next refresh.', 'ok');
+    const skipNote = skippedCount > 0 ? ` (${skippedCount} client${skippedCount === 1 ? '' : 's'} left blank, unchanged)` : '';
+    setStatus($('save-status'), `✓ Saved!${skipNote} The dashboard will show these numbers on its next refresh.`, 'ok');
   }catch(e){
     setStatus($('save-status'), '✗ ' + e.message, 'err');
   }finally{
