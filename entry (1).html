@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Peak Exposure Media — Data Entry</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#12151f">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-grad-1:#171c2a; --bg-grad-2:#10131c;
+    --surface:#1d2233; --surface-2:#262c42; --line:#333b54;
+    --gold:#c9a876; --gold-bright:#e6cd9c; --slate:#7d84a0;
+    --text:#f3f1ea; --text-dim:#9aa0b8; --up:#93c08f; --down:#c97b6b;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{
+    background:linear-gradient(180deg,var(--bg-grad-1),var(--bg-grad-2));
+    color:var(--text); font-family:'Montserrat',sans-serif;
+    min-height:100vh; padding:20px 16px 60px;
+  }
+  .display{ font-family:'Bebas Neue',sans-serif; letter-spacing:0.03em; }
+  h1{ font-size:26px; margin-bottom:4px; }
+  .sub{ color:var(--text-dim); font-size:13px; margin-bottom:22px; }
+
+  .panel{
+    background:linear-gradient(180deg,var(--surface),#1a1f30);
+    border:1px solid var(--line); border-radius:14px;
+    padding:18px; margin-bottom:16px;
+  }
+  .panel h2{ font-size:15px; margin-bottom:12px; color:var(--gold-bright); }
+  label{ display:block; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-dim); margin:10px 0 5px; }
+  input[type=text], input[type=number], input[type=password]{
+    width:100%; padding:11px 12px; border-radius:9px;
+    border:1px solid var(--line); background:var(--surface-2); color:var(--text);
+    font-size:15px; font-family:inherit;
+  }
+  input:focus{ outline:none; border-color:var(--gold); }
+  .row{ display:flex; gap:10px; }
+  .row > div{ flex:1; }
+
+  .client-card{
+    background:var(--surface-2); border:1px solid var(--line);
+    border-radius:12px; padding:14px 14px 16px; margin-bottom:12px;
+  }
+  .client-card h3{ font-size:16px; margin-bottom:2px; }
+  .client-card .handle{ font-size:11.5px; color:var(--text-dim); margin-bottom:12px; }
+
+  .section-label{
+    font-size:10.5px; text-transform:uppercase; letter-spacing:0.1em;
+    color:var(--gold-bright); font-weight:700; margin:14px 0 2px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .section-label .freq{ font-size:9.5px; color:var(--text-dim); font-weight:500; text-transform:none; letter-spacing:0; }
+
+  .toggle-row{ display:flex; align-items:center; gap:12px; margin-top:8px; }
+  .toggle-btn{
+    flex:1; padding:12px; border-radius:9px; border:1.5px solid var(--line);
+    background:transparent; color:var(--text-dim); font-weight:700; font-size:13px;
+    cursor:pointer; text-align:center; user-select:none;
+  }
+  .toggle-btn.active{ background:var(--gold); border-color:var(--gold); color:#1a1f30; }
+
+  .prev-note{ font-size:11px; color:var(--text-dim); margin-top:6px; }
+  .weekly-block{
+    background:rgba(201,168,118,0.06); border:1px dashed var(--line); border-radius:9px;
+    padding:2px 12px 12px; margin-top:6px;
+  }
+  .weekly-status{ font-size:11.5px; margin-top:4px; }
+  .weekly-status.stale{ color:var(--down); }
+  .weekly-status.fresh{ color:var(--up); }
+  .calc-note{ font-size:11px; color:var(--text-dim); margin-top:6px; line-height:1.4; }
+
+  button.primary{
+    width:100%; padding:14px; border-radius:10px; border:none;
+    background:var(--gold); color:#1a1f30; font-weight:700; font-size:15px;
+    cursor:pointer; margin-top:6px;
+  }
+  button.primary:disabled{ opacity:0.5; cursor:not-allowed; }
+
+  .status{ font-size:13px; margin-top:12px; padding:10px 12px; border-radius:8px; display:none; }
+  .status.show{ display:block; }
+  .status.ok{ background:rgba(147,192,143,0.12); color:var(--up); }
+  .status.err{ background:rgba(201,123,107,0.12); color:var(--down); }
+  .status.loading{ background:rgba(125,132,160,0.12); color:var(--text-dim); }
+
+  .helper{ font-size:12px; color:var(--text-dim); line-height:1.5; margin-top:6px; }
+  .helper a{ color:var(--gold-bright); }
+  details{ margin-top:4px; }
+  summary{ font-size:12px; color:var(--gold-bright); cursor:pointer; }
+</style>
+</head>
+<body>
+
+<h1 class="display">Data Entry</h1>
+<div class="sub">Peak Exposure Media — updates data.json, daily.json &amp; weekly.json directly in GitHub</div>
+
+<div class="panel" id="config-panel">
+  <h2>Connection</h2>
+  <label>GitHub username or org</label>
+  <input type="text" id="gh-owner" placeholder="e.g. cameronmonahan">
+  <label>Repository name</label>
+  <input type="text" id="gh-repo" placeholder="e.g. Peak-Pulse">
+  <label>Personal Access Token</label>
+  <input type="password" id="gh-token" placeholder="github_pat_...">
+  <div class="helper">
+    Create a token at <a href="https://github.com/settings/personal-access-tokens/new" target="_blank">github.com/settings/personal-access-tokens/new</a> —
+    scope it to just this one repository, with <b>Contents: Read and write</b> permission only.
+  </div>
+  <label style="display:flex;align-items:center;gap:8px;margin-top:12px;cursor:pointer;">
+    <input type="checkbox" id="remember-token" style="width:auto;"> Remember for this browser session only
+  </label>
+  <div id="config-status" class="status"></div>
+</div>
+
+<div id="clients-container"></div>
+
+<button class="primary" id="save-btn" disabled>Save all changes to GitHub</button>
+<div id="save-status" class="status"></div>
+
+<details style="margin-top:20px;">
+  <summary>How this works</summary>
+  <div class="helper" style="margin-top:8px;">
+    <b>Daily Update</b> (do every day): follower count + whether you posted today. This builds a permanent
+    day-by-day log (daily.json) that the dashboard uses for "new followers today," this week's post count,
+    and monthly totals.<br><br>
+    <b>Weekly Engagement</b> (do once a week, whenever convenient): total likes + comments across the last 5 posts.
+    This is saved once per week (weekly.json) and used for the engagement rate shown on the dashboard —
+    it does NOT need to be filled in every day.<br><br>
+    Your GitHub token is never saved anywhere except (optionally) this browser tab's session memory.
+  </div>
+</details>
+
+<script>
+const $ = id => document.getElementById(id);
+
+function getPostWeekRange(now = new Date()){
+  const day = now.getDay();
+  const diffToThu = (day - 4 + 7) % 7;
+  const start = new Date(now);
+  start.setHours(0,0,0,0);
+  start.setDate(now.getDate() - diffToThu);
+  const end = new Date(start);
+  end.setDate(start.getDate() + 6);
+  return { start, end };
+}
+function todayKey(d = new Date()){ return d.toISOString().slice(0,10); }
+function dateKey(d){ return d.toISOString().slice(0,10); }
+
+function b64EncodeUnicode(str){
+  return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g,
+    (_, p1) => String.fromCharCode('0x' + p1)));
+}
+function b64DecodeUnicode(str){
+  return decodeURIComponent(atob(str).split('').map(c =>
+    '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+}
+function setStatus(el, msg, kind){
+  el.textContent = msg;
+  el.className = 'status show ' + (kind || '');
+}
+
+let STATE = {
+  owner:'', repo:'', token:'',
+  clients: [],
+  data: null, dataSha: null,
+  daily: {}, dailySha: null,
+  weekly: {}, weeklySha: null,
+  weekStart: null, weekEnd: null
+};
+
+const MAX_DAILY_ENTRIES = 400;  // ~13 months per client
+const MAX_WEEKLY_ENTRIES = 60;  // ~13 months per client
+
+async function ghGet(path){
+  const url = `https://api.github.com/repos/${STATE.owner}/${STATE.repo}/contents/${path}`;
+  const resp = await fetch(url, {
+    headers: { 'Authorization': `token ${STATE.token}`, 'Accept':'application/vnd.github+json' }
+  });
+  if(!resp.ok) throw new Error(`Couldn't read ${path} (${resp.status}). Check owner/repo/token.`);
+  const json = await resp.json();
+  return { content: JSON.parse(b64DecodeUnicode(json.content)), sha: json.sha };
+}
+
+async function ghGetOptional(path){
+  try{ return await ghGet(path); }
+  catch(e){ return { content: {}, sha: null }; }
+}
+
+async function ghPut(path, obj, sha, message){
+  const url = `https://api.github.com/repos/${STATE.owner}/${STATE.repo}/contents/${path}`;
+  const body = { message, content: b64EncodeUnicode(JSON.stringify(obj, null, 2)), sha };
+  const resp = await fetch(url, {
+    method:'PUT',
+    headers: {
+      'Authorization': `token ${STATE.token}`,
+      'Accept':'application/vnd.github+json',
+      'Content-Type':'application/json'
+    },
+    body: JSON.stringify(body)
+  });
+  if(!resp.ok){
+    const errJson = await resp.json().catch(()=>({}));
+    throw new Error(`Failed to save ${path}: ${errJson.message || resp.status}`);
+  }
+  return resp.json();
+}
+
+function latestWeeklyEntry(handle){
+  const entries = STATE.weekly[handle] || [];
+  if(!entries.length) return null;
+  return [...entries].sort((a,b) => a.weekStart.localeCompare(b.weekStart)).pop();
+}
+
+function renderClients(){
+  const container = $('clients-container');
+  container.innerHTML = '';
+  const { start, end } = getPostWeekRange();
+  STATE.weekStart = start;
+  STATE.weekEnd = end;
+  const today = todayKey();
+
+  STATE.clients.forEach(client => {
+    const handle = client.handle;
+    const dailyEntries = (STATE.daily[handle] || []);
+    const todayEntry = dailyEntries.find(e => e.date === today);
+    const priorEntries = dailyEntries.filter(e => e.date !== today).sort((a,b) => a.date.localeCompare(b.date));
+    const prevFollowers = priorEntries.length ? priorEntries[priorEntries.length-1].followers : null;
+
+    const latestWeekly = latestWeeklyEntry(handle);
+    const currentWeekStartKey = dateKey(start);
+    const weeklyIsCurrentWeek = latestWeekly && latestWeekly.weekStart === currentWeekStartKey;
+
+    const card = document.createElement('div');
+    card.className = 'client-card';
+    card.dataset.handle = handle;
+    card.innerHTML = `
+      <h3 class="display">${client.name}</h3>
+      <div class="handle">@${handle}</div>
+
+      <div class="section-label">Daily Update <span class="freq">— do this every day</span></div>
+      <label>Current followers</label>
+      <input type="number" class="f-followers" value="${todayEntry ? todayEntry.followers : ''}" placeholder="e.g. 4820">
+      <div class="prev-note">${prevFollowers !== null ? `Yesterday's saved count: ${prevFollowers.toLocaleString()}` : "No previous count yet — today's delta will show as +0"}</div>
+      <label>Posted today?</label>
+      <div class="toggle-row">
+        <div class="toggle-btn f-posted-yes ${todayEntry && todayEntry.posted ? 'active' : ''}">Yes</div>
+        <div class="toggle-btn f-posted-no ${todayEntry && !todayEntry.posted ? 'active' : ''}">No</div>
+      </div>
+
+      <div class="section-label" style="margin-top:18px;">Weekly Engagement <span class="freq">— update once a week</span></div>
+      <div class="weekly-block">
+        <div class="weekly-status ${weeklyIsCurrentWeek ? 'fresh' : 'stale'}">
+          ${latestWeekly
+            ? (weeklyIsCurrentWeek
+                ? `✓ Updated for this week (${latestWeekly.engagementRate}%)`
+                : `⚠ Last updated week of ${latestWeekly.weekStart} — due for a refresh`)
+            : '⚠ Never updated yet'}
+        </div>
+        <label>Total likes — last 5 posts</label>
+        <input type="number" class="f-likes5" placeholder="leave blank to skip this week">
+        <label>Total comments — last 5 posts</label>
+        <input type="number" class="f-comments5" placeholder="leave blank to skip this week">
+        <div class="calc-note">Engagement rate = (likes + comments) ÷ (5 × followers) × 100</div>
+      </div>
+    `;
+    container.appendChild(card);
+
+    const yesBtn = card.querySelector('.f-posted-yes');
+    const noBtn = card.querySelector('.f-posted-no');
+    yesBtn.addEventListener('click', () => { yesBtn.classList.add('active'); noBtn.classList.remove('active'); });
+    noBtn.addEventListener('click', () => { noBtn.classList.add('active'); yesBtn.classList.remove('active'); });
+  });
+
+  $('save-btn').disabled = false;
+}
+
+async function loadAll(){
+  setStatus($('config-status'), 'Connecting…', 'loading');
+  try{
+    const clientsResp = await fetch(`https://raw.githubusercontent.com/${STATE.owner}/${STATE.repo}/main/clients.json?t=${Date.now()}`);
+    if(!clientsResp.ok) throw new Error('Could not load clients.json — check owner/repo.');
+    STATE.clients = await clientsResp.json();
+
+    const dataResult = await ghGet('data.json');
+    STATE.data = dataResult.content;
+    STATE.dataSha = dataResult.sha;
+    if(!STATE.data.accounts) STATE.data.accounts = {};
+
+    const dailyResult = await ghGetOptional('daily.json');
+    STATE.daily = dailyResult.content || {};
+    STATE.dailySha = dailyResult.sha;
+
+    const weeklyResult = await ghGetOptional('weekly.json');
+    STATE.weekly = weeklyResult.content || {};
+    STATE.weeklySha = weeklyResult.sha;
+
+    setStatus($('config-status'), '✓ Connected — ' + STATE.clients.length + ' clients loaded', 'ok');
+    renderClients();
+  }catch(e){
+    setStatus($('config-status'), '✗ ' + e.message, 'err');
+    $('save-btn').disabled = true;
+  }
+}
+
+async function saveAll(){
+  const btn = $('save-btn');
+  btn.disabled = true;
+  setStatus($('save-status'), 'Saving…', 'loading');
+
+  try{
+    const today = todayKey();
+    const currentWeekStartKey = dateKey(STATE.weekStart);
+    const cards = document.querySelectorAll('.client-card');
+    let dailySkipped = 0, weeklySkipped = 0;
+
+    cards.forEach(card => {
+      const handle = card.dataset.handle;
+      const client = STATE.clients.find(c => c.handle === handle);
+      const followersRaw = card.querySelector('.f-followers').value.trim();
+      const posted = card.querySelector('.f-posted-yes').classList.contains('active');
+
+      const dailyEntries = STATE.daily[handle] || [];
+
+      if(followersRaw !== ''){
+        const followers = parseInt(followersRaw, 10) || 0;
+        const withoutToday = dailyEntries.filter(e => e.date !== today);
+        withoutToday.push({ date: today, followers, posted });
+        withoutToday.sort((a,b) => a.date.localeCompare(b.date));
+        if(withoutToday.length > MAX_DAILY_ENTRIES) withoutToday.splice(0, withoutToday.length - MAX_DAILY_ENTRIES);
+        STATE.daily[handle] = withoutToday;
+      } else {
+        dailySkipped++;
+      }
+
+      const likesRaw = card.querySelector('.f-likes5').value.trim();
+      const commentsRaw = card.querySelector('.f-comments5').value.trim();
+      if(likesRaw !== '' || commentsRaw !== ''){
+        const likes = parseFloat(likesRaw) || 0;
+        const comments = parseFloat(commentsRaw) || 0;
+        const followersForCalc = followersRaw !== ''
+          ? parseInt(followersRaw, 10)
+          : (STATE.data.accounts[handle] ? STATE.data.accounts[handle].followers : null);
+
+        if(followersForCalc){
+          const rate = ((likes + comments) / (5 * followersForCalc)) * 100;
+          const weeklyEntries = (STATE.weekly[handle] || []).filter(e => e.weekStart !== currentWeekStartKey);
+          weeklyEntries.push({ weekStart: currentWeekStartKey, engagementRate: parseFloat(rate.toFixed(2)) });
+          weeklyEntries.sort((a,b) => a.weekStart.localeCompare(b.weekStart));
+          if(weeklyEntries.length > MAX_WEEKLY_ENTRIES) weeklyEntries.splice(0, weeklyEntries.length - MAX_WEEKLY_ENTRIES);
+          STATE.weekly[handle] = weeklyEntries;
+        }
+      } else {
+        weeklySkipped++;
+      }
+
+      // Rebuild data.json (the "this week" live snapshot) from daily.json + weekly.json
+      const finalDaily = (STATE.daily[handle] || []).sort((a,b) => a.date.localeCompare(b.date));
+      const todayEntry = finalDaily.find(e => e.date === today);
+      if(todayEntry){
+        const priorEntries = finalDaily.filter(e => e.date !== today);
+        const prevFollowers = priorEntries.length ? priorEntries[priorEntries.length-1].followers : todayEntry.followers;
+        const deltaToday = todayEntry.followers - prevFollowers;
+
+        const postDates = finalDaily
+          .filter(e => e.date >= currentWeekStartKey && e.date <= dateKey(STATE.weekEnd) && e.posted)
+          .map(e => new Date(e.date + 'T00:00:00Z').toISOString());
+
+        const latestWeekly = latestWeeklyEntry(handle);
+        const existingRate = STATE.data.accounts[handle] ? STATE.data.accounts[handle].engagementRate : 0;
+
+        STATE.data.accounts[handle] = {
+          name: client.name,
+          handle,
+          followers: todayEntry.followers,
+          deltaToday,
+          engagementRate: latestWeekly ? latestWeekly.engagementRate : (existingRate || 0),
+          postDates
+        };
+      }
+    });
+
+    STATE.data.generatedAt = new Date().toISOString();
+    STATE.data.weekStart = STATE.weekStart.toISOString();
+    STATE.data.weekEnd = STATE.weekEnd.toISOString();
+
+    const dataResult = await ghPut('data.json', STATE.data, STATE.dataSha, 'Update data.json [entry form]');
+    STATE.dataSha = dataResult.content.sha;
+
+    const dailyResult = await ghPut('daily.json', STATE.daily, STATE.dailySha, 'Update daily.json [entry form]');
+    STATE.dailySha = dailyResult.content.sha;
+
+    const weeklyResult = await ghPut('weekly.json', STATE.weekly, STATE.weeklySha, 'Update weekly.json [entry form]');
+    STATE.weeklySha = weeklyResult.content.sha;
+
+    let note = '';
+    if(dailySkipped > 0) note += ` ${dailySkipped} daily update${dailySkipped===1?'':'s'} skipped (blank).`;
+    if(weeklySkipped > 0) note += ` ${weeklySkipped} weekly engagement${weeklySkipped===1?'':'s'} skipped (blank).`;
+
+    setStatus($('save-status'), `✓ Saved!${note} Dashboard updates on next refresh.`, 'ok');
+    renderClients();
+  }catch(e){
+    setStatus($('save-status'), '✗ ' + e.message, 'err');
+  }finally{
+    btn.disabled = false;
+  }
+}
+
+function tryRestoreSession(){
+  const saved = sessionStorage.getItem('pem_entry_config');
+  if(saved){
+    try{
+      const cfg = JSON.parse(saved);
+      $('gh-owner').value = cfg.owner || '';
+      $('gh-repo').value = cfg.repo || '';
+      $('gh-token').value = cfg.token || '';
+      $('remember-token').checked = true;
+    }catch(e){}
+  }
+}
+
+$('gh-owner').addEventListener('change', maybeConnect);
+$('gh-repo').addEventListener('change', maybeConnect);
+$('gh-token').addEventListener('change', maybeConnect);
+$('save-btn').addEventListener('click', saveAll);
+
+function maybeConnect(){
+  const owner = $('gh-owner').value.trim();
+  const repo = $('gh-repo').value.trim();
+  const token = $('gh-token').value.trim();
+  if(!owner || !repo || !token) return;
+
+  STATE.owner = owner; STATE.repo = repo; STATE.token = token;
+
+  if($('remember-token').checked){
+    sessionStorage.setItem('pem_entry_config', JSON.stringify({ owner, repo, token }));
+  } else {
+    sessionStorage.removeItem('pem_entry_config');
+  }
+  loadAll();
+}
+
+tryRestoreSession();
+if($('gh-owner').value && $('gh-repo').value && $('gh-token').value){
+  maybeConnect();
+}
+</script>
+</body>
+</html>
