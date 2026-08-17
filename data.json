@@ -1,15 +1,18 @@
 {
-  "generatedAt": "2026-08-17T23:02:49.376Z",
+  "generatedAt": "2026-08-17T23:09:10.960Z",
   "weekStart": "2026-08-13T06:00:00.000Z",
   "weekEnd": "2026-08-19T06:00:00.000Z",
   "accounts": {
     "paragon_custom_construction": {
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
-      "followers": 0,
+      "followers": 4348,
       "deltaToday": 0,
-      "engagementRate": 0,
-      "postDates": []
+      "engagementRate": 0.38,
+      "postDates": [
+        "2026-08-14T06:00:00.000Z",
+        "2026-08-16T06:00:00.000Z"
+      ]
     },
     "legacyflooringsd": {
       "name": "Legacy Flooring",
