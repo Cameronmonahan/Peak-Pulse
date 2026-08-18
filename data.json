@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T00:23:31.434Z",
+  "generatedAt": "2026-08-18T03:44:12.792Z",
   "weekStart": "2026-08-13T06:00:00.000Z",
   "weekEnd": "2026-08-19T06:00:00.000Z",
   "accounts": {
@@ -7,10 +7,11 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "followers": 4348,
-      "deltaToday": 0,
-      "engagementRate": 0.38,
+      "deltaToday": 9,
+      "engagementRate": 0.3,
       "postDates": [
-        "2026-08-16T00:00:00.000Z"
+        "2026-08-14T06:00:00.000Z",
+        "2026-08-16T06:00:00.000Z"
       ]
     },
     "legacyflooringsd": {
@@ -18,42 +19,59 @@
       "handle": "legacyflooringsd",
       "followers": 890,
       "deltaToday": 0,
-      "engagementRate": 0,
+      "engagementRate": 0.65,
       "postDates": [
-        "2026-08-16T00:00:00.000Z"
+        "2026-08-13T06:00:00.000Z",
+        "2026-08-16T06:00:00.000Z",
+        "2026-08-17T06:00:00.000Z"
       ]
     },
     "marwooddesign": {
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "followers": 8740,
-      "deltaToday": 0,
-      "engagementRate": 0,
-      "postDates": []
+      "deltaToday": 2,
+      "engagementRate": 0.37,
+      "postDates": [
+        "2026-08-13T06:00:00.000Z",
+        "2026-08-15T06:00:00.000Z",
+        "2026-08-17T06:00:00.000Z"
+      ]
     },
     "ventisalesgroup": {
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
       "followers": 100,
-      "deltaToday": 0,
-      "engagementRate": 0,
-      "postDates": []
+      "deltaToday": 6,
+      "engagementRate": 14.72,
+      "postDates": [
+        "2026-08-13T06:00:00.000Z",
+        "2026-08-14T06:00:00.000Z",
+        "2026-08-15T06:00:00.000Z"
+      ]
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "followers": 872,
-      "deltaToday": 0,
-      "engagementRate": 0,
-      "postDates": []
+      "deltaToday": 2,
+      "engagementRate": 1.7,
+      "postDates": [
+        "2026-08-13T06:00:00.000Z",
+        "2026-08-15T06:00:00.000Z",
+        "2026-08-17T06:00:00.000Z"
+      ]
     },
     "louiehamner": {
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "followers": 2444,
-      "deltaToday": 0,
-      "engagementRate": 0,
-      "postDates": []
+      "deltaToday": -1,
+      "engagementRate": 0.87,
+      "postDates": [
+        "2026-08-13T06:00:00.000Z",
+        "2026-08-17T06:00:00.000Z"
+      ]
     },
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
