@@ -330,7 +330,7 @@
 </div>
 
 <div class="demo-banner" id="demo-banner">
-  ⚠ <span><b>Demo data</b> — these numbers are simulated so you can preview the layout. Swap in the Instagram Graph API layer (see build notes) to make it live.</span>
+  ⚠ <span><b>Demo Data</b> — real numbers will appear here automatically once entered.</span>
 </div>
 
 <div class="view-switch" id="view-switch">
@@ -773,12 +773,11 @@ function tickClock(){
 function updateBanner(){
   const banner = document.getElementById('demo-banner');
   if(LIVE_MODE){
-    const genAt = LIVE_DATA.generatedAt ? new Date(LIVE_DATA.generatedAt).toLocaleString('en-US', { month:'short', day:'numeric', hour:'2-digit', minute:'2-digit' }) : 'unknown';
-    banner.innerHTML = `✓ <span><b>Live data</b> — pulled from data.json, generated ${genAt}. Any card marked "not connected" needs its Instagram account linked in the fetch script.</span>`;
+    banner.innerHTML = `✓ <span><b>Live View</b></span>`;
     banner.style.borderColor = 'rgba(147,192,143,0.45)';
     banner.style.color = 'var(--up)';
   } else {
-    banner.innerHTML = `⚠ <span><b>Demo data</b> — no data.json found yet (or it's empty), so these numbers are simulated. Once the GitHub Actions workflow runs, this dashboard switches to live data automatically.</span>`;
+    banner.innerHTML = `⚠ <span><b>Demo Data</b> — real numbers will appear here automatically once entered.</span>`;
   }
 }
 
