@@ -1,1 +1,26 @@
-{}
+{
+  "paragon_custom_construction": [
+    { "weekStart": "2026-08-01", "engagementRate": 0.52 },
+    { "weekStart": "2026-08-08", "engagementRate": 0.30 }
+  ],
+  "legacyflooringsd": [
+    { "weekStart": "2026-08-01", "engagementRate": 0.56 },
+    { "weekStart": "2026-08-08", "engagementRate": 0.65 }
+  ],
+  "marwooddesign": [
+    { "weekStart": "2026-08-01", "engagementRate": 0.17 },
+    { "weekStart": "2026-08-08", "engagementRate": 0.37 }
+  ],
+  "ventisalesgroup": [
+    { "weekStart": "2026-08-01", "engagementRate": 4.26 },
+    { "weekStart": "2026-08-08", "engagementRate": 14.72 }
+  ],
+  "guide_n_gallop": [
+    { "weekStart": "2026-08-01", "engagementRate": 1.26 },
+    { "weekStart": "2026-08-08", "engagementRate": 1.70 }
+  ],
+  "louiehamner": [
+    { "weekStart": "2026-08-01", "engagementRate": 1.29 },
+    { "weekStart": "2026-08-08", "engagementRate": 0.87 }
+  ]
+}
