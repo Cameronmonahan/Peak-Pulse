@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T23:09:10.960Z",
+  "generatedAt": "2026-08-18T00:23:31.434Z",
   "weekStart": "2026-08-13T06:00:00.000Z",
   "weekEnd": "2026-08-19T06:00:00.000Z",
   "accounts": {
@@ -10,22 +10,23 @@
       "deltaToday": 0,
       "engagementRate": 0.38,
       "postDates": [
-        "2026-08-14T06:00:00.000Z",
-        "2026-08-16T06:00:00.000Z"
+        "2026-08-16T00:00:00.000Z"
       ]
     },
     "legacyflooringsd": {
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
-      "followers": 0,
+      "followers": 890,
       "deltaToday": 0,
       "engagementRate": 0,
-      "postDates": []
+      "postDates": [
+        "2026-08-16T00:00:00.000Z"
+      ]
     },
     "marwooddesign": {
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
-      "followers": 0,
+      "followers": 8740,
       "deltaToday": 0,
       "engagementRate": 0,
       "postDates": []
@@ -33,7 +34,7 @@
     "ventisalesgroup": {
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
-      "followers": 0,
+      "followers": 100,
       "deltaToday": 0,
       "engagementRate": 0,
       "postDates": []
@@ -41,7 +42,7 @@
     "guide_n_gallop": {
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
-      "followers": 0,
+      "followers": 872,
       "deltaToday": 0,
       "engagementRate": 0,
       "postDates": []
@@ -49,7 +50,7 @@
     "louiehamner": {
       "name": "Louie Hamner",
       "handle": "louiehamner",
-      "followers": 0,
+      "followers": 2444,
       "deltaToday": 0,
       "engagementRate": 0,
       "postDates": []
@@ -57,7 +58,7 @@
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
-      "followers": 0,
+      "followers": 17616,
       "deltaToday": 0,
       "engagementRate": 0,
       "postDates": []
