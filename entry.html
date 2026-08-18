@@ -417,7 +417,7 @@ async function saveAll(){
 
         const postDates = finalDaily
           .filter(e => e.date >= currentWeekStartKey && e.date <= currentWeekEndKey && e.posted)
-          .map(e => new Date(e.date + 'T00:00:00Z').toISOString());
+          .map(e => new Date(e.date + 'T00:00:00').toISOString());
 
         const latestWeekly = latestWeeklyEntry(handle);
         const existingRate = STATE.data.accounts[handle] ? STATE.data.accounts[handle].engagementRate : 0;
