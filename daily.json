@@ -31,7 +31,8 @@
     },
     {
       "date": "2026-08-17",
-      "followers": 4348
+      "followers": 4348,
+      "posted": false
     }
   ],
   "legacyflooringsd": [
@@ -169,7 +170,8 @@
     },
     {
       "date": "2026-08-17",
-      "followers": 100
+      "followers": 100,
+      "posted": false
     }
   ],
   "guide_n_gallop": [
@@ -245,7 +247,8 @@
     },
     {
       "date": "2026-08-17",
-      "followers": 17616
+      "followers": 17616,
+      "posted": false
     }
   ],
   "thenanonature": [
@@ -255,7 +258,8 @@
     },
     {
       "date": "2026-08-17",
-      "followers": 2036
+      "followers": 2036,
+      "posted": false
     }
   ]
 }
