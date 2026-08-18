@@ -1,6 +1,31 @@
 {
   "paragon_custom_construction": [
     {
+      "date": "2026-08-04",
+      "followers": 4339,
+      "posted": true
+    },
+    {
+      "date": "2026-08-06",
+      "posted": true
+    },
+    {
+      "date": "2026-08-08",
+      "posted": true
+    },
+    {
+      "date": "2026-08-10",
+      "posted": true
+    },
+    {
+      "date": "2026-08-12",
+      "posted": true
+    },
+    {
+      "date": "2026-08-14",
+      "posted": true
+    },
+    {
       "date": "2026-08-16",
       "posted": true
     },
@@ -11,25 +36,132 @@
   ],
   "legacyflooringsd": [
     {
+      "date": "2026-08-03",
+      "posted": true
+    },
+    {
+      "date": "2026-08-04",
+      "followers": 890,
+      "posted": true
+    },
+    {
+      "date": "2026-08-05",
+      "posted": true
+    },
+    {
+      "date": "2026-08-06",
+      "posted": true
+    },
+    {
+      "date": "2026-08-07",
+      "posted": true
+    },
+    {
+      "date": "2026-08-10",
+      "posted": true
+    },
+    {
+      "date": "2026-08-11",
+      "posted": true
+    },
+    {
+      "date": "2026-08-13",
+      "posted": true
+    },
+    {
       "date": "2026-08-16",
       "posted": true
     },
     {
       "date": "2026-08-17",
-      "followers": 890
+      "followers": 890,
+      "posted": true
     }
   ],
   "marwooddesign": [
+    {
+      "date": "2026-08-01",
+      "posted": true
+    },
+    {
+      "date": "2026-08-03",
+      "posted": true
+    },
+    {
+      "date": "2026-08-04",
+      "followers": 8738
+    },
+    {
+      "date": "2026-08-05",
+      "posted": true
+    },
+    {
+      "date": "2026-08-07",
+      "posted": true
+    },
+    {
+      "date": "2026-08-09",
+      "posted": true
+    },
+    {
+      "date": "2026-08-11",
+      "posted": true
+    },
+    {
+      "date": "2026-08-13",
+      "posted": true
+    },
+    {
+      "date": "2026-08-15",
+      "posted": true
+    },
     {
       "date": "2026-08-16",
       "posted": false
     },
     {
       "date": "2026-08-17",
-      "followers": 8740
+      "followers": 8740,
+      "posted": true
     }
   ],
   "ventisalesgroup": [
+    {
+      "date": "2026-08-01",
+      "posted": true
+    },
+    {
+      "date": "2026-08-04",
+      "followers": 94
+    },
+    {
+      "date": "2026-08-06",
+      "posted": true
+    },
+    {
+      "date": "2026-08-08",
+      "posted": true
+    },
+    {
+      "date": "2026-08-10",
+      "posted": true
+    },
+    {
+      "date": "2026-08-11",
+      "posted": true
+    },
+    {
+      "date": "2026-08-13",
+      "posted": true
+    },
+    {
+      "date": "2026-08-14",
+      "posted": true
+    },
+    {
+      "date": "2026-08-15",
+      "posted": true
+    },
     {
       "date": "2026-08-16",
       "posted": false
@@ -41,22 +173,68 @@
   ],
   "guide_n_gallop": [
     {
+      "date": "2026-08-04",
+      "followers": 870
+    },
+    {
+      "date": "2026-08-07",
+      "posted": true
+    },
+    {
+      "date": "2026-08-09",
+      "posted": true
+    },
+    {
+      "date": "2026-08-11",
+      "posted": true
+    },
+    {
+      "date": "2026-08-13",
+      "posted": true
+    },
+    {
+      "date": "2026-08-15",
+      "posted": true
+    },
+    {
       "date": "2026-08-16",
       "posted": false
     },
     {
       "date": "2026-08-17",
-      "followers": 872
+      "followers": 872,
+      "posted": true
     }
   ],
   "louiehamner": [
     {
+      "date": "2026-07-28",
+      "followers": 2445
+    },
+    {
+      "date": "2026-08-02",
+      "posted": true
+    },
+    {
+      "date": "2026-08-06",
+      "posted": true
+    },
+    {
+      "date": "2026-08-11",
+      "posted": true
+    },
+    {
+      "date": "2026-08-13",
+      "posted": true
+    },
+    {
       "date": "2026-08-16",
       "posted": false
     },
     {
       "date": "2026-08-17",
-      "followers": 2444
+      "followers": 2444,
+      "posted": true
     }
   ],
   "peakexposuremedia": [
