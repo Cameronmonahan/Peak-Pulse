@@ -85,6 +85,10 @@
     {
       "date": "2026-08-18",
       "followers": 891
+    },
+    {
+      "date": "2026-08-19",
+      "followers": 890
     }
   ],
   "marwooddesign": [
@@ -135,6 +139,11 @@
     },
     {
       "date": "2026-08-18",
+      "followers": 8740,
+      "posted": false
+    },
+    {
+      "date": "2026-08-19",
       "followers": 8740
     }
   ],
@@ -187,6 +196,11 @@
     },
     {
       "date": "2026-08-18",
+      "followers": 101,
+      "posted": true
+    },
+    {
+      "date": "2026-08-19",
       "followers": 101
     }
   ],
@@ -227,6 +241,10 @@
     {
       "date": "2026-08-18",
       "followers": 872
+    },
+    {
+      "date": "2026-08-19",
+      "followers": 872
     }
   ],
   "louiehamner": [
@@ -261,7 +279,12 @@
     },
     {
       "date": "2026-08-18",
-      "followers": 2446
+      "followers": 2446,
+      "posted": false
+    },
+    {
+      "date": "2026-08-19",
+      "followers": 2444
     }
   ],
   "peakexposuremedia": [
@@ -276,6 +299,11 @@
     },
     {
       "date": "2026-08-18",
+      "followers": 17613,
+      "posted": false
+    },
+    {
+      "date": "2026-08-19",
       "followers": 17613
     }
   ],
@@ -291,6 +319,11 @@
     },
     {
       "date": "2026-08-18",
+      "followers": 2036,
+      "posted": false
+    },
+    {
+      "date": "2026-08-19",
       "followers": 2036
     }
   ]

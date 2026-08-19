@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T04:42:39.411Z",
+  "generatedAt": "2026-08-19T14:30:00.000Z",
   "weekStart": "2026-08-13T06:00:00.000Z",
   "weekEnd": "2026-08-19T06:00:00.000Z",
   "accounts": {
@@ -17,8 +17,8 @@
     "legacyflooringsd": {
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
-      "followers": 891,
-      "deltaToday": 1,
+      "followers": 890,
+      "deltaToday": -1,
       "engagementRate": 0.65,
       "postDates": [
         "2026-08-13T06:00:00.000Z",
@@ -31,7 +31,7 @@
       "handle": "marwooddesign",
       "followers": 8740,
       "deltaToday": 0,
-      "engagementRate": 0.37,
+      "engagementRate": 0.42,
       "postDates": [
         "2026-08-13T06:00:00.000Z",
         "2026-08-15T06:00:00.000Z",
@@ -42,12 +42,13 @@
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
       "followers": 101,
-      "deltaToday": 1,
-      "engagementRate": 14.72,
+      "deltaToday": 0,
+      "engagementRate": 13.37,
       "postDates": [
         "2026-08-13T06:00:00.000Z",
         "2026-08-14T06:00:00.000Z",
-        "2026-08-15T06:00:00.000Z"
+        "2026-08-15T06:00:00.000Z",
+        "2026-08-18T06:00:00.000Z"
       ]
     },
     "guide_n_gallop": {
@@ -65,9 +66,9 @@
     "louiehamner": {
       "name": "Louie Hamner",
       "handle": "louiehamner",
-      "followers": 2446,
-      "deltaToday": 2,
-      "engagementRate": 0.87,
+      "followers": 2444,
+      "deltaToday": -2,
+      "engagementRate": 0.55,
       "postDates": [
         "2026-08-13T06:00:00.000Z",
         "2026-08-17T06:00:00.000Z"
@@ -77,7 +78,7 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "followers": 17613,
-      "deltaToday": -3,
+      "deltaToday": 0,
       "engagementRate": 0,
       "postDates": []
     },
