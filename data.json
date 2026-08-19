@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T04:42:09.881Z",
+  "generatedAt": "2026-08-19T04:42:39.411Z",
   "weekStart": "2026-08-13T06:00:00.000Z",
   "weekEnd": "2026-08-19T06:00:00.000Z",
   "accounts": {
@@ -29,8 +29,8 @@
     "marwooddesign": {
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
-      "followers": 8741,
-      "deltaToday": 1,
+      "followers": 8740,
+      "deltaToday": 0,
       "engagementRate": 0.37,
       "postDates": [
         "2026-08-13T06:00:00.000Z",
@@ -41,8 +41,8 @@
     "ventisalesgroup": {
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
-      "followers": 100,
-      "deltaToday": 0,
+      "followers": 101,
+      "deltaToday": 1,
       "engagementRate": 14.72,
       "postDates": [
         "2026-08-13T06:00:00.000Z",
@@ -76,8 +76,8 @@
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
-      "followers": 18000,
-      "deltaToday": 384,
+      "followers": 17613,
+      "deltaToday": -3,
       "engagementRate": 0,
       "postDates": []
     },
