@@ -36,7 +36,12 @@
     },
     {
       "date": "2026-08-18",
-      "followers": 4350
+      "followers": 4350,
+      "posted": true
+    },
+    {
+      "date": "2026-08-19",
+      "followers": 4349
     }
   ],
   "legacyflooringsd": [
@@ -84,7 +89,8 @@
     },
     {
       "date": "2026-08-18",
-      "followers": 891
+      "followers": 891,
+      "posted": true
     },
     {
       "date": "2026-08-19",
@@ -240,7 +246,8 @@
     },
     {
       "date": "2026-08-18",
-      "followers": 872
+      "followers": 872,
+      "posted": false
     },
     {
       "date": "2026-08-19",

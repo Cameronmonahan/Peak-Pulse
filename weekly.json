@@ -7,6 +7,10 @@
     {
       "weekStart": "2026-08-08",
       "engagementRate": 0.3
+    },
+    {
+      "weekStart": "2026-08-13",
+      "engagementRate": 0.27
     }
   ],
   "legacyflooringsd": [
@@ -17,6 +21,10 @@
     {
       "weekStart": "2026-08-08",
       "engagementRate": 0.65
+    },
+    {
+      "weekStart": "2026-08-13",
+      "engagementRate": 0.59
     }
   ],
   "marwooddesign": [
@@ -55,6 +63,10 @@
     {
       "weekStart": "2026-08-08",
       "engagementRate": 1.7
+    },
+    {
+      "weekStart": "2026-08-13",
+      "engagementRate": 2.29
     }
   ],
   "louiehamner": [
