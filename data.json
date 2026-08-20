@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-19T15:26:27.892Z",
-  "weekStart": "2026-08-13T06:00:00.000Z",
-  "weekEnd": "2026-08-19T06:00:00.000Z",
+  "generatedAt": "2026-08-20T14:34:00.000Z",
+  "weekStart": "2026-08-20T06:00:00.000Z",
+  "weekEnd": "2026-08-26T06:00:00.000Z",
   "accounts": {
     "paragon_custom_construction": {
       "name": "Paragon Custom Homes",
@@ -9,11 +9,7 @@
       "followers": 4349,
       "deltaToday": -1,
       "engagementRate": 0.27,
-      "postDates": [
-        "2026-08-14T06:00:00.000Z",
-        "2026-08-16T06:00:00.000Z",
-        "2026-08-18T06:00:00.000Z"
-      ]
+      "postDates": []
     },
     "legacyflooringsd": {
       "name": "Legacy Flooring",
@@ -21,12 +17,7 @@
       "followers": 890,
       "deltaToday": -1,
       "engagementRate": 0.59,
-      "postDates": [
-        "2026-08-13T06:00:00.000Z",
-        "2026-08-16T06:00:00.000Z",
-        "2026-08-17T06:00:00.000Z",
-        "2026-08-18T06:00:00.000Z"
-      ]
+      "postDates": []
     },
     "marwooddesign": {
       "name": "Marwood Premium Cabinetry",
@@ -34,24 +25,15 @@
       "followers": 8740,
       "deltaToday": 0,
       "engagementRate": 0.42,
-      "postDates": [
-        "2026-08-13T06:00:00.000Z",
-        "2026-08-15T06:00:00.000Z",
-        "2026-08-17T06:00:00.000Z"
-      ]
+      "postDates": []
     },
     "ventisalesgroup": {
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
-      "followers": 101,
-      "deltaToday": 0,
+      "followers": 103,
+      "deltaToday": 2,
       "engagementRate": 13.37,
-      "postDates": [
-        "2026-08-13T06:00:00.000Z",
-        "2026-08-14T06:00:00.000Z",
-        "2026-08-15T06:00:00.000Z",
-        "2026-08-18T06:00:00.000Z"
-      ]
+      "postDates": []
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
@@ -59,36 +41,29 @@
       "followers": 872,
       "deltaToday": 0,
       "engagementRate": 2.29,
-      "postDates": [
-        "2026-08-13T06:00:00.000Z",
-        "2026-08-15T06:00:00.000Z",
-        "2026-08-17T06:00:00.000Z"
-      ]
+      "postDates": []
     },
     "louiehamner": {
       "name": "Louie Hamner",
       "handle": "louiehamner",
-      "followers": 2444,
-      "deltaToday": -2,
+      "followers": 2445,
+      "deltaToday": 1,
       "engagementRate": 0.55,
-      "postDates": [
-        "2026-08-13T06:00:00.000Z",
-        "2026-08-17T06:00:00.000Z"
-      ]
+      "postDates": []
     },
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
-      "followers": 17613,
-      "deltaToday": 0,
+      "followers": 17609,
+      "deltaToday": -4,
       "engagementRate": 0,
       "postDates": []
     },
     "thenanonature": {
       "name": "The Nano Nature",
       "handle": "thenanonature",
-      "followers": 2036,
-      "deltaToday": 0,
+      "followers": 2038,
+      "deltaToday": 2,
       "engagementRate": 0,
       "postDates": []
     }

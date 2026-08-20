@@ -150,6 +150,11 @@
     },
     {
       "date": "2026-08-19",
+      "followers": 8740,
+      "posted": true
+    },
+    {
+      "date": "2026-08-20",
       "followers": 8740
     }
   ],
@@ -207,7 +212,12 @@
     },
     {
       "date": "2026-08-19",
-      "followers": 101
+      "followers": 101,
+      "posted": false
+    },
+    {
+      "date": "2026-08-20",
+      "followers": 103
     }
   ],
   "guide_n_gallop": [
@@ -291,7 +301,12 @@
     },
     {
       "date": "2026-08-19",
-      "followers": 2444
+      "followers": 2444,
+      "posted": true
+    },
+    {
+      "date": "2026-08-20",
+      "followers": 2445
     }
   ],
   "peakexposuremedia": [
@@ -311,7 +326,12 @@
     },
     {
       "date": "2026-08-19",
-      "followers": 17613
+      "followers": 17613,
+      "posted": false
+    },
+    {
+      "date": "2026-08-20",
+      "followers": 17609
     }
   ],
   "thenanonature": [
@@ -331,7 +351,12 @@
     },
     {
       "date": "2026-08-19",
-      "followers": 2036
+      "followers": 2036,
+      "posted": false
+    },
+    {
+      "date": "2026-08-20",
+      "followers": 2038
     }
   ]
 }
