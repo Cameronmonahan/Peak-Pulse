@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T14:34:00.000Z",
+  "generatedAt": "2026-08-21T14:30:00.000Z",
   "weekStart": "2026-08-20T06:00:00.000Z",
   "weekEnd": "2026-08-26T06:00:00.000Z",
   "accounts": {
@@ -22,16 +22,16 @@
     "marwooddesign": {
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
-      "followers": 8740,
-      "deltaToday": 0,
+      "followers": 8738,
+      "deltaToday": -2,
       "engagementRate": 0.42,
       "postDates": []
     },
     "ventisalesgroup": {
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
-      "followers": 103,
-      "deltaToday": 2,
+      "followers": 104,
+      "deltaToday": 1,
       "engagementRate": 13.37,
       "postDates": []
     },
@@ -46,7 +46,7 @@
     "louiehamner": {
       "name": "Louie Hamner",
       "handle": "louiehamner",
-      "followers": 2445,
+      "followers": 2446,
       "deltaToday": 1,
       "engagementRate": 0.55,
       "postDates": []
@@ -54,16 +54,16 @@
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
-      "followers": 17609,
-      "deltaToday": -4,
+      "followers": 17610,
+      "deltaToday": 1,
       "engagementRate": 0,
       "postDates": []
     },
     "thenanonature": {
       "name": "The Nano Nature",
       "handle": "thenanonature",
-      "followers": 2038,
-      "deltaToday": 2,
+      "followers": 2037,
+      "deltaToday": -1,
       "engagementRate": 0,
       "postDates": []
     }
