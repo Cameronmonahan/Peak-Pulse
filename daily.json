@@ -42,6 +42,14 @@
     {
       "date": "2026-08-19",
       "followers": 4349
+    },
+    {
+      "date": "2026-08-20",
+      "posted": true
+    },
+    {
+      "date": "2026-08-21",
+      "followers": 4349
     }
   ],
   "legacyflooringsd": [
@@ -95,6 +103,14 @@
     {
       "date": "2026-08-19",
       "followers": 890
+    },
+    {
+      "date": "2026-08-20",
+      "posted": true
+    },
+    {
+      "date": "2026-08-21",
+      "followers": 915
     }
   ],
   "marwooddesign": [
@@ -271,6 +287,14 @@
     },
     {
       "date": "2026-08-19",
+      "followers": 872
+    },
+    {
+      "date": "2026-08-20",
+      "posted": false
+    },
+    {
+      "date": "2026-08-21",
       "followers": 872
     }
   ],

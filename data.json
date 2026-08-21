@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T14:30:00.000Z",
+  "generatedAt": "2026-08-21T14:54:15.300Z",
   "weekStart": "2026-08-20T06:00:00.000Z",
   "weekEnd": "2026-08-26T06:00:00.000Z",
   "accounts": {
@@ -7,17 +7,21 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "followers": 4349,
-      "deltaToday": -1,
+      "deltaToday": 0,
       "engagementRate": 0.27,
-      "postDates": []
+      "postDates": [
+        "2026-08-20T06:00:00.000Z"
+      ]
     },
     "legacyflooringsd": {
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
-      "followers": 890,
-      "deltaToday": -1,
+      "followers": 915,
+      "deltaToday": 25,
       "engagementRate": 0.59,
-      "postDates": []
+      "postDates": [
+        "2026-08-20T06:00:00.000Z"
+      ]
     },
     "marwooddesign": {
       "name": "Marwood Premium Cabinetry",
