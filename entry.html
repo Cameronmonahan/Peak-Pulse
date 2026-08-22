@@ -43,7 +43,14 @@
     background:var(--surface-2); border:1px solid var(--line);
     border-radius:12px; padding:14px 14px 16px; margin-bottom:12px;
   }
-  .client-card h3{ font-size:16px; margin-bottom:2px; }
+  .card-title-row{ display:flex; align-items:center; gap:10px; margin-bottom:2px; }
+  .client-card h3{ font-size:16px; }
+  .platform-tag{
+    display:flex; align-items:center; gap:4px;
+    font-size:9.5px; text-transform:uppercase; letter-spacing:0.06em; font-weight:700;
+    padding:3px 7px; border-radius:6px; border:1px solid var(--line); color:var(--text-dim);
+  }
+  .platform-tag svg{ width:11px; height:11px; }
   .client-card .handle{ font-size:11.5px; color:var(--text-dim); margin-bottom:12px; }
 
   .section-label{
@@ -121,18 +128,25 @@
 <details style="margin-top:20px;">
   <summary>How this works</summary>
   <div class="helper" style="margin-top:8px;">
-    <b>Daily Update</b> (do every day): follower count + whether you posted today. This builds a permanent
-    day-by-day log (daily.json) that the dashboard uses for "new followers today," this week's post count,
-    and monthly totals.<br><br>
-    <b>Weekly Engagement</b> (do once a week, whenever convenient): total likes + comments across the last 5 posts.
-    This is saved once per week (weekly.json) and used for the engagement rate shown on the dashboard —
-    it does NOT need to be filled in every day.<br><br>
+    Each account (Instagram, and TikTok where tracked) gets its own card below.<br><br>
+    <b>Daily Update</b> (check in as often as you like — once or twice a day): current follower count +
+    whether there's been a post since your last check-in. If you check twice in one day, the second check
+    just confirms/updates the same day's entry — it won't lose an earlier "yes."<br><br>
+    <b>Weekly Engagement</b> (once a week, whenever convenient): total likes + comments across this week's
+    posts so far. The rate auto-calculates using the actual number of posts logged that week.<br><br>
     Your GitHub token is never saved anywhere except (optionally) this browser tab's session memory.
   </div>
 </details>
 
 <script>
 const $ = id => document.getElementById(id);
+
+const IG_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor" stroke="none"/>
+</svg>`;
+const TT_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14 3v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c0 3 2.2 5 5 5"/>
+</svg>`;
 
 function getPostWeekRange(now = new Date()){
   const day = now.getDay();
@@ -163,14 +177,28 @@ function setStatus(el, msg, kind){
 let STATE = {
   owner:'', repo:'', token:'',
   clients: [],
+  accounts: [],  // flattened: one entry per platform per client
   data: null, dataSha: null,
   daily: {}, dailySha: null,
   weekly: {}, weeklySha: null,
   weekStart: null, weekEnd: null
 };
 
-const MAX_DAILY_ENTRIES = 400;  // ~13 months per client
-const MAX_WEEKLY_ENTRIES = 60;  // ~13 months per client
+const MAX_DAILY_ENTRIES = 400;
+const MAX_WEEKLY_ENTRIES = 60;
+
+// Builds the flat list of trackable accounts (one per platform per client)
+// from clients.json. A client with a tiktokHandle gets two entries.
+function buildAccountsList(clients){
+  const list = [];
+  clients.forEach(c => {
+    list.push({ name:c.name, handle:c.handle, platform:'instagram' });
+    if(c.tiktokHandle && !c.tiktokHandle.startsWith('REPLACE_')){
+      list.push({ name:c.name, handle:c.tiktokHandle, platform:'tiktok' });
+    }
+  });
+  return list;
+}
 
 async function ghGet(path){
   const url = `https://api.github.com/repos/${STATE.owner}/${STATE.repo}/contents/${path}`;
@@ -181,12 +209,10 @@ async function ghGet(path){
   const json = await resp.json();
   return { content: JSON.parse(b64DecodeUnicode(json.content)), sha: json.sha };
 }
-
 async function ghGetOptional(path){
   try{ return await ghGet(path); }
   catch(e){ return { content: {}, sha: null }; }
 }
-
 async function ghPut(path, obj, sha, message){
   const url = `https://api.github.com/repos/${STATE.owner}/${STATE.repo}/contents/${path}`;
   const body = { message, content: b64EncodeUnicode(JSON.stringify(obj, null, 2)), sha };
@@ -212,21 +238,18 @@ function latestWeeklyEntry(handle){
   return [...entries].sort((a,b) => a.weekStart.localeCompare(b.weekStart)).pop();
 }
 
-function yesterdayKey(d = new Date()){
-  const y = new Date(d);
-  y.setDate(y.getDate() - 1);
-  return y.toISOString().slice(0,10);
-}
-
-// Merges fields into a client's daily.json entry for a given date, creating it
-// if it doesn't exist yet, without clobbering fields set by a different day's save
-// (e.g. yesterday's "posted" flag gets filled in the morning after, while that same
-// date's "followers" value — if any — was set on its own morning).
+// Merges fields into a handle's daily.json entry for a given date, creating it
+// if needed. "posted" merges as OR — a later check-in that says "no" never
+// erases an earlier "yes" logged the same day.
 function upsertDaily(handle, date, fields){
   const arr = (STATE.daily[handle] || []).slice();
   const idx = arr.findIndex(e => e.date === date);
   if(idx >= 0){
-    arr[idx] = Object.assign({}, arr[idx], fields);
+    const merged = Object.assign({}, arr[idx], fields);
+    if('posted' in fields){
+      merged.posted = !!(arr[idx].posted || fields.posted);
+    }
+    arr[idx] = merged;
   } else {
     arr.push(Object.assign({ date }, fields));
   }
@@ -242,47 +265,45 @@ function renderClients(){
   STATE.weekStart = start;
   STATE.weekEnd = end;
   const today = todayKey();
-  const yesterday = yesterdayKey();
   const weekStartKey = dateKey(start);
   const weekEndKey = dateKey(end);
 
-  STATE.clients.forEach(client => {
-    const handle = client.handle;
+  STATE.accounts.forEach(account => {
+    const handle = account.handle;
     const dailyEntries = (STATE.daily[handle] || []);
-
-    // Follower count: captured in the moment, dated today.
     const todayEntry = dailyEntries.find(e => e.date === today);
     const followerEntries = dailyEntries.filter(e => typeof e.followers === 'number' && e.date !== today)
       .sort((a,b) => a.date.localeCompare(b.date));
     const prevFollowers = followerEntries.length ? followerEntries[followerEntries.length-1].followers : null;
 
-    // Posted flag: about yesterday specifically.
-    const yesterdayEntry = dailyEntries.find(e => e.date === yesterday);
-    const yesterdayPosted = yesterdayEntry ? !!yesterdayEntry.posted : null; // null = not yet answered
-
     const postsThisWeekSoFar = dailyEntries.filter(e =>
-      e.date >= weekStartKey && e.date <= weekEndKey && e.date !== yesterday && e.posted
+      e.date >= weekStartKey && e.date <= weekEndKey && e.posted
     ).length;
 
     const latestWeekly = latestWeeklyEntry(handle);
-    const currentWeekStartKey = weekStartKey;
-    const weeklyIsCurrentWeek = latestWeekly && latestWeekly.weekStart === currentWeekStartKey;
+    const weeklyIsCurrentWeek = latestWeekly && latestWeekly.weekStart === weekStartKey;
+
+    const icon = account.platform === 'tiktok' ? TT_ICON : IG_ICON;
+    const platformLabel = account.platform === 'tiktok' ? 'TikTok' : 'Instagram';
 
     const card = document.createElement('div');
     card.className = 'client-card';
     card.dataset.handle = handle;
     card.innerHTML = `
-      <h3 class="display">${client.name}</h3>
+      <div class="card-title-row">
+        <h3 class="display">${account.name}</h3>
+        <span class="platform-tag">${icon} ${platformLabel}</span>
+      </div>
       <div class="handle">@${handle}</div>
 
-      <div class="section-label">Daily Update <span class="freq">— report each morning</span></div>
-      <label>Current follower count <span style="text-transform:none;color:var(--text-dim);">(right now, this morning)</span></label>
+      <div class="section-label">Daily Update <span class="freq">— check in as often as you like</span></div>
+      <label>Current follower count <span style="text-transform:none;color:var(--text-dim);">(right now)</span></label>
       <input type="number" class="f-followers" value="${todayEntry && typeof todayEntry.followers === 'number' ? todayEntry.followers : ''}" placeholder="e.g. 4820">
       <div class="prev-note">${prevFollowers !== null ? `Previous saved count: ${prevFollowers.toLocaleString()}` : "No previous count yet — today's delta will show as +0"}</div>
-      <label>Was there a post yesterday?</label>
+      <label>Posted since your last check-in?</label>
       <div class="toggle-row">
-        <div class="toggle-btn f-posted-yes ${yesterdayPosted === true ? 'active' : ''}">Yes</div>
-        <div class="toggle-btn f-posted-no ${yesterdayPosted !== true ? 'active' : ''}">No</div>
+        <div class="toggle-btn f-posted-yes ${todayEntry && todayEntry.posted ? 'active' : ''}">Yes</div>
+        <div class="toggle-btn f-posted-no ${!(todayEntry && todayEntry.posted) ? 'active' : ''}">No</div>
       </div>
 
       <div class="section-label" style="margin-top:18px;">Weekly Engagement <span class="freq">— update once a week</span></div>
@@ -318,6 +339,7 @@ async function loadAll(){
     const clientsResp = await fetch(`https://raw.githubusercontent.com/${STATE.owner}/${STATE.repo}/main/clients.json?t=${Date.now()}`);
     if(!clientsResp.ok) throw new Error('Could not load clients.json — check owner/repo.');
     STATE.clients = await clientsResp.json();
+    STATE.accounts = buildAccountsList(STATE.clients);
 
     const dataResult = await ghGet('data.json');
     STATE.data = dataResult.content;
@@ -332,7 +354,7 @@ async function loadAll(){
     STATE.weekly = weeklyResult.content || {};
     STATE.weeklySha = weeklyResult.sha;
 
-    setStatus($('config-status'), '✓ Connected — ' + STATE.clients.length + ' clients loaded', 'ok');
+    setStatus($('config-status'), '✓ Connected — ' + STATE.accounts.length + ' accounts loaded (' + STATE.clients.length + ' clients)', 'ok');
     renderClients();
   }catch(e){
     setStatus($('config-status'), '✗ ' + e.message, 'err');
@@ -347,7 +369,6 @@ async function saveAll(){
 
   try{
     const today = todayKey();
-    const yesterday = yesterdayKey();
     const currentWeekStartKey = dateKey(STATE.weekStart);
     const currentWeekEndKey = dateKey(STATE.weekEnd);
     const cards = document.querySelectorAll('.client-card');
@@ -355,25 +376,18 @@ async function saveAll(){
 
     cards.forEach(card => {
       const handle = card.dataset.handle;
-      const client = STATE.clients.find(c => c.handle === handle);
+      const account = STATE.accounts.find(a => a.handle === handle);
       const followersRaw = card.querySelector('.f-followers').value.trim();
       const posted = card.querySelector('.f-posted-yes').classList.contains('active');
 
-      // Follower count reflects the moment it's entered, so it's saved under today's date.
       if(followersRaw !== ''){
         const followers = parseInt(followersRaw, 10) || 0;
-        upsertDaily(handle, today, { followers });
+        upsertDaily(handle, today, { followers, posted });
       } else {
+        upsertDaily(handle, today, { posted });
         dailySkipped++;
       }
 
-      // The Yes/No toggle is always answered (defaults to "No"), and it's specifically
-      // about yesterday, so it's saved under yesterday's date — merged into whatever
-      // entry already exists there rather than overwriting it.
-      upsertDaily(handle, yesterday, { posted });
-
-      // How many posts have actually been logged this week so far (used as the
-      // engagement-rate denominator instead of a fixed number).
       const postsThisWeek = (STATE.daily[handle] || []).filter(e =>
         e.date >= currentWeekStartKey && e.date <= currentWeekEndKey && e.posted
       ).length;
@@ -395,15 +409,12 @@ async function saveAll(){
           if(weeklyEntries.length > MAX_WEEKLY_ENTRIES) weeklyEntries.splice(0, weeklyEntries.length - MAX_WEEKLY_ENTRIES);
           STATE.weekly[handle] = weeklyEntries;
         } else if(likesRaw !== '' || commentsRaw !== ''){
-          // Likes/comments were entered but there's no logged post this week yet —
-          // can't compute a meaningful rate, so skip saving it rather than divide by zero.
           weeklySkipped++;
         }
       } else {
         weeklySkipped++;
       }
 
-      // Rebuild data.json (the "this week" live snapshot) from daily.json + weekly.json
       const finalDaily = (STATE.daily[handle] || []).sort((a,b) => a.date.localeCompare(b.date));
       const followerEntries = finalDaily.filter(e => typeof e.followers === 'number');
       const latestFollowerEntry = followerEntries.length ? followerEntries[followerEntries.length-1] : null;
@@ -423,8 +434,9 @@ async function saveAll(){
         const existingRate = STATE.data.accounts[handle] ? STATE.data.accounts[handle].engagementRate : 0;
 
         STATE.data.accounts[handle] = {
-          name: client.name,
+          name: account.name,
           handle,
+          platform: account.platform,
           followers: latestFollowerEntry.followers,
           deltaToday: deltaLatest,
           engagementRate: latestWeekly ? latestWeekly.engagementRate : (existingRate || 0),
@@ -447,8 +459,8 @@ async function saveAll(){
     STATE.weeklySha = weeklyResult.content.sha;
 
     let note = '';
-    if(dailySkipped > 0) note += ` ${dailySkipped} daily update${dailySkipped===1?'':'s'} skipped (blank).`;
-    if(weeklySkipped > 0) note += ` ${weeklySkipped} weekly engagement${weeklySkipped===1?'':'s'} skipped (blank).`;
+    if(dailySkipped > 0) note += ` ${dailySkipped} follower count${dailySkipped===1?'':'s'} left blank.`;
+    if(weeklySkipped > 0) note += ` ${weeklySkipped} weekly engagement${weeklySkipped===1?'':'s'} skipped.`;
 
     setStatus($('save-status'), `✓ Saved!${note} Dashboard updates on next refresh.`, 'ok');
     renderClients();
