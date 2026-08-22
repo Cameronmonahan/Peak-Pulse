@@ -247,6 +247,19 @@
   }
   .platform-badge svg{ width:12px; height:12px; display:block; }
 
+  .platform-tabs{ display:flex; gap:6px; flex-shrink:0; }
+  .platform-tab{
+    width:32px; height:32px; border-radius:9px;
+    background:var(--surface-2);
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer; color:var(--text-dim);
+    transition:background .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .platform-tab svg{ width:15px; height:15px; display:block; }
+  .platform-tab.active{ background:var(--gold); border-color:var(--gold); color:#1a1f30; }
+  .platform-tab:not(.active):hover{ border-color:var(--gold); color:var(--gold-bright); }
+
   .stat-row{ display:flex; align-items:baseline; gap:10px; }
   .followers-count{ font-family:'Bebas Neue'; font-size:40px; letter-spacing:0.02em; color:var(--text); line-height:1; }
   .followers-label{ font-size:11px; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.1em; }
@@ -392,6 +405,22 @@ let DAILY_DATA = {};        // populated from daily.json when available
 let WEEKLY_DATA = {};       // populated from weekly.json when available
 let VIEW_MODE = 'week';     // 'week' | 'month'
 let SELECTED_MONTH = null;  // 'YYYY-MM'
+let PLATFORM_SELECTION = {}; // { [instagramHandle]: 'instagram' | 'tiktok' }
+
+// Which platforms exist for a client, and the account object to use for
+// whichever one is currently selected in that card.
+function clientPlatforms(client){
+  const platforms = [{ key:'instagram', account:{ name:client.name, handle:client.handle, platform:'instagram', seedFollowers:client.seedFollowers } }];
+  if(client.tiktokHandle && !String(client.tiktokHandle).startsWith('REPLACE_')){
+    platforms.push({ key:'tiktok', account:{ name:client.name, handle:client.tiktokHandle, platform:'tiktok', seedFollowers:Math.round(client.seedFollowers*0.6) } });
+  }
+  return platforms;
+}
+function selectedAccountFor(client){
+  const platforms = clientPlatforms(client);
+  const selected = PLATFORM_SELECTION[client.handle] || 'instagram';
+  return platforms.find(p => p.key === selected)?.account || platforms[0].account;
+}
 
 async function tryLoadClientsJson(){
   try{
@@ -641,7 +670,9 @@ function renderWeek(){
   const grid = document.getElementById('grid');
   grid.innerHTML = '';
 
-  ACCOUNTS.forEach(account => {
+  RAW_CLIENTS.forEach(client => {
+    const platforms = clientPlatforms(client);
+    const account = selectedAccountFor(client);
     const data = fetchAccountSnapshot(account, start);
 
     const postedDayIdx = new Set(data.postDates.map(iso => {
@@ -655,6 +686,7 @@ function renderWeek(){
 
     const card = document.createElement('div');
     card.className = 'card';
+    card.dataset.clientHandle = client.handle;
 
     const deltaClass = data.deltaToday > 0 ? '' : 'flat';
     const deltaSign = data.deltaToday > 0 ? '+' : '';
@@ -676,16 +708,20 @@ function renderWeek(){
       </div>`;
     }).join('');
 
+    const tabsHtml = platforms.length > 1
+      ? `<div class="platform-tabs">${platforms.map(p => `
+          <div class="platform-tab ${p.key === account.platform ? 'active' : ''}" data-platform="${p.key}" title="${p.key === 'tiktok' ? 'TikTok' : 'Instagram'}">
+            ${p.key === 'tiktok' ? TT_ICON_SVG : IG_ICON_SVG}
+          </div>`).join('')}</div>`
+      : `<div class="avatar-badge">${initials(client.name)}${platformBadge('instagram')}</div>`;
+
     card.innerHTML = `
       <div class="card-head">
         <div>
-          <div class="client-name display">${account.name}</div>
+          <div class="client-name display">${client.name}</div>
           <div class="client-handle">${account.handle}</div>
         </div>
-        <div class="avatar-badge">
-          ${initials(account.name)}
-          ${platformBadge(account.platform)}
-        </div>
+        ${tabsHtml}
       </div>
 
       <div class="stat-row">
@@ -717,6 +753,14 @@ function renderWeek(){
 
       ${statusHtml}
     `;
+
+    card.querySelectorAll('.platform-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        PLATFORM_SELECTION[client.handle] = tab.dataset.platform;
+        render();
+      });
+    });
+
     grid.appendChild(card);
   });
 }
@@ -726,10 +770,13 @@ function renderMonth(){
   const grid = document.getElementById('grid');
   grid.innerHTML = '';
 
-  ACCOUNTS.forEach(account => {
+  RAW_CLIENTS.forEach(client => {
+    const platforms = clientPlatforms(client);
+    const account = selectedAccountFor(client);
     const stats = computeMonthlyStats(account.handle, SELECTED_MONTH);
     const card = document.createElement('div');
     card.className = 'card';
+    card.dataset.clientHandle = client.handle;
 
     let bodyHtml;
     if(!stats.hasData){
@@ -762,20 +809,32 @@ function renderMonth(){
       `;
     }
 
+    const tabsHtml = platforms.length > 1
+      ? `<div class="platform-tabs">${platforms.map(p => `
+          <div class="platform-tab ${p.key === account.platform ? 'active' : ''}" data-platform="${p.key}" title="${p.key === 'tiktok' ? 'TikTok' : 'Instagram'}">
+            ${p.key === 'tiktok' ? TT_ICON_SVG : IG_ICON_SVG}
+          </div>`).join('')}</div>`
+      : `<div class="avatar-badge">${initials(client.name)}${platformBadge('instagram')}</div>`;
+
     card.innerHTML = `
       <div class="card-head">
         <div>
-          <div class="client-name display">${account.name}</div>
+          <div class="client-name display">${client.name}</div>
           <div class="client-handle">${account.handle}</div>
         </div>
-        <div class="avatar-badge">
-          ${initials(account.name)}
-          ${platformBadge(account.platform)}
-        </div>
+        ${tabsHtml}
       </div>
       <div class="divider" style="margin-bottom:14px;"></div>
       ${bodyHtml}
     `;
+
+    card.querySelectorAll('.platform-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        PLATFORM_SELECTION[client.handle] = tab.dataset.platform;
+        render();
+      });
+    });
+
     grid.appendChild(card);
   });
 }
