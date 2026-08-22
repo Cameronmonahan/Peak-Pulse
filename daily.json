@@ -49,6 +49,11 @@
     },
     {
       "date": "2026-08-21",
+      "followers": 4349,
+      "posted": false
+    },
+    {
+      "date": "2026-08-22",
       "followers": 4349
     }
   ],
@@ -110,7 +115,12 @@
     },
     {
       "date": "2026-08-21",
-      "followers": 915
+      "followers": 915,
+      "posted": true
+    },
+    {
+      "date": "2026-08-22",
+      "followers": 925
     }
   ],
   "marwooddesign": [
@@ -176,7 +186,12 @@
     },
     {
       "date": "2026-08-21",
-      "followers": 8738
+      "followers": 8738,
+      "posted": true
+    },
+    {
+      "date": "2026-08-22",
+      "followers": 8743
     }
   ],
   "ventisalesgroup": [
@@ -243,7 +258,12 @@
     },
     {
       "date": "2026-08-21",
-      "followers": 104
+      "followers": 104,
+      "posted": true
+    },
+    {
+      "date": "2026-08-22",
+      "followers": 105
     }
   ],
   "guide_n_gallop": [
@@ -295,7 +315,12 @@
     },
     {
       "date": "2026-08-21",
-      "followers": 872
+      "followers": 872,
+      "posted": true
+    },
+    {
+      "date": "2026-08-22",
+      "followers": 873
     }
   ],
   "louiehamner": [
@@ -345,7 +370,12 @@
     },
     {
       "date": "2026-08-21",
-      "followers": 2446
+      "followers": 2446,
+      "posted": true
+    },
+    {
+      "date": "2026-08-22",
+      "followers": 2447
     }
   ],
   "peakexposuremedia": [
@@ -375,7 +405,12 @@
     },
     {
       "date": "2026-08-21",
-      "followers": 17610
+      "followers": 17610,
+      "posted": false
+    },
+    {
+      "date": "2026-08-22",
+      "followers": 17607
     }
   ],
   "thenanonature": [
@@ -405,6 +440,11 @@
     },
     {
       "date": "2026-08-21",
+      "followers": 2037,
+      "posted": false
+    },
+    {
+      "date": "2026-08-22",
       "followers": 2037
     }
   ]
