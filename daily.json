@@ -447,5 +447,19 @@
       "date": "2026-08-22",
       "followers": 2037
     }
+  ],
+  "paragon_custom_const": [
+    {
+      "date": "2026-08-22",
+      "followers": 43,
+      "posted": false
+    }
+  ],
+  "the.nano.nature": [
+    {
+      "date": "2026-08-22",
+      "followers": 703,
+      "posted": false
+    }
   ]
 }

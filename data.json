@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T14:30:00.000Z",
+  "generatedAt": "2026-08-22T16:36:25.091Z",
   "weekStart": "2026-08-20T06:00:00.000Z",
   "weekEnd": "2026-08-26T06:00:00.000Z",
   "accounts": {
@@ -84,6 +84,24 @@
       "handle": "thenanonature",
       "platform": "instagram",
       "followers": 2037,
+      "deltaToday": 0,
+      "engagementRate": 0,
+      "postDates": []
+    },
+    "paragon_custom_const": {
+      "name": "Paragon Custom Homes",
+      "handle": "paragon_custom_const",
+      "platform": "tiktok",
+      "followers": 43,
+      "deltaToday": 0,
+      "engagementRate": 0,
+      "postDates": []
+    },
+    "the.nano.nature": {
+      "name": "The Nano Nature",
+      "handle": "the.nano.nature",
+      "platform": "tiktok",
+      "followers": 703,
       "deltaToday": 0,
       "engagementRate": 0,
       "postDates": []
