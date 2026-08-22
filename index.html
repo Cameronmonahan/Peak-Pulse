@@ -360,16 +360,31 @@ document.getElementById('pem-logo').src = "data:image/png;base64,iVBORw0KGgoAAAA
    with the Python fetch script). seedFollowers below is only used for the
    demo-data fallback, so live numbers look plausible before real data loads.
 ------------------------------------------------------ */
-let CLIENTS = [
-  { name:"Paragon Custom Homes", handle:"paragon_custom_construction", seedFollowers:4820 },
+let RAW_CLIENTS = [
+  { name:"Paragon Custom Homes", handle:"paragon_custom_construction", seedFollowers:4820, tiktokHandle:null },
   { name:"Legacy Flooring",       handle:"legacyflooringsd",           seedFollowers:2140 },
   { name:"Marwood Premium Cabinetry", handle:"marwooddesign",          seedFollowers:6390 },
-  { name:"Venti Sales Group",     handle:"ventisalesgroup",            seedFollowers:9870 },
+  { name:"Venti Sales Group",     handle:"ventisalesgroup",            seedFollowers:9870, tiktokHandle:null },
   { name:"Guide N Gallop",        handle:"guide_n_gallop",             seedFollowers:3155 },
-  { name:"Louie Hamner",          handle:"louiehamner",                seedFollowers:15230 },
+  { name:"Louie Hamner",          handle:"louiehamner",                seedFollowers:15230, tiktokHandle:null },
   { name:"Peak Exposure Media",   handle:"peakexposuremedia",          seedFollowers:2670 },
-  { name:"The Nano Nature",       handle:"thenanonature",              seedFollowers:1980 },
+  { name:"The Nano Nature",       handle:"thenanonature",              seedFollowers:1980, tiktokHandle:null },
 ];
+
+// Flattened list: one entry per platform per client. A client with a
+// tiktokHandle set (and not a placeholder) gets a second, separate account.
+let ACCOUNTS = [];
+function buildAccounts(){
+  const list = [];
+  RAW_CLIENTS.forEach(c => {
+    list.push({ name:c.name, handle:c.handle, platform:'instagram', seedFollowers:c.seedFollowers });
+    if(c.tiktokHandle && !String(c.tiktokHandle).startsWith('REPLACE_')){
+      list.push({ name:c.name, handle:c.tiktokHandle, platform:'tiktok', seedFollowers: Math.round(c.seedFollowers*0.6) });
+    }
+  });
+  ACCOUNTS = list;
+}
+buildAccounts();
 
 let LIVE_DATA = null;       // populated from data.json when available
 let LIVE_MODE = false;
@@ -385,10 +400,16 @@ async function tryLoadClientsJson(){
     const json = await resp.json();
     if(Array.isArray(json) && json.length){
       // keep existing seedFollowers if a handle matches, for a smoother demo fallback
-      CLIENTS = json.map(c => {
-        const existing = CLIENTS.find(x => x.handle === c.handle);
-        return { name:c.name, handle:c.handle, seedFollowers: existing ? existing.seedFollowers : 2000 };
+      RAW_CLIENTS = json.map(c => {
+        const existing = RAW_CLIENTS.find(x => x.handle === c.handle);
+        return {
+          name:c.name,
+          handle:c.handle,
+          tiktokHandle: c.tiktokHandle || null,
+          seedFollowers: existing ? existing.seedFollowers : 2000
+        };
       });
+      buildAccounts();
     }
   }catch(e){ /* fine — fall back to the hardcoded list above */ }
 }
@@ -597,6 +618,21 @@ function initials(name){
   return name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
 }
 
+const IG_ICON_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="#c9a876" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/>
+  <circle cx="12" cy="12" r="4.3"/>
+  <circle cx="17.3" cy="6.7" r="0.6" fill="#c9a876" stroke="none"/>
+</svg>`;
+const TT_ICON_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="#c9a876" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14 3v10.5a3.5 3.5 0 1 1-3.5-3.5"/>
+  <path d="M14 3c0 3 2.2 5 5 5"/>
+</svg>`;
+function platformBadge(platform){
+  const icon = platform === 'tiktok' ? TT_ICON_SVG : IG_ICON_SVG;
+  const label = platform === 'tiktok' ? 'TikTok' : 'Instagram';
+  return `<div class="platform-badge" title="${label}">${icon}</div>`;
+}
+
 function renderWeek(){
   document.getElementById('week-range-row').style.display = '';
   const { start, end } = getPostWeekRange();
@@ -605,8 +641,8 @@ function renderWeek(){
   const grid = document.getElementById('grid');
   grid.innerHTML = '';
 
-  CLIENTS.forEach(client => {
-    const data = fetchAccountSnapshot(client, start);
+  ACCOUNTS.forEach(account => {
+    const data = fetchAccountSnapshot(account, start);
 
     const postedDayIdx = new Set(data.postDates.map(iso => {
       const d = new Date(iso);
@@ -643,18 +679,12 @@ function renderWeek(){
     card.innerHTML = `
       <div class="card-head">
         <div>
-          <div class="client-name display">${client.name}</div>
-          <div class="client-handle">${client.handle}</div>
+          <div class="client-name display">${account.name}</div>
+          <div class="client-handle">${account.handle}</div>
         </div>
         <div class="avatar-badge">
-          ${initials(client.name)}
-          <div class="platform-badge" title="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#c9a876" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/>
-              <circle cx="12" cy="12" r="4.3"/>
-              <circle cx="17.3" cy="6.7" r="0.6" fill="#c9a876" stroke="none"/>
-            </svg>
-          </div>
+          ${initials(account.name)}
+          ${platformBadge(account.platform)}
         </div>
       </div>
 
@@ -696,8 +726,8 @@ function renderMonth(){
   const grid = document.getElementById('grid');
   grid.innerHTML = '';
 
-  CLIENTS.forEach(client => {
-    const stats = computeMonthlyStats(client.handle, SELECTED_MONTH);
+  ACCOUNTS.forEach(account => {
+    const stats = computeMonthlyStats(account.handle, SELECTED_MONTH);
     const card = document.createElement('div');
     card.className = 'card';
 
@@ -735,18 +765,12 @@ function renderMonth(){
     card.innerHTML = `
       <div class="card-head">
         <div>
-          <div class="client-name display">${client.name}</div>
-          <div class="client-handle">${client.handle}</div>
+          <div class="client-name display">${account.name}</div>
+          <div class="client-handle">${account.handle}</div>
         </div>
         <div class="avatar-badge">
-          ${initials(client.name)}
-          <div class="platform-badge" title="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#c9a876" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/>
-              <circle cx="12" cy="12" r="4.3"/>
-              <circle cx="17.3" cy="6.7" r="0.6" fill="#c9a876" stroke="none"/>
-            </svg>
-          </div>
+          ${initials(account.name)}
+          ${platformBadge(account.platform)}
         </div>
       </div>
       <div class="divider" style="margin-bottom:14px;"></div>
