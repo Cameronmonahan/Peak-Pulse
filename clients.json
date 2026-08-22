@@ -1,10 +1,10 @@
 [
-  { "name": "Paragon Custom Homes",        "handle": "paragon_custom_construction" },
+  { "name": "Paragon Custom Homes",        "handle": "paragon_custom_construction", "tiktokHandle": "Paragon_Custom_const" },
   { "name": "Legacy Flooring",             "handle": "legacyflooringsd" },
   { "name": "Marwood Premium Cabinetry",   "handle": "marwooddesign" },
-  { "name": "Venti Sales Group",           "handle": "ventisalesgroup" },
+  { "name": "Venti Sales Group",           "handle": "ventisalesgroup", "tiktokHandle": "REPLACE_venti_tiktok" },
   { "name": "Guide N Gallop",              "handle": "guide_n_gallop" },
-  { "name": "Louie Hamner",                "handle": "louiehamner" },
+  { "name": "Louie Hamner",                "handle": "louiehamner", "tiktokHandle": "REPLACE_louie_tiktok" },
   { "name": "Peak Exposure Media",         "handle": "peakexposuremedia" },
-  { "name": "The Nano Nature",             "handle": "thenanonature" }
+  { "name": "The Nano Nature",             "handle": "thenanonature", "tiktokHandle": "The_nano_Nature" }
 ]
