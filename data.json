@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T14:30:00+00:00",
+  "generatedAt": "2026-08-23T15:36:22Z",
   "weekStart": "2026-08-20T06:00:00.000Z",
   "weekEnd": "2026-08-26T06:00:00.000Z",
   "accounts": {
@@ -11,7 +11,8 @@
       "deltaToday": -2,
       "engagementRate": 0.27,
       "postDates": [
-        "2026-08-20T06:00:00.000Z"
+        "2026-08-20T06:00:00.000Z",
+        "2026-08-23T06:00:00.000Z"
       ]
     },
     "paragon_custom_const": {
