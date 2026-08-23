@@ -55,6 +55,10 @@
     {
       "date": "2026-08-22",
       "followers": 4349
+    },
+    {
+      "date": "2026-08-23",
+      "followers": 4347
     }
   ],
   "legacyflooringsd": [
@@ -121,6 +125,10 @@
     {
       "date": "2026-08-22",
       "followers": 925
+    },
+    {
+      "date": "2026-08-23",
+      "followers": 921
     }
   ],
   "marwooddesign": [
@@ -192,6 +200,10 @@
     {
       "date": "2026-08-22",
       "followers": 8743
+    },
+    {
+      "date": "2026-08-23",
+      "followers": 8742
     }
   ],
   "ventisalesgroup": [
@@ -264,6 +276,10 @@
     {
       "date": "2026-08-22",
       "followers": 105
+    },
+    {
+      "date": "2026-08-23",
+      "followers": 105
     }
   ],
   "guide_n_gallop": [
@@ -321,6 +337,10 @@
     {
       "date": "2026-08-22",
       "followers": 873
+    },
+    {
+      "date": "2026-08-23",
+      "followers": 873
     }
   ],
   "louiehamner": [
@@ -375,6 +395,10 @@
     },
     {
       "date": "2026-08-22",
+      "followers": 2447
+    },
+    {
+      "date": "2026-08-23",
       "followers": 2447
     }
   ],
@@ -446,6 +470,10 @@
     {
       "date": "2026-08-22",
       "followers": 2037
+    },
+    {
+      "date": "2026-08-23",
+      "followers": 2041
     }
   ],
   "paragon_custom_const": [
@@ -453,6 +481,10 @@
       "date": "2026-08-22",
       "followers": 43,
       "posted": false
+    },
+    {
+      "date": "2026-08-23",
+      "followers": 43
     }
   ],
   "the.nano.nature": [
@@ -460,6 +492,10 @@
       "date": "2026-08-22",
       "followers": 703,
       "posted": false
+    },
+    {
+      "date": "2026-08-23",
+      "followers": 706
     }
   ]
 }
