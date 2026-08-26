@@ -7,9 +7,9 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4347,
-      "deltaToday": 2,
-      "engagementRate": 0.27,
+      "followers": 4348,
+      "deltaToday": 3,
+      "engagementRate": 0.37,
       "postDates": []
     },
     "paragon_custom_const": {
@@ -26,7 +26,7 @@
       "handle": "legacyflooringsd",
       "platform": "instagram",
       "followers": 968,
-      "deltaToday": 1,
+      "deltaToday": 0,
       "engagementRate": 0.59,
       "postDates": []
     },
@@ -35,7 +35,7 @@
       "handle": "marwooddesign",
       "platform": "instagram",
       "followers": 8739,
-      "deltaToday": 0,
+      "deltaToday": -1,
       "engagementRate": 0.42,
       "postDates": []
     },
@@ -43,19 +43,21 @@
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
       "platform": "instagram",
-      "followers": 104,
-      "deltaToday": 0,
-      "engagementRate": 13.37,
+      "followers": 105,
+      "deltaToday": 1,
+      "engagementRate": 6.67,
       "postDates": []
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 874,
-      "deltaToday": 0,
-      "engagementRate": 2.29,
-      "postDates": []
+      "followers": 875,
+      "deltaToday": 1,
+      "engagementRate": 3.62,
+      "postDates": [
+        "2026-08-27T06:00:00.000Z"
+      ]
     },
     "louiehamner": {
       "name": "Louie Hamner",
@@ -63,8 +65,10 @@
       "platform": "instagram",
       "followers": 2457,
       "deltaToday": 4,
-      "engagementRate": 0.55,
-      "postDates": []
+      "engagementRate": 1.51,
+      "postDates": [
+        "2026-08-27T06:00:00.000Z"
+      ]
     },
     "peakexposuremedia": {
       "name": "Peak Exposure Media",

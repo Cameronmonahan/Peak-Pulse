@@ -50,7 +50,7 @@
     {
       "date": "2026-08-21",
       "followers": 4349,
-      "posted": false
+      "posted": true
     },
     {
       "date": "2026-08-22",
@@ -62,8 +62,13 @@
       "posted": true
     },
     {
+      "date": "2026-08-24",
+      "posted": true
+    },
+    {
       "date": "2026-08-25",
-      "followers": 4343
+      "followers": 4343,
+      "posted": true
     },
     {
       "date": "2026-08-26",
@@ -71,7 +76,7 @@
     },
     {
       "date": "2026-08-27",
-      "followers": 4347
+      "followers": 4348
     }
   ],
   "legacyflooringsd": [
@@ -144,12 +149,18 @@
       "followers": 921
     },
     {
+      "date": "2026-08-24",
+      "posted": true
+    },
+    {
       "date": "2026-08-25",
-      "followers": 957
+      "followers": 957,
+      "posted": true
     },
     {
       "date": "2026-08-26",
-      "followers": 967
+      "followers": 968,
+      "posted": true
     },
     {
       "date": "2026-08-27",
@@ -238,11 +249,12 @@
     },
     {
       "date": "2026-08-25",
-      "followers": 8740
+      "followers": 8740,
+      "posted": true
     },
     {
       "date": "2026-08-26",
-      "followers": 8739
+      "followers": 8740
     },
     {
       "date": "2026-08-27",
@@ -318,7 +330,8 @@
     },
     {
       "date": "2026-08-22",
-      "followers": 105
+      "followers": 105,
+      "posted": true
     },
     {
       "date": "2026-08-23",
@@ -332,7 +345,8 @@
     },
     {
       "date": "2026-08-25",
-      "followers": 104
+      "followers": 104,
+      "posted": true
     },
     {
       "date": "2026-08-26",
@@ -340,7 +354,7 @@
     },
     {
       "date": "2026-08-27",
-      "followers": 104
+      "followers": 105
     }
   ],
   "guide_n_gallop": [
@@ -401,7 +415,12 @@
     },
     {
       "date": "2026-08-23",
-      "followers": 873
+      "followers": 873,
+      "posted": true
+    },
+    {
+      "date": "2026-08-24",
+      "posted": true
     },
     {
       "date": "2026-08-25",
@@ -413,7 +432,8 @@
     },
     {
       "date": "2026-08-27",
-      "followers": 874
+      "followers": 875,
+      "posted": true
     }
   ],
   "louiehamner": [
@@ -478,7 +498,7 @@
     {
       "date": "2026-08-24",
       "followers": 2451,
-      "posted": false
+      "posted": true
     },
     {
       "date": "2026-08-25",
@@ -490,7 +510,8 @@
     },
     {
       "date": "2026-08-27",
-      "followers": 2457
+      "followers": 2457,
+      "posted": true
     }
   ],
   "peakexposuremedia": [

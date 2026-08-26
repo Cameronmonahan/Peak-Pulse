@@ -11,6 +11,10 @@
     {
       "weekStart": "2026-08-13",
       "engagementRate": 0.27
+    },
+    {
+      "weekStart": "2026-08-20",
+      "engagementRate": 0.37
     }
   ],
   "legacyflooringsd": [
@@ -53,6 +57,10 @@
     {
       "weekStart": "2026-08-13",
       "engagementRate": 13.37
+    },
+    {
+      "weekStart": "2026-08-20",
+      "engagementRate": 6.67
     }
   ],
   "guide_n_gallop": [
@@ -67,6 +75,10 @@
     {
       "weekStart": "2026-08-13",
       "engagementRate": 2.29
+    },
+    {
+      "weekStart": "2026-08-20",
+      "engagementRate": 3.62
     }
   ],
   "louiehamner": [
@@ -81,6 +93,10 @@
     {
       "weekStart": "2026-08-13",
       "engagementRate": 0.55
+    },
+    {
+      "weekStart": "2026-08-20",
+      "engagementRate": 1.51
     }
   ]
 }
