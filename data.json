@@ -1,19 +1,16 @@
 {
-  "generatedAt": "2026-08-26T14:30:00.000Z",
-  "weekStart": "2026-08-20T06:00:00.000Z",
-  "weekEnd": "2026-08-26T06:00:00.000Z",
+  "generatedAt": "2026-08-27T14:30:00.000Z",
+  "weekStart": "2026-08-27T06:00:00.000Z",
+  "weekEnd": "2026-09-02T06:00:00.000Z",
   "accounts": {
     "paragon_custom_construction": {
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4345,
+      "followers": 4347,
       "deltaToday": 2,
       "engagementRate": 0.27,
-      "postDates": [
-        "2026-08-20T06:00:00.000Z",
-        "2026-08-23T06:00:00.000Z"
-      ]
+      "postDates": []
     },
     "paragon_custom_const": {
       "name": "Paragon Custom Homes",
@@ -28,25 +25,19 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 967,
-      "deltaToday": 10,
+      "followers": 968,
+      "deltaToday": 1,
       "engagementRate": 0.59,
-      "postDates": [
-        "2026-08-20T06:00:00.000Z",
-        "2026-08-21T06:00:00.000Z"
-      ]
+      "postDates": []
     },
     "marwooddesign": {
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
       "followers": 8739,
-      "deltaToday": -1,
+      "deltaToday": 0,
       "engagementRate": 0.42,
-      "postDates": [
-        "2026-08-21T06:00:00.000Z",
-        "2026-08-23T06:00:00.000Z"
-      ]
+      "postDates": []
     },
     "ventisalesgroup": {
       "name": "Venti Sales Group",
@@ -55,9 +46,7 @@
       "followers": 104,
       "deltaToday": 0,
       "engagementRate": 13.37,
-      "postDates": [
-        "2026-08-21T06:00:00.000Z"
-      ]
+      "postDates": []
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
@@ -66,21 +55,16 @@
       "followers": 874,
       "deltaToday": 0,
       "engagementRate": 2.29,
-      "postDates": [
-        "2026-08-21T06:00:00.000Z"
-      ]
+      "postDates": []
     },
     "louiehamner": {
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2453,
-      "deltaToday": -1,
+      "followers": 2457,
+      "deltaToday": 4,
       "engagementRate": 0.55,
-      "postDates": [
-        "2026-08-21T06:00:00.000Z",
-        "2026-08-23T06:00:00.000Z"
-      ]
+      "postDates": []
     },
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
@@ -95,8 +79,8 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 2039,
-      "deltaToday": 1,
+      "followers": 2036,
+      "deltaToday": -3,
       "engagementRate": 0,
       "postDates": []
     },
@@ -105,7 +89,7 @@
       "handle": "the.nano.nature",
       "platform": "tiktok",
       "followers": 719,
-      "deltaToday": 5,
+      "deltaToday": 0,
       "engagementRate": 0,
       "postDates": []
     }
