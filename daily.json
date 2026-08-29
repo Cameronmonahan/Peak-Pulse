@@ -270,6 +270,11 @@
     },
     {
       "date": "2026-08-28",
+      "followers": 8741,
+      "posted": false
+    },
+    {
+      "date": "2026-08-29",
       "followers": 8741
     }
   ],
@@ -370,6 +375,11 @@
     },
     {
       "date": "2026-08-28",
+      "followers": 104,
+      "posted": true
+    },
+    {
+      "date": "2026-08-29",
       "followers": 104
     }
   ],
@@ -535,7 +545,12 @@
     },
     {
       "date": "2026-08-28",
-      "followers": 2457
+      "followers": 2457,
+      "posted": false
+    },
+    {
+      "date": "2026-08-29",
+      "followers": 2456
     }
   ],
   "peakexposuremedia": [
@@ -584,6 +599,14 @@
     {
       "date": "2026-08-25",
       "followers": 17605
+    },
+    {
+      "date": "2026-08-28",
+      "posted": false
+    },
+    {
+      "date": "2026-08-29",
+      "followers": 17602
     }
   ],
   "thenanonature": [
@@ -644,6 +667,11 @@
     },
     {
       "date": "2026-08-28",
+      "followers": 2033,
+      "posted": false
+    },
+    {
+      "date": "2026-08-29",
       "followers": 2033
     }
   ],
@@ -677,6 +705,10 @@
     {
       "date": "2026-08-28",
       "followers": 43
+    },
+    {
+      "date": "2026-08-29",
+      "followers": 44
     }
   ],
   "the.nano.nature": [
@@ -708,6 +740,10 @@
     },
     {
       "date": "2026-08-28",
+      "followers": 723
+    },
+    {
+      "date": "2026-08-29",
       "followers": 723
     }
   ]

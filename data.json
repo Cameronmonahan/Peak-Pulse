@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T14:30:00.000Z",
+  "generatedAt": "2026-08-29T14:30:00.000Z",
   "weekStart": "2026-08-27T06:00:00.000Z",
   "weekEnd": "2026-09-02T06:00:00.000Z",
   "accounts": {
@@ -16,8 +16,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_const",
       "platform": "tiktok",
-      "followers": 43,
-      "deltaToday": 0,
+      "followers": 44,
+      "deltaToday": 1,
       "engagementRate": 0,
       "postDates": []
     },
@@ -35,7 +35,7 @@
       "handle": "marwooddesign",
       "platform": "instagram",
       "followers": 8741,
-      "deltaToday": 2,
+      "deltaToday": 0,
       "engagementRate": 0.42,
       "postDates": []
     },
@@ -44,9 +44,11 @@
       "handle": "ventisalesgroup",
       "platform": "instagram",
       "followers": 104,
-      "deltaToday": -1,
+      "deltaToday": 0,
       "engagementRate": 6.67,
-      "postDates": []
+      "postDates": [
+        "2026-08-28T06:00:00.000Z"
+      ]
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
@@ -63,8 +65,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2457,
-      "deltaToday": 0,
+      "followers": 2456,
+      "deltaToday": -1,
       "engagementRate": 1.51,
       "postDates": [
         "2026-08-27T06:00:00.000Z"
@@ -74,8 +76,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17605,
-      "deltaToday": 0,
+      "followers": 17602,
+      "deltaToday": -3,
       "engagementRate": 0,
       "postDates": []
     },
@@ -84,7 +86,7 @@
       "handle": "thenanonature",
       "platform": "instagram",
       "followers": 2033,
-      "deltaToday": -3,
+      "deltaToday": 0,
       "engagementRate": 0,
       "postDates": []
     },
@@ -93,7 +95,7 @@
       "handle": "the.nano.nature",
       "platform": "tiktok",
       "followers": 723,
-      "deltaToday": 4,
+      "deltaToday": 0,
       "engagementRate": 0,
       "postDates": []
     }
