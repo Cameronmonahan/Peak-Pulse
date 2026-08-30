@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T14:30:00.000Z",
+  "generatedAt": "2026-08-30T14:30:00.000Z",
   "weekStart": "2026-08-27T06:00:00.000Z",
   "weekEnd": "2026-09-02T06:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4348,
-      "deltaToday": 0,
+      "followers": 4345,
+      "deltaToday": -3,
       "engagementRate": 0.37,
       "postDates": []
     },
@@ -17,7 +17,7 @@
       "handle": "paragon_custom_const",
       "platform": "tiktok",
       "followers": 44,
-      "deltaToday": 1,
+      "deltaToday": 0,
       "engagementRate": 0,
       "postDates": []
     },
@@ -25,8 +25,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 969,
-      "deltaToday": 1,
+      "followers": 972,
+      "deltaToday": 3,
       "engagementRate": 0.59,
       "postDates": []
     },
@@ -37,7 +37,9 @@
       "followers": 8741,
       "deltaToday": 0,
       "engagementRate": 0.42,
-      "postDates": []
+      "postDates": [
+        "2026-08-29T06:00:00.000Z"
+      ]
     },
     "ventisalesgroup": {
       "name": "Venti Sales Group",
@@ -47,7 +49,8 @@
       "deltaToday": 0,
       "engagementRate": 6.67,
       "postDates": [
-        "2026-08-28T06:00:00.000Z"
+        "2026-08-28T06:00:00.000Z",
+        "2026-08-29T06:00:00.000Z"
       ]
     },
     "guide_n_gallop": {
@@ -55,7 +58,7 @@
       "handle": "guide_n_gallop",
       "platform": "instagram",
       "followers": 874,
-      "deltaToday": -1,
+      "deltaToday": 0,
       "engagementRate": 3.62,
       "postDates": [
         "2026-08-27T06:00:00.000Z"
@@ -65,19 +68,20 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2456,
-      "deltaToday": -1,
+      "followers": 2458,
+      "deltaToday": 2,
       "engagementRate": 1.51,
       "postDates": [
-        "2026-08-27T06:00:00.000Z"
+        "2026-08-27T06:00:00.000Z",
+        "2026-08-29T06:00:00.000Z"
       ]
     },
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17602,
-      "deltaToday": -3,
+      "followers": 17601,
+      "deltaToday": -1,
       "engagementRate": 0,
       "postDates": []
     },
@@ -94,8 +98,8 @@
       "name": "The Nano Nature",
       "handle": "the.nano.nature",
       "platform": "tiktok",
-      "followers": 723,
-      "deltaToday": 0,
+      "followers": 728,
+      "deltaToday": 5,
       "engagementRate": 0,
       "postDates": []
     }

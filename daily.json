@@ -81,6 +81,10 @@
     {
       "date": "2026-08-28",
       "followers": 4348
+    },
+    {
+      "date": "2026-08-30",
+      "followers": 4345
     }
   ],
   "legacyflooringsd": [
@@ -173,6 +177,10 @@
     {
       "date": "2026-08-28",
       "followers": 969
+    },
+    {
+      "date": "2026-08-30",
+      "followers": 972
     }
   ],
   "marwooddesign": [
@@ -275,6 +283,11 @@
     },
     {
       "date": "2026-08-29",
+      "followers": 8741,
+      "posted": true
+    },
+    {
+      "date": "2026-08-30",
       "followers": 8741
     }
   ],
@@ -380,6 +393,11 @@
     },
     {
       "date": "2026-08-29",
+      "followers": 104,
+      "posted": true
+    },
+    {
+      "date": "2026-08-30",
       "followers": 104
     }
   ],
@@ -463,6 +481,10 @@
     },
     {
       "date": "2026-08-28",
+      "followers": 874
+    },
+    {
+      "date": "2026-08-30",
       "followers": 874
     }
   ],
@@ -550,7 +572,12 @@
     },
     {
       "date": "2026-08-29",
-      "followers": 2456
+      "followers": 2456,
+      "posted": true
+    },
+    {
+      "date": "2026-08-30",
+      "followers": 2458
     }
   ],
   "peakexposuremedia": [
@@ -606,7 +633,12 @@
     },
     {
       "date": "2026-08-29",
-      "followers": 17602
+      "followers": 17602,
+      "posted": false
+    },
+    {
+      "date": "2026-08-30",
+      "followers": 17601
     }
   ],
   "thenanonature": [
@@ -672,6 +704,11 @@
     },
     {
       "date": "2026-08-29",
+      "followers": 2033,
+      "posted": false
+    },
+    {
+      "date": "2026-08-30",
       "followers": 2033
     }
   ],
@@ -709,6 +746,10 @@
     {
       "date": "2026-08-29",
       "followers": 44
+    },
+    {
+      "date": "2026-08-30",
+      "followers": 44
     }
   ],
   "the.nano.nature": [
@@ -745,6 +786,10 @@
     {
       "date": "2026-08-29",
       "followers": 723
+    },
+    {
+      "date": "2026-08-30",
+      "followers": 728
     }
   ]
 }
