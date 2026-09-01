@@ -64,7 +64,7 @@
     {
       "date": "2026-08-24",
       "posted": true,
-      "followers": 4354
+      "followers": 4355
     },
     {
       "date": "2026-08-25",
@@ -73,12 +73,12 @@
     },
     {
       "date": "2026-08-26",
-      "followers": 4357,
+      "followers": 4360,
       "posted": true
     },
     {
       "date": "2026-08-27",
-      "followers": 4358,
+      "followers": 4360,
       "posted": true
     },
     {
@@ -89,17 +89,22 @@
     {
       "date": "2026-08-29",
       "posted": true,
-      "followers": 4361
+      "followers": 4364
     },
     {
       "date": "2026-08-30",
-      "followers": 4361,
+      "followers": 4367,
       "posted": true
     },
     {
       "date": "2026-08-31",
       "posted": false,
-      "followers": 4361
+      "followers": 4367
+    },
+    {
+      "date": "2026-09-01",
+      "posted": false,
+      "followers": 4367
     }
   ],
   "legacyflooringsd": [
@@ -175,42 +180,47 @@
     {
       "date": "2026-08-24",
       "posted": true,
-      "followers": 936
+      "followers": 945
     },
     {
       "date": "2026-08-25",
-      "followers": 936,
+      "followers": 946,
       "posted": true
     },
     {
       "date": "2026-08-26",
-      "followers": 937,
+      "followers": 946,
       "posted": true
     },
     {
       "date": "2026-08-27",
-      "followers": 942,
+      "followers": 947,
       "posted": true
     },
     {
       "date": "2026-08-28",
-      "followers": 953,
+      "followers": 952,
       "posted": true
     },
     {
       "date": "2026-08-29",
       "posted": false,
-      "followers": 953
+      "followers": 963
     },
     {
       "date": "2026-08-30",
-      "followers": 953,
+      "followers": 976,
       "posted": false
     },
     {
       "date": "2026-08-31",
       "posted": true,
-      "followers": 953
+      "followers": 976
+    },
+    {
+      "date": "2026-09-01",
+      "posted": false,
+      "followers": 976
     }
   ],
   "marwooddesign": [
@@ -290,12 +300,12 @@
     },
     {
       "date": "2026-08-24",
-      "followers": 8749,
+      "followers": 8747,
       "posted": true
     },
     {
       "date": "2026-08-25",
-      "followers": 8753,
+      "followers": 8751,
       "posted": true
     },
     {
@@ -310,23 +320,28 @@
     },
     {
       "date": "2026-08-28",
-      "followers": 8758,
+      "followers": 8759,
       "posted": true
     },
     {
       "date": "2026-08-29",
-      "followers": 8758,
+      "followers": 8760,
       "posted": true
     },
     {
       "date": "2026-08-30",
-      "followers": 8758,
+      "followers": 8762,
       "posted": false
     },
     {
       "date": "2026-08-31",
       "posted": true,
-      "followers": 8758
+      "followers": 8762
+    },
+    {
+      "date": "2026-09-01",
+      "posted": false,
+      "followers": 8762
     }
   ],
   "ventisalesgroup": [
@@ -413,7 +428,7 @@
     },
     {
       "date": "2026-08-25",
-      "followers": 106,
+      "followers": 105,
       "posted": true
     },
     {
@@ -444,6 +459,11 @@
     {
       "date": "2026-08-31",
       "posted": true,
+      "followers": 106
+    },
+    {
+      "date": "2026-09-01",
+      "posted": false,
       "followers": 106
     }
   ],
@@ -520,12 +540,12 @@
     },
     {
       "date": "2026-08-26",
-      "followers": 874,
+      "followers": 873,
       "posted": true
     },
     {
       "date": "2026-08-27",
-      "followers": 875,
+      "followers": 874,
       "posted": true
     },
     {
@@ -546,6 +566,11 @@
     {
       "date": "2026-08-31",
       "posted": true,
+      "followers": 875
+    },
+    {
+      "date": "2026-09-01",
+      "posted": false,
       "followers": 875
     }
   ],
@@ -610,7 +635,7 @@
     },
     {
       "date": "2026-08-24",
-      "followers": 2454,
+      "followers": 2453,
       "posted": true
     },
     {
@@ -620,33 +645,38 @@
     },
     {
       "date": "2026-08-26",
-      "followers": 2457,
+      "followers": 2460,
       "posted": true
     },
     {
       "date": "2026-08-27",
-      "followers": 2457,
+      "followers": 2460,
       "posted": true
     },
     {
       "date": "2026-08-28",
-      "followers": 2459,
+      "followers": 2460,
       "posted": true
     },
     {
       "date": "2026-08-29",
-      "followers": 2459,
+      "followers": 2462,
       "posted": true
     },
     {
       "date": "2026-08-30",
-      "followers": 2459,
+      "followers": 2463,
       "posted": true
     },
     {
       "date": "2026-08-31",
       "posted": true,
-      "followers": 2459
+      "followers": 2463
+    },
+    {
+      "date": "2026-09-01",
+      "posted": false,
+      "followers": 2463
     }
   ],
   "peakexposuremedia": [
@@ -690,18 +720,18 @@
     },
     {
       "date": "2026-08-24",
-      "followers": 17610,
+      "followers": 17609,
       "posted": false
     },
     {
       "date": "2026-08-25",
-      "followers": 17610,
+      "followers": 17611,
       "posted": false
     },
     {
       "date": "2026-08-26",
       "posted": false,
-      "followers": 17612
+      "followers": 17611
     },
     {
       "date": "2026-08-27",
@@ -711,22 +741,27 @@
     {
       "date": "2026-08-28",
       "posted": false,
-      "followers": 17615
+      "followers": 17614
     },
     {
       "date": "2026-08-29",
-      "followers": 17615,
+      "followers": 17616,
       "posted": false
     },
     {
       "date": "2026-08-30",
-      "followers": 17615,
+      "followers": 17619,
       "posted": false
     },
     {
       "date": "2026-08-31",
       "posted": false,
-      "followers": 17615
+      "followers": 17619
+    },
+    {
+      "date": "2026-09-01",
+      "posted": false,
+      "followers": 17619
     }
   ],
   "thenanonature": [
@@ -770,43 +805,48 @@
     },
     {
       "date": "2026-08-24",
-      "followers": 2038,
+      "followers": 2039,
       "posted": false
     },
     {
       "date": "2026-08-25",
-      "followers": 2038,
+      "followers": 2039,
       "posted": false
     },
     {
       "date": "2026-08-26",
-      "followers": 2038,
+      "followers": 2039,
       "posted": false
     },
     {
       "date": "2026-08-27",
-      "followers": 2038,
+      "followers": 2039,
       "posted": false
     },
     {
       "date": "2026-08-28",
-      "followers": 2038,
+      "followers": 2039,
       "posted": false
     },
     {
       "date": "2026-08-29",
-      "followers": 2038,
+      "followers": 2039,
       "posted": false
     },
     {
       "date": "2026-08-30",
-      "followers": 2038,
+      "followers": 2040,
       "posted": false
     },
     {
       "date": "2026-08-31",
       "posted": false,
-      "followers": 2038
+      "followers": 2040
+    },
+    {
+      "date": "2026-09-01",
+      "posted": false,
+      "followers": 2040
     }
   ],
   "paragon_custom_const": [

@@ -18,7 +18,7 @@
     },
     {
       "weekStart": "2026-08-27",
-      "engagementRate": 0.49
+      "engagementRate": 0.61
     }
   ],
   "legacyflooringsd": [
@@ -36,7 +36,7 @@
     },
     {
       "weekStart": "2026-08-27",
-      "engagementRate": 1.94
+      "engagementRate": 1.91
     }
   ],
   "marwooddesign": [
@@ -54,7 +54,7 @@
     },
     {
       "weekStart": "2026-08-27",
-      "engagementRate": 0.23
+      "engagementRate": 0.22
     }
   ],
   "ventisalesgroup": [
@@ -76,7 +76,7 @@
     },
     {
       "weekStart": "2026-08-27",
-      "engagementRate": 7.55
+      "engagementRate": 5.97
     }
   ],
   "guide_n_gallop": [
@@ -98,7 +98,7 @@
     },
     {
       "weekStart": "2026-08-27",
-      "engagementRate": 3.49
+      "engagementRate": 3.43
     }
   ],
   "louiehamner": [
@@ -120,7 +120,7 @@
     },
     {
       "weekStart": "2026-08-27",
-      "engagementRate": 1.26
+      "engagementRate": 1.45
     }
   ]
 }
