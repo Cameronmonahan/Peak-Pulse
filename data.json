@@ -1,16 +1,18 @@
 {
-  "generatedAt": "2026-09-01T03:01:29.974938+00:00",
-  "weekStart": "2026-08-27T00:00:00+00:00",
-  "weekEnd": "2026-09-02T23:59:59+00:00",
+  "generatedAt": "2026-08-31T21:41:49.144444-06:00",
+  "weekStart": "2026-08-27T00:00:00-06:00",
+  "weekEnd": "2026-09-02T23:59:59-06:00",
   "accounts": {
     "paragon_custom_construction": {
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
-      "followers": 4359,
+      "followers": 4361,
       "deltaToday": 0,
       "engagementRate": 0.49,
       "postDates": [
+        "2026-08-27T00:00:00.000Z",
         "2026-08-28T00:00:00.000Z",
+        "2026-08-29T00:00:00.000Z",
         "2026-08-30T00:00:00.000Z"
       ]
     },
@@ -26,23 +28,26 @@
     "legacyflooringsd": {
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
-      "followers": 949,
+      "followers": 953,
       "deltaToday": 0,
-      "engagementRate": 1.95,
+      "engagementRate": 1.94,
       "postDates": [
         "2026-08-27T00:00:00.000Z",
-        "2026-08-28T00:00:00.000Z"
+        "2026-08-28T00:00:00.000Z",
+        "2026-08-31T00:00:00.000Z"
       ]
     },
     "marwooddesign": {
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
-      "followers": 8757,
+      "followers": 8758,
       "deltaToday": 0,
       "engagementRate": 0.23,
       "postDates": [
         "2026-08-27T00:00:00.000Z",
-        "2026-08-29T00:00:00.000Z"
+        "2026-08-28T00:00:00.000Z",
+        "2026-08-29T00:00:00.000Z",
+        "2026-08-31T00:00:00.000Z"
       ]
     },
     "ventisalesgroup": {
@@ -52,8 +57,10 @@
       "deltaToday": 0,
       "engagementRate": 7.55,
       "postDates": [
+        "2026-08-27T00:00:00.000Z",
         "2026-08-28T00:00:00.000Z",
-        "2026-08-29T00:00:00.000Z"
+        "2026-08-29T00:00:00.000Z",
+        "2026-08-31T00:00:00.000Z"
       ]
     },
     "guide_n_gallop": {
@@ -64,7 +71,9 @@
       "engagementRate": 3.49,
       "postDates": [
         "2026-08-27T00:00:00.000Z",
-        "2026-08-29T00:00:00.000Z"
+        "2026-08-28T00:00:00.000Z",
+        "2026-08-29T00:00:00.000Z",
+        "2026-08-31T00:00:00.000Z"
       ]
     },
     "louiehamner": {
@@ -75,8 +84,10 @@
       "engagementRate": 1.26,
       "postDates": [
         "2026-08-27T00:00:00.000Z",
+        "2026-08-28T00:00:00.000Z",
         "2026-08-29T00:00:00.000Z",
-        "2026-08-30T00:00:00.000Z"
+        "2026-08-30T00:00:00.000Z",
+        "2026-08-31T00:00:00.000Z"
       ]
     },
     "peakexposuremedia": {
@@ -90,7 +101,7 @@
     "thenanonature": {
       "name": "The Nano Nature",
       "handle": "thenanonature",
-      "followers": 2042,
+      "followers": 2038,
       "deltaToday": 0,
       "engagementRate": 0,
       "postDates": []

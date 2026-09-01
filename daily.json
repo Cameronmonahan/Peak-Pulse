@@ -58,48 +58,48 @@
     },
     {
       "date": "2026-08-23",
-      "followers": 4347,
+      "followers": 4352,
       "posted": true
     },
     {
       "date": "2026-08-24",
       "posted": true,
-      "followers": 4350
+      "followers": 4354
     },
     {
       "date": "2026-08-25",
-      "followers": 4352,
+      "followers": 4357,
       "posted": true
     },
     {
       "date": "2026-08-26",
-      "followers": 4355,
+      "followers": 4357,
       "posted": true
     },
     {
       "date": "2026-08-27",
-      "followers": 4355,
-      "posted": false
+      "followers": 4358,
+      "posted": true
     },
     {
       "date": "2026-08-28",
-      "followers": 4356,
+      "followers": 4361,
       "posted": true
     },
     {
       "date": "2026-08-29",
-      "posted": false,
-      "followers": 4359
+      "posted": true,
+      "followers": 4361
     },
     {
       "date": "2026-08-30",
-      "followers": 4359,
+      "followers": 4361,
       "posted": true
     },
     {
       "date": "2026-08-31",
       "posted": false,
-      "followers": 4352
+      "followers": 4361
     }
   ],
   "legacyflooringsd": [
@@ -169,47 +169,48 @@
     },
     {
       "date": "2026-08-23",
-      "followers": 921
+      "followers": 935,
+      "posted": true
     },
     {
       "date": "2026-08-24",
       "posted": true,
-      "followers": 931
+      "followers": 936
     },
     {
       "date": "2026-08-25",
-      "followers": 932,
+      "followers": 936,
       "posted": true
     },
     {
       "date": "2026-08-26",
-      "followers": 932,
+      "followers": 937,
       "posted": true
     },
     {
       "date": "2026-08-27",
-      "followers": 933,
+      "followers": 942,
       "posted": true
     },
     {
       "date": "2026-08-28",
-      "followers": 938,
+      "followers": 953,
       "posted": true
     },
     {
       "date": "2026-08-29",
       "posted": false,
-      "followers": 949
+      "followers": 953
     },
     {
       "date": "2026-08-30",
-      "followers": 949,
+      "followers": 953,
       "posted": false
     },
     {
       "date": "2026-08-31",
       "posted": true,
-      "followers": 1006
+      "followers": 953
     }
   ],
   "marwooddesign": [
@@ -284,48 +285,48 @@
     },
     {
       "date": "2026-08-23",
-      "followers": 8742,
+      "followers": 8745,
       "posted": true
     },
     {
       "date": "2026-08-24",
-      "followers": 8744,
-      "posted": false
+      "followers": 8749,
+      "posted": true
     },
     {
       "date": "2026-08-25",
-      "followers": 8748,
+      "followers": 8753,
       "posted": true
     },
     {
       "date": "2026-08-26",
-      "followers": 8752,
-      "posted": false
+      "followers": 8755,
+      "posted": true
     },
     {
       "date": "2026-08-27",
-      "followers": 8754,
+      "followers": 8757,
       "posted": true
     },
     {
       "date": "2026-08-28",
-      "followers": 8756,
-      "posted": false
+      "followers": 8758,
+      "posted": true
     },
     {
       "date": "2026-08-29",
-      "followers": 8757,
+      "followers": 8758,
       "posted": true
     },
     {
       "date": "2026-08-30",
-      "followers": 8757,
+      "followers": 8758,
       "posted": false
     },
     {
       "date": "2026-08-31",
       "posted": true,
-      "followers": 8740
+      "followers": 8758
     }
   ],
   "ventisalesgroup": [
@@ -408,11 +409,11 @@
     {
       "date": "2026-08-24",
       "followers": 105,
-      "posted": false
+      "posted": true
     },
     {
       "date": "2026-08-25",
-      "followers": 105,
+      "followers": 106,
       "posted": true
     },
     {
@@ -423,7 +424,7 @@
     {
       "date": "2026-08-27",
       "followers": 106,
-      "posted": false
+      "posted": true
     },
     {
       "date": "2026-08-28",
@@ -443,7 +444,7 @@
     {
       "date": "2026-08-31",
       "posted": true,
-      "followers": 104
+      "followers": 106
     }
   ],
   "guide_n_gallop": [
@@ -519,18 +520,18 @@
     },
     {
       "date": "2026-08-26",
-      "followers": 873,
-      "posted": false
+      "followers": 874,
+      "posted": true
     },
     {
       "date": "2026-08-27",
-      "followers": 874,
+      "followers": 875,
       "posted": true
     },
     {
       "date": "2026-08-28",
       "followers": 875,
-      "posted": false
+      "posted": true
     },
     {
       "date": "2026-08-29",
@@ -545,7 +546,7 @@
     {
       "date": "2026-08-31",
       "posted": true,
-      "followers": 872
+      "followers": 875
     }
   ],
   "louiehamner": [
@@ -604,23 +605,23 @@
     },
     {
       "date": "2026-08-23",
-      "followers": 2447,
-      "posted": true
-    },
-    {
-      "date": "2026-08-24",
       "followers": 2450,
       "posted": true
     },
     {
-      "date": "2026-08-25",
+      "date": "2026-08-24",
       "followers": 2454,
+      "posted": true
+    },
+    {
+      "date": "2026-08-25",
+      "followers": 2457,
       "posted": true
     },
     {
       "date": "2026-08-26",
       "followers": 2457,
-      "posted": false
+      "posted": true
     },
     {
       "date": "2026-08-27",
@@ -629,8 +630,8 @@
     },
     {
       "date": "2026-08-28",
-      "followers": 2457,
-      "posted": false
+      "followers": 2459,
+      "posted": true
     },
     {
       "date": "2026-08-29",
@@ -645,7 +646,7 @@
     {
       "date": "2026-08-31",
       "posted": true,
-      "followers": 2456
+      "followers": 2459
     }
   ],
   "peakexposuremedia": [
@@ -684,11 +685,12 @@
     },
     {
       "date": "2026-08-23",
-      "posted": false
+      "posted": false,
+      "followers": 17608
     },
     {
       "date": "2026-08-24",
-      "followers": 17608,
+      "followers": 17610,
       "posted": false
     },
     {
@@ -699,17 +701,17 @@
     {
       "date": "2026-08-26",
       "posted": false,
-      "followers": 17610
+      "followers": 17612
     },
     {
       "date": "2026-08-27",
       "posted": false,
-      "followers": 17612
+      "followers": 17613
     },
     {
       "date": "2026-08-28",
       "posted": false,
-      "followers": 17613
+      "followers": 17615
     },
     {
       "date": "2026-08-29",
@@ -724,7 +726,7 @@
     {
       "date": "2026-08-31",
       "posted": false,
-      "followers": 17604
+      "followers": 17615
     }
   ],
   "thenanonature": [
@@ -763,48 +765,48 @@
     },
     {
       "date": "2026-08-23",
-      "followers": 2041,
+      "followers": 2038,
       "posted": false
     },
     {
       "date": "2026-08-24",
-      "followers": 2042,
+      "followers": 2038,
       "posted": false
     },
     {
       "date": "2026-08-25",
-      "followers": 2042,
+      "followers": 2038,
       "posted": false
     },
     {
       "date": "2026-08-26",
-      "followers": 2042,
+      "followers": 2038,
       "posted": false
     },
     {
       "date": "2026-08-27",
-      "followers": 2042,
+      "followers": 2038,
       "posted": false
     },
     {
       "date": "2026-08-28",
-      "followers": 2042,
+      "followers": 2038,
       "posted": false
     },
     {
       "date": "2026-08-29",
-      "followers": 2042,
+      "followers": 2038,
       "posted": false
     },
     {
       "date": "2026-08-30",
-      "followers": 2042,
+      "followers": 2038,
       "posted": false
     },
     {
       "date": "2026-08-31",
       "posted": false,
-      "followers": 2032
+      "followers": 2038
     }
   ],
   "paragon_custom_const": [
