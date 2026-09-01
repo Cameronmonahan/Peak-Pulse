@@ -33,8 +33,11 @@ import json
 import os
 import sys
 from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 
 import requests
+
+MOUNTAIN_TZ = ZoneInfo("America/Denver")  # handles MST/MDT switch automatically
 
 BASE = "https://services.leadconnectorhq.com"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -72,10 +75,12 @@ def get_env(name):
     return val
 
 
-def get_post_week_range(now):
-    """Thursday -> Wednesday cycle, matching entry.html's logic exactly."""
-    days_since_thursday = (now.weekday() - 3) % 7  # Monday=0 ... Thursday=3
-    start = (now - timedelta(days=days_since_thursday)).replace(
+def get_post_week_range(now_local):
+    """Thursday -> Wednesday cycle, computed in LOCAL (Mountain) time so it
+    matches how a person actually experiences 'this week' — not UTC, which
+    can put very recent activity on the wrong calendar day entirely."""
+    days_since_thursday = (now_local.weekday() - 3) % 7  # Monday=0 ... Thursday=3
+    start = (now_local - timedelta(days=days_since_thursday)).replace(
         hour=0, minute=0, second=0, microsecond=0
     )
     end = start + timedelta(days=6, hours=23, minutes=59, seconds=59)
@@ -97,12 +102,17 @@ def fetch_instagram_accounts(headers, location_id):
     }
 
 
-def fetch_statistics(headers, location_id, profile_id, start_date, end_date):
+def fetch_statistics(headers, location_id, profile_id, start_date_local, end_date_local):
+    # GHL's API expects UTC timestamps. We compute day boundaries in Mountain
+    # Time (so "today" matches what a person in Utah actually means by
+    # "today"), then convert those exact instants to UTC right before sending.
+    start_utc = start_date_local.astimezone(timezone.utc)
+    end_utc = end_date_local.astimezone(timezone.utc)
     body = {
         "profileIds": [profile_id],
         "currentRange": {
-            "startDate": start_date.strftime("%Y-%m-%dT00:00:00.000Z"),
-            "endDate": end_date.strftime("%Y-%m-%dT23:59:59.999Z"),
+            "startDate": start_utc.strftime("%Y-%m-%dT%H:%M:%S.000Z"),
+            "endDate": end_utc.strftime("%Y-%m-%dT%H:%M:%S.999Z"),
         },
     }
     resp = requests.post(
@@ -259,7 +269,7 @@ def main():
         "Accept": "application/json",
     }
 
-    now = datetime.now(timezone.utc)
+    now = datetime.now(MOUNTAIN_TZ)
 
     clients = load_json(CLIENTS_PATH, [])
     daily_data = load_json(DAILY_PATH, {})
