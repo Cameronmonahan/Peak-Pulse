@@ -1,0 +1,41 @@
+name: Sync GoHighLevel Data
+
+on:
+  schedule:
+    # 8:00 AM and 8:00 PM Mountain Time (UTC-6 during daylight saving).
+    # Cron is always in UTC, so that's 14:00 and 02:00 UTC.
+    - cron: "0 14 * * *"
+    - cron: "0 2 * * *"
+  workflow_dispatch: {} # lets you trigger it manually from the Actions tab anytime
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Sync GoHighLevel data
+        env:
+          GHL_PRIVATE_TOKEN: ${{ secrets.GHL_PRIVATE_TOKEN }}
+          GHL_LOCATION_ID: ${{ secrets.GHL_LOCATION_ID }}
+        run: python scripts/ghl_sync.py
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name "pem-ghl-sync-bot"
+          git config user.email "actions@github.com"
+          git add daily.json weekly.json data.json
+          git diff --quiet --cached || git commit -m "Sync GoHighLevel data [automated]"
+          git push
