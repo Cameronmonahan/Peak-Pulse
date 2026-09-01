@@ -69,11 +69,13 @@ def main():
 
     # Pick the first account as a test subject
     test_account = accounts[0]
-    test_id = test_account["id"]
+    test_id = test_account["profileId"]  # NOT the composite "id" field — the statistics
+                                          # endpoint expects this shorter internal ID instead.
 
     print("\n" + "=" * 70)
     print(f"STEP 2: Fetching statistics for ONE account (test subject)")
     print(f"  name={test_account.get('name')}  platform={test_account.get('platform')}")
+    print(f"  using profileId={test_id}")
     print("=" * 70)
 
     now = datetime.now(timezone.utc)
@@ -103,6 +105,36 @@ def main():
     stats_data = stats_resp.json()
     print("\nFull response:")
     print(json.dumps(stats_data, indent=2))
+
+    # Also test an actual Instagram account specifically, since that's what
+    # the real dashboard cares about — the first account above might just be
+    # a Facebook Page, which isn't directly useful for our purposes.
+    ig_account = next((a for a in accounts if a.get("platform") == "instagram"), None)
+    if ig_account:
+        ig_id = ig_account["profileId"]
+        print("\n" + "=" * 70)
+        print(f"STEP 3: Fetching statistics for an INSTAGRAM account")
+        print(f"  name={ig_account.get('name')}  using profileId={ig_id}")
+        print("=" * 70)
+
+        ig_body = {
+            "profileIds": [ig_id],
+            "currentRange": {
+                "startDate": week_ago.strftime("%Y-%m-%dT00:00:00.000Z"),
+                "endDate": now.strftime("%Y-%m-%dT23:59:59.999Z"),
+            },
+        }
+        ig_resp = requests.post(
+            f"{BASE}/social-media-posting/statistics",
+            headers={**headers, "Content-Type": "application/json"},
+            params={"locationId": location_id},
+            json=ig_body,
+        )
+        print(f"Status: {ig_resp.status_code}")
+        if ig_resp.status_code == 200:
+            print(json.dumps(ig_resp.json(), indent=2))
+        else:
+            print("Response body:", ig_resp.text)
 
     print("\n" + "=" * 70)
     print("DONE — copy everything above and send it back for review.")
