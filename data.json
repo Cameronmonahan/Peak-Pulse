@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-03T14:30:00.000Z",
+  "generatedAt": "2026-09-04T14:30:00.000Z",
   "weekStart": "2026-09-03T00:00:00-06:00",
   "weekEnd": "2026-09-09T23:59:59-06:00",
   "accounts": {
     "paragon_custom_construction": {
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
-      "followers": 4367,
-      "deltaToday": 0,
+      "followers": 4357,
+      "deltaToday": -10,
       "engagementRate": 0.61,
       "postDates": []
     },
@@ -23,40 +23,40 @@
     "legacyflooringsd": {
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
-      "followers": 976,
-      "deltaToday": 0,
+      "followers": 1015,
+      "deltaToday": 39,
       "engagementRate": 1.91,
       "postDates": []
     },
     "marwooddesign": {
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
-      "followers": 8762,
-      "deltaToday": 0,
+      "followers": 8737,
+      "deltaToday": -25,
       "engagementRate": 0.22,
       "postDates": []
     },
     "ventisalesgroup": {
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
-      "followers": 106,
-      "deltaToday": 0,
+      "followers": 104,
+      "deltaToday": -2,
       "engagementRate": 5.97,
       "postDates": []
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
-      "followers": 875,
-      "deltaToday": 0,
+      "followers": 873,
+      "deltaToday": -2,
       "engagementRate": 3.43,
       "postDates": []
     },
     "louiehamner": {
       "name": "Louie Hamner",
       "handle": "louiehamner",
-      "followers": 2463,
-      "deltaToday": 0,
+      "followers": 2458,
+      "deltaToday": -5,
       "engagementRate": 1.45,
       "postDates": []
     },
@@ -71,16 +71,16 @@
     "thenanonature": {
       "name": "The Nano Nature",
       "handle": "thenanonature",
-      "followers": 2040,
-      "deltaToday": 0,
+      "followers": 2031,
+      "deltaToday": -9,
       "engagementRate": 0,
       "postDates": []
     },
     "the.nano.nature": {
       "name": "The Nano Nature",
       "handle": "the.nano.nature",
-      "followers": 728,
-      "deltaToday": 0,
+      "followers": 730,
+      "deltaToday": 2,
       "engagementRate": 0,
       "postDates": [],
       "platform": "tiktok"
