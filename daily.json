@@ -121,7 +121,12 @@
     },
     {
       "date": "2026-09-10",
-      "followers": 4397
+      "followers": 4397,
+      "posted": false
+    },
+    {
+      "date": "2026-09-11",
+      "followers": 4394
     }
   ],
   "legacyflooringsd": [
@@ -254,6 +259,11 @@
     },
     {
       "date": "2026-09-10",
+      "followers": 1015,
+      "posted": false
+    },
+    {
+      "date": "2026-09-11",
       "followers": 1015
     }
   ],
@@ -392,7 +402,12 @@
     },
     {
       "date": "2026-09-10",
-      "followers": 8790
+      "followers": 8790,
+      "posted": false
+    },
+    {
+      "date": "2026-09-11",
+      "followers": 8785
     }
   ],
   "ventisalesgroup": [
@@ -532,6 +547,11 @@
     },
     {
       "date": "2026-09-10",
+      "followers": 105,
+      "posted": false
+    },
+    {
+      "date": "2026-09-11",
       "followers": 105
     }
   ],
@@ -656,6 +676,11 @@
     },
     {
       "date": "2026-09-10",
+      "followers": 892,
+      "posted": false
+    },
+    {
+      "date": "2026-09-11",
       "followers": 892
     }
   ],
@@ -778,7 +803,12 @@
     },
     {
       "date": "2026-09-10",
-      "followers": 2468
+      "followers": 2468,
+      "posted": false
+    },
+    {
+      "date": "2026-09-11",
+      "followers": 2469
     }
   ],
   "peakexposuremedia": [
@@ -871,7 +901,8 @@
     },
     {
       "date": "2026-09-10",
-      "followers": 17598
+      "followers": 17598,
+      "posted": false
     }
   ],
   "thenanonature": [
@@ -973,7 +1004,12 @@
     },
     {
       "date": "2026-09-10",
-      "followers": 2028
+      "followers": 2028,
+      "posted": false
+    },
+    {
+      "date": "2026-09-11",
+      "followers": 2027
     }
   ],
   "paragon_custom_const": [
@@ -1059,6 +1095,10 @@
     },
     {
       "date": "2026-09-10",
+      "followers": 44
+    },
+    {
+      "date": "2026-09-11",
       "followers": 44
     }
   ],
@@ -1146,6 +1186,10 @@
     {
       "date": "2026-09-10",
       "followers": 729
+    },
+    {
+      "date": "2026-09-11",
+      "followers": 736
     }
   ]
 }
