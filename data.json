@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T14:33:15.252275Z",
+  "generatedAt": "2026-09-18T14:30:00.000Z",
   "weekStart": "2026-09-17T00:00:00-06:00",
   "weekEnd": "2026-09-23T00:00:00-06:00",
   "accounts": {
@@ -88,8 +88,8 @@
       "name": "The Nano Nature",
       "handle": "the.nano.nature",
       "platform": "tiktok",
-      "followers": 756,
-      "deltaToday": 4,
+      "followers": 758,
+      "deltaToday": 2,
       "engagementRate": 0,
       "postDates": []
     }
