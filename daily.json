@@ -129,6 +129,10 @@
     {
       "date": "2026-09-20",
       "followers": 4483
+    },
+    {
+      "date": "2026-09-21",
+      "followers": 4482
     }
   ],
   "legacyflooringsd": [
@@ -268,6 +272,10 @@
     },
     {
       "date": "2026-09-20",
+      "followers": 1011
+    },
+    {
+      "date": "2026-09-21",
       "followers": 1011
     }
   ],
@@ -414,6 +422,10 @@
     {
       "date": "2026-09-20",
       "followers": 9085
+    },
+    {
+      "date": "2026-09-21",
+      "followers": 9084
     }
   ],
   "ventisalesgroup": [
@@ -561,6 +573,10 @@
     {
       "date": "2026-09-20",
       "followers": 108
+    },
+    {
+      "date": "2026-09-21",
+      "followers": 108
     }
   ],
   "guide_n_gallop": [
@@ -692,6 +708,10 @@
     {
       "date": "2026-09-20",
       "followers": 896
+    },
+    {
+      "date": "2026-09-21",
+      "followers": 897
     }
   ],
   "louiehamner": [
@@ -821,6 +841,10 @@
     {
       "date": "2026-09-20",
       "followers": 2478
+    },
+    {
+      "date": "2026-09-21",
+      "followers": 2477
     }
   ],
   "peakexposuremedia": [
@@ -1015,6 +1039,10 @@
     {
       "date": "2026-09-20",
       "followers": 2025
+    },
+    {
+      "date": "2026-09-21",
+      "followers": 2025
     }
   ],
   "paragon_custom_const": [
@@ -1135,6 +1163,10 @@
     },
     {
       "date": "2026-09-20",
+      "followers": 44
+    },
+    {
+      "date": "2026-09-21",
       "followers": 44
     }
   ],
@@ -1257,6 +1289,10 @@
     {
       "date": "2026-09-20",
       "followers": 762
+    },
+    {
+      "date": "2026-09-21",
+      "followers": 761
     }
   ]
 }
