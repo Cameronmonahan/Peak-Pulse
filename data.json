@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-24T14:30:00.000Z",
-  "weekStart": "2026-09-24T00:00:00-06:00",
-  "weekEnd": "2026-09-30T23:59:59-06:00",
+  "generatedAt": "2026-09-25T14:32:34.131Z",
+  "weekStart": "2026-09-24T00:00:00.000Z",
+  "weekEnd": "2026-09-30T00:00:00.000Z",
   "accounts": {
     "paragon_custom_construction": {
       "name": "Paragon Custom Homes",
@@ -88,8 +88,8 @@
       "name": "The Nano Nature",
       "handle": "the.nano.nature",
       "platform": "tiktok",
-      "followers": 767,
-      "deltaToday": 1,
+      "followers": 769,
+      "deltaToday": 2,
       "engagementRate": 0,
       "postDates": []
     }
