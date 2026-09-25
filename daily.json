@@ -1180,6 +1180,11 @@
     },
     {
       "date": "2026-09-24",
+      "followers": 44,
+      "posted": false
+    },
+    {
+      "date": "2026-09-25",
       "followers": 44
     }
   ],
@@ -1318,7 +1323,12 @@
     },
     {
       "date": "2026-09-24",
-      "followers": 767
+      "followers": 767,
+      "posted": false
+    },
+    {
+      "date": "2026-09-25",
+      "followers": 769
     }
   ]
 }
