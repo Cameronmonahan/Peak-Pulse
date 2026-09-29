@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T14:30:00.000Z",
+  "generatedAt": "2026-09-29T14:30:00.000Z",
   "weekStart": "2026-09-24T00:00:00.000Z",
   "weekEnd": "2026-09-30T00:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4548,
-      "deltaToday": 14,
+      "followers": 4552,
+      "deltaToday": 4,
       "engagementRate": 0.61,
       "postDates": []
     },
@@ -25,8 +25,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1021,
-      "deltaToday": 3,
+      "followers": 1029,
+      "deltaToday": 8,
       "engagementRate": 1.91,
       "postDates": []
     },
@@ -34,8 +34,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 9288,
-      "deltaToday": 46,
+      "followers": 9301,
+      "deltaToday": 13,
       "engagementRate": 0.22,
       "postDates": []
     },
@@ -43,7 +43,7 @@
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
       "platform": "instagram",
-      "followers": 108,
+      "followers": 109,
       "deltaToday": 1,
       "engagementRate": 5.97,
       "postDates": []
@@ -52,8 +52,8 @@
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 900,
-      "deltaToday": -2,
+      "followers": 901,
+      "deltaToday": 1,
       "engagementRate": 3.43,
       "postDates": []
     },
@@ -61,8 +61,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2487,
-      "deltaToday": 1,
+      "followers": 2489,
+      "deltaToday": 2,
       "engagementRate": 1.45,
       "postDates": []
     },
@@ -79,8 +79,8 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 2021,
-      "deltaToday": 0,
+      "followers": 2020,
+      "deltaToday": -1,
       "engagementRate": 0,
       "postDates": []
     },
@@ -88,8 +88,8 @@
       "name": "The Nano Nature",
       "handle": "the.nano.nature",
       "platform": "tiktok",
-      "followers": 778,
-      "deltaToday": 3,
+      "followers": 776,
+      "deltaToday": -2,
       "engagementRate": 0,
       "postDates": []
     }
