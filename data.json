@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T14:30:00.000Z",
+  "generatedAt": "2026-10-03T14:30:00.000Z",
   "weekStart": "2026-10-01T06:00:00.000Z",
   "weekEnd": "2026-10-07T06:00:00.000Z",
   "accounts": {
@@ -34,8 +34,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 9361,
-      "deltaToday": 60,
+      "followers": 9593,
+      "deltaToday": 232,
       "engagementRate": 0.22,
       "postDates": []
     },
@@ -43,10 +43,12 @@
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
       "platform": "instagram",
-      "followers": 109,
-      "deltaToday": 0,
+      "followers": 108,
+      "deltaToday": -1,
       "engagementRate": 5.97,
-      "postDates": []
+      "postDates": [
+        "2026-10-02T00:00:00Z"
+      ]
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
@@ -70,8 +72,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17619,
-      "deltaToday": 0,
+      "followers": 17787,
+      "deltaToday": 168,
       "engagementRate": 0,
       "postDates": []
     },
@@ -79,7 +81,7 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 2018,
+      "followers": 2016,
       "deltaToday": -2,
       "engagementRate": 0,
       "postDates": []
@@ -89,7 +91,7 @@
       "handle": "the.nano.nature",
       "platform": "tiktok",
       "followers": 776,
-      "deltaToday": -1,
+      "deltaToday": 0,
       "engagementRate": 0,
       "postDates": []
     }

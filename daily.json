@@ -474,6 +474,14 @@
     {
       "date": "2026-09-30",
       "followers": 9361
+    },
+    {
+      "date": "2026-10-02",
+      "posted": false
+    },
+    {
+      "date": "2026-10-03",
+      "followers": 9593
     }
   ],
   "ventisalesgroup": [
@@ -641,6 +649,14 @@
     {
       "date": "2026-09-30",
       "followers": 109
+    },
+    {
+      "date": "2026-10-02",
+      "posted": true
+    },
+    {
+      "date": "2026-10-03",
+      "followers": 108
     }
   ],
   "guide_n_gallop": [
@@ -1026,6 +1042,14 @@
       "date": "2026-09-01",
       "posted": false,
       "followers": 17619
+    },
+    {
+      "date": "2026-10-02",
+      "posted": false
+    },
+    {
+      "date": "2026-10-03",
+      "followers": 17787
     }
   ],
   "thenanonature": [
@@ -1155,6 +1179,14 @@
     {
       "date": "2026-09-30",
       "followers": 2018
+    },
+    {
+      "date": "2026-10-02",
+      "posted": false
+    },
+    {
+      "date": "2026-10-03",
+      "followers": 2016
     }
   ],
   "paragon_custom_const": [
@@ -1328,6 +1360,10 @@
     {
       "date": "2026-10-02",
       "followers": 44
+    },
+    {
+      "date": "2026-10-03",
+      "followers": 44
     }
   ],
   "the.nano.nature": [
@@ -1500,6 +1536,10 @@
     },
     {
       "date": "2026-10-02",
+      "followers": 776
+    },
+    {
+      "date": "2026-10-03",
       "followers": 776
     }
   ]
