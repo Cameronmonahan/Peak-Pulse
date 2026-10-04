@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T14:30:00.000Z",
+  "generatedAt": "2026-10-04T14:30:00.000Z",
   "weekStart": "2026-10-01T06:00:00.000Z",
   "weekEnd": "2026-10-07T06:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4559,
-      "deltaToday": 7,
+      "followers": 4603,
+      "deltaToday": 44,
       "engagementRate": 0.61,
       "postDates": []
     },
@@ -25,8 +25,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1031,
-      "deltaToday": 2,
+      "followers": 1034,
+      "deltaToday": 3,
       "engagementRate": 1.91,
       "postDates": []
     },
@@ -34,8 +34,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 9593,
-      "deltaToday": 232,
+      "followers": 9595,
+      "deltaToday": 2,
       "engagementRate": 0.22,
       "postDates": []
     },
@@ -44,7 +44,7 @@
       "handle": "ventisalesgroup",
       "platform": "instagram",
       "followers": 108,
-      "deltaToday": -1,
+      "deltaToday": 0,
       "engagementRate": 5.97,
       "postDates": [
         "2026-10-02T00:00:00Z"
@@ -54,8 +54,8 @@
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 901,
-      "deltaToday": 0,
+      "followers": 905,
+      "deltaToday": 4,
       "engagementRate": 3.43,
       "postDates": []
     },
@@ -81,8 +81,8 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 2016,
-      "deltaToday": -2,
+      "followers": 2015,
+      "deltaToday": -1,
       "engagementRate": 0,
       "postDates": []
     },
