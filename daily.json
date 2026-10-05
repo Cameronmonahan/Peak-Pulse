@@ -153,6 +153,10 @@
     {
       "date": "2026-10-04",
       "followers": 4603
+    },
+    {
+      "date": "2026-10-05",
+      "followers": 4601
     }
   ],
   "legacyflooringsd": [
@@ -316,6 +320,10 @@
     },
     {
       "date": "2026-10-04",
+      "followers": 1034
+    },
+    {
+      "date": "2026-10-05",
       "followers": 1034
     }
   ],
@@ -494,6 +502,10 @@
     {
       "date": "2026-10-04",
       "followers": 9595
+    },
+    {
+      "date": "2026-10-05",
+      "followers": 9596
     }
   ],
   "ventisalesgroup": [
@@ -673,6 +685,10 @@
     {
       "date": "2026-10-04",
       "followers": 108
+    },
+    {
+      "date": "2026-10-05",
+      "followers": 108
     }
   ],
   "guide_n_gallop": [
@@ -828,6 +844,10 @@
     {
       "date": "2026-10-04",
       "followers": 905
+    },
+    {
+      "date": "2026-10-05",
+      "followers": 906
     }
   ],
   "louiehamner": [
@@ -981,6 +1001,10 @@
     {
       "date": "2026-10-04",
       "followers": 2489
+    },
+    {
+      "date": "2026-10-05",
+      "followers": 2490
     }
   ],
   "peakexposuremedia": [
@@ -1215,6 +1239,10 @@
     {
       "date": "2026-10-04",
       "followers": 2015
+    },
+    {
+      "date": "2026-10-05",
+      "followers": 2015
     }
   ],
   "paragon_custom_const": [
@@ -1396,6 +1424,10 @@
     {
       "date": "2026-10-04",
       "followers": 44
+    },
+    {
+      "date": "2026-10-05",
+      "followers": 45
     }
   ],
   "the.nano.nature": [
@@ -1577,6 +1609,10 @@
     {
       "date": "2026-10-04",
       "followers": 776
+    },
+    {
+      "date": "2026-10-05",
+      "followers": 777
     }
   ]
 }
