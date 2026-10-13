@@ -153,16 +153,17 @@ const TT_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stro
 
 function getPostWeekRange(now = new Date()){
   const day = now.getDay();
-  const diffToThu = (day - 4 + 7) % 7;
+  const diffToMon = (day - 1 + 7) % 7;
   const start = new Date(now);
   start.setHours(0,0,0,0);
-  start.setDate(now.getDate() - diffToThu);
+  start.setDate(now.getDate() - diffToMon);
   const end = new Date(start);
   end.setDate(start.getDate() + 6);
   return { start, end };
 }
-function todayKey(d = new Date()){ return d.toISOString().slice(0,10); }
-function dateKey(d){ return d.toISOString().slice(0,10); }
+// Local-time date keys (so a Sunday 8pm entry isn't dated Monday by UTC)
+function dateKey(d){ return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
+function todayKey(d = new Date()){ return dateKey(d); }
 
 function b64EncodeUnicode(str){
   return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g,

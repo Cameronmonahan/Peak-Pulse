@@ -332,7 +332,7 @@
     <div class="header-right">
       <div class="live-pill"><span class="live-dot"></span><span>LIVE</span></div>
       <div class="week-range" id="week-range-row">
-        <div class="eyebrow">Post week (Thu–Wed)</div>
+        <div class="eyebrow">Week (Mon–Sun)</div>
         <div class="value" id="week-range">—</div>
       </div>
       <div class="clock">
@@ -562,21 +562,21 @@ function computeMonthlyStats(handle, key){
   };
 }
 
-/* ---------------- WEEK LOGIC (Thu -> Wed reset) ---------------- */
-// Returns the Thursday that starts the current post-week, and the following Wednesday.
+/* ---------------- WEEK LOGIC (Mon -> Sun reset) ---------------- */
+// Returns the Monday that starts the current week, and the following Sunday.
 function getPostWeekRange(d = new Date()){
-  const day = d.getDay(); // 0=Sun..6=Sat, Thu=4
-  const diffToThu = (day - 4 + 7) % 7;
+  const day = d.getDay(); // 0=Sun..6=Sat, Mon=1
+  const diffToMon = (day - 1 + 7) % 7;
   const start = new Date(d);
   start.setHours(0,0,0,0);
-  start.setDate(d.getDate() - diffToThu);
+  start.setDate(d.getDate() - diffToMon);
   const end = new Date(start);
-  end.setDate(start.getDate() + 6); // following Wednesday
+  end.setDate(start.getDate() + 6); // following Sunday
   return { start, end };
 }
 function fmtShort(d){ return d.toLocaleDateString('en-US',{ month:'short', day:'numeric' }); }
 
-const DAY_ORDER = ["Thu","Fri","Sat","Sun","Mon","Tue","Wed"];
+const DAY_ORDER = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 
 /* ---------------- MOCK DATA LAYER ----------------
    Replace `fetchAccountSnapshot` with a real call to your backend,
@@ -758,7 +758,7 @@ function renderWeek(){
 
       <div class="week-tracker">
         <div class="week-tracker-head">
-          <div class="m-label">Thu → Wed cycle</div>
+          <div class="m-label">Mon → Sun cycle</div>
           <div class="m-count">${data.postDates.length} posted</div>
         </div>
         <div class="dots">${dotsHtml}</div>

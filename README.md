@@ -3,7 +3,7 @@
 A live dashboard for the office TV (and your phone) showing, per client Instagram account:
 - New followers today
 - Engagement rate
-- Posts this week (Thursday → Wednesday cycle)
+- Posts this week (Monday → Sunday cycle)
 
 ## Files
 
