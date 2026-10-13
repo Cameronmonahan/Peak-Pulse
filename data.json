@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T09:02:25.906Z",
+  "generatedAt": "2026-10-13T09:06:54.897Z",
   "weekStart": "2026-10-08T07:00:00.000Z",
   "weekEnd": "2026-10-14T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4677,
-      "deltaToday": 76,
+      "followers": 4728,
+      "deltaToday": 51,
       "engagementRate": 0.61,
       "postDates": []
     },
@@ -25,8 +25,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1033,
-      "deltaToday": -1,
+      "followers": 1069,
+      "deltaToday": 36,
       "engagementRate": 1.91,
       "postDates": []
     },
@@ -34,8 +34,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 9626,
-      "deltaToday": 30,
+      "followers": 9664,
+      "deltaToday": 38,
       "engagementRate": 0.22,
       "postDates": []
     },
@@ -43,8 +43,8 @@
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
       "platform": "instagram",
-      "followers": 108,
-      "deltaToday": 0,
+      "followers": 110,
+      "deltaToday": 2,
       "engagementRate": 5.97,
       "postDates": []
     },
@@ -107,6 +107,15 @@
       "handle": "diamondstrengthandwellness_fb",
       "platform": "facebook",
       "followers": 23,
+      "deltaToday": 0,
+      "engagementRate": 0,
+      "postDates": []
+    },
+    "legacyflooringsd_fb": {
+      "name": "Legacy Flooring",
+      "handle": "legacyflooringsd_fb",
+      "platform": "facebook",
+      "followers": 482,
       "deltaToday": 0,
       "engagementRate": 0,
       "postDates": []
