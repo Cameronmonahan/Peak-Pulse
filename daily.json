@@ -185,6 +185,10 @@
       "posted": true
     },
     {
+      "date": "2026-10-12",
+      "posted": false
+    },
+    {
       "date": "2026-10-13",
       "posted": false,
       "followers": 4728
@@ -382,6 +386,10 @@
     {
       "date": "2026-10-11",
       "posted": false
+    },
+    {
+      "date": "2026-10-12",
+      "posted": true
     },
     {
       "date": "2026-10-13",
@@ -593,6 +601,10 @@
     },
     {
       "date": "2026-10-11",
+      "posted": true
+    },
+    {
+      "date": "2026-10-12",
       "posted": true
     },
     {
@@ -810,6 +822,10 @@
       "posted": true
     },
     {
+      "date": "2026-10-12",
+      "posted": true
+    },
+    {
       "date": "2026-10-13",
       "posted": false,
       "followers": 110
@@ -1000,6 +1016,10 @@
       "posted": true
     },
     {
+      "date": "2026-10-12",
+      "posted": false
+    },
+    {
       "date": "2026-10-13",
       "posted": false,
       "followers": 908
@@ -1188,6 +1208,10 @@
       "posted": true
     },
     {
+      "date": "2026-10-12",
+      "posted": false
+    },
+    {
       "date": "2026-10-13",
       "followers": 2519,
       "posted": false
@@ -1312,6 +1336,10 @@
     {
       "date": "2026-10-11",
       "posted": true
+    },
+    {
+      "date": "2026-10-12",
+      "posted": false
     },
     {
       "date": "2026-10-13",
@@ -1487,6 +1515,10 @@
     },
     {
       "date": "2026-10-11",
+      "posted": false
+    },
+    {
+      "date": "2026-10-12",
       "posted": false
     },
     {
@@ -1708,6 +1740,10 @@
       "posted": false
     },
     {
+      "date": "2026-10-12",
+      "posted": false
+    },
+    {
       "date": "2026-10-13",
       "posted": false,
       "followers": 45
@@ -1910,6 +1946,10 @@
       "followers": 782
     },
     {
+      "date": "2026-10-12",
+      "posted": false
+    },
+    {
       "date": "2026-10-13",
       "posted": false
     }
@@ -1951,12 +1991,20 @@
       "posted": true
     },
     {
+      "date": "2026-10-12",
+      "posted": true
+    },
+    {
       "date": "2026-10-13",
       "followers": 134,
       "posted": false
     }
   ],
   "diamondstrengthandwellness_fb": [
+    {
+      "date": "2026-10-12",
+      "posted": true
+    },
     {
       "date": "2026-10-13",
       "followers": 23,
