@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T09:45:30.251Z",
+  "generatedAt": "2026-10-13T10:25:12.643Z",
   "weekStart": "2026-10-12T07:00:00.000Z",
   "weekEnd": "2026-10-18T07:00:00.000Z",
   "accounts": {
@@ -128,7 +128,9 @@
       "followers": 482,
       "deltaToday": 0,
       "engagementRate": 0,
-      "postDates": []
+      "postDates": [
+        "2026-10-12T07:00:00.000Z"
+      ]
     }
   }
 }
