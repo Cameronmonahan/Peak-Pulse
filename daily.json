@@ -1956,6 +1956,11 @@
   ],
   "legacyflooringsd_fb": [
     {
+      "date": "2026-10-12",
+      "followers": 482,
+      "posted": true
+    },
+    {
       "date": "2026-10-13",
       "posted": false,
       "followers": 482
@@ -2003,6 +2008,7 @@
   "diamondstrengthandwellness_fb": [
     {
       "date": "2026-10-12",
+      "followers": 23,
       "posted": true
     },
     {
