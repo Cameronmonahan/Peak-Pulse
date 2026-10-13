@@ -375,13 +375,14 @@ document.getElementById('pem-logo').src = "data:image/png;base64,iVBORw0KGgoAAAA
 ------------------------------------------------------ */
 let RAW_CLIENTS = [
   { name:"Paragon Custom Homes", handle:"paragon_custom_construction", seedFollowers:4820, tiktokHandle:null },
-  { name:"Legacy Flooring",       handle:"legacyflooringsd",           seedFollowers:2140 },
+  { name:"Legacy Flooring",       handle:"legacyflooringsd",           seedFollowers:2140, facebookHandle:"legacyflooringsd_fb" },
   { name:"Marwood Premium Cabinetry", handle:"marwooddesign",          seedFollowers:6390 },
   { name:"Venti Sales Group",     handle:"ventisalesgroup",            seedFollowers:9870, tiktokHandle:null },
   { name:"Guide N Gallop",        handle:"guide_n_gallop",             seedFollowers:3155 },
   { name:"Louie Hamner",          handle:"louiehamner",                seedFollowers:15230, tiktokHandle:null },
   { name:"Peak Exposure Media",   handle:"peakexposuremedia",          seedFollowers:2670 },
   { name:"The Nano Nature",       handle:"thenanonature",              seedFollowers:1980, tiktokHandle:null },
+  { name:"Diamond Strength & Wellness", handle:"diamondstrengthandwellness", seedFollowers:300, facebookHandle:"diamondstrengthandwellness_fb" },
 ];
 
 // Flattened list: one entry per platform per client. A client with a
@@ -394,6 +395,9 @@ function buildAccounts(){
     if(c.tiktokHandle && !String(c.tiktokHandle).startsWith('REPLACE_')){
       list.push({ name:c.name, handle:c.tiktokHandle, platform:'tiktok', seedFollowers: Math.round(c.seedFollowers*0.6) });
     }
+    if(c.facebookHandle){
+      list.push({ name:c.name, handle:c.facebookHandle, platform:'facebook', seedFollowers: Math.round(c.seedFollowers*0.8) });
+    }
   });
   ACCOUNTS = list;
 }
@@ -405,7 +409,7 @@ let DAILY_DATA = {};        // populated from daily.json when available
 let WEEKLY_DATA = {};       // populated from weekly.json when available
 let VIEW_MODE = 'week';     // 'week' | 'month'
 let SELECTED_MONTH = null;  // 'YYYY-MM'
-let PLATFORM_SELECTION = {}; // { [instagramHandle]: 'instagram' | 'tiktok' }
+let PLATFORM_SELECTION = {}; // { [instagramHandle]: 'instagram' | 'tiktok' | 'facebook' }
 
 // Which platforms exist for a client, and the account object to use for
 // whichever one is currently selected in that card.
@@ -413,6 +417,9 @@ function clientPlatforms(client){
   const platforms = [{ key:'instagram', account:{ name:client.name, handle:client.handle, platform:'instagram', seedFollowers:client.seedFollowers } }];
   if(client.tiktokHandle && !String(client.tiktokHandle).startsWith('REPLACE_')){
     platforms.push({ key:'tiktok', account:{ name:client.name, handle:client.tiktokHandle, platform:'tiktok', seedFollowers:Math.round(client.seedFollowers*0.6) } });
+  }
+  if(client.facebookHandle){
+    platforms.push({ key:'facebook', account:{ name:client.name, handle:client.facebookHandle, platform:'facebook', seedFollowers:Math.round(client.seedFollowers*0.8) } });
   }
   return platforms;
 }
@@ -435,6 +442,7 @@ async function tryLoadClientsJson(){
           name:c.name,
           handle:c.handle,
           tiktokHandle: c.tiktokHandle || null,
+          facebookHandle: c.facebookHandle || null,
           seedFollowers: existing ? existing.seedFollowers : 2000
         };
       });
@@ -656,9 +664,14 @@ const TT_ICON_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="#c9a876" strok
   <path d="M14 3v10.5a3.5 3.5 0 1 1-3.5-3.5"/>
   <path d="M14 3c0 3 2.2 5 5 5"/>
 </svg>`;
+const FB_ICON_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="#c9a876" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14 8.5V7c0-.8.4-1.2 1.2-1.2H17V2.5h-2.6C11.8 2.5 10.5 4 10.5 6.6v1.9H8v3.3h2.5v9.7H14v-9.7h2.7l.5-3.3H14z"/>
+</svg>`;
+const PLATFORM_ICONS = { instagram: IG_ICON_SVG, tiktok: TT_ICON_SVG, facebook: FB_ICON_SVG };
+const PLATFORM_LABELS = { instagram:'Instagram', tiktok:'TikTok', facebook:'Facebook' };
 function platformBadge(platform){
-  const icon = platform === 'tiktok' ? TT_ICON_SVG : IG_ICON_SVG;
-  const label = platform === 'tiktok' ? 'TikTok' : 'Instagram';
+  const icon = PLATFORM_ICONS[platform] || IG_ICON_SVG;
+  const label = PLATFORM_LABELS[platform] || 'Instagram';
   return `<div class="platform-badge" title="${label}">${icon}</div>`;
 }
 
@@ -710,8 +723,8 @@ function renderWeek(){
 
     const tabsHtml = platforms.length > 1
       ? `<div class="platform-tabs">${platforms.map(p => `
-          <div class="platform-tab ${p.key === account.platform ? 'active' : ''}" data-platform="${p.key}" title="${p.key === 'tiktok' ? 'TikTok' : 'Instagram'}">
-            ${p.key === 'tiktok' ? TT_ICON_SVG : IG_ICON_SVG}
+          <div class="platform-tab ${p.key === account.platform ? 'active' : ''}" data-platform="${p.key}" title="${PLATFORM_LABELS[p.key]}">
+            ${PLATFORM_ICONS[p.key]}
           </div>`).join('')}</div>`
       : `<div class="avatar-badge">${initials(client.name)}${platformBadge('instagram')}</div>`;
 
@@ -811,8 +824,8 @@ function renderMonth(){
 
     const tabsHtml = platforms.length > 1
       ? `<div class="platform-tabs">${platforms.map(p => `
-          <div class="platform-tab ${p.key === account.platform ? 'active' : ''}" data-platform="${p.key}" title="${p.key === 'tiktok' ? 'TikTok' : 'Instagram'}">
-            ${p.key === 'tiktok' ? TT_ICON_SVG : IG_ICON_SVG}
+          <div class="platform-tab ${p.key === account.platform ? 'active' : ''}" data-platform="${p.key}" title="${PLATFORM_LABELS[p.key]}">
+            ${PLATFORM_ICONS[p.key]}
           </div>`).join('')}</div>`
       : `<div class="avatar-badge">${initials(client.name)}${platformBadge('instagram')}</div>`;
 

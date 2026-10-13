@@ -6,7 +6,8 @@
   },
   {
     "name": "Legacy Flooring",
-    "handle": "legacyflooringsd"
+    "handle": "legacyflooringsd",
+    "facebookHandle": "legacyflooringsd_fb"
   },
   {
     "name": "Marwood Premium Cabinetry",
@@ -34,5 +35,10 @@
     "name": "The Nano Nature",
     "handle": "thenanonature",
     "tiktokHandle": "the.nano.nature"
+  },
+  {
+    "name": "Diamond Strength & Wellness",
+    "handle": "diamondstrengthandwellness",
+    "facebookHandle": "diamondstrengthandwellness_fb"
   }
 ]
