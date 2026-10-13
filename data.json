@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-09T14:30:00.000Z",
-  "weekStart": "2026-10-08T00:00:00-06:00",
-  "weekEnd": "2026-10-14T23:59:59-06:00",
+  "generatedAt": "2026-10-13T09:02:25.906Z",
+  "weekStart": "2026-10-08T07:00:00.000Z",
+  "weekEnd": "2026-10-14T07:00:00.000Z",
   "accounts": {
     "paragon_custom_construction": {
       "name": "Paragon Custom Homes",
@@ -61,8 +61,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2499,
-      "deltaToday": 9,
+      "followers": 2519,
+      "deltaToday": 20,
       "engagementRate": 1.45,
       "postDates": []
     },
@@ -70,8 +70,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17787,
-      "deltaToday": 168,
+      "followers": 17851,
+      "deltaToday": 64,
       "engagementRate": 0,
       "postDates": []
     },
@@ -79,8 +79,8 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 2014,
-      "deltaToday": -1,
+      "followers": 2011,
+      "deltaToday": -3,
       "engagementRate": 0,
       "postDates": []
     },
@@ -90,6 +90,24 @@
       "platform": "tiktok",
       "followers": 782,
       "deltaToday": 2,
+      "engagementRate": 0,
+      "postDates": []
+    },
+    "diamondstrengthandwellness": {
+      "name": "Diamond Strength & Wellness",
+      "handle": "diamondstrengthandwellness",
+      "platform": "instagram",
+      "followers": 134,
+      "deltaToday": 0,
+      "engagementRate": 0,
+      "postDates": []
+    },
+    "diamondstrengthandwellness_fb": {
+      "name": "Diamond Strength & Wellness",
+      "handle": "diamondstrengthandwellness_fb",
+      "platform": "facebook",
+      "followers": 23,
+      "deltaToday": 0,
       "engagementRate": 0,
       "postDates": []
     }
