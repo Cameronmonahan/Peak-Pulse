@@ -156,11 +156,33 @@
     },
     {
       "date": "2026-10-05",
-      "followers": 4601
+      "followers": 4601,
+      "posted": true
+    },
+    {
+      "date": "2026-10-06",
+      "posted": false
+    },
+    {
+      "date": "2026-10-07",
+      "posted": true
     },
     {
       "date": "2026-10-08",
-      "followers": 4677
+      "followers": 4677,
+      "posted": true
+    },
+    {
+      "date": "2026-10-09",
+      "posted": true
+    },
+    {
+      "date": "2026-10-10",
+      "posted": false
+    },
+    {
+      "date": "2026-10-11",
+      "posted": true
     },
     {
       "date": "2026-10-13",
@@ -333,11 +355,33 @@
     },
     {
       "date": "2026-10-05",
-      "followers": 1034
+      "followers": 1034,
+      "posted": true
+    },
+    {
+      "date": "2026-10-06",
+      "posted": true
+    },
+    {
+      "date": "2026-10-07",
+      "posted": true
     },
     {
       "date": "2026-10-08",
-      "followers": 1033
+      "followers": 1033,
+      "posted": false
+    },
+    {
+      "date": "2026-10-09",
+      "posted": true
+    },
+    {
+      "date": "2026-10-10",
+      "posted": false
+    },
+    {
+      "date": "2026-10-11",
+      "posted": false
     },
     {
       "date": "2026-10-13",
@@ -523,11 +567,33 @@
     },
     {
       "date": "2026-10-05",
-      "followers": 9596
+      "followers": 9596,
+      "posted": true
+    },
+    {
+      "date": "2026-10-06",
+      "posted": false
+    },
+    {
+      "date": "2026-10-07",
+      "posted": true
     },
     {
       "date": "2026-10-08",
-      "followers": 9626
+      "followers": 9626,
+      "posted": false
+    },
+    {
+      "date": "2026-10-09",
+      "posted": true
+    },
+    {
+      "date": "2026-10-10",
+      "posted": false
+    },
+    {
+      "date": "2026-10-11",
+      "posted": true
     },
     {
       "date": "2026-10-13",
@@ -715,11 +781,33 @@
     },
     {
       "date": "2026-10-05",
-      "followers": 108
+      "followers": 108,
+      "posted": false
+    },
+    {
+      "date": "2026-10-06",
+      "posted": false
+    },
+    {
+      "date": "2026-10-07",
+      "posted": true
     },
     {
       "date": "2026-10-08",
-      "followers": 108
+      "followers": 108,
+      "posted": false
+    },
+    {
+      "date": "2026-10-09",
+      "posted": true
+    },
+    {
+      "date": "2026-10-10",
+      "posted": false
+    },
+    {
+      "date": "2026-10-11",
+      "posted": true
     },
     {
       "date": "2026-10-13",
@@ -883,11 +971,33 @@
     },
     {
       "date": "2026-10-05",
-      "followers": 906
+      "followers": 906,
+      "posted": true
+    },
+    {
+      "date": "2026-10-06",
+      "posted": false
+    },
+    {
+      "date": "2026-10-07",
+      "posted": true
     },
     {
       "date": "2026-10-08",
-      "followers": 906
+      "followers": 906,
+      "posted": false
+    },
+    {
+      "date": "2026-10-09",
+      "posted": true
+    },
+    {
+      "date": "2026-10-10",
+      "posted": false
+    },
+    {
+      "date": "2026-10-11",
+      "posted": true
     },
     {
       "date": "2026-10-13",
@@ -1049,11 +1159,33 @@
     },
     {
       "date": "2026-10-05",
-      "followers": 2490
+      "followers": 2490,
+      "posted": true
+    },
+    {
+      "date": "2026-10-06",
+      "posted": false
+    },
+    {
+      "date": "2026-10-07",
+      "posted": true
     },
     {
       "date": "2026-10-08",
-      "followers": 2499
+      "followers": 2499,
+      "posted": true
+    },
+    {
+      "date": "2026-10-09",
+      "posted": true
+    },
+    {
+      "date": "2026-10-10",
+      "posted": false
+    },
+    {
+      "date": "2026-10-11",
+      "posted": true
     },
     {
       "date": "2026-10-13",
@@ -1152,6 +1284,34 @@
     {
       "date": "2026-10-03",
       "followers": 17787
+    },
+    {
+      "date": "2026-10-05",
+      "posted": false
+    },
+    {
+      "date": "2026-10-06",
+      "posted": true
+    },
+    {
+      "date": "2026-10-07",
+      "posted": false
+    },
+    {
+      "date": "2026-10-08",
+      "posted": false
+    },
+    {
+      "date": "2026-10-09",
+      "posted": false
+    },
+    {
+      "date": "2026-10-10",
+      "posted": false
+    },
+    {
+      "date": "2026-10-11",
+      "posted": true
     },
     {
       "date": "2026-10-13",
@@ -1301,11 +1461,33 @@
     },
     {
       "date": "2026-10-05",
-      "followers": 2015
+      "followers": 2015,
+      "posted": false
+    },
+    {
+      "date": "2026-10-06",
+      "posted": false
+    },
+    {
+      "date": "2026-10-07",
+      "posted": false
     },
     {
       "date": "2026-10-08",
-      "followers": 2014
+      "followers": 2014,
+      "posted": false
+    },
+    {
+      "date": "2026-10-09",
+      "posted": false
+    },
+    {
+      "date": "2026-10-10",
+      "posted": false
+    },
+    {
+      "date": "2026-10-11",
+      "posted": false
     },
     {
       "date": "2026-10-13",
@@ -1495,19 +1677,35 @@
     },
     {
       "date": "2026-10-05",
-      "followers": 45
+      "followers": 45,
+      "posted": false
+    },
+    {
+      "date": "2026-10-06",
+      "posted": false
     },
     {
       "date": "2026-10-07",
-      "followers": 45
+      "followers": 45,
+      "posted": true
     },
     {
       "date": "2026-10-08",
-      "followers": 45
+      "followers": 45,
+      "posted": false
     },
     {
       "date": "2026-10-09",
-      "followers": 45
+      "followers": 45,
+      "posted": true
+    },
+    {
+      "date": "2026-10-10",
+      "posted": false
+    },
+    {
+      "date": "2026-10-11",
+      "posted": false
     },
     {
       "date": "2026-10-13",
@@ -1724,6 +1922,34 @@
     }
   ],
   "diamondstrengthandwellness": [
+    {
+      "date": "2026-10-05",
+      "posted": true
+    },
+    {
+      "date": "2026-10-06",
+      "posted": true
+    },
+    {
+      "date": "2026-10-07",
+      "posted": true
+    },
+    {
+      "date": "2026-10-08",
+      "posted": false
+    },
+    {
+      "date": "2026-10-09",
+      "posted": true
+    },
+    {
+      "date": "2026-10-10",
+      "posted": true
+    },
+    {
+      "date": "2026-10-11",
+      "posted": true
+    },
     {
       "date": "2026-10-13",
       "followers": 134,
