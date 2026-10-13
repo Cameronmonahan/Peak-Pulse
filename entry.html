@@ -129,9 +129,9 @@
   <summary>How this works</summary>
   <div class="helper" style="margin-top:8px;">
     Each account (Instagram, plus TikTok and Facebook where tracked) gets its own card below.<br><br>
-    <b>Daily Update</b> (check in as often as you like — once or twice a day): current follower count +
-    whether there's been a post since your last check-in. If you check twice in one day, the second check
-    just confirms/updates the same day's entry — it won't lose an earlier "yes."<br><br>
+    <b>Daily Update</b> (check in at 7:30, 12:30, 5 and 9): current follower count + <b>"Posted today?"</b>
+    Just answer Yes if the account has posted at any point today. Once a day says Yes it stays Yes — a later
+    check can't turn it back to No. Follower count: the latest check of the day is what's kept.<br><br>
     <b>Weekly Engagement</b> (once a week, whenever convenient): total likes + comments across this week's
     posts so far. The rate auto-calculates using the actual number of posts logged that week.<br><br>
     Your GitHub token is never saved anywhere except (optionally) this browser tab's session memory.
@@ -307,11 +307,12 @@ function renderClients(){
       <label>Current follower count <span style="text-transform:none;color:var(--text-dim);">(right now)</span></label>
       <input type="number" class="f-followers" value="${todayEntry && typeof todayEntry.followers === 'number' ? todayEntry.followers : ''}" placeholder="e.g. 4820">
       <div class="prev-note">${prevFollowers !== null ? `Previous saved count: ${prevFollowers.toLocaleString()}` : "No previous count yet — today's delta will show as +0"}</div>
-      <label>Posted since your last check-in?</label>
+      <label>Posted today?</label>
       <div class="toggle-row">
         <div class="toggle-btn f-posted-yes ${todayEntry && todayEntry.posted ? 'active' : ''}">Yes</div>
         <div class="toggle-btn f-posted-no ${!(todayEntry && todayEntry.posted) ? 'active' : ''}">No</div>
       </div>
+      ${todayEntry && todayEntry.posted ? '<div class="prev-note" style="color:var(--up);">✓ Already logged as posted today — stays Yes for the day</div>' : ''}
 
       <div class="section-label" style="margin-top:18px;">Weekly Engagement <span class="freq">— update once a week</span></div>
       <div class="weekly-block">
@@ -334,7 +335,10 @@ function renderClients(){
     const yesBtn = card.querySelector('.f-posted-yes');
     const noBtn = card.querySelector('.f-posted-no');
     yesBtn.addEventListener('click', () => { yesBtn.classList.add('active'); noBtn.classList.remove('active'); });
-    noBtn.addEventListener('click', () => { noBtn.classList.add('active'); yesBtn.classList.remove('active'); });
+    noBtn.addEventListener('click', () => {
+      if(todayEntry && todayEntry.posted) return; // Yes sticks for the day
+      noBtn.classList.add('active'); yesBtn.classList.remove('active');
+    });
   });
 
   $('save-btn').disabled = false;
