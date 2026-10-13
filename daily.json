@@ -385,7 +385,7 @@
     },
     {
       "date": "2026-10-13",
-      "posted": false,
+      "posted": true,
       "followers": 1069
     }
   ],
@@ -597,7 +597,7 @@
     },
     {
       "date": "2026-10-13",
-      "posted": false,
+      "posted": true,
       "followers": 9664
     }
   ],
@@ -811,7 +811,7 @@
     },
     {
       "date": "2026-10-13",
-      "posted": false,
+      "posted": true,
       "followers": 110
     }
   ],
@@ -1953,14 +1953,14 @@
     {
       "date": "2026-10-13",
       "followers": 134,
-      "posted": false
+      "posted": true
     }
   ],
   "diamondstrengthandwellness_fb": [
     {
       "date": "2026-10-13",
       "followers": 23,
-      "posted": false
+      "posted": true
     }
   ]
 }
