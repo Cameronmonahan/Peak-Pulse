@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T09:06:54.897Z",
+  "generatedAt": "2026-10-13T09:07:57.050Z",
   "weekStart": "2026-10-08T07:00:00.000Z",
   "weekEnd": "2026-10-14T07:00:00.000Z",
   "accounts": {
@@ -52,8 +52,8 @@
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 906,
-      "deltaToday": 0,
+      "followers": 908,
+      "deltaToday": 2,
       "engagementRate": 3.43,
       "postDates": []
     },
