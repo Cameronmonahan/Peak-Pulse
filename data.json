@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T09:36:18.304Z",
+  "generatedAt": "2026-10-13T09:45:30.251Z",
   "weekStart": "2026-10-12T07:00:00.000Z",
   "weekEnd": "2026-10-18T07:00:00.000Z",
   "accounts": {
@@ -28,7 +28,9 @@
       "followers": 1069,
       "deltaToday": 36,
       "engagementRate": 1.91,
-      "postDates": []
+      "postDates": [
+        "2026-10-13T07:00:00.000Z"
+      ]
     },
     "marwooddesign": {
       "name": "Marwood Premium Cabinetry",
@@ -37,7 +39,9 @@
       "followers": 9664,
       "deltaToday": 38,
       "engagementRate": 0.22,
-      "postDates": []
+      "postDates": [
+        "2026-10-13T07:00:00.000Z"
+      ]
     },
     "ventisalesgroup": {
       "name": "Venti Sales Group",
@@ -46,7 +50,9 @@
       "followers": 110,
       "deltaToday": 2,
       "engagementRate": 5.97,
-      "postDates": []
+      "postDates": [
+        "2026-10-13T07:00:00.000Z"
+      ]
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
@@ -100,7 +106,9 @@
       "followers": 134,
       "deltaToday": 0,
       "engagementRate": 0,
-      "postDates": []
+      "postDates": [
+        "2026-10-13T07:00:00.000Z"
+      ]
     },
     "diamondstrengthandwellness_fb": {
       "name": "Diamond Strength & Wellness",
@@ -109,7 +117,9 @@
       "followers": 23,
       "deltaToday": 0,
       "engagementRate": 0,
-      "postDates": []
+      "postDates": [
+        "2026-10-13T07:00:00.000Z"
+      ]
     },
     "legacyflooringsd_fb": {
       "name": "Legacy Flooring",
