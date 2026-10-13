@@ -161,6 +161,10 @@
     {
       "date": "2026-10-08",
       "followers": 4677
+    },
+    {
+      "date": "2026-10-13",
+      "posted": false
     }
   ],
   "legacyflooringsd": [
@@ -333,6 +337,10 @@
     {
       "date": "2026-10-08",
       "followers": 1033
+    },
+    {
+      "date": "2026-10-13",
+      "posted": false
     }
   ],
   "marwooddesign": [
@@ -518,6 +526,10 @@
     {
       "date": "2026-10-08",
       "followers": 9626
+    },
+    {
+      "date": "2026-10-13",
+      "posted": false
     }
   ],
   "ventisalesgroup": [
@@ -705,6 +717,10 @@
     {
       "date": "2026-10-08",
       "followers": 108
+    },
+    {
+      "date": "2026-10-13",
+      "posted": false
     }
   ],
   "guide_n_gallop": [
@@ -868,6 +884,10 @@
     {
       "date": "2026-10-08",
       "followers": 906
+    },
+    {
+      "date": "2026-10-13",
+      "posted": false
     }
   ],
   "louiehamner": [
@@ -1029,6 +1049,11 @@
     {
       "date": "2026-10-08",
       "followers": 2499
+    },
+    {
+      "date": "2026-10-13",
+      "followers": 2519,
+      "posted": false
     }
   ],
   "peakexposuremedia": [
@@ -1122,6 +1147,11 @@
     {
       "date": "2026-10-03",
       "followers": 17787
+    },
+    {
+      "date": "2026-10-13",
+      "followers": 17851,
+      "posted": false
     }
   ],
   "thenanonature": [
@@ -1271,6 +1301,11 @@
     {
       "date": "2026-10-08",
       "followers": 2014
+    },
+    {
+      "date": "2026-10-13",
+      "followers": 2011,
+      "posted": false
     }
   ],
   "paragon_custom_const": [
@@ -1468,6 +1503,10 @@
     {
       "date": "2026-10-09",
       "followers": 45
+    },
+    {
+      "date": "2026-10-13",
+      "posted": false
     }
   ],
   "the.nano.nature": [
@@ -1665,6 +1704,30 @@
     {
       "date": "2026-10-09",
       "followers": 782
+    },
+    {
+      "date": "2026-10-13",
+      "posted": false
+    }
+  ],
+  "legacyflooringsd_fb": [
+    {
+      "date": "2026-10-13",
+      "posted": false
+    }
+  ],
+  "diamondstrengthandwellness": [
+    {
+      "date": "2026-10-13",
+      "followers": 134,
+      "posted": false
+    }
+  ],
+  "diamondstrengthandwellness_fb": [
+    {
+      "date": "2026-10-13",
+      "followers": 23,
+      "posted": false
     }
   ]
 }
