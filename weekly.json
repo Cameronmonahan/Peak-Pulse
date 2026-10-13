@@ -122,5 +122,11 @@
       "weekStart": "2026-08-27",
       "engagementRate": 1.45
     }
+  ],
+  "built.bykate": [
+    {
+      "weekStart": "2026-10-12",
+      "engagementRate": 19.69
+    }
   ]
 }
