@@ -282,6 +282,8 @@
   .metric .m-label{ font-size:10px; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-dim); margin-bottom:4px; }
   .metric .m-value{ font-size:20px; font-weight:700; color:var(--text); }
   .metric .m-value.gold{ color:var(--gold-bright); }
+  .metric .m-value.good{ color:#93c08f; }
+  .metric .m-value.bad{ color:#e07a6a; }
 
   .week-tracker{ display:flex; flex-direction:column; gap:8px; }
   .week-tracker-head{ display:flex; justify-content:space-between; align-items:baseline; }
@@ -423,6 +425,26 @@ function clientPlatforms(client){
   }
   return platforms;
 }
+/* Instagram median engagement rate per post, by industry — Rival IQ 2025 Social
+   Media Industry Benchmark Report (same formula: interactions / followers per post).
+   Set each client's "industry" in clients.json to one of these names. */
+const IG_BENCHMARKS = {
+  'Alcohol':0.368, 'Fashion':0.147, 'Financial Services':0.261, 'Food & Beverage':0.400,
+  'Health & Beauty':0.144, 'Higher Ed':2.101, 'Home Decor':0.136, 'Influencers':0.576,
+  'Media':0.443, 'Nonprofits':0.561, 'Retail':0.160, 'Sports Teams':1.30,
+  'Tech & Software':0.327, 'Travel':0.341, 'All Industries':0.36
+};
+// Returns { cls, tip } for the engagement number. Only Instagram is graded.
+function engagementGrade(client, account, rate){
+  if(account.platform !== 'instagram') return { cls:'gold', tip:'' };
+  const industry = (client.industry && IG_BENCHMARKS[client.industry] != null) ? client.industry : 'All Industries';
+  const bench = IG_BENCHMARKS[industry];
+  if(!rate) return { cls:'gold', tip:`${industry} Instagram benchmark: ${bench}%` };
+  return {
+    cls: rate >= bench ? 'good' : 'bad',
+    tip: `${industry} Instagram benchmark: ${bench}% (Rival IQ 2025)`
+  };
+}
 function selectedAccountFor(client){
   const platforms = clientPlatforms(client);
   const selected = PLATFORM_SELECTION[client.handle] || 'instagram';
@@ -442,6 +464,7 @@ async function tryLoadClientsJson(){
           name:c.name,
           handle:c.handle,
           tiktokHandle: c.tiktokHandle || null,
+          industry: c.industry || null,
           facebookHandle: c.facebookHandle || null,
           seedFollowers: existing ? existing.seedFollowers : 2000
         };
@@ -748,7 +771,7 @@ function renderWeek(){
       <div class="metrics-row">
         <div class="metric">
           <div class="m-label">Engagement rate (weekly)</div>
-          <div class="m-value gold">${data.engagementRate.toFixed(1)}%</div>
+          <div class="m-value ${engagementGrade(client, account, data.engagementRate).cls}" title="${engagementGrade(client, account, data.engagementRate).tip}">${data.engagementRate.toFixed(2)}%</div>
         </div>
         <div class="metric">
           <div class="m-label">Posts this week</div>
