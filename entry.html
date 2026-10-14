@@ -132,6 +132,8 @@
     <b>Daily Update</b> (check in at 7:30, 12:30, 5 and 9): current follower count + <b>"Posted today?"</b>
     Just answer Yes if the account has posted at any point today. Once a day says Yes it stays Yes — a later
     check can't turn it back to No. Follower count: the latest check of the day is what's kept.<br><br>
+    <b>Finsta</b> cards (one per client): enter how many reels and photos have been posted on the finsta for
+    the <b>Tuesday</b> batch and the <b>Thursday</b> batch. You can update either batch any time that week.<br><br>
     <b>Weekly Engagement</b> (once a week, whenever convenient): total likes + comments across this week's
     posts so far. The rate auto-calculates using the actual number of posts logged that week.<br><br>
     Your GitHub token is never saved anywhere except (optionally) this browser tab's session memory.
@@ -146,6 +148,9 @@ const IG_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stro
 </svg>`;
 const FB_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M14 8.5V7c0-.8.4-1.2 1.2-1.2H17V2.5h-2.6C11.8 2.5 10.5 4 10.5 6.6v1.9H8v3.3h2.5v9.7H14v-9.7h2.7l.5-3.3H14z"/>
+</svg>`;
+const FIN_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/>
 </svg>`;
 const TT_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M14 3v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c0 3 2.2 5 5 5"/>
@@ -163,6 +168,14 @@ function getPostWeekRange(now = new Date()){
 }
 // Local-time date keys (so a Sunday 8pm entry isn't dated Monday by UTC)
 function dateKey(d){ return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
+// Finsta content batches are due Tuesday and Thursday of the (Mon-Sun) week.
+function batchDays(){
+  const { start } = getPostWeekRange();
+  const tue = new Date(start); tue.setDate(start.getDate() + 1);
+  const thu = new Date(start); thu.setDate(start.getDate() + 3);
+  return { tue, thu };
+}
+function fmtBatchDay(d){ return d.toLocaleDateString('en-US',{ weekday:'long', month:'short', day:'numeric' }); }
 function todayKey(d = new Date()){ return dateKey(d); }
 
 function b64EncodeUnicode(str){
@@ -202,6 +215,9 @@ function buildAccountsList(clients){
     }
     if(c.facebookHandle){
       list.push({ name:c.name, handle:c.facebookHandle, platform:'facebook' });
+    }
+    if(c.finsta){
+      list.push({ name:c.name, handle:c.handle + '_finsta', platform:'finsta' });
     }
   });
   return list;
@@ -265,6 +281,42 @@ function upsertDaily(handle, date, fields){
   STATE.daily[handle] = arr;
 }
 
+function renderFinstaCard(container, account){
+  const handle = account.handle;
+  const { tue, thu } = batchDays();
+  const entries = STATE.daily[handle] || [];
+  const tueKey = dateKey(tue), thuKey = dateKey(thu);
+  const tueE = entries.find(x => x.date === tueKey) || {};
+  const thuE = entries.find(x => x.date === thuKey) || {};
+  const val = v => (typeof v === 'number' ? v : '');
+  const block = (cls, label, ent) => `
+    <div class="${cls}" style="margin-top:12px;">
+      <label style="margin-top:0;">${label}</label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div><div class="prev-note" style="margin:0 0 4px;">Reels posted</div>
+          <input type="number" min="0" class="f-reels" value="${val(ent.reels)}" placeholder="0"></div>
+        <div><div class="prev-note" style="margin:0 0 4px;">Photos posted</div>
+          <input type="number" min="0" class="f-photos" value="${val(ent.photos)}" placeholder="0"></div>
+      </div>
+    </div>`;
+  const card = document.createElement('div');
+  card.className = 'client-card';
+  card.dataset.handle = handle;
+  card.dataset.platform = 'finsta';
+  card.innerHTML = `
+    <div class="card-title-row">
+      <h3 class="display">${account.name}</h3>
+      <span class="platform-tag">${FIN_ICON} Finsta</span>
+    </div>
+    <div class="handle">Client-approval account — batch tracking</div>
+    <div class="section-label">Content Batches <span class="freq">— count what's been posted on the finsta for each batch</span></div>
+    ${block('batch-tue', 'Tuesday batch — ' + fmtBatchDay(tue), tueE)}
+    ${block('batch-thu', 'Thursday batch — ' + fmtBatchDay(thu), thuE)}
+    <div class="calc-note">Enter the total reels and photos posted for that batch so far. Leave blank to skip. You can update a batch any time this week.</div>
+  `;
+  container.appendChild(card);
+}
+
 function renderClients(){
   const container = $('clients-container');
   container.innerHTML = '';
@@ -277,6 +329,7 @@ function renderClients(){
 
   STATE.accounts.forEach(account => {
     const handle = account.handle;
+    if(account.platform === 'finsta'){ renderFinstaCard(container, account); return; }
     const dailyEntries = (STATE.daily[handle] || []);
     const todayEntry = dailyEntries.find(e => e.date === today);
     const followerEntries = dailyEntries.filter(e => typeof e.followers === 'number' && e.date !== today)
@@ -388,6 +441,19 @@ async function saveAll(){
     cards.forEach(card => {
       const handle = card.dataset.handle;
       const account = STATE.accounts.find(a => a.handle === handle);
+      if(card.dataset.platform === 'finsta'){
+        const { tue, thu } = batchDays();
+        [['.batch-tue', tue], ['.batch-thu', thu]].forEach(([sel, day]) => {
+          const reelsRaw = card.querySelector(sel + ' .f-reels').value.trim();
+          const photosRaw = card.querySelector(sel + ' .f-photos').value.trim();
+          if(reelsRaw === '' && photosRaw === '') return;
+          const fields = {};
+          if(reelsRaw !== '') fields.reels = Math.max(0, parseInt(reelsRaw, 10) || 0);
+          if(photosRaw !== '') fields.photos = Math.max(0, parseInt(photosRaw, 10) || 0);
+          upsertDaily(handle, dateKey(day), fields);
+        });
+        return;
+      }
       const followersRaw = card.querySelector('.f-followers').value.trim();
       const posted = card.querySelector('.f-posted-yes').classList.contains('active');
 

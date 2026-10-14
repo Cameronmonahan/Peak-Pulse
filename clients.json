@@ -3,56 +3,66 @@
     "name": "Paragon Custom Homes",
     "handle": "paragon_custom_construction",
     "tiktokHandle": "paragon_custom_const",
-    "industry": "Home Decor"
+    "industry": "Home Decor",
+    "finsta": true
   },
   {
     "name": "Legacy Flooring",
     "handle": "legacyflooringsd",
     "facebookHandle": "legacyflooringsd_fb",
-    "industry": "Home Decor"
+    "industry": "Home Decor",
+    "finsta": true
   },
   {
     "name": "Marwood Premium Cabinetry",
     "handle": "marwooddesign",
-    "industry": "Home Decor"
+    "industry": "Home Decor",
+    "finsta": true
   },
   {
     "name": "Venti Sales Group",
     "handle": "ventisalesgroup",
     "tiktokHandle": "REPLACE_venti_tiktok",
-    "industry": "All Industries"
+    "industry": "All Industries",
+    "finsta": true
   },
   {
     "name": "Guide N Gallop",
     "handle": "guide_n_gallop",
-    "industry": "All Industries"
+    "industry": "All Industries",
+    "finsta": true
   },
   {
     "name": "Louie Hamner",
     "handle": "louiehamner",
     "tiktokHandle": "REPLACE_louie_tiktok",
-    "industry": "Influencers"
+    "industry": "Influencers",
+    "finsta": true
   },
   {
     "name": "Peak Exposure Media",
     "handle": "peakexposuremedia",
-    "industry": "Media"
+    "industry": "Media",
+    "finsta": true
   },
   {
     "name": "The Nano Nature",
     "handle": "thenanonature",
     "tiktokHandle": "the.nano.nature",
-    "industry": "All Industries"
+    "industry": "All Industries",
+    "finsta": true
   },
   {
     "name": "Diamond Strength & Wellness",
     "handle": "diamondstrengthandwellness",
     "facebookHandle": "diamondstrengthandwellness_fb",
-    "industry": "Health & Beauty"
+    "industry": "Health & Beauty",
+    "finsta": true
   },
   {
     "name": "Built by Kate",
     "handle": "built.bykate",
-    "industry": "Health & Beauty"
+    "industry": "Health & Beauty",
+    "finsta": true
   }
 ]

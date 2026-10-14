@@ -258,6 +258,8 @@
   }
   .platform-tab svg{ width:15px; height:15px; display:block; }
   .platform-tab.active{ background:var(--gold); border-color:var(--gold); color:#1a1f30; }
+  .platform-tab.active svg{ stroke:#1a1f30; }
+  .platform-tab.active svg circle[fill]{ fill:#1a1f30; }
   .platform-tab:not(.active):hover{ border-color:var(--gold); color:var(--gold-bright); }
 
   .stat-row{ display:flex; align-items:baseline; gap:10px; }
@@ -282,6 +284,20 @@
   .metric .m-label{ font-size:10px; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-dim); margin-bottom:4px; }
   .metric .m-value{ font-size:20px; font-weight:700; color:var(--text); }
   .metric .m-value.gold{ color:var(--gold-bright); }
+  .batch-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:4px; }
+  .batch-tile{ background:rgba(255,255,255,0.03); border:1px solid var(--line); border-radius:12px; padding:12px; }
+  .batch-tile .b-day{ font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-dim); }
+  .batch-tile .b-date{ font-size:12px; color:var(--text); margin-bottom:8px; }
+  .batch-tile .b-counts{ font-family:'Bebas Neue'; font-size:24px; line-height:1.15; color:var(--text); }
+  .batch-tile .b-counts small{ font-family:'Montserrat',sans-serif; font-size:10px; color:var(--text-dim); letter-spacing:0.08em; margin-left:4px; }
+  .batch-head{ font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-dim); margin-bottom:8px; }
+  .batch-tile .b-status{ margin-top:8px; font-size:11px; font-weight:700; }
+  .batch-tile.ok{ border-color:rgba(147,192,143,0.5); }
+  .batch-tile.ok .b-status{ color:#93c08f; }
+  .batch-tile.late{ border-color:rgba(224,122,106,0.55); }
+  .batch-tile.late .b-status{ color:#e07a6a; }
+  .batch-tile.due .b-status{ color:var(--gold-bright); }
+  .batch-tile.upcoming .b-status{ color:var(--text-dim); }
   .metric .m-value.good{ color:#93c08f; }
   .metric .m-value.bad{ color:#e07a6a; }
 
@@ -420,6 +436,9 @@ function clientPlatforms(client){
   if(client.tiktokHandle && !String(client.tiktokHandle).startsWith('REPLACE_')){
     platforms.push({ key:'tiktok', account:{ name:client.name, handle:client.tiktokHandle, platform:'tiktok', seedFollowers:Math.round(client.seedFollowers*0.6) } });
   }
+  if(client.finsta){
+    platforms.push({ key:'finsta', account:{ name:client.name, handle:client.handle + '_finsta', platform:'finsta', seedFollowers:0 } });
+  }
   if(client.facebookHandle){
     platforms.push({ key:'facebook', account:{ name:client.name, handle:client.facebookHandle, platform:'facebook', seedFollowers:Math.round(client.seedFollowers*0.8) } });
   }
@@ -465,6 +484,7 @@ async function tryLoadClientsJson(){
           handle:c.handle,
           tiktokHandle: c.tiktokHandle || null,
           industry: c.industry || null,
+          finsta: !!c.finsta,
           facebookHandle: c.facebookHandle || null,
           seedFollowers: existing ? existing.seedFollowers : 2000
         };
@@ -690,12 +710,69 @@ const TT_ICON_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="#c9a876" strok
 const FB_ICON_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="#c9a876" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M14 8.5V7c0-.8.4-1.2 1.2-1.2H17V2.5h-2.6C11.8 2.5 10.5 4 10.5 6.6v1.9H8v3.3h2.5v9.7H14v-9.7h2.7l.5-3.3H14z"/>
 </svg>`;
-const PLATFORM_ICONS = { instagram: IG_ICON_SVG, tiktok: TT_ICON_SVG, facebook: FB_ICON_SVG };
-const PLATFORM_LABELS = { instagram:'Instagram', tiktok:'TikTok', facebook:'Facebook' };
+const FIN_ICON_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="#c9a876" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/>
+</svg>`;
+const PLATFORM_ICONS = { instagram: IG_ICON_SVG, tiktok: TT_ICON_SVG, facebook: FB_ICON_SVG, finsta: FIN_ICON_SVG };
+const PLATFORM_LABELS = { instagram:'Instagram', tiktok:'TikTok', facebook:'Facebook', finsta:'Finsta (batches)' };
 function platformBadge(platform){
   const icon = PLATFORM_ICONS[platform] || IG_ICON_SVG;
   const label = PLATFORM_LABELS[platform] || 'Instagram';
   return `<div class="platform-badge" title="${label}">${icon}</div>`;
+}
+
+/* ---------------- FINSTA BATCH TRACKING ----------------
+   Content batches are due Tuesday and Thursday; the finsta is where they get posted
+   for client approval. We only track reels + photos posted for each batch day. */
+function localKey(d){ return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
+function batchStatus(entry, day){
+  const reels = entry && typeof entry.reels === 'number' ? entry.reels : 0;
+  const photos = entry && typeof entry.photos === 'number' ? entry.photos : 0;
+  const todayStr = localKey(new Date());
+  const dayStr = localKey(day);
+  if(reels + photos > 0) return { cls:'ok', text:'✓ Posted', reels, photos };
+  if(dayStr < todayStr) return { cls:'late', text:'✗ Not posted', reels, photos };
+  if(dayStr === todayStr) return { cls:'due', text:'Due today', reels, photos };
+  return { cls:'upcoming', text:'Upcoming', reels, photos };
+}
+function finstaBodyWeek(handle, start){
+  const entries = DAILY_DATA[handle] || [];
+  const tiles = [['Tuesday', 1], ['Thursday', 3]].map(([label, off]) => {
+    const day = new Date(start); day.setDate(start.getDate() + off);
+    const ent = entries.find(x => x.date === localKey(day));
+    const st = batchStatus(ent, day);
+    return `<div class="batch-tile ${st.cls}">
+      <div class="b-day">${label} batch</div>
+      <div class="b-date">${fmtShort(day)}</div>
+      <div class="b-counts">${st.reels}<small>REELS</small></div><div class="b-counts">${st.photos}<small>PHOTOS</small></div>
+      <div class="b-status">${st.text}</div>
+    </div>`;
+  }).join('');
+  return `<div class="batch-head">Finsta batches this week</div><div class="batch-grid">${tiles}</div>`;
+}
+function finstaBodyMonth(handle, key){
+  const { start, end } = monthBounds(key);
+  const entries = DAILY_DATA[handle] || [];
+  const todayStr = localKey(new Date());
+  let due = 0, posted = 0, reels = 0, photos = 0;
+  for(let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)){
+    const wd = d.getDay();
+    if(wd !== 2 && wd !== 4) continue;
+    const k = localKey(d);
+    if(k > todayStr) continue;
+    due++;
+    const ent = entries.find(x => x.date === k);
+    const r = ent && typeof ent.reels === 'number' ? ent.reels : 0;
+    const p = ent && typeof ent.photos === 'number' ? ent.photos : 0;
+    reels += r; photos += p;
+    if(r + p > 0) posted++;
+  }
+  if(!due) return `<div class="month-empty">No batch days yet in ${monthLabel(key)}.</div>`;
+  return `<div class="month-metric-row">
+    <div class="month-metric"><div class="mm-label">Batches posted</div><div class="mm-value ${posted === due ? 'gold' : ''}">${posted} / ${due}</div></div>
+    <div class="month-metric"><div class="mm-label">Reels</div><div class="mm-value">${reels}</div></div>
+    <div class="month-metric"><div class="mm-label">Photos</div><div class="mm-value">${photos}</div></div>
+  </div>`;
 }
 
 function renderWeek(){
@@ -709,6 +786,31 @@ function renderWeek(){
   RAW_CLIENTS.forEach(client => {
     const platforms = clientPlatforms(client);
     const account = selectedAccountFor(client);
+    if(account.platform === 'finsta'){
+      const fcard = document.createElement('div');
+      fcard.className = 'card';
+      fcard.dataset.clientHandle = client.handle;
+      const ftabs = `<div class="platform-tabs">${platforms.map(p => `
+          <div class="platform-tab ${p.key === account.platform ? 'active' : ''}" data-platform="${p.key}" title="${PLATFORM_LABELS[p.key]}">
+            ${PLATFORM_ICONS[p.key]}
+          </div>`).join('')}</div>`;
+      fcard.innerHTML = `
+        <div class="card-head">
+          <div>
+            <div class="client-name display">${client.name}</div>
+            <div class="client-handle">Finsta · client approval</div>
+          </div>
+          ${ftabs}
+        </div>
+        <div class="divider" style="margin-bottom:14px;"></div>
+        ${finstaBodyWeek(account.handle, start)}
+      `;
+      fcard.querySelectorAll('.platform-tab').forEach(tab => {
+        tab.addEventListener('click', () => { PLATFORM_SELECTION[client.handle] = tab.dataset.platform; render(); });
+      });
+      grid.appendChild(fcard);
+      return;
+    }
     const data = fetchAccountSnapshot(account, start);
 
     const postedDayIdx = new Set(data.postDates.map(iso => {
@@ -809,6 +911,31 @@ function renderMonth(){
   RAW_CLIENTS.forEach(client => {
     const platforms = clientPlatforms(client);
     const account = selectedAccountFor(client);
+    if(account.platform === 'finsta'){
+      const fcard = document.createElement('div');
+      fcard.className = 'card';
+      fcard.dataset.clientHandle = client.handle;
+      const ftabs = `<div class="platform-tabs">${platforms.map(p => `
+          <div class="platform-tab ${p.key === account.platform ? 'active' : ''}" data-platform="${p.key}" title="${PLATFORM_LABELS[p.key]}">
+            ${PLATFORM_ICONS[p.key]}
+          </div>`).join('')}</div>`;
+      fcard.innerHTML = `
+        <div class="card-head">
+          <div>
+            <div class="client-name display">${client.name}</div>
+            <div class="client-handle">Finsta · client approval</div>
+          </div>
+          ${ftabs}
+        </div>
+        <div class="divider" style="margin-bottom:14px;"></div>
+        ${finstaBodyMonth(account.handle, SELECTED_MONTH)}
+      `;
+      fcard.querySelectorAll('.platform-tab').forEach(tab => {
+        tab.addEventListener('click', () => { PLATFORM_SELECTION[client.handle] = tab.dataset.platform; render(); });
+      });
+      grid.appendChild(fcard);
+      return;
+    }
     const stats = computeMonthlyStats(account.handle, SELECTED_MONTH);
     const card = document.createElement('div');
     card.className = 'card';
