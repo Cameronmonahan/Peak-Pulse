@@ -190,8 +190,8 @@
     },
     {
       "date": "2026-10-13",
-      "posted": false,
-      "followers": 4731
+      "posted": true,
+      "followers": 4732
     }
   ],
   "legacyflooringsd": [
@@ -394,7 +394,7 @@
     {
       "date": "2026-10-13",
       "posted": true,
-      "followers": 1085
+      "followers": 1096
     }
   ],
   "marwooddesign": [
@@ -610,7 +610,7 @@
     {
       "date": "2026-10-13",
       "posted": true,
-      "followers": 9704
+      "followers": 9729
     }
   ],
   "ventisalesgroup": [
@@ -827,7 +827,7 @@
     },
     {
       "date": "2026-10-13",
-      "posted": false,
+      "posted": true,
       "followers": 110
     }
   ],
@@ -1022,7 +1022,7 @@
     {
       "date": "2026-10-13",
       "posted": true,
-      "followers": 908
+      "followers": 910
     }
   ],
   "louiehamner": [
@@ -1343,7 +1343,7 @@
     },
     {
       "date": "2026-10-13",
-      "followers": 17850,
+      "followers": 17851,
       "posted": false
     }
   ],
@@ -2025,7 +2025,7 @@
     },
     {
       "date": "2026-10-13",
-      "followers": 7286,
+      "followers": 7327,
       "posted": true
     }
   ]
