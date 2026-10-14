@@ -291,6 +291,7 @@
   .batch-tile .b-counts{ font-family:'Bebas Neue'; font-size:24px; line-height:1.15; color:var(--text); }
   .batch-tile .b-counts small{ font-family:'Montserrat',sans-serif; font-size:10px; color:var(--text-dim); letter-spacing:0.08em; margin-left:4px; }
   .batch-head{ font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-dim); margin-bottom:8px; }
+  .batch-tile .b-mix{ font-size:10.5px; color:var(--text-dim); margin-top:4px; }
   .batch-tile .b-status{ margin-top:8px; font-size:11px; font-weight:700; }
   .batch-tile.ok{ border-color:rgba(147,192,143,0.5); }
   .batch-tile.ok .b-status{ color:#93c08f; }
@@ -748,7 +749,7 @@ function batchesDueInWeek(client, weekStart){
   const out = [];
   for(let i = 0; i < 7; i++){
     const d = new Date(weekStart); d.setDate(weekStart.getDate() + i);
-    batchesDueOn(client, d).forEach(b => out.push({ label:b.label, date:d }));
+    batchesDueOn(client, d).forEach(b => out.push({ label:b.label, date:d, rule:b }));
   }
   return out;
 }
@@ -761,29 +762,41 @@ function nextBatchDue(client, from){
   return null;
 }
 
-function batchStatus(entry, day){
+function batchStatus(entry, day, rule){
   const reels = entry && typeof entry.reels === 'number' ? entry.reels : 0;
   const photos = entry && typeof entry.photos === 'number' ? entry.photos : 0;
+  const total = reels + photos;
+  const target = rule.target || 0;
+  const meets = total >= target && (!rule.reelsTarget || reels >= rule.reelsTarget) && (!rule.photosTarget || photos >= rule.photosTarget);
   const todayStr = localKey(new Date());
   const dayStr = localKey(day);
-  if(reels + photos > 0) return { cls:'ok', text:'✓ Posted', reels, photos };
-  if(dayStr < todayStr) return { cls:'late', text:'✗ Not posted', reels, photos };
-  if(dayStr === todayStr) return { cls:'due', text:'Due today', reels, photos };
-  return { cls:'upcoming', text:'Upcoming', reels, photos };
+  const out = { reels, photos, total, target };
+  if(meets && total > 0) return Object.assign(out, { cls:'ok', text:'✓ Complete' });
+  if(dayStr < todayStr){
+    const short = Math.max(0, target - total);
+    if(rule.flexible && total > 0) return Object.assign(out, { cls:'due', text:`Under target by ${short} (flexible)` });
+    let text = short > 0 ? `✗ ${short} post${short === 1 ? '' : 's'} short` : '✗ Missing mix';
+    if(short === 0 && rule.reelsTarget) text = `✗ Needs ${rule.reelsTarget} videos + ${rule.photosTarget} static`;
+    return Object.assign(out, { cls:'late', text });
+  }
+  if(total > 0) return Object.assign(out, { cls:'due', text:'In progress' });
+  return Object.assign(out, dayStr === todayStr ? { cls:'due', text:'Due today' } : { cls:'upcoming', text:'Upcoming' });
 }
 function finstaTile(handle, bt, overdueTag){
   const ent = (DAILY_DATA[handle] || []).find(x => x.date === localKey(bt.date));
-  const st = batchStatus(ent, bt.date);
+  const st = batchStatus(ent, bt.date, bt.rule);
+  const mix = bt.rule.reelsTarget ? `${st.reels}/${bt.rule.reelsTarget} videos · ${st.photos}/${bt.rule.photosTarget} static` : `${st.reels} reels · ${st.photos} photos`;
   return `<div class="batch-tile ${st.cls}">
     <div class="b-day">${bt.label}${overdueTag ? ' · last week' : ''}</div>
     <div class="b-date">Due ${bt.date.toLocaleDateString('en-US',{ weekday:'short', month:'short', day:'numeric' })}</div>
-    <div class="b-counts">${st.reels}<small>REELS</small></div><div class="b-counts">${st.photos}<small>PHOTOS</small></div>
+    <div class="b-counts">${st.total}<small>/ ${st.target}${bt.rule.flexible ? ' (≈)' : ''} POSTS</small></div>
+    <div class="b-mix">${mix}</div>
     <div class="b-status">${st.text}</div>
   </div>`;
 }
 function finstaBodyWeek(client, handle, start){
   const prev = new Date(start); prev.setDate(start.getDate() - 7);
-  const logged = bt => { const x = (DAILY_DATA[handle] || []).find(en => en.date === localKey(bt.date)); return x && ((x.reels||0) + (x.photos||0)) > 0; };
+  const logged = bt => { const x = (DAILY_DATA[handle] || []).find(en => en.date === localKey(bt.date)); return x && ((x.reels||0) + (x.photos||0)) >= (bt.rule.target || 0); };
   const tiles = [];
   batchesDueInWeek(client, prev).forEach(bt => { if(!logged(bt)) tiles.push(finstaTile(handle, bt, true)); });
   batchesDueInWeek(client, start).forEach(bt => tiles.push(finstaTile(handle, bt, false)));
@@ -798,24 +811,23 @@ function finstaBodyMonth(client, handle, key){
   const { start, end } = monthBounds(key);
   const entries = DAILY_DATA[handle] || [];
   const todayStr = localKey(new Date());
-  let due = 0, posted = 0, reels = 0, photos = 0;
+  let due = 0, complete = 0, delivered = 0, expected = 0;
   for(let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)){
     const k = localKey(d);
     if(k > todayStr) continue;
-    batchesDueOn(client, d).forEach(() => {
+    batchesDueOn(client, d).forEach(rule => {
       due++;
       const ent = entries.find(x => x.date === k);
-      const r = ent && typeof ent.reels === 'number' ? ent.reels : 0;
-      const p = ent && typeof ent.photos === 'number' ? ent.photos : 0;
-      reels += r; photos += p;
-      if(r + p > 0) posted++;
+      const st = batchStatus(ent, d, rule);
+      delivered += Math.min(st.total, st.target);
+      expected += st.target;
+      if(st.cls === 'ok') complete++;
     });
   }
   if(!due) return `<div class="month-empty">No batches due yet in ${monthLabel(key)}.</div>`;
   return `<div class="month-metric-row">
-    <div class="month-metric"><div class="mm-label">Batches posted</div><div class="mm-value ${posted === due ? 'gold' : ''}">${posted} / ${due}</div></div>
-    <div class="month-metric"><div class="mm-label">Reels</div><div class="mm-value">${reels}</div></div>
-    <div class="month-metric"><div class="mm-label">Photos</div><div class="mm-value">${photos}</div></div>
+    <div class="month-metric"><div class="mm-label">Batches complete</div><div class="mm-value ${complete === due ? 'gold' : ''}">${complete} / ${due}</div></div>
+    <div class="month-metric"><div class="mm-label">Posts delivered</div><div class="mm-value">${delivered} / ${expected}</div></div>
   </div>`;
 }
 

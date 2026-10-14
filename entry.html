@@ -191,7 +191,7 @@ function batchesDueInWeek(client, weekStart){
   const out = [];
   for(let i = 0; i < 7; i++){
     const d = new Date(weekStart); d.setDate(weekStart.getDate() + i);
-    batchesDueOn(client, d).forEach(b => out.push({ label:b.label, date:d }));
+    batchesDueOn(client, d).forEach(b => out.push({ label:b.label, date:d, rule:b }));
   }
   return out;
 }
@@ -330,7 +330,7 @@ function renderFinstaCard(container, account){
     const ent = entries.find(x => x.date === dateKey(bt.date)) || {};
     return `
     <div class="batch-block" data-date="${dateKey(bt.date)}" style="margin-top:12px;">
-      <label style="margin-top:0;">${bt.label} — due ${fmtBatchDay(bt.date)}${bt.overdue ? ' <span style="color:#e07a6a;">(overdue — not logged yet)</span>' : ''}</label>
+      <label style="margin-top:0;">${bt.label} — due ${fmtBatchDay(bt.date)} — target ${bt.rule.target}${bt.rule.flexible ? ' (about; fewer during events)' : ''} posts${bt.rule.reelsTarget ? ' (' + bt.rule.reelsTarget + ' videos + ' + bt.rule.photosTarget + ' static)' : ''}${bt.overdue ? ' <span style="color:#e07a6a;">(overdue — not logged yet)</span>' : ''}</label>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
         <div><div class="prev-note" style="margin:0 0 4px;">Reels posted</div>
           <input type="number" min="0" class="f-reels" value="${val(ent.reels)}" placeholder="0"></div>
@@ -352,7 +352,7 @@ function renderFinstaCard(container, account){
     <div class="handle">Client-approval account — batch tracking</div>
     <div class="section-label">Content Batch <span class="freq">— reels and photos posted on the finsta for the batch</span></div>
     ${blocks || `<div class="prev-note" style="margin-top:10px;">No batch due this week.${nxt ? ' Next: ' + nxt.label + ' — ' + fmtBatchDay(nxt.date) + '.' : ''}</div>`}
-    ${blocks ? '<div class="calc-note">Enter the total reels and photos posted for that batch so far. Leave blank to skip. Update it any time.</div>' : ''}
+    ${blocks ? '<div class="calc-note">Enter the total reels and photos posted for that batch so far (reels + photos counts toward the target). Leave blank to skip. Update it any time.</div>' : ''}
   `;
   container.appendChild(card);
 }
