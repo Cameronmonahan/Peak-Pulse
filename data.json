@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T23:17:46.000Z",
+  "generatedAt": "2026-10-14T03:07:12.000Z",
   "weekStart": "2026-10-12T07:00:00.000Z",
   "weekEnd": "2026-10-18T07:00:00.000Z",
   "accounts": {
@@ -7,10 +7,12 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4731,
-      "deltaToday": 54,
+      "followers": 4732,
+      "deltaToday": 55,
       "engagementRate": 0.61,
-      "postDates": []
+      "postDates": [
+        "2026-10-13T07:00:00.000Z"
+      ]
     },
     "paragon_custom_const": {
       "name": "Paragon Custom Homes",
@@ -25,8 +27,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1085,
-      "deltaToday": 52,
+      "followers": 1096,
+      "deltaToday": 63,
       "engagementRate": 1.91,
       "postDates": [
         "2026-10-12T07:00:00.000Z",
@@ -37,8 +39,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 9704,
-      "deltaToday": 78,
+      "followers": 9729,
+      "deltaToday": 103,
       "engagementRate": 0.22,
       "postDates": [
         "2026-10-12T07:00:00.000Z",
@@ -53,15 +55,16 @@
       "deltaToday": 2,
       "engagementRate": 5.97,
       "postDates": [
-        "2026-10-12T07:00:00.000Z"
+        "2026-10-12T07:00:00.000Z",
+        "2026-10-13T07:00:00.000Z"
       ]
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 908,
-      "deltaToday": 2,
+      "followers": 910,
+      "deltaToday": 4,
       "engagementRate": 3.43,
       "postDates": [
         "2026-10-13T07:00:00.000Z"
@@ -82,8 +85,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17850,
-      "deltaToday": 63,
+      "followers": 17851,
+      "deltaToday": 64,
       "engagementRate": 0,
       "postDates": []
     },
@@ -145,8 +148,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7286,
-      "deltaToday": 100,
+      "followers": 7327,
+      "deltaToday": 141,
       "engagementRate": 19.69,
       "postDates": [
         "2026-10-12T07:00:00.000Z",
