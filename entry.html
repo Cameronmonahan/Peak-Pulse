@@ -132,8 +132,9 @@
     <b>Daily Update</b> (check in at 7:30, 12:30, 5 and 9): current follower count + <b>"Posted today?"</b>
     Just answer Yes if the account has posted at any point today. Once a day says Yes it stays Yes — a later
     check can't turn it back to No. Follower count: the latest check of the day is what's kept.<br><br>
-    <b>Finsta</b> cards (one per client): enter how many reels and photos have been posted on the finsta for
-    the <b>Tuesday</b> batch and the <b>Thursday</b> batch. You can update either batch any time that week.<br><br>
+    <b>Finsta</b> cards: when a client has a content batch due, enter how many reels and photos have been posted on
+    the finsta for that batch (the card shows which batch and its due date). Clients with no batch due this week
+    just show the next due date.<br><br>
     <b>Weekly Engagement</b> (once a week, whenever convenient): total likes + comments across this week's
     posts so far. The rate auto-calculates using the actual number of posts logged that week.<br><br>
     Your GitHub token is never saved anywhere except (optionally) this browser tab's session memory.
@@ -168,12 +169,39 @@ function getPostWeekRange(now = new Date()){
 }
 // Local-time date keys (so a Sunday 8pm entry isn't dated Monday by UTC)
 function dateKey(d){ return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
-// Finsta content batches are due Tuesday and Thursday of the (Mon-Sun) week.
-function batchDays(){
-  const { start } = getPostWeekRange();
-  const tue = new Date(start); tue.setDate(start.getDate() + 1);
-  const thu = new Date(start); thu.setDate(start.getDate() + 3);
-  return { tue, thu };
+
+// ---- Finsta batch schedule (per client, from clients.json "batches") ----
+// Each rule: { label, weekday (0=Sun..6=Sat), anchor:'YYYY-MM-DD' (a due date), everyWeeks }
+function _dayNum(y,m,d){ return Math.round(Date.UTC(y,m,d) / 86400000); }
+function _dayNumOfDate(d){ return _dayNum(d.getFullYear(), d.getMonth(), d.getDate()); }
+function _dayNumOfKey(k){ const p = k.split('-').map(Number); return _dayNum(p[0], p[1]-1, p[2]); }
+const BATCH_TRACKING_START = '2026-10-13'; // batches before this date weren't tracked
+function batchesDueOn(client, d){
+  const dn = _dayNumOfDate(d);
+  if(dn < _dayNumOfKey(BATCH_TRACKING_START)) return [];
+  return (client && client.batches || []).filter(b => {
+    if(d.getDay() !== b.weekday) return false;
+    const weeks = (dn - _dayNumOfKey(b.anchor)) / 7;
+    const n = b.everyWeeks || 1;
+    return Number.isInteger(weeks) && (((weeks % n) + n) % n === 0);
+  });
+}
+// Batches due in the 7 days starting at weekStart (a Monday).
+function batchesDueInWeek(client, weekStart){
+  const out = [];
+  for(let i = 0; i < 7; i++){
+    const d = new Date(weekStart); d.setDate(weekStart.getDate() + i);
+    batchesDueOn(client, d).forEach(b => out.push({ label:b.label, date:d }));
+  }
+  return out;
+}
+function nextBatchDue(client, from){
+  for(let i = 0; i < 70; i++){
+    const d = new Date(from); d.setDate(from.getDate() + i);
+    const b = batchesDueOn(client, d);
+    if(b.length) return { label:b.map(x => x.label).join(' + '), date:d };
+  }
+  return null;
 }
 function fmtBatchDay(d){ return d.toLocaleDateString('en-US',{ weekday:'long', month:'short', day:'numeric' }); }
 function todayKey(d = new Date()){ return dateKey(d); }
@@ -281,17 +309,28 @@ function upsertDaily(handle, date, fields){
   STATE.daily[handle] = arr;
 }
 
+function finstaBatchesToShow(client){
+  // This week's due batches, plus any from LAST week that never got logged (overdue).
+  const { start } = getPostWeekRange();
+  const prev = new Date(start); prev.setDate(start.getDate() - 7);
+  const entries = STATE.daily[client.handle + '_finsta'] || [];
+  const logged = day => { const x = entries.find(en => en.date === dateKey(day)); return x && ((x.reels||0) + (x.photos||0)) > 0; };
+  const list = [];
+  batchesDueInWeek(client, prev).forEach(bt => { if(!logged(bt.date)) list.push(Object.assign({ overdue:true }, bt)); });
+  batchesDueInWeek(client, start).forEach(bt => list.push(Object.assign({ overdue:false }, bt)));
+  return list;
+}
 function renderFinstaCard(container, account){
   const handle = account.handle;
-  const { tue, thu } = batchDays();
+  const client = STATE.clients.find(c => c.handle + '_finsta' === handle) || { batches: [] };
   const entries = STATE.daily[handle] || [];
-  const tueKey = dateKey(tue), thuKey = dateKey(thu);
-  const tueE = entries.find(x => x.date === tueKey) || {};
-  const thuE = entries.find(x => x.date === thuKey) || {};
+  const due = finstaBatchesToShow(client);
   const val = v => (typeof v === 'number' ? v : '');
-  const block = (cls, label, ent) => `
-    <div class="${cls}" style="margin-top:12px;">
-      <label style="margin-top:0;">${label}</label>
+  const blocks = due.map(bt => {
+    const ent = entries.find(x => x.date === dateKey(bt.date)) || {};
+    return `
+    <div class="batch-block" data-date="${dateKey(bt.date)}" style="margin-top:12px;">
+      <label style="margin-top:0;">${bt.label} — due ${fmtBatchDay(bt.date)}${bt.overdue ? ' <span style="color:#e07a6a;">(overdue — not logged yet)</span>' : ''}</label>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
         <div><div class="prev-note" style="margin:0 0 4px;">Reels posted</div>
           <input type="number" min="0" class="f-reels" value="${val(ent.reels)}" placeholder="0"></div>
@@ -299,6 +338,8 @@ function renderFinstaCard(container, account){
           <input type="number" min="0" class="f-photos" value="${val(ent.photos)}" placeholder="0"></div>
       </div>
     </div>`;
+  }).join('');
+  const nxt = nextBatchDue(client, new Date());
   const card = document.createElement('div');
   card.className = 'client-card';
   card.dataset.handle = handle;
@@ -309,10 +350,9 @@ function renderFinstaCard(container, account){
       <span class="platform-tag">${FIN_ICON} Finsta</span>
     </div>
     <div class="handle">Client-approval account — batch tracking</div>
-    <div class="section-label">Content Batches <span class="freq">— count what's been posted on the finsta for each batch</span></div>
-    ${block('batch-tue', 'Tuesday batch — ' + fmtBatchDay(tue), tueE)}
-    ${block('batch-thu', 'Thursday batch — ' + fmtBatchDay(thu), thuE)}
-    <div class="calc-note">Enter the total reels and photos posted for that batch so far. Leave blank to skip. You can update a batch any time this week.</div>
+    <div class="section-label">Content Batch <span class="freq">— reels and photos posted on the finsta for the batch</span></div>
+    ${blocks || `<div class="prev-note" style="margin-top:10px;">No batch due this week.${nxt ? ' Next: ' + nxt.label + ' — ' + fmtBatchDay(nxt.date) + '.' : ''}</div>`}
+    ${blocks ? '<div class="calc-note">Enter the total reels and photos posted for that batch so far. Leave blank to skip. Update it any time.</div>' : ''}
   `;
   container.appendChild(card);
 }
@@ -442,15 +482,14 @@ async function saveAll(){
       const handle = card.dataset.handle;
       const account = STATE.accounts.find(a => a.handle === handle);
       if(card.dataset.platform === 'finsta'){
-        const { tue, thu } = batchDays();
-        [['.batch-tue', tue], ['.batch-thu', thu]].forEach(([sel, day]) => {
-          const reelsRaw = card.querySelector(sel + ' .f-reels').value.trim();
-          const photosRaw = card.querySelector(sel + ' .f-photos').value.trim();
+        card.querySelectorAll('.batch-block').forEach(blk => {
+          const reelsRaw = blk.querySelector('.f-reels').value.trim();
+          const photosRaw = blk.querySelector('.f-photos').value.trim();
           if(reelsRaw === '' && photosRaw === '') return;
           const fields = {};
           if(reelsRaw !== '') fields.reels = Math.max(0, parseInt(reelsRaw, 10) || 0);
           if(photosRaw !== '') fields.photos = Math.max(0, parseInt(photosRaw, 10) || 0);
-          upsertDaily(handle, dateKey(day), fields);
+          upsertDaily(handle, blk.dataset.date, fields);
         });
         return;
       }

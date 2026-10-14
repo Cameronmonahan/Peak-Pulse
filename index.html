@@ -485,6 +485,7 @@ async function tryLoadClientsJson(){
           tiktokHandle: c.tiktokHandle || null,
           industry: c.industry || null,
           finsta: !!c.finsta,
+          batches: c.batches || [],
           facebookHandle: c.facebookHandle || null,
           seedFollowers: existing ? existing.seedFollowers : 2000
         };
@@ -725,6 +726,41 @@ function platformBadge(platform){
    Content batches are due Tuesday and Thursday; the finsta is where they get posted
    for client approval. We only track reels + photos posted for each batch day. */
 function localKey(d){ return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
+
+// ---- Finsta batch schedule (per client, from clients.json "batches") ----
+// Each rule: { label, weekday (0=Sun..6=Sat), anchor:'YYYY-MM-DD' (a due date), everyWeeks }
+function _dayNum(y,m,d){ return Math.round(Date.UTC(y,m,d) / 86400000); }
+function _dayNumOfDate(d){ return _dayNum(d.getFullYear(), d.getMonth(), d.getDate()); }
+function _dayNumOfKey(k){ const p = k.split('-').map(Number); return _dayNum(p[0], p[1]-1, p[2]); }
+const BATCH_TRACKING_START = '2026-10-13'; // batches before this date weren't tracked
+function batchesDueOn(client, d){
+  const dn = _dayNumOfDate(d);
+  if(dn < _dayNumOfKey(BATCH_TRACKING_START)) return [];
+  return (client && client.batches || []).filter(b => {
+    if(d.getDay() !== b.weekday) return false;
+    const weeks = (dn - _dayNumOfKey(b.anchor)) / 7;
+    const n = b.everyWeeks || 1;
+    return Number.isInteger(weeks) && (((weeks % n) + n) % n === 0);
+  });
+}
+// Batches due in the 7 days starting at weekStart (a Monday).
+function batchesDueInWeek(client, weekStart){
+  const out = [];
+  for(let i = 0; i < 7; i++){
+    const d = new Date(weekStart); d.setDate(weekStart.getDate() + i);
+    batchesDueOn(client, d).forEach(b => out.push({ label:b.label, date:d }));
+  }
+  return out;
+}
+function nextBatchDue(client, from){
+  for(let i = 0; i < 70; i++){
+    const d = new Date(from); d.setDate(from.getDate() + i);
+    const b = batchesDueOn(client, d);
+    if(b.length) return { label:b.map(x => x.label).join(' + '), date:d };
+  }
+  return null;
+}
+
 function batchStatus(entry, day){
   const reels = entry && typeof entry.reels === 'number' ? entry.reels : 0;
   const photos = entry && typeof entry.photos === 'number' ? entry.photos : 0;
@@ -735,39 +771,47 @@ function batchStatus(entry, day){
   if(dayStr === todayStr) return { cls:'due', text:'Due today', reels, photos };
   return { cls:'upcoming', text:'Upcoming', reels, photos };
 }
-function finstaBodyWeek(handle, start){
-  const entries = DAILY_DATA[handle] || [];
-  const tiles = [['Tuesday', 1], ['Thursday', 3]].map(([label, off]) => {
-    const day = new Date(start); day.setDate(start.getDate() + off);
-    const ent = entries.find(x => x.date === localKey(day));
-    const st = batchStatus(ent, day);
-    return `<div class="batch-tile ${st.cls}">
-      <div class="b-day">${label} batch</div>
-      <div class="b-date">${fmtShort(day)}</div>
-      <div class="b-counts">${st.reels}<small>REELS</small></div><div class="b-counts">${st.photos}<small>PHOTOS</small></div>
-      <div class="b-status">${st.text}</div>
-    </div>`;
-  }).join('');
-  return `<div class="batch-head">Finsta batches this week</div><div class="batch-grid">${tiles}</div>`;
+function finstaTile(handle, bt, overdueTag){
+  const ent = (DAILY_DATA[handle] || []).find(x => x.date === localKey(bt.date));
+  const st = batchStatus(ent, bt.date);
+  return `<div class="batch-tile ${st.cls}">
+    <div class="b-day">${bt.label}${overdueTag ? ' · last week' : ''}</div>
+    <div class="b-date">Due ${bt.date.toLocaleDateString('en-US',{ weekday:'short', month:'short', day:'numeric' })}</div>
+    <div class="b-counts">${st.reels}<small>REELS</small></div><div class="b-counts">${st.photos}<small>PHOTOS</small></div>
+    <div class="b-status">${st.text}</div>
+  </div>`;
 }
-function finstaBodyMonth(handle, key){
+function finstaBodyWeek(client, handle, start){
+  const prev = new Date(start); prev.setDate(start.getDate() - 7);
+  const logged = bt => { const x = (DAILY_DATA[handle] || []).find(en => en.date === localKey(bt.date)); return x && ((x.reels||0) + (x.photos||0)) > 0; };
+  const tiles = [];
+  batchesDueInWeek(client, prev).forEach(bt => { if(!logged(bt)) tiles.push(finstaTile(handle, bt, true)); });
+  batchesDueInWeek(client, start).forEach(bt => tiles.push(finstaTile(handle, bt, false)));
+  if(!tiles.length){
+    const nxt = nextBatchDue(client, new Date());
+    return `<div class="batch-head">Finsta batch</div>
+      <div class="month-empty">No batch due this week.${nxt ? ' Next: ' + nxt.label + ' — ' + nxt.date.toLocaleDateString('en-US',{ weekday:'short', month:'short', day:'numeric' }) + '.' : ''}</div>`;
+  }
+  return `<div class="batch-head">Finsta batch this week</div><div class="batch-grid">${tiles.join('')}</div>`;
+}
+function finstaBodyMonth(client, handle, key){
   const { start, end } = monthBounds(key);
   const entries = DAILY_DATA[handle] || [];
   const todayStr = localKey(new Date());
   let due = 0, posted = 0, reels = 0, photos = 0;
   for(let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)){
-    const wd = d.getDay();
-    if(wd !== 2 && wd !== 4) continue;
     const k = localKey(d);
     if(k > todayStr) continue;
-    due++;
-    const ent = entries.find(x => x.date === k);
-    const r = ent && typeof ent.reels === 'number' ? ent.reels : 0;
-    const p = ent && typeof ent.photos === 'number' ? ent.photos : 0;
-    reels += r; photos += p;
-    if(r + p > 0) posted++;
+    batchesDueOn(client, d).forEach(() => {
+      due++;
+      const ent = entries.find(x => x.date === k);
+      const r = ent && typeof ent.reels === 'number' ? ent.reels : 0;
+      const p = ent && typeof ent.photos === 'number' ? ent.photos : 0;
+      reels += r; photos += p;
+      if(r + p > 0) posted++;
+    });
   }
-  if(!due) return `<div class="month-empty">No batch days yet in ${monthLabel(key)}.</div>`;
+  if(!due) return `<div class="month-empty">No batches due yet in ${monthLabel(key)}.</div>`;
   return `<div class="month-metric-row">
     <div class="month-metric"><div class="mm-label">Batches posted</div><div class="mm-value ${posted === due ? 'gold' : ''}">${posted} / ${due}</div></div>
     <div class="month-metric"><div class="mm-label">Reels</div><div class="mm-value">${reels}</div></div>
@@ -803,7 +847,7 @@ function renderWeek(){
           ${ftabs}
         </div>
         <div class="divider" style="margin-bottom:14px;"></div>
-        ${finstaBodyWeek(account.handle, start)}
+        ${finstaBodyWeek(client, account.handle, start)}
       `;
       fcard.querySelectorAll('.platform-tab').forEach(tab => {
         tab.addEventListener('click', () => { PLATFORM_SELECTION[client.handle] = tab.dataset.platform; render(); });
@@ -928,7 +972,7 @@ function renderMonth(){
           ${ftabs}
         </div>
         <div class="divider" style="margin-bottom:14px;"></div>
-        ${finstaBodyMonth(account.handle, SELECTED_MONTH)}
+        ${finstaBodyMonth(client, account.handle, SELECTED_MONTH)}
       `;
       fcard.querySelectorAll('.platform-tab').forEach(tab => {
         tab.addEventListener('click', () => { PLATFORM_SELECTION[client.handle] = tab.dataset.platform; render(); });

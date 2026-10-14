@@ -4,65 +4,124 @@
     "handle": "paragon_custom_construction",
     "tiktokHandle": "paragon_custom_const",
     "industry": "Home Decor",
-    "finsta": true
+    "finsta": true,
+    "batches": [
+      {
+        "label": "Batch 1",
+        "weekday": 4,
+        "anchor": "2026-10-22",
+        "everyWeeks": 2
+      }
+    ]
   },
   {
     "name": "Legacy Flooring",
     "handle": "legacyflooringsd",
     "facebookHandle": "legacyflooringsd_fb",
     "industry": "Home Decor",
-    "finsta": true
+    "finsta": true,
+    "batches": [
+      {
+        "label": "Batch 2",
+        "weekday": 4,
+        "anchor": "2026-10-15",
+        "everyWeeks": 2
+      }
+    ]
   },
   {
     "name": "Marwood Premium Cabinetry",
     "handle": "marwooddesign",
     "industry": "Home Decor",
-    "finsta": true
+    "finsta": true,
+    "batches": [
+      {
+        "label": "Batch 1",
+        "weekday": 4,
+        "anchor": "2026-10-22",
+        "everyWeeks": 2
+      }
+    ]
   },
   {
     "name": "Venti Sales Group",
     "handle": "ventisalesgroup",
     "tiktokHandle": "REPLACE_venti_tiktok",
     "industry": "All Industries",
-    "finsta": true
+    "finsta": true,
+    "batches": [
+      {
+        "label": "Batch 1",
+        "weekday": 4,
+        "anchor": "2026-10-22",
+        "everyWeeks": 2
+      },
+      {
+        "label": "Tuesday batch",
+        "weekday": 2,
+        "anchor": "2026-10-13",
+        "everyWeeks": 2
+      }
+    ]
   },
   {
     "name": "Guide N Gallop",
     "handle": "guide_n_gallop",
     "industry": "All Industries",
-    "finsta": true
+    "finsta": true,
+    "batches": [
+      {
+        "label": "Batch 2",
+        "weekday": 4,
+        "anchor": "2026-10-15",
+        "everyWeeks": 2
+      }
+    ]
   },
   {
     "name": "Louie Hamner",
     "handle": "louiehamner",
     "tiktokHandle": "REPLACE_louie_tiktok",
     "industry": "Influencers",
-    "finsta": true
+    "finsta": true,
+    "batches": [
+      {
+        "label": "Batch 2",
+        "weekday": 4,
+        "anchor": "2026-10-15",
+        "everyWeeks": 2
+      }
+    ]
   },
   {
     "name": "Peak Exposure Media",
     "handle": "peakexposuremedia",
-    "industry": "Media",
-    "finsta": true
+    "industry": "Media"
   },
   {
     "name": "The Nano Nature",
     "handle": "thenanonature",
     "tiktokHandle": "the.nano.nature",
-    "industry": "All Industries",
-    "finsta": true
+    "industry": "All Industries"
   },
   {
     "name": "Diamond Strength & Wellness",
     "handle": "diamondstrengthandwellness",
     "facebookHandle": "diamondstrengthandwellness_fb",
     "industry": "Health & Beauty",
-    "finsta": true
+    "finsta": true,
+    "batches": [
+      {
+        "label": "Batch 1",
+        "weekday": 4,
+        "anchor": "2026-10-22",
+        "everyWeeks": 2
+      }
+    ]
   },
   {
     "name": "Built by Kate",
     "handle": "built.bykate",
-    "industry": "Health & Beauty",
-    "finsta": true
+    "industry": "Health & Beauty"
   }
 ]
