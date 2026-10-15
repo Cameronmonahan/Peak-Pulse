@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T23:00:13.000Z",
+  "generatedAt": "2026-10-15T23:08:47.000Z",
   "weekStart": "2026-10-12T06:00:00.000Z",
   "weekEnd": "2026-10-18T06:00:00.000Z",
   "accounts": {
@@ -11,15 +11,16 @@
       "deltaToday": 1,
       "engagementRate": 1.45,
       "postDates": [
-        "2026-10-13T12:00:00.000Z"
+        "2026-10-13T12:00:00.000Z",
+        "2026-10-15T12:00:00.000Z"
       ]
     },
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17845,
-      "deltaToday": -2,
+      "followers": 17844,
+      "deltaToday": -3,
       "engagementRate": 0,
       "postDates": []
     },
@@ -42,7 +43,8 @@
       "postDates": [
         "2026-10-12T12:00:00.000Z",
         "2026-10-13T12:00:00.000Z",
-        "2026-10-14T12:00:00.000Z"
+        "2026-10-14T12:00:00.000Z",
+        "2026-10-15T12:00:00.000Z"
       ]
     },
     "diamondstrengthandwellness_fb": {
@@ -63,8 +65,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4735,
-      "deltaToday": 3,
+      "followers": 4734,
+      "deltaToday": 2,
       "engagementRate": 0.61,
       "postDates": [
         "2026-10-13T12:00:00.000Z"
@@ -74,13 +76,14 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1143,
-      "deltaToday": 8,
+      "followers": 1157,
+      "deltaToday": 22,
       "engagementRate": 1.91,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
         "2026-10-13T12:00:00.000Z",
-        "2026-10-14T12:00:00.000Z"
+        "2026-10-14T12:00:00.000Z",
+        "2026-10-15T12:00:00.000Z"
       ]
     },
     "legacyflooringsd_fb": {
@@ -101,13 +104,14 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 9824,
-      "deltaToday": 13,
+      "followers": 9844,
+      "deltaToday": 33,
       "engagementRate": 0.22,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
         "2026-10-13T12:00:00.000Z",
-        "2026-10-14T12:00:00.000Z"
+        "2026-10-14T12:00:00.000Z",
+        "2026-10-15T12:00:00.000Z"
       ]
     },
     "ventisalesgroup": {
@@ -127,8 +131,8 @@
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 909,
-      "deltaToday": -1,
+      "followers": 910,
+      "deltaToday": 0,
       "engagementRate": 3.43,
       "postDates": [
         "2026-10-13T12:00:00.000Z"
@@ -158,13 +162,14 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7532,
-      "deltaToday": 34,
+      "followers": 7570,
+      "deltaToday": 72,
       "engagementRate": 6.56,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
         "2026-10-13T12:00:00.000Z",
-        "2026-10-14T12:00:00.000Z"
+        "2026-10-14T12:00:00.000Z",
+        "2026-10-15T12:00:00.000Z"
       ]
     }
   }
