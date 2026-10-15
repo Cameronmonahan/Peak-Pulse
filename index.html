@@ -854,12 +854,18 @@ function monthKeyRange(key){
 }
 
 // 5-5-5 (engage 5 new accounts, 5 thoughtful comments, 5 DMs/replies): one Yes/No per day, Instagram only.
+// Done = fiveFiveFive:true, or a bot-written engagement555 object with at least 5 / 5 / 5.
+function fffEntryDone(e){
+  if(!e) return false;
+  if(e.fiveFiveFive) return true;
+  const o = e.engagement555;
+  return !!(o && typeof o === 'object' && (o.newAccounts|0) >= 5 && (o.comments|0) >= 5 && (o.dms|0) >= 5);
+}
 function fffDone(handle, key){
-  const e = (DAILY_DATA[handle] || []).find(x => x.date === key);
-  return !!(e && e.fiveFiveFive);
+  return fffEntryDone((DAILY_DATA[handle] || []).find(x => x.date === key));
 }
 function fffInKeys(handle, a, b){
-  return (DAILY_DATA[handle] || []).filter(e => e.date >= a && e.date <= b && e.fiveFiveFive).length;
+  return (DAILY_DATA[handle] || []).filter(e => e.date >= a && e.date <= b && fffEntryDone(e)).length;
 }
 
 function fffHtml(handle, start, todayIdx){
