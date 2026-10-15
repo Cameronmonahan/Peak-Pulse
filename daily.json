@@ -202,7 +202,7 @@
     {
       "date": "2026-10-15",
       "posted": false,
-      "followers": 4735,
+      "followers": 4734,
       "stories": 0
     }
   ],
@@ -416,8 +416,8 @@
     },
     {
       "date": "2026-10-15",
-      "posted": false,
-      "followers": 1143,
+      "posted": true,
+      "followers": 1157,
       "stories": 0
     }
   ],
@@ -644,8 +644,8 @@
     },
     {
       "date": "2026-10-15",
-      "posted": false,
-      "followers": 9824,
+      "posted": true,
+      "followers": 9844,
       "stories": 0
     }
   ],
@@ -1081,7 +1081,7 @@
     {
       "date": "2026-10-15",
       "posted": false,
-      "followers": 909,
+      "followers": 910,
       "stories": 0
     }
   ],
@@ -1284,7 +1284,7 @@
     },
     {
       "date": "2026-10-15",
-      "posted": false,
+      "posted": true,
       "followers": 2521,
       "stories": 0
     }
@@ -1428,7 +1428,7 @@
       "date": "2026-10-15",
       "fiveFiveFive": true,
       "posted": false,
-      "followers": 17845,
+      "followers": 17844,
       "stories": 0
     }
   ],
@@ -2139,7 +2139,7 @@
     },
     {
       "date": "2026-10-15",
-      "posted": false,
+      "posted": true,
       "followers": 134,
       "stories": 0
     }
@@ -2185,8 +2185,8 @@
     },
     {
       "date": "2026-10-15",
-      "posted": false,
-      "followers": 7532,
+      "posted": true,
+      "followers": 7570,
       "stories": 0
     }
   ],
