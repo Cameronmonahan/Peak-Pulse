@@ -317,6 +317,16 @@
   .dot.today{ border-color:var(--today); box-shadow:0 0 0 2px rgba(230,205,156,0.18); }
   .dot-day{ font-size:9px; color:var(--text-dim); letter-spacing:0.06em; }
 
+  .fff-tracker{ display:flex; flex-direction:column; gap:6px; margin-top:-2px; }
+  .fff-head{ display:flex; justify-content:space-between; align-items:baseline; }
+  .fff-head .m-label{ font-size:10px; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-dim); }
+  .fff-head .m-count{ font-size:12px; font-weight:700; color:var(--text-dim); }
+  .fff-head .m-count.full{ color:#93c08f; }
+  .fff-bars{ display:flex; gap:6px; }
+  .fff-bar{ flex:1; height:7px; border-radius:4px; border:1px solid var(--line); background:transparent; }
+  .fff-bar.done{ background:#93c08f; border-color:#93c08f; }
+  .fff-bar.today{ border-color:var(--today); }
+
   .card-status{
     font-size:10.5px;
     letter-spacing:0.03em;
@@ -832,9 +842,38 @@ function finstaBodyMonth(client, handle, key){
 }
 
 // Stories posted per day are stored in daily.json as "stories"; the week total is their sum (Mon-Sun).
-function storiesInRange(handle, start, end){
-  const a = localKey(start), b = localKey(end);
+function storiesInKeys(handle, a, b){
   return (DAILY_DATA[handle] || []).reduce((sum, e) => sum + ((e.date >= a && e.date <= b && typeof e.stories === 'number') ? e.stories : 0), 0);
+}
+function storiesInRange(handle, start, end){ return storiesInKeys(handle, localKey(start), localKey(end)); }
+// 'YYYY-MM' -> first/last day keys (plain strings, so no time-zone shift)
+function monthKeyRange(key){
+  const [y, m] = key.split('-').map(Number);
+  const last = new Date(Date.UTC(y, m, 0)).getUTCDate();
+  return [key + '-01', key + '-' + String(last).padStart(2, '0')];
+}
+
+// 5-5-5 (engage 5 new accounts, 5 thoughtful comments, 5 DMs/replies): one Yes/No per day, Instagram only.
+function fffDone(handle, key){
+  const e = (DAILY_DATA[handle] || []).find(x => x.date === key);
+  return !!(e && e.fiveFiveFive);
+}
+function fffInKeys(handle, a, b){
+  return (DAILY_DATA[handle] || []).filter(e => e.date >= a && e.date <= b && e.fiveFiveFive).length;
+}
+
+function fffHtml(handle, start, todayIdx){
+  let n = 0;
+  const bars = DAY_ORDER.map((label, idx) => {
+    const d = new Date(start); d.setDate(start.getDate() + idx);
+    const done = fffDone(handle, localKey(d));
+    if(done) n++;
+    return `<div class="fff-bar ${done ? 'done' : ''} ${idx === todayIdx ? 'today' : ''}" title="${label}: ${done ? '5-5-5 done' : 'not logged'}"></div>`;
+  }).join('');
+  return `<div class="fff-tracker">
+    <div class="fff-head"><div class="m-label">5-5-5 engagement</div><div class="m-count ${n === 7 ? 'full' : ''}">${n} / 7 days</div></div>
+    <div class="fff-bars">${bars}</div>
+  </div>`;
 }
 
 function renderWeek(){
@@ -955,6 +994,8 @@ function renderWeek(){
         <div class="dots">${dotsHtml}</div>
       </div>
 
+      ${account.platform === 'instagram' ? fffHtml(account.handle, start, todayIdx) : ''}
+
       ${statusHtml}
     `;
 
@@ -969,10 +1010,7 @@ function renderWeek(){
   });
 }
 
-function monthStories(handle, key){
-  const { start, end } = monthBounds(key);
-  return storiesInRange(handle, start, end);
-}
+function monthStories(handle, key){ const [a, b] = monthKeyRange(key); return storiesInKeys(handle, a, b); }
 
 function renderMonth(){
   document.getElementById('week-range-row').style.display = 'none';
@@ -1040,6 +1078,10 @@ function renderMonth(){
             <div class="mm-value">${stats.totalPosts}</div>
           </div>
           ${account.platform === 'instagram' ? `<div class="month-metric">
+            <div class="mm-label">5-5-5 days</div>
+            <div class="mm-value">${(() => { const [a, b] = monthKeyRange(SELECTED_MONTH); return fffInKeys(account.handle, a, b); })()}</div>
+          </div>
+          <div class="month-metric">
             <div class="mm-label">Stories</div>
             <div class="mm-value">${monthStories(account.handle, SELECTED_MONTH)}</div>
           </div>` : ''}

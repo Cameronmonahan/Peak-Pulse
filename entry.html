@@ -407,6 +407,12 @@ function renderClients(){
       </div>
       ${todayEntry && todayEntry.posted ? '<div class="prev-note" style="color:var(--up);">✓ Already logged as posted today — stays Yes for the day</div>' : ''}
       ${account.platform === 'instagram' ? `
+      <label>5-5-5 done today? <span style="text-transform:none;color:var(--text-dim);">(5 new accounts engaged · 5 thoughtful comments · 5 DMs/replies)</span></label>
+      <div class="toggle-row">
+        <div class="toggle-btn f-fff-yes ${todayEntry && todayEntry.fiveFiveFive ? 'active' : ''}">Yes</div>
+        <div class="toggle-btn f-fff-no ${!(todayEntry && todayEntry.fiveFiveFive) ? 'active' : ''}">No</div>
+      </div>
+      ${todayEntry && todayEntry.fiveFiveFive ? '<div class="prev-note" style="color:var(--up);">✓ 5-5-5 already logged today — stays Yes for the day</div>' : ''}
       <label>Stories posted today <span style="text-transform:none;color:var(--text-dim);">(total since midnight — count each story once)</span></label>
       <input type="number" min="0" class="f-stories" value="${todayEntry && typeof todayEntry.stories === 'number' ? todayEntry.stories : ''}" placeholder="0">
       <div class="prev-note">Stories last 24 hours, so don't re-count one you already counted at an earlier check. Leave blank to skip.</div>` : ''}
@@ -436,6 +442,14 @@ function renderClients(){
       if(todayEntry && todayEntry.posted) return; // Yes sticks for the day
       noBtn.classList.add('active'); yesBtn.classList.remove('active');
     });
+    const fYes = card.querySelector('.f-fff-yes'), fNo = card.querySelector('.f-fff-no');
+    if(fYes && fNo){
+      fYes.addEventListener('click', () => { fYes.classList.add('active'); fNo.classList.remove('active'); });
+      fNo.addEventListener('click', () => {
+        if(todayEntry && todayEntry.fiveFiveFive) return; // Yes sticks for the day
+        fNo.classList.add('active'); fYes.classList.remove('active');
+      });
+    }
   });
 
   $('save-btn').disabled = false;
@@ -499,6 +513,8 @@ async function saveAll(){
       }
       const followersRaw = card.querySelector('.f-followers').value.trim();
       const posted = card.querySelector('.f-posted-yes').classList.contains('active');
+      const fffYes = card.querySelector('.f-fff-yes');
+      if(fffYes && fffYes.classList.contains('active')) upsertDaily(handle, today, { fiveFiveFive: true });
       const storiesEl = card.querySelector('.f-stories');
       if(storiesEl && storiesEl.value.trim() !== ''){
         upsertDaily(handle, today, { stories: Math.max(0, parseInt(storiesEl.value, 10) || 0) });

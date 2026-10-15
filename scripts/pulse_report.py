@@ -26,6 +26,7 @@ Report format (JSON):
   "accounts": [
     // Instagram / Facebook / TikTok (use the handle keys from clients.json)
     {"handle": "marwooddesign", "posted": true, "followers": 9796,
+     "fiveFiveFive": true,                        // 5-5-5 done today? (Instagram only; omit if not done/checked)
      "stories": ["3h", "5h", "40m"],              // ages shown on each story you see right now; [] = none up
      "likes": 120, "comments": 8},                // optional: last-5-posts totals for weekly engagement
     {"handle": "legacyflooringsd_fb", "posted": false, "followers": 410},
@@ -347,6 +348,8 @@ def main():
                 fields["posted"] = bool(a["posted"])
             if isinstance(a.get("followers"), (int, float)):
                 fields["followers"] = int(a["followers"])
+            if a.get("fiveFiveFive") and meta["platform"] == "instagram":
+                fields["fiveFiveFive"] = True      # a Yes sticks for the day; false never erases it
             if fields:
                 upsert_daily(daily, h, today, fields)
             if h in story_counts:
@@ -421,6 +424,8 @@ def main():
                 bits.append("posted=" + ("yes" if a["posted"] else "no"))
             if a.get("followers") is not None:
                 bits.append(f"followers={a['followers']}")
+            if a.get("fiveFiveFive") and meta["platform"] == "instagram":
+                bits.append("5-5-5=yes")
             if h in story_counts:
                 bits.append(f"stories seen={len(a['stories'])}, new={new_stories.get(h, 0)}, "
                             f"today total={story_counts[h].get(today, 0)}")
