@@ -406,6 +406,10 @@ function renderClients(){
         <div class="toggle-btn f-posted-no ${!(todayEntry && todayEntry.posted) ? 'active' : ''}">No</div>
       </div>
       ${todayEntry && todayEntry.posted ? '<div class="prev-note" style="color:var(--up);">✓ Already logged as posted today — stays Yes for the day</div>' : ''}
+      ${account.platform === 'instagram' ? `
+      <label>Stories posted today <span style="text-transform:none;color:var(--text-dim);">(total since midnight — count each story once)</span></label>
+      <input type="number" min="0" class="f-stories" value="${todayEntry && typeof todayEntry.stories === 'number' ? todayEntry.stories : ''}" placeholder="0">
+      <div class="prev-note">Stories last 24 hours, so don't re-count one you already counted at an earlier check. Leave blank to skip.</div>` : ''}
 
       <div class="section-label" style="margin-top:18px;">Weekly Engagement <span class="freq">— update once a week</span></div>
       <div class="weekly-block">
@@ -495,6 +499,10 @@ async function saveAll(){
       }
       const followersRaw = card.querySelector('.f-followers').value.trim();
       const posted = card.querySelector('.f-posted-yes').classList.contains('active');
+      const storiesEl = card.querySelector('.f-stories');
+      if(storiesEl && storiesEl.value.trim() !== ''){
+        upsertDaily(handle, today, { stories: Math.max(0, parseInt(storiesEl.value, 10) || 0) });
+      }
 
       if(followersRaw !== ''){
         const followers = parseInt(followersRaw, 10) || 0;

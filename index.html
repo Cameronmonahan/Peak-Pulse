@@ -831,6 +831,12 @@ function finstaBodyMonth(client, handle, key){
   </div>`;
 }
 
+// Stories posted per day are stored in daily.json as "stories"; the week total is their sum (Mon-Sun).
+function storiesInRange(handle, start, end){
+  const a = localKey(start), b = localKey(end);
+  return (DAILY_DATA[handle] || []).reduce((sum, e) => sum + ((e.date >= a && e.date <= b && typeof e.stories === 'number') ? e.stories : 0), 0);
+}
+
 function renderWeek(){
   document.getElementById('week-range-row').style.display = '';
   const { start, end } = getPostWeekRange();
@@ -935,6 +941,10 @@ function renderWeek(){
           <div class="m-label">Posts this week</div>
           <div class="m-value">${data.postDates.length}</div>
         </div>
+        ${account.platform === 'instagram' ? `<div class="metric">
+          <div class="m-label">Stories this week</div>
+          <div class="m-value">${storiesInRange(account.handle, start, end)}</div>
+        </div>` : ''}
       </div>
 
       <div class="week-tracker">
@@ -957,6 +967,11 @@ function renderWeek(){
 
     grid.appendChild(card);
   });
+}
+
+function monthStories(handle, key){
+  const { start, end } = monthBounds(key);
+  return storiesInRange(handle, start, end);
 }
 
 function renderMonth(){
@@ -1024,6 +1039,10 @@ function renderMonth(){
             <div class="mm-label">Total posts</div>
             <div class="mm-value">${stats.totalPosts}</div>
           </div>
+          ${account.platform === 'instagram' ? `<div class="month-metric">
+            <div class="mm-label">Stories</div>
+            <div class="mm-value">${monthStories(account.handle, SELECTED_MONTH)}</div>
+          </div>` : ''}
         </div>
       `;
     }
