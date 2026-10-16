@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T13:32:12.000Z",
+  "generatedAt": "2026-10-16T13:41:54.000Z",
   "weekStart": "2026-10-12T06:00:00.000Z",
   "weekEnd": "2026-10-18T06:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2521,
-      "deltaToday": 1,
+      "followers": 2520,
+      "deltaToday": -1,
       "engagementRate": 1.45,
       "postDates": [
         "2026-10-13T12:00:00.000Z",
@@ -19,8 +19,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17844,
-      "deltaToday": -3,
+      "followers": 17843,
+      "deltaToday": -1,
       "engagementRate": 0,
       "postDates": []
     },
@@ -28,8 +28,8 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 2006,
-      "deltaToday": -4,
+      "followers": 2005,
+      "deltaToday": -1,
       "engagementRate": 0,
       "postDates": []
     },
@@ -66,7 +66,7 @@
       "handle": "paragon_custom_construction",
       "platform": "instagram",
       "followers": 4734,
-      "deltaToday": 2,
+      "deltaToday": 0,
       "engagementRate": 0.61,
       "postDates": [
         "2026-10-13T12:00:00.000Z",
@@ -77,8 +77,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1171,
-      "deltaToday": 36,
+      "followers": 1186,
+      "deltaToday": 15,
       "engagementRate": 1.91,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
@@ -105,8 +105,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 9858,
-      "deltaToday": 47,
+      "followers": 9873,
+      "deltaToday": 15,
       "engagementRate": 0.22,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
@@ -164,8 +164,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7582,
-      "deltaToday": 84,
+      "followers": 7597,
+      "deltaToday": 15,
       "engagementRate": 6.56,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
