@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T02:58:31.000Z",
+  "generatedAt": "2026-10-16T03:04:46.000Z",
   "weekStart": "2026-10-12T06:00:00.000Z",
   "weekEnd": "2026-10-18T06:00:00.000Z",
   "accounts": {
@@ -69,15 +69,16 @@
       "deltaToday": 2,
       "engagementRate": 0.61,
       "postDates": [
-        "2026-10-13T12:00:00.000Z"
+        "2026-10-13T12:00:00.000Z",
+        "2026-10-15T12:00:00.000Z"
       ]
     },
     "legacyflooringsd": {
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1157,
-      "deltaToday": 22,
+      "followers": 1171,
+      "deltaToday": 36,
       "engagementRate": 1.91,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
@@ -104,8 +105,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 9844,
-      "deltaToday": 33,
+      "followers": 9858,
+      "deltaToday": 47,
       "engagementRate": 0.22,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
@@ -135,7 +136,8 @@
       "deltaToday": 0,
       "engagementRate": 3.43,
       "postDates": [
-        "2026-10-13T12:00:00.000Z"
+        "2026-10-13T12:00:00.000Z",
+        "2026-10-15T12:00:00.000Z"
       ]
     },
     "paragon_custom_const": {
@@ -162,8 +164,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7570,
-      "deltaToday": 72,
+      "followers": 7582,
+      "deltaToday": 84,
       "engagementRate": 6.56,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
