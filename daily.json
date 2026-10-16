@@ -1854,6 +1854,11 @@
       "date": "2026-10-15",
       "posted": false,
       "followers": 45
+    },
+    {
+      "date": "2026-10-16",
+      "posted": false,
+      "followers": 45
     }
   ],
   "the.nano.nature": [
@@ -2069,6 +2074,11 @@
       "date": "2026-10-15",
       "posted": false,
       "followers": 798
+    },
+    {
+      "date": "2026-10-16",
+      "posted": false,
+      "followers": 797
     }
   ],
   "legacyflooringsd_fb": [
@@ -2090,6 +2100,11 @@
     {
       "date": "2026-10-15",
       "posted": true,
+      "followers": 482
+    },
+    {
+      "date": "2026-10-16",
+      "posted": false,
       "followers": 482
     }
   ],
@@ -2163,6 +2178,11 @@
     {
       "date": "2026-10-15",
       "posted": true,
+      "followers": 23
+    },
+    {
+      "date": "2026-10-16",
+      "posted": false,
       "followers": 23
     }
   ],
