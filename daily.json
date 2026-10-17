@@ -2275,6 +2275,11 @@
       "date": "2026-10-13",
       "reels": 4,
       "photos": 2
+    },
+    {
+      "date": "2026-10-16",
+      "reels": 4,
+      "photos": 2
     }
   ],
   "legacyflooringsd_finsta": [
@@ -2282,11 +2287,21 @@
       "date": "2026-10-15",
       "reels": 3,
       "photos": 1
+    },
+    {
+      "date": "2026-10-16",
+      "reels": 3,
+      "photos": 2
     }
   ],
   "guide_n_gallop_finsta": [
     {
       "date": "2026-10-15",
+      "reels": 6,
+      "photos": 5
+    },
+    {
+      "date": "2026-10-16",
       "reels": 6,
       "photos": 5
     }
@@ -2296,9 +2311,19 @@
       "date": "2026-10-15",
       "reels": 5,
       "photos": 7
+    },
+    {
+      "date": "2026-10-16",
+      "reels": 5,
+      "photos": 7
     }
   ],
   "diamondstrengthandwellness_finsta": [
+    {
+      "date": "2026-10-16",
+      "reels": 8,
+      "photos": 6
+    },
     {
       "date": "2026-10-22",
       "reels": 6,
@@ -2307,9 +2332,21 @@
   ],
   "marwooddesign_finsta": [
     {
+      "date": "2026-10-16",
+      "reels": 2,
+      "photos": 0
+    },
+    {
       "date": "2026-10-22",
       "reels": 2,
       "photos": 0
+    }
+  ],
+  "paragon_custom_construction_finsta": [
+    {
+      "date": "2026-10-16",
+      "reels": 8,
+      "photos": 5
     }
   ]
 }
