@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T02:58:41.000Z",
+  "generatedAt": "2026-10-17T03:05:30.000Z",
   "weekStart": "2026-10-12T06:00:00.000Z",
   "weekEnd": "2026-10-18T06:00:00.000Z",
   "accounts": {
@@ -79,8 +79,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1199,
-      "deltaToday": 28,
+      "followers": 1210,
+      "deltaToday": 39,
       "engagementRate": 1.91,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
@@ -109,8 +109,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 9888,
-      "deltaToday": 30,
+      "followers": 9905,
+      "deltaToday": 47,
       "engagementRate": 0.22,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
@@ -129,15 +129,16 @@
       "postDates": [
         "2026-10-12T12:00:00.000Z",
         "2026-10-13T12:00:00.000Z",
-        "2026-10-14T12:00:00.000Z"
+        "2026-10-14T12:00:00.000Z",
+        "2026-10-16T12:00:00.000Z"
       ]
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 910,
-      "deltaToday": 0,
+      "followers": 909,
+      "deltaToday": -1,
       "engagementRate": 3.43,
       "postDates": [
         "2026-10-13T12:00:00.000Z",
@@ -168,8 +169,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7619,
-      "deltaToday": 37,
+      "followers": 7628,
+      "deltaToday": 46,
       "engagementRate": 6.56,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
