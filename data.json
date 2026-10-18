@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T23:11:30.000Z",
+  "generatedAt": "2026-10-18T03:23:32.000Z",
   "weekStart": "2026-10-12T06:00:00.000Z",
   "weekEnd": "2026-10-18T06:00:00.000Z",
   "accounts": {
@@ -20,8 +20,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17840,
-      "deltaToday": -3,
+      "followers": 17838,
+      "deltaToday": -5,
       "engagementRate": 0,
       "postDates": []
     },
@@ -70,8 +70,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4744,
-      "deltaToday": 1,
+      "followers": 4745,
+      "deltaToday": 2,
       "engagementRate": 0.61,
       "postDates": [
         "2026-10-13T12:00:00.000Z",
@@ -83,8 +83,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1247,
-      "deltaToday": 37,
+      "followers": 1262,
+      "deltaToday": 52,
       "engagementRate": 1.91,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
@@ -113,8 +113,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 9942,
-      "deltaToday": 37,
+      "followers": 9952,
+      "deltaToday": 47,
       "engagementRate": 0.22,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
@@ -128,8 +128,8 @@
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
       "platform": "instagram",
-      "followers": 111,
-      "deltaToday": 0,
+      "followers": 112,
+      "deltaToday": 1,
       "engagementRate": 5.97,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
@@ -175,8 +175,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7666,
-      "deltaToday": 38,
+      "followers": 7682,
+      "deltaToday": 54,
       "engagementRate": 6.56,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
