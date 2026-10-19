@@ -19,6 +19,10 @@
     {
       "weekStart": "2026-08-27",
       "engagementRate": 0.61
+    },
+    {
+      "weekStart": "2026-10-12",
+      "engagementRate": 0.32
     }
   ],
   "legacyflooringsd": [
@@ -37,6 +41,10 @@
     {
       "weekStart": "2026-08-27",
       "engagementRate": 1.91
+    },
+    {
+      "weekStart": "2026-10-12",
+      "engagementRate": 0.25
     }
   ],
   "marwooddesign": [
@@ -55,6 +63,10 @@
     {
       "weekStart": "2026-08-27",
       "engagementRate": 0.22
+    },
+    {
+      "weekStart": "2026-10-12",
+      "engagementRate": 0.86
     }
   ],
   "ventisalesgroup": [
@@ -77,6 +89,10 @@
     {
       "weekStart": "2026-08-27",
       "engagementRate": 5.97
+    },
+    {
+      "weekStart": "2026-10-12",
+      "engagementRate": 4.78
     }
   ],
   "guide_n_gallop": [
@@ -99,6 +115,10 @@
     {
       "weekStart": "2026-08-27",
       "engagementRate": 3.43
+    },
+    {
+      "weekStart": "2026-10-12",
+      "engagementRate": 2.82
     }
   ],
   "louiehamner": [
@@ -121,12 +141,50 @@
     {
       "weekStart": "2026-08-27",
       "engagementRate": 1.45
+    },
+    {
+      "weekStart": "2026-10-12",
+      "engagementRate": 2.51
     }
   ],
   "built.bykate": [
     {
       "weekStart": "2026-10-05",
       "engagementRate": 6.56
+    },
+    {
+      "weekStart": "2026-10-12",
+      "engagementRate": 19.46
+    }
+  ],
+  "peakexposuremedia": [
+    {
+      "weekStart": "2026-10-12",
+      "engagementRate": 1.9
+    }
+  ],
+  "thenanonature": [
+    {
+      "weekStart": "2026-10-12",
+      "engagementRate": 22.45
+    }
+  ],
+  "diamondstrengthandwellness": [
+    {
+      "weekStart": "2026-10-12",
+      "engagementRate": 5.22
+    }
+  ],
+  "paragon_custom_const": [
+    {
+      "weekStart": "2026-10-12",
+      "engagementRate": 46.22
+    }
+  ],
+  "the.nano.nature": [
+    {
+      "weekStart": "2026-10-12",
+      "engagementRate": 32.74
     }
   ]
 }
