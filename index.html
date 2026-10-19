@@ -818,6 +818,21 @@ function batchStatus(entry, day, rule){
   if(total > 0) return Object.assign(out, { cls:'due', text:'In progress' });
   return Object.assign(out, dayStr === todayStr ? { cls:'due', text:'Due today' } : { cls:'upcoming', text:'Upcoming' });
 }
+function _prettyKey(k){ const p = k.split('-').map(Number); return new Date(p[0], p[1]-1, p[2]).toLocaleDateString('en-US',{ month:'short', day:'numeric' }); }
+// Due-day 11pm snapshot ("closeReels/closePhotos") and the date the batch first showed complete ("completedOn").
+function batchLogHtml(ent, bt){
+  if(!ent) return '';
+  const lines = [];
+  if(typeof ent.closeReels === 'number' || typeof ent.closePhotos === 'number'){
+    const t = (ent.closeReels || 0) + (ent.closePhotos || 0);
+    lines.push(`End of day (11pm): <b>${t}/${bt.rule.target}</b>`);
+  }
+  if(ent.completedOn){
+    const late = ent.completedOn > localKey(bt.date);
+    lines.push(`Completed ${_prettyKey(ent.completedOn)}${late ? ' (after due date)' : ''}`);
+  }
+  return lines.length ? `<div class="b-mix">${lines.join('<br>')}</div>` : '';
+}
 function finstaTile(handle, bt, overdueTag){
   const ent = (DAILY_DATA[handle] || []).find(x => x.date === localKey(bt.date));
   const st = batchStatus(ent, bt.date, bt.rule);
@@ -827,6 +842,7 @@ function finstaTile(handle, bt, overdueTag){
     <div class="b-date">Due ${bt.date.toLocaleDateString('en-US',{ weekday:'short', month:'short', day:'numeric' })}</div>
     <div class="b-counts">${st.total}<small>/ ${st.target}${bt.rule.flexible ? ' (≈)' : ''} POSTS</small></div>
     <div class="b-mix">${mix}</div>
+    ${batchLogHtml(ent, bt)}
     <div class="b-status">${st.text}</div>
   </div>`;
 }

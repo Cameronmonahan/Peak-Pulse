@@ -31,7 +31,9 @@ Report format (JSON):
      "likes": 120, "comments": 8},                // optional: last-5-posts totals for weekly engagement
     {"handle": "legacyflooringsd_fb", "posted": false, "followers": 410},
     // Finsta batches (key = <igHandle>_finsta), on the batch due date
-    {"handle": "marwooddesign_finsta", "date": "2026-10-15", "reels": 6, "photos": 8}
+    {"handle": "marwooddesign_finsta", "date": "2026-10-15", "reels": 6, "photos": 8},
+    // the 11pm check on the due date itself: add "endOfDay": true to save the end-of-day count
+    {"handle": "marwooddesign_finsta", "date": "2026-10-15", "reels": 6, "photos": 8, "endOfDay": true}
   ]
 }
 Omit a field you did not check. "posted": false never erases an earlier "yes" today.
@@ -44,7 +46,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
-from datetime import datetime, timedelta, timezone
+from datetime import date as _date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo(os.environ.get("PULSE_TZ", "America/Denver"))
@@ -245,6 +247,20 @@ def stories_per_day(ledger, handle):
 
 
 # ---------------------------------------------------------------- daily
+def batch_rule(client, d):
+    """The batch rule from clients.json that falls due on date d (None if none)."""
+    for r in client.get("batches") or []:
+        a = _date.fromisoformat(r["anchor"])
+        if (d.weekday() + 1) % 7 == r["weekday"] and d >= a and ((d - a).days // 7) % r.get("everyWeeks", 1) == 0:
+            return r
+    return None
+
+
+def batch_met(rule, reels, photos):
+    return (reels + photos >= rule["target"] and reels >= rule.get("reelsTarget", 0)
+            and photos >= rule.get("photosTarget", 0))
+
+
 def upsert_daily(daily, handle, date, fields):
     arr = list(daily.get(handle, []))
     idx = next((i for i, e in enumerate(arr) if e["date"] == date), None)
@@ -340,8 +356,22 @@ def main():
         for h, meta, a in entries:
             if meta["platform"] == "finsta":
                 fields = {k: max(0, int(a[k])) for k in ("reels", "photos") if a.get(k) is not None}
+                bd = a.get("date") or today
                 if fields:
-                    upsert_daily(daily, h, a.get("date") or today, fields)
+                    cur = next((e for e in daily.get(h, []) if e["date"] == bd), {})
+                    reels = fields.get("reels", cur.get("reels") or 0)
+                    photos = fields.get("photos", cur.get("photos") or 0)
+                    if a.get("endOfDay"):
+                        # the 11pm snapshot of the due day: what was done when the day ended
+                        if bd == today:
+                            fields["closeReels"], fields["closePhotos"] = reels, photos
+                        else:
+                            notes.append(f"{h}: endOfDay ignored (it only counts on the due date itself, {bd})")
+                    client = next((c for c in clients or [] if c["handle"] + "_finsta" == h), {})
+                    rule = batch_rule(client, _date.fromisoformat(bd))
+                    if rule and not cur.get("completedOn") and batch_met(rule, reels, photos):
+                        fields["completedOn"] = today   # first check that showed the batch complete
+                    upsert_daily(daily, h, bd, fields)
                 continue
             fields = {}
             if a.get("posted") is not None:
@@ -418,7 +448,8 @@ def main():
     for h, meta, a in entries:
         bits = []
         if meta["platform"] == "finsta":
-            bits.append(f"batch {a.get('date') or today}: reels={a.get('reels')} photos={a.get('photos')}")
+            bits.append(f"batch {a.get('date') or today}: reels={a.get('reels')} photos={a.get('photos')}"
+                        + (" (end of day)" if a.get("endOfDay") else ""))
         else:
             if a.get("posted") is not None:
                 bits.append("posted=" + ("yes" if a["posted"] else "no"))

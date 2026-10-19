@@ -54,7 +54,7 @@ def build_html(root, mon, header_src):
         ok = b["got"] >= b["target"]
         cls = "pos" if ok else ("dim" if b["flexible"] else "neg")
         status = "Complete" if ok else ("Under target" if b["flexible"] else f'{b["target"] - b["got"]} short')
-        brows += (f'<tr><td class="cl">{esc(b["name"])}</td><td class="pl">{esc(b["label"])} · due {we.fmt_day(b["due"])}</td>'
+        brows += (f'<tr><td class="cl">{esc(b["name"])}</td><td class="pl">{esc(b["label"])} · due {we.fmt_day(b["due"])}<br>{esc(we.batch_note(b))}</td>'
                   f'<td class="n">{b["got"]} / {b["target"]} posts</td><td class="n {cls} b">{status}</td></tr>')
 
     kpi = lambda v, n, s: f'<div class="kpi"><div class="kv">{v}</div><div class="kn">{n}</div><div class="ks">{s}</div></div>'

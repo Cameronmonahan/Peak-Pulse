@@ -99,9 +99,23 @@ def batches_in_week(client, mon, daily):
                 continue
             e = next((x for x in daily.get(key, []) if x["date"] == d.isoformat()), {})
             got = (e.get("reels") or 0) + (e.get("photos") or 0)
-            out.append({"name": client["name"], "label": rule["label"], "due": d, "got": got,
+            close = (e["closeReels"] or 0) + (e.get("closePhotos") or 0) if e.get("closeReels") is not None or e.get("closePhotos") is not None else None
+            done = e.get("completedOn")
+            out.append({"name": client["name"], "label": rule["label"], "due": d, "got": got, "close": close, "done": done,
                         "target": rule["target"], "flexible": bool(rule.get("flexible"))})
     return out
+
+
+def batch_note(b):
+    """'11pm: 5/14 · completed Oct 21' (parts only when logged)."""
+    bits = []
+    if b.get("close") is not None:
+        bits.append(f'11pm: {b["close"]}/{b["target"]}')
+    if b.get("done"):
+        bits.append("completed " + fmt_day(date.fromisoformat(b["done"])))
+    elif b["got"] < b["target"]:
+        bits.append("not completed yet")
+    return " · ".join(bits)
 
 
 def fmt_day(d):
@@ -295,7 +309,8 @@ def build(root, mon):
             status = "Complete" if ok else ("Under target" if b["flexible"] else f'{b["target"] - b["got"]} short')
             items += (f'<tr><td style="padding:9px 0;border-bottom:1px solid {LINE};">'
                       f'<div style="font-size:15px;font-weight:700;color:{INK};">{esc(b["name"])}</div>'
-                      f'<div style="font-size:12px;color:{DIM};margin-top:2px;">{esc(b["label"])} · due {fmt_day(b["due"])}</div></td>'
+                      f'<div style="font-size:12px;color:{DIM};margin-top:2px;">{esc(b["label"])} · due {fmt_day(b["due"])}</div>'
+                      f'<div style="font-size:12px;color:{DIM};margin-top:2px;">{esc(batch_note(b))}</div></td>'
                       f'<td align="right" valign="middle" style="padding:9px 0;border-bottom:1px solid {LINE};">'
                       f'<div style="font-size:15px;color:{INK};">{b["got"]} / {b["target"]} posts</div>'
                       f'<div style="font-size:12px;font-weight:700;color:{col};margin-top:2px;">{status}</div></td></tr>')
@@ -345,7 +360,7 @@ def build(root, mon):
                                  num(r["stories"]), "–" if r["fff"] is None else f'{r["fff"]}/7',
                                  "–" if r["eng"] is None else f'{r["eng"]:.2f}%']))
     if batches:
-        lines += ["", "CONTENT BATCHES DUE"] + [f'{b["name"]} {b["label"]} ({fmt_day(b["due"])}): {b["got"]}/{b["target"]} posts' for b in batches]
+        lines += ["", "CONTENT BATCHES DUE"] + [f'{b["name"]} {b["label"]} ({fmt_day(b["due"])}): {b["got"]}/{b["target"]} posts' + (f' [{batch_note(b)}]' if batch_note(b) else '') for b in batches]
     lines += ["", "PDF report: " + pdf_url, "Live dashboard: " + DASH_URL]
     return subject, html_out, "\n".join(lines)
 
