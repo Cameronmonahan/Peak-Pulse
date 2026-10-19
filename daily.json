@@ -225,7 +225,8 @@
     {
       "date": "2026-10-19",
       "followers": 4809,
-      "posted": false
+      "posted": false,
+      "stories": 0
     }
   ],
   "legacyflooringsd": [
@@ -462,7 +463,8 @@
     {
       "date": "2026-10-19",
       "followers": 1268,
-      "posted": false
+      "posted": false,
+      "stories": 0
     }
   ],
   "marwooddesign": [
@@ -713,7 +715,8 @@
     {
       "date": "2026-10-19",
       "followers": 10032,
-      "posted": false
+      "posted": false,
+      "stories": 0
     }
   ],
   "ventisalesgroup": [
@@ -965,7 +968,8 @@
     {
       "date": "2026-10-19",
       "followers": 113,
-      "posted": false
+      "posted": false,
+      "stories": 0
     }
   ],
   "guide_n_gallop": [
@@ -1194,7 +1198,8 @@
     {
       "date": "2026-10-19",
       "followers": 909,
-      "posted": false
+      "posted": false,
+      "stories": 0
     }
   ],
   "louiehamner": [
@@ -1415,12 +1420,13 @@
       "date": "2026-10-18",
       "posted": false,
       "followers": 2521,
-      "stories": 0
+      "stories": 2
     },
     {
       "date": "2026-10-19",
       "followers": 2520,
-      "posted": false
+      "posted": false,
+      "stories": 0
     }
   ],
   "peakexposuremedia": [
@@ -1585,7 +1591,8 @@
     {
       "date": "2026-10-19",
       "followers": 17869,
-      "posted": false
+      "posted": false,
+      "stories": 0
     }
   ],
   "thenanonature": [
@@ -1799,7 +1806,8 @@
     {
       "date": "2026-10-19",
       "followers": 2006,
-      "posted": false
+      "posted": false,
+      "stories": 0
     }
   ],
   "paragon_custom_const": [
@@ -2401,7 +2409,8 @@
     {
       "date": "2026-10-19",
       "followers": 137,
-      "posted": false
+      "posted": false,
+      "stories": 0
     }
   ],
   "diamondstrengthandwellness_fb": [
@@ -2485,12 +2494,13 @@
       "date": "2026-10-18",
       "posted": true,
       "followers": 7735,
-      "stories": 0
+      "stories": 2
     },
     {
       "date": "2026-10-19",
       "followers": 7751,
-      "posted": false
+      "posted": false,
+      "stories": 0
     }
   ],
   "ventisalesgroup_finsta": [
