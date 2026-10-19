@@ -312,7 +312,7 @@ def build(root, mon):
   <tr><td>{"".join(cards)}</td></tr>
   {batch_html}
   <tr><td bgcolor="#ffffff" style="background:#ffffff;padding:16px 18px 4px 18px;font-size:12px;line-height:1.55;color:{DIM};border-top:1px solid {LINE};">
-    Followers = last count logged by Sunday; the number beside it is the change vs. the last count before Monday. "Posted" = days with at least one post (red means none). Stories and 5-5-5 are Instagram only.
+    Followers = last count logged by Sunday; the number beside it is the change vs. the last count before Monday. "Posted" = days with at least one post (red means none). Stories and 5-5-5 are Instagram only.&nbsp;
     Engagement is the weekly rate for the week; on Instagram, <b style="color:{GREEN};">green</b> beats the industry benchmark and <b style="color:{RED};">red</b> is below it.
   </td></tr>
   <tr><td align="center" bgcolor="#ffffff" style="background:#ffffff;padding:16px 18px 26px 18px;">
