@@ -121,23 +121,6 @@ def signed(v):
     return f"+{v:,}" if v > 0 else f"{v:,}"
 
 
-def compact_styles(h):
-    """Turn repeated inline style="..." values into <style> classes (much smaller email, same look)."""
-    import re
-    from collections import Counter
-    pat = re.compile(r'<(\w+)((?:(?!class=)[^>])*?) style="([^"]+)"([^>]*)>')
-    counts = Counter(m.group(3) for m in pat.finditer(h) if "class=" not in m.group(0))
-    names = {v: f"s{i}" for i, (v, n) in enumerate(counts.most_common()) if n >= 3}
-    def sub(m):
-        v = m.group(3)
-        if v in names and "class=" not in m.group(0):
-            return f'<{m.group(1)}{m.group(2)} class="{names[v]}"{m.group(4)}>'
-        return m.group(0)
-    h = pat.sub(sub, h)
-    css = "".join(f".{c}{{{v}}}" for v, c in names.items())
-    return h.replace("</head>", f"<style>{css}</style></head>", 1)
-
-
 def build(root, mon):
     clients = load(root, "clients.json")
     daily, weekly = load(root, "daily.json"), load(root, "weekly.json")
@@ -231,41 +214,113 @@ def build(root, mon):
                       f'<table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">{brow}</table></td></tr>')
 
     top_sub = f'{esc(top["name"].split(" ")[0])} {signed(top["change"])}' if top else ""
+
+    # Email-safe: tables + inline styles + bgcolor attributes only (no <style>, no classes; Gmail on iPhone drops them).
+    def label(t, align="left"):
+        return (f'<div style="font-size:10px;letter-spacing:1.1px;text-transform:uppercase;color:{DIM};'
+                f'font-weight:700;text-align:{align};">{t}</div>')
+
+    def kpi(value, name, sub):
+        return (f'<td width="50%" align="center" bgcolor="{NAVY2}" style="background:{NAVY2};padding:16px 6px;border:3px solid {NAVY};">'
+                f'<div style="font-family:Georgia,serif;font-size:32px;line-height:1.1;color:{GOLD_BRIGHT};">{value}</div>'
+                f'<div style="font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:#d5d8e6;margin-top:6px;font-weight:700;">{name}</div>'
+                f'<div style="font-size:12px;color:#aab0c8;margin-top:3px;">{sub}</div></td>')
+
+    def metric(name, value, color=INK, sub=""):
+        sub_h = f'<span style="color:{DIM};font-weight:400;font-size:12px;"> {sub}</span>' if sub else ""
+        return (f'<td width="25%" valign="top" style="padding:0 4px 0 0;">'
+                f'<div style="font-size:9.5px;letter-spacing:.8px;text-transform:uppercase;color:{DIM};font-weight:700;">{name}</div>'
+                f'<div style="font-size:16px;font-weight:700;color:{color};margin-top:3px;">{value}{sub_h}</div></td>')
+
+    cards, i = [], 0
+    for c in clients:
+        crows = [r for r in rows if r["name"] == c["name"]]
+        if not crows:
+            continue
+        i += 1
+        bg = "#ffffff" if i % 2 else ZEBRA
+        block = [f'<tr><td bgcolor="{bg}" style="background:{bg};padding:16px 18px 2px 18px;border-top:1px solid {LINE};">'
+                 f'<div style="font-size:17px;font-weight:700;color:{NAVY};">{esc(c["name"])}</div></td></tr>']
+        for r in crows:
+            chg_color = GREEN if (r["change"] or 0) > 0 else (RED if (r["change"] or 0) < 0 else DIM)
+            eng_color = GREEN if r["grade"] == "good" else (RED if r["grade"] == "bad" else INK)
+            ms = [metric("Posted", f'{r["posted"]}', RED if r["posted"] == 0 else INK, "of 7 days")]
+            if r["platform"] == "instagram":
+                ms.append(metric("Stories", num(r["stories"])))
+                ms.append(metric("5-5-5", f'{r["fff"]}', INK, "of 7"))
+            else:
+                ms += ['<td width="25%"></td>', '<td width="25%"></td>']
+            ms.append(metric("Engagement", "–" if r["eng"] is None else f'{r["eng"]:.2f}%', eng_color))
+            block.append(
+                f'<tr><td bgcolor="{bg}" style="background:{bg};padding:8px 18px 12px 18px;">'
+                f'<table width="100%" cellpadding="0" cellspacing="0"><tr>'
+                f'<td valign="bottom" style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:{GOLD};font-weight:700;padding-bottom:6px;">{PLAT[r["platform"]]}</td>'
+                f'<td align="right" valign="bottom" style="padding-bottom:6px;"><span style="font-size:18px;font-weight:700;color:{INK};">{num(r["end"])}</span>'
+                f'<span style="font-size:12px;color:{DIM};"> followers </span>'
+                f'<span style="font-size:14px;font-weight:700;color:{chg_color};">{signed(r["change"])}</span></td></tr></table>'
+                f'<table width="100%" cellpadding="0" cellspacing="0"><tr>{"".join(ms)}</tr></table></td></tr>')
+        cards.append(f'<table width="100%" cellpadding="0" cellspacing="0">{"".join(block)}</table>')
+
+    attn_html = ""
+    attn = []
+    for r in quiet:
+        attn.append(f'<b>{esc(r["name"])}</b> had no Instagram posts logged this week.')
+    for b in short:
+        attn.append(f'<b>{esc(b["name"])}</b> {esc(b["label"])} ({fmt_day(b["due"])}): {b["got"]} of {b["target"]} posts delivered.')
+    if attn:
+        items = "".join(f'<tr><td valign="top" style="padding:0 8px 8px 0;color:{GOLD};font-size:16px;line-height:1.3;">•</td>'
+                        f'<td style="padding:0 0 8px 0;font-size:15px;line-height:1.4;color:{INK};">{a}</td></tr>' for a in attn)
+        attn_html = (f'<tr><td bgcolor="#fbf3e2" style="background:#fbf3e2;padding:18px 18px 10px 18px;border-top:1px solid {LINE};">'
+                     f'<div style="font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#8a6a2f;font-weight:700;margin-bottom:10px;">For Monday\'s meeting</div>'
+                     f'<table cellpadding="0" cellspacing="0" width="100%">{items}</table></td></tr>')
+
+    batch_html = ""
+    if batches:
+        items = ""
+        for b in sorted(batches, key=lambda b: (b["due"], b["name"])):
+            ok = b["got"] >= b["target"]
+            col = GREEN if ok else (GOLD if b["flexible"] else RED)
+            status = "Complete" if ok else ("Under target" if b["flexible"] else f'{b["target"] - b["got"]} short')
+            items += (f'<tr><td style="padding:9px 0;border-bottom:1px solid {LINE};">'
+                      f'<div style="font-size:15px;font-weight:700;color:{INK};">{esc(b["name"])}</div>'
+                      f'<div style="font-size:12px;color:{DIM};margin-top:2px;">{esc(b["label"])} · due {fmt_day(b["due"])}</div></td>'
+                      f'<td align="right" valign="middle" style="padding:9px 0;border-bottom:1px solid {LINE};">'
+                      f'<div style="font-size:15px;color:{INK};">{b["got"]} / {b["target"]} posts</div>'
+                      f'<div style="font-size:12px;font-weight:700;color:{col};margin-top:2px;">{status}</div></td></tr>')
+        batch_html = (f'<tr><td bgcolor="#ffffff" style="background:#ffffff;padding:20px 18px 6px 18px;border-top:1px solid {LINE};">'
+                      f'<div style="font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:{GOLD};font-weight:700;margin-bottom:6px;">Content batches due this week</div>'
+                      f'<table width="100%" cellpadding="0" cellspacing="0">{items}</table></td></tr>')
+
     html_out = f"""<!doctype html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(subject)}</title></head>
-<body style="margin:0;padding:0;background:#ece8de;">
-<table width="100%" cellpadding="0" cellspacing="0" style="background:#ece8de;"><tr><td align="center" style="padding:24px 10px;">
-<table width="680" cellpadding="0" cellspacing="0" style="max-width:680px;width:100%;background:#ffffff;border-radius:14px;overflow:hidden;font-family:Helvetica,Arial,sans-serif;">
-  <tr><td style="background:{NAVY};padding:26px 28px 8px 28px;border-bottom:3px solid {GOLD};">
-    <img src="{LOGO_URL}" width="200" alt="Peak Exposure Media" style="display:block;border:0;height:auto;max-width:200px;">
-    <div style="font-family:Georgia,serif;font-size:28px;color:#f3f1ea;margin-top:18px;">Weekly Client Pulse</div>
-    <div style="font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:{GOLD_BRIGHT};margin:6px 0 16px 0;">{esc(rng)} · Monday to Sunday</div>
-    <table width="100%" cellpadding="0" cellspacing="0" style="background:{NAVY2};border-radius:10px;margin-bottom:22px;"><tr>
-      {stat("Net followers", signed(tot_change), top_sub)}
-      {stat("Posted days", tot_posted, "across all accounts")}
-      {stat("Stories", tot_stories, "Instagram")}
-      {stat("5-5-5 days", tot_fff, "Instagram")}
-    </tr></table>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light only"><title>{esc(subject)}</title></head>
+<body bgcolor="#ece8de" style="margin:0;padding:0;background:#ece8de;">
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ece8de" style="background:#ece8de;"><tr><td align="center" style="padding:12px 8px;">
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="max-width:640px;width:100%;background:#ffffff;font-family:Helvetica,Arial,sans-serif;">
+  <tr><td bgcolor="{NAVY}" style="background:{NAVY};padding:24px 18px 6px 18px;border-bottom:3px solid {GOLD};">
+    <img src="{LOGO_URL}" width="180" alt="PEAK EXPOSURE MEDIA" style="display:block;border:0;height:auto;max-width:180px;color:{GOLD_BRIGHT};font-size:13px;letter-spacing:2px;">
+    <div style="font-family:Georgia,serif;font-size:30px;color:#f3f1ea;margin-top:18px;line-height:1.15;">Weekly Client Pulse</div>
+    <div style="font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:{GOLD_BRIGHT};margin:8px 0 16px 0;font-weight:700;">{esc(rng)} · Mon to Sun</div>
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;">
+      <tr>{kpi(signed(tot_change), "Net followers", top_sub or "all accounts")}{kpi(tot_posted, "Posted days", "all accounts")}</tr>
+      <tr>{kpi(tot_stories, "Stories", "Instagram")}{kpi(tot_fff, "5-5-5 days", "Instagram")}</tr>
+    </table>
   </td></tr>
   {attn_html}
-  <tr><td style="padding:22px 28px 4px 28px;">
-    <div style="font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:{GOLD};font-weight:700;margin-bottom:8px;">Every account</div>
-    <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><thead><tr>{head_html}</tr></thead><tbody>{"".join(body_rows)}</tbody></table>
+  <tr><td bgcolor="#ffffff" style="background:#ffffff;padding:20px 18px 12px 18px;border-top:1px solid {LINE};">
+    <div style="font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:{GOLD};font-weight:700;">Every account</div>
   </td></tr>
+  <tr><td>{"".join(cards)}</td></tr>
   {batch_html}
-  <tr><td style="padding:14px 28px 6px 28px;font-size:11.5px;line-height:1.55;color:{DIM};">
-    <b>Followers</b> = last count logged by Sunday. <b>Change</b> = vs. the last count before Monday ("–" means not enough counts to compare).
-    <b>Posted days</b> = days with at least one post (max 7); red means none. <b>Stories</b> and <b>5-5-5</b> are Instagram only.
-    <b>Engagement</b> is the weekly rate logged for the week; on Instagram, <span style="color:{GREEN};font-weight:700;">green</span> beats the industry benchmark and <span style="color:{RED};font-weight:700;">red</span> is below it.
+  <tr><td bgcolor="#ffffff" style="background:#ffffff;padding:16px 18px 4px 18px;font-size:12px;line-height:1.55;color:{DIM};border-top:1px solid {LINE};">
+    Followers = last count logged by Sunday; the number beside it is the change vs. the last count before Monday. "Posted" = days with at least one post (red means none). Stories and 5-5-5 are Instagram only.
+    Engagement is the weekly rate for the week; on Instagram, <b style="color:{GREEN};">green</b> beats the industry benchmark and <b style="color:{RED};">red</b> is below it.
   </td></tr>
-  <tr><td align="center" style="padding:18px 28px 28px 28px;">
-    <a href="{DASH_URL}" style="display:inline-block;background:{GOLD};color:{NAVY};font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;text-decoration:none;padding:12px 26px;border-radius:8px;">Open the live dashboard</a>
+  <tr><td align="center" bgcolor="#ffffff" style="background:#ffffff;padding:16px 18px 26px 18px;">
+    <a href="{DASH_URL}" style="display:inline-block;background:{GOLD};color:{NAVY};font-size:14px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;text-decoration:none;padding:14px 28px;border-radius:8px;">Open the live dashboard</a>
   </td></tr>
-  <tr><td style="background:{NAVY};padding:14px 28px;font-size:11px;color:#8d93ac;text-align:center;">Peak Exposure Media · internal weekly report</td></tr>
+  <tr><td bgcolor="{NAVY}" style="background:{NAVY};padding:14px 18px;font-size:11px;color:#aab0c8;text-align:center;">Peak Exposure Media · internal weekly report</td></tr>
 </table>
 </td></tr></table></body></html>"""
-
-    html_out = compact_styles(html_out)
 
     # ---------- plain text ----------
     lines = [subject, "", f"Net followers {signed(tot_change)} | Posted days {tot_posted} | Stories {tot_stories} | 5-5-5 days {tot_fff}", ""]
