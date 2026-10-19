@@ -224,8 +224,8 @@
     },
     {
       "date": "2026-10-19",
-      "followers": 4809,
-      "posted": false,
+      "followers": 4810,
+      "posted": true,
       "stories": 0
     }
   ],
@@ -714,7 +714,7 @@
     },
     {
       "date": "2026-10-19",
-      "followers": 10032,
+      "followers": 10045,
       "posted": false,
       "stories": 0
     }
@@ -1198,7 +1198,7 @@
     {
       "date": "2026-10-19",
       "followers": 909,
-      "posted": false,
+      "posted": true,
       "stories": 0
     }
   ],
@@ -1424,7 +1424,7 @@
     },
     {
       "date": "2026-10-19",
-      "followers": 2520,
+      "followers": 2521,
       "posted": false,
       "stories": 0
     }
@@ -1590,7 +1590,7 @@
     },
     {
       "date": "2026-10-19",
-      "followers": 17869,
+      "followers": 17870,
       "posted": false,
       "stories": 0
     }
@@ -2294,7 +2294,7 @@
     {
       "date": "2026-10-19",
       "posted": false,
-      "followers": 796
+      "followers": 797
     }
   ],
   "legacyflooringsd_fb": [
@@ -2408,8 +2408,8 @@
     },
     {
       "date": "2026-10-19",
-      "followers": 137,
-      "posted": false,
+      "followers": 138,
+      "posted": true,
       "stories": 0
     }
   ],
@@ -2451,7 +2451,7 @@
     },
     {
       "date": "2026-10-19",
-      "posted": false,
+      "posted": true,
       "followers": 24
     }
   ],
@@ -2498,8 +2498,8 @@
     },
     {
       "date": "2026-10-19",
-      "followers": 7751,
-      "posted": false,
+      "followers": 7757,
+      "posted": true,
       "stories": 0
     }
   ],
