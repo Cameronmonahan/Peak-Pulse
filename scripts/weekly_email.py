@@ -121,6 +121,23 @@ def signed(v):
     return f"+{v:,}" if v > 0 else f"{v:,}"
 
 
+def compact_styles(h):
+    """Turn repeated inline style="..." values into <style> classes (much smaller email, same look)."""
+    import re
+    from collections import Counter
+    pat = re.compile(r'<(\w+)((?:(?!class=)[^>])*?) style="([^"]+)"([^>]*)>')
+    counts = Counter(m.group(3) for m in pat.finditer(h) if "class=" not in m.group(0))
+    names = {v: f"s{i}" for i, (v, n) in enumerate(counts.most_common()) if n >= 3}
+    def sub(m):
+        v = m.group(3)
+        if v in names and "class=" not in m.group(0):
+            return f'<{m.group(1)}{m.group(2)} class="{names[v]}"{m.group(4)}>'
+        return m.group(0)
+    h = pat.sub(sub, h)
+    css = "".join(f".{c}{{{v}}}" for v, c in names.items())
+    return h.replace("</head>", f"<style>{css}</style></head>", 1)
+
+
 def build(root, mon):
     clients = load(root, "clients.json")
     daily, weekly = load(root, "daily.json"), load(root, "weekly.json")
@@ -247,6 +264,8 @@ def build(root, mon):
   <tr><td style="background:{NAVY};padding:14px 28px;font-size:11px;color:#8d93ac;text-align:center;">Peak Exposure Media · internal weekly report</td></tr>
 </table>
 </td></tr></table></body></html>"""
+
+    html_out = compact_styles(html_out)
 
     # ---------- plain text ----------
     lines = [subject, "", f"Net followers {signed(tot_change)} | Posted days {tot_posted} | Stories {tot_stories} | 5-5-5 days {tot_fff}", ""]
