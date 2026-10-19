@@ -2438,6 +2438,11 @@
       "date": "2026-10-17",
       "reels": 4,
       "photos": 2
+    },
+    {
+      "date": "2026-10-18",
+      "reels": 4,
+      "photos": 2
     }
   ],
   "legacyflooringsd_finsta": [
@@ -2453,6 +2458,11 @@
     },
     {
       "date": "2026-10-17",
+      "reels": 3,
+      "photos": 2
+    },
+    {
+      "date": "2026-10-18",
       "reels": 3,
       "photos": 2
     }
@@ -2472,6 +2482,11 @@
       "date": "2026-10-17",
       "reels": 6,
       "photos": 5
+    },
+    {
+      "date": "2026-10-18",
+      "reels": 6,
+      "photos": 5
     }
   ],
   "louiehamner_finsta": [
@@ -2489,6 +2504,11 @@
       "date": "2026-10-17",
       "reels": 5,
       "photos": 7
+    },
+    {
+      "date": "2026-10-18",
+      "reels": 5,
+      "photos": 7
     }
   ],
   "diamondstrengthandwellness_finsta": [
@@ -2499,6 +2519,11 @@
     },
     {
       "date": "2026-10-17",
+      "reels": 8,
+      "photos": 6
+    },
+    {
+      "date": "2026-10-18",
       "reels": 8,
       "photos": 6
     },
@@ -2520,6 +2545,11 @@
       "photos": 0
     },
     {
+      "date": "2026-10-18",
+      "reels": 2,
+      "photos": 0
+    },
+    {
       "date": "2026-10-22",
       "reels": 2,
       "photos": 0
@@ -2533,6 +2563,11 @@
     },
     {
       "date": "2026-10-17",
+      "reels": 8,
+      "photos": 5
+    },
+    {
+      "date": "2026-10-18",
       "reels": 8,
       "photos": 5
     }
