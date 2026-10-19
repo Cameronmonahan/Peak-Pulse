@@ -1,0 +1,45 @@
+name: Weekly report PDF
+
+on:
+  schedule:
+    # Mondays 11:00 UTC = 5:00am Mountain (4:00am in winter). Always before the 6:30am email.
+    - cron: "0 11 * * 1"
+  workflow_dispatch:
+    inputs:
+      week:
+        description: "Monday of the week to build (YYYY-MM-DD). Leave blank for last week."
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build the PDF
+        run: |
+          if [ -n "${{ github.event.inputs.week }}" ]; then
+            python3 scripts/weekly_pdf.py --week "${{ github.event.inputs.week }}"
+          else
+            python3 scripts/weekly_pdf.py
+          fi
+
+      - name: Save it to the repo
+        run: |
+          git config user.name "peak-pulse-bot"
+          git config user.email "peak-pulse-bot@users.noreply.github.com"
+          git add reports/*.pdf
+          if git diff --cached --quiet; then echo "Nothing new to commit"; exit 0; fi
+          git commit -m "Add weekly report PDF [bot]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1

@@ -20,6 +20,7 @@ from zoneinfo import ZoneInfo
 TZ = ZoneInfo(os.environ.get("PULSE_TZ", "America/Denver"))
 DASH_URL = "https://cameronmonahan.github.io/Peak-Pulse/"
 LOGO_URL = DASH_URL + "logo-email.png"
+HEADER_URL = DASH_URL + "header-email.png"
 BATCH_TRACKING_START = "2026-10-13"
 
 NAVY, NAVY2, GOLD, GOLD_BRIGHT = "#171c2a", "#262c42", "#c9a876", "#e6cd9c"
@@ -121,7 +122,8 @@ def signed(v):
     return f"+{v:,}" if v > 0 else f"{v:,}"
 
 
-def build(root, mon):
+def collect(root, mon):
+    """All the numbers for one Monday-Sunday week (shared by the email and the PDF)."""
     clients = load(root, "clients.json")
     daily, weekly = load(root, "daily.json"), load(root, "weekly.json")
     sun = (date.fromisoformat(mon) + timedelta(days=6)).isoformat()
@@ -144,7 +146,17 @@ def build(root, mon):
     quiet = [r for r in rows if r["platform"] == "instagram" and r["posted"] == 0]
     short = [b for b in batches if b["got"] < b["target"] and not (b["flexible"] and b["got"] > 0)]
 
+    return dict(clients=clients, rows=rows, batches=batches, rng=rng, sun=sun, tot_posted=tot_posted,
+                tot_stories=tot_stories, tot_fff=tot_fff, tot_change=tot_change, top=top, quiet=quiet, short=short)
+
+
+def build(root, mon):
+    c = collect(root, mon)
+    clients, rows, batches, rng = c["clients"], c["rows"], c["batches"], c["rng"]
+    tot_posted, tot_stories, tot_fff, tot_change = c["tot_posted"], c["tot_stories"], c["tot_fff"], c["tot_change"]
+    top, quiet, short = c["top"], c["quiet"], c["short"]
     subject = f"Peak Pulse weekly report: {rng}"
+    pdf_url = DASH_URL + f"reports/peak-pulse-{mon}.pdf"
 
     # ---------- HTML ----------
     def td(content, align="right", color=INK, bold=False, extra=""):
@@ -221,10 +233,10 @@ def build(root, mon):
                 f'font-weight:700;text-align:{align};">{t}</div>')
 
     def kpi(value, name, sub):
-        return (f'<td width="50%" align="center" bgcolor="{NAVY2}" style="background:{NAVY2};padding:16px 6px;border:3px solid {NAVY};">'
-                f'<div style="font-family:Georgia,serif;font-size:32px;line-height:1.1;color:{GOLD_BRIGHT};">{value}</div>'
-                f'<div style="font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:#d5d8e6;margin-top:6px;font-weight:700;">{name}</div>'
-                f'<div style="font-size:12px;color:#aab0c8;margin-top:3px;">{sub}</div></td>')
+        return (f'<td width="50%" align="center" bgcolor="#f3eee2" style="background:#f3eee2;padding:16px 6px;border:3px solid #ffffff;border-top:3px solid {GOLD};">'
+                f'<div style="font-family:Georgia,serif;font-size:32px;line-height:1.1;color:{NAVY};font-weight:700;">{value}</div>'
+                f'<div style="font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:#3a4160;margin-top:6px;font-weight:700;">{name}</div>'
+                f'<div style="font-size:12px;color:{DIM};margin-top:3px;">{sub}</div></td>')
 
     def metric(name, value, color=INK, sub=""):
         sub_h = f'<span style="color:{DIM};font-weight:400;font-size:12px;"> {sub}</span>' if sub else ""
@@ -296,11 +308,11 @@ def build(root, mon):
 <body bgcolor="#ece8de" style="margin:0;padding:0;background:#ece8de;">
 <table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ece8de" style="background:#ece8de;"><tr><td align="center" style="padding:12px 8px;">
 <table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="max-width:640px;width:100%;background:#ffffff;font-family:Helvetica,Arial,sans-serif;">
-  <tr><td bgcolor="{NAVY}" style="background:{NAVY};padding:24px 18px 6px 18px;border-bottom:3px solid {GOLD};">
-    <img src="{LOGO_URL}" width="180" alt="PEAK EXPOSURE MEDIA" style="display:block;border:0;height:auto;max-width:180px;color:{GOLD_BRIGHT};font-size:13px;letter-spacing:2px;">
-    <div style="font-family:Georgia,serif;font-size:30px;color:#f3f1ea;margin-top:18px;line-height:1.15;">Weekly Client Pulse</div>
-    <div style="font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:{GOLD_BRIGHT};margin:8px 0 16px 0;font-weight:700;">{esc(rng)} · Mon to Sun</div>
-    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;">
+  <tr><td bgcolor="{NAVY}" style="background:{NAVY};padding:0;line-height:0;font-size:0;"><img src="{HEADER_URL}" width="640" alt="Peak Exposure Media: Weekly Client Pulse" style="display:block;border:0;width:100%;height:auto;max-width:640px;"></td></tr>
+  <tr><td bgcolor="#ffffff" style="background:#ffffff;padding:20px 18px 6px 18px;">
+    <div style="font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:{GOLD};font-weight:700;">Week of</div>
+    <div style="font-family:Georgia,serif;font-size:28px;color:{NAVY};margin:4px 0 14px 0;line-height:1.15;font-weight:700;">{esc(rng)}</div>
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:8px;">
       <tr>{kpi(signed(tot_change), "Net followers", top_sub or "all accounts")}{kpi(tot_posted, "Posted days", "all accounts")}</tr>
       <tr>{kpi(tot_stories, "Stories", "Instagram")}{kpi(tot_fff, "5-5-5 days", "Instagram")}</tr>
     </table>
@@ -316,9 +328,10 @@ def build(root, mon):
     Engagement is the weekly rate for the week; on Instagram, <b style="color:{GREEN};">green</b> beats the industry benchmark and <b style="color:{RED};">red</b> is below it.
   </td></tr>
   <tr><td align="center" bgcolor="#ffffff" style="background:#ffffff;padding:16px 18px 26px 18px;">
-    <a href="{DASH_URL}" style="display:inline-block;background:{GOLD};color:{NAVY};font-size:14px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;text-decoration:none;padding:14px 28px;border-radius:8px;">Open the live dashboard</a>
+    <a href="{pdf_url}" style="display:inline-block;background:{GOLD};color:{NAVY};font-size:14px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;text-decoration:none;padding:14px 28px;border-radius:8px;margin:4px;">Download the PDF</a>
+    <a href="{DASH_URL}" style="display:inline-block;border:2px solid {GOLD};color:{NAVY};font-size:14px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;text-decoration:none;padding:12px 26px;border-radius:8px;margin:4px;">Live dashboard</a>
   </td></tr>
-  <tr><td bgcolor="{NAVY}" style="background:{NAVY};padding:14px 18px;font-size:11px;color:#aab0c8;text-align:center;">Peak Exposure Media · internal weekly report</td></tr>
+  <tr><td bgcolor="#f3eee2" style="background:#f3eee2;padding:14px 18px;font-size:11px;color:{DIM};text-align:center;border-top:3px solid {GOLD};">Peak Exposure Media · internal weekly report</td></tr>
 </table>
 </td></tr></table></body></html>"""
 
@@ -333,7 +346,7 @@ def build(root, mon):
                                  "–" if r["eng"] is None else f'{r["eng"]:.2f}%']))
     if batches:
         lines += ["", "CONTENT BATCHES DUE"] + [f'{b["name"]} {b["label"]} ({fmt_day(b["due"])}): {b["got"]}/{b["target"]} posts' for b in batches]
-    lines += ["", "Live dashboard: " + DASH_URL]
+    lines += ["", "PDF report: " + pdf_url, "Live dashboard: " + DASH_URL]
     return subject, html_out, "\n".join(lines)
 
 
