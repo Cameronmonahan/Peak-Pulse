@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T03:13:52.000Z",
+  "generatedAt": "2026-10-19T03:55:25.000Z",
   "weekStart": "2026-10-12T06:00:00.000Z",
   "weekEnd": "2026-10-18T06:00:00.000Z",
   "accounts": {
@@ -9,7 +9,7 @@
       "platform": "instagram",
       "followers": 2521,
       "deltaToday": 2,
-      "engagementRate": 1.45,
+      "engagementRate": 2.51,
       "postDates": [
         "2026-10-13T12:00:00.000Z",
         "2026-10-15T12:00:00.000Z",
@@ -20,9 +20,9 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17860,
-      "deltaToday": 22,
-      "engagementRate": 0,
+      "followers": 17859,
+      "deltaToday": 21,
+      "engagementRate": 1.9,
       "postDates": []
     },
     "thenanonature": {
@@ -31,7 +31,7 @@
       "platform": "instagram",
       "followers": 2005,
       "deltaToday": 1,
-      "engagementRate": 0,
+      "engagementRate": 22.45,
       "postDates": []
     },
     "diamondstrengthandwellness": {
@@ -40,7 +40,7 @@
       "platform": "instagram",
       "followers": 138,
       "deltaToday": 2,
-      "engagementRate": 0,
+      "engagementRate": 5.22,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
         "2026-10-13T12:00:00.000Z",
@@ -72,9 +72,9 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4797,
-      "deltaToday": 52,
-      "engagementRate": 0.61,
+      "followers": 4795,
+      "deltaToday": 50,
+      "engagementRate": 0.32,
       "postDates": [
         "2026-10-13T12:00:00.000Z",
         "2026-10-15T12:00:00.000Z",
@@ -87,7 +87,7 @@
       "platform": "instagram",
       "followers": 1267,
       "deltaToday": 5,
-      "engagementRate": 1.91,
+      "engagementRate": 0.25,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
         "2026-10-13T12:00:00.000Z",
@@ -117,7 +117,7 @@
       "platform": "instagram",
       "followers": 10019,
       "deltaToday": 67,
-      "engagementRate": 0.22,
+      "engagementRate": 0.86,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
         "2026-10-13T12:00:00.000Z",
@@ -132,7 +132,7 @@
       "platform": "instagram",
       "followers": 113,
       "deltaToday": 1,
-      "engagementRate": 5.97,
+      "engagementRate": 4.78,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
         "2026-10-13T12:00:00.000Z",
@@ -147,7 +147,7 @@
       "platform": "instagram",
       "followers": 909,
       "deltaToday": 1,
-      "engagementRate": 3.43,
+      "engagementRate": 2.82,
       "postDates": [
         "2026-10-13T12:00:00.000Z",
         "2026-10-15T12:00:00.000Z",
@@ -160,7 +160,7 @@
       "platform": "tiktok",
       "followers": 45,
       "deltaToday": 0,
-      "engagementRate": 0,
+      "engagementRate": 46.22,
       "postDates": [
         "2026-10-13T12:00:00.000Z"
       ]
@@ -171,16 +171,16 @@
       "platform": "tiktok",
       "followers": 796,
       "deltaToday": 0,
-      "engagementRate": 0,
+      "engagementRate": 32.74,
       "postDates": []
     },
     "built.bykate": {
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7737,
-      "deltaToday": 56,
-      "engagementRate": 6.56,
+      "followers": 7735,
+      "deltaToday": 54,
+      "engagementRate": 19.46,
       "postDates": [
         "2026-10-12T12:00:00.000Z",
         "2026-10-13T12:00:00.000Z",
