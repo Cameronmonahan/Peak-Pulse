@@ -142,6 +142,29 @@
     letter-spacing:0.04em; text-transform:uppercase; cursor:pointer;
   }
   .view-btn.active{ background:var(--gold); border-color:var(--gold); color:#1a1f30; }
+  .report{ grid-column:1 / -1; background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:18px 18px 10px; overflow-x:auto; }
+  .report-head{ display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px; }
+  .report-title{ font-family:'Bebas Neue'; font-size:26px; letter-spacing:0.04em; color:var(--text); }
+  .report-sub{ font-size:11px; color:var(--text-dim); letter-spacing:0.06em; text-transform:uppercase; }
+  .report-btn{ padding:7px 14px; border-radius:8px; border:1px solid var(--line); background:var(--surface-2); color:var(--gold-bright); font-size:11.5px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; cursor:pointer; }
+  table.report-table{ width:100%; border-collapse:collapse; min-width:720px; font-size:13px; }
+  .report-table th{ text-align:right; font-size:9.5px; letter-spacing:0.09em; text-transform:uppercase; color:var(--text-dim); padding:6px 10px 8px; border-bottom:1px solid var(--line); font-weight:600; }
+  .report-table th:first-child, .report-table th:nth-child(2){ text-align:left; }
+  .report-table td{ text-align:right; padding:9px 10px; border-bottom:1px solid var(--line); color:var(--text); font-variant-numeric:tabular-nums; }
+  .report-table td:first-child, .report-table td:nth-child(2){ text-align:left; }
+  .report-table td.client{ font-weight:700; }
+  .report-table td.plat{ color:var(--text-dim); font-size:11.5px; text-transform:uppercase; letter-spacing:0.06em; }
+  .report-table td.dim{ color:var(--text-dim); }
+  .report-table td.good{ color:#93c08f; }
+  .report-table td.bad{ color:#e07a6a; }
+  .report-table td.up{ color:#93c08f; }
+  .report-table td.down{ color:#e07a6a; }
+  .report-table tr.total td{ font-weight:700; color:var(--gold-bright); border-bottom:none; }
+  .report-note{ font-size:10.5px; color:var(--text-dim); margin:10px 0 6px; line-height:1.5; }
+  #week-select{
+    padding:8px 14px; border-radius:8px; border:1px solid var(--line);
+    background:var(--surface); color:var(--text); font-size:13px; font-family:'Montserrat';
+  }
   #month-select{
     padding:8px 14px; border-radius:8px; border:1px solid var(--line);
     background:var(--surface); color:var(--text); font-size:13px; font-family:'Montserrat';
@@ -379,7 +402,9 @@
 <div class="view-switch" id="view-switch">
   <div class="view-btn active" id="view-btn-week">This Week</div>
   <div class="view-btn" id="view-btn-month">Monthly</div>
+  <div class="view-btn" id="view-btn-report">Weekly Report</div>
   <select id="month-select" style="display:none;"></select>
+  <select id="week-select" style="display:none;"></select>
 </div>
 
 <main>
@@ -436,7 +461,8 @@ let LIVE_DATA = null;       // populated from data.json when available
 let LIVE_MODE = false;
 let DAILY_DATA = {};        // populated from daily.json when available
 let WEEKLY_DATA = {};       // populated from weekly.json when available
-let VIEW_MODE = 'week';     // 'week' | 'month'
+let VIEW_MODE = 'week';     // 'week' | 'month' | 'report'
+let SELECTED_REPORT_WEEK = null; // Monday key 'YYYY-MM-DD'
 let SELECTED_MONTH = null;  // 'YYYY-MM'
 let PLATFORM_SELECTION = {}; // { [instagramHandle]: 'instagram' | 'tiktok' | 'facebook' }
 
@@ -1125,8 +1151,132 @@ function renderMonth(){
   });
 }
 
+
+/* ---------------- WEEKLY REPORT (Mon–Sun, one row per account) ---------------- */
+function keyAddDays(key, n){
+  const [y, m, d] = key.split('-').map(Number);
+  const dt = new Date(Date.UTC(y, m - 1, d + n));
+  return dt.toISOString().slice(0, 10);
+}
+function mondayKeyOf(d){ return localKey(getPostWeekRange(d).start); }
+function reportWeekKeys(){
+  let earliest = null;
+  Object.values(DAILY_DATA).forEach(arr => (arr || []).forEach(e => { if(!earliest || e.date < earliest) earliest = e.date; }));
+  const cur = mondayKeyOf(new Date());
+  if(!earliest) return [cur];
+  let k = (() => { const [y,m,d] = earliest.split('-').map(Number); return mondayKeyOf(new Date(y, m-1, d)); })();
+  const out = [];
+  while(k <= cur){ out.push(k); k = keyAddDays(k, 7); }
+  return out.reverse(); // newest first
+}
+function reportWeekLabel(mon){
+  const cur = mondayKeyOf(new Date());
+  const fmt = key => { const [y,m,d] = key.split('-').map(Number); return fmtShort(new Date(y, m-1, d)); };
+  const tag = mon === cur ? ' (this week, in progress)' : (mon === keyAddDays(cur, -7) ? ' (last week)' : '');
+  return fmt(mon) + ' – ' + fmt(keyAddDays(mon, 6)) + tag;
+}
+function populateWeekSelect(){
+  const sel = document.getElementById('week-select');
+  const keys = reportWeekKeys();
+  const cur = mondayKeyOf(new Date());
+  const last = keyAddDays(cur, -7);
+  const def = keys.includes(last) ? last : keys[0];
+  sel.innerHTML = keys.map(k => `<option value="${k}">${reportWeekLabel(k)}</option>`).join('');
+  if(!SELECTED_REPORT_WEEK || !keys.includes(SELECTED_REPORT_WEEK)) SELECTED_REPORT_WEEK = def;
+  sel.value = SELECTED_REPORT_WEEK;
+}
+
+function weekReportRow(client, platform, account, mon){
+  const sun = keyAddDays(mon, 6);
+  const daily = (DAILY_DATA[account.handle] || []).slice().sort((a, b) => a.date.localeCompare(b.date));
+  const inWeek = daily.filter(e => e.date >= mon && e.date <= sun);
+  const posted = inWeek.filter(e => e.posted).length;
+  const stories = platform === 'instagram' ? inWeek.reduce((t, e) => t + (typeof e.stories === 'number' ? e.stories : 0), 0) : null;
+  const fff = platform === 'instagram' ? inWeek.filter(fffEntryDone).length : null;
+  const withF = daily.filter(e => typeof e.followers === 'number');
+  const endE = withF.filter(e => e.date <= sun).pop();
+  const endInWeek = endE && endE.date >= mon ? endE : null;
+  const baseE = withF.filter(e => e.date < mon).pop() || withF.find(e => e.date >= mon);
+  let end = endInWeek ? endInWeek.followers : null;
+  let change = (endInWeek && baseE && baseE !== endInWeek) ? endInWeek.followers - baseE.followers : null;
+  const wk = (WEEKLY_DATA[account.handle] || []).find(e => e.weekStart === mon);
+  const eng = wk ? wk.engagementRate : null;
+  const grade = (eng != null && platform === 'instagram') ? engagementGrade(client, account, eng).cls : '';
+  return { name: client.name, platform, posted, stories, fff, end, change, eng, grade };
+}
+
+function weekReportRows(mon){
+  const rows = [];
+  RAW_CLIENTS.forEach(client => {
+    clientPlatforms(client).forEach(pl => {
+      if(pl.key === 'finsta') return;
+      rows.push(weekReportRow(client, pl.key, pl.account, mon));
+    });
+  });
+  return rows;
+}
+
+function weekReportText(mon, rows){
+  const n = v => (v == null ? '-' : v);
+  const lines = [`Peak Pulse weekly report, ${reportWeekLabel(mon).replace(/ \(.*\)$/, '')}`,
+    ['Client', 'Platform', 'Followers', 'Change', 'Posted days', 'Stories', '5-5-5 days', 'Engagement %'].join('\t')];
+  rows.forEach(r => lines.push([r.name, PLATFORM_LABELS[r.platform] || r.platform, n(r.end),
+    r.change == null ? '-' : (r.change > 0 ? '+' : '') + r.change, r.posted, n(r.stories), n(r.fff), r.eng == null ? '-' : r.eng.toFixed(2)].join('\t')));
+  return lines.join('\n');
+}
+
+function renderReport(){
+  document.getElementById('week-range-row').style.display = 'none';
+  const grid = document.getElementById('grid');
+  const mon = SELECTED_REPORT_WEEK || mondayKeyOf(new Date());
+  const rows = weekReportRows(mon);
+  const sum = f => rows.reduce((t, r) => t + (r[f] || 0), 0);
+  const dash = '<span style="opacity:.5">—</span>';
+  let lastName = null;
+  const body = rows.map(r => {
+    const first = r.name !== lastName; lastName = r.name;
+    const ch = r.change == null ? dash : (r.change > 0 ? '+' : '') + r.change.toLocaleString();
+    const chCls = r.change == null || r.change === 0 ? 'dim' : (r.change > 0 ? 'up' : 'down');
+    return `<tr>
+      <td class="client">${first ? r.name : ''}</td>
+      <td class="plat">${PLATFORM_LABELS[r.platform] || r.platform}</td>
+      <td>${r.end == null ? dash : r.end.toLocaleString()}</td>
+      <td class="${chCls}">${ch}</td>
+      <td>${r.posted} <span style="color:var(--text-dim)">/ 7</span></td>
+      <td>${r.stories == null ? dash : r.stories}</td>
+      <td>${r.fff == null ? dash : r.fff + ' <span style="color:var(--text-dim)">/ 7</span>'}</td>
+      <td class="${r.grade}">${r.eng == null ? dash : r.eng.toFixed(2) + '%'}</td>
+    </tr>`;
+  }).join('');
+  const totalChange = rows.reduce((t, r) => t + (r.change || 0), 0);
+  grid.innerHTML = `<div class="report">
+    <div class="report-head">
+      <div>
+        <div class="report-title">Weekly Report</div>
+        <div class="report-sub">${reportWeekLabel(mon)}</div>
+      </div>
+      <div class="report-btn" id="report-copy">Copy for meeting</div>
+    </div>
+    <table class="report-table">
+      <thead><tr><th>Client</th><th>Platform</th><th>Followers</th><th>Change</th><th>Posted days</th><th>Stories</th><th>5-5-5 days</th><th>Engagement</th></tr></thead>
+      <tbody>${body}
+        <tr class="total"><td>Team total</td><td></td><td></td><td>${totalChange > 0 ? '+' : ''}${totalChange.toLocaleString()}</td><td>${sum('posted')}</td><td>${sum('stories')}</td><td>${sum('fff')}</td><td></td></tr>
+      </tbody>
+    </table>
+    <div class="report-note">Followers = last count logged by Sunday. Change = vs. the last count before Monday (a dash means not enough counts to compare). Posted days = days with at least one post (max 7). Stories and 5-5-5 are Instagram only. Engagement is the weekly rate logged for that week; green or red is Instagram vs. the industry benchmark.</div>
+  </div>`;
+  document.getElementById('report-copy').addEventListener('click', e => {
+    const btn = e.currentTarget;
+    const done = t => { btn.textContent = t; setTimeout(() => { btn.textContent = 'Copy for meeting'; }, 1800); };
+    try{ navigator.clipboard.writeText(weekReportText(mon, rows)).then(() => done('Copied ✓'), () => done('Copy blocked')); }
+    catch(err){ done('Copy blocked'); }
+  });
+}
+
 function render(){
-  if(VIEW_MODE === 'month'){
+  if(VIEW_MODE === 'report'){
+    renderReport();
+  } else if(VIEW_MODE === 'month'){
     renderMonth();
   } else {
     renderWeek();
@@ -1160,30 +1310,25 @@ async function refreshCycle(){
     populateMonthSelect();
     document.getElementById('month-select').dataset.populated = '1';
   }
+  if(VIEW_MODE === 'report') populateWeekSelect();
   render();
   document.getElementById('refresh-note').textContent = 'Last refreshed ' + new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
 }
 
-document.getElementById('view-btn-week').addEventListener('click', () => {
-  VIEW_MODE = 'week';
-  document.getElementById('view-btn-week').classList.add('active');
-  document.getElementById('view-btn-month').classList.remove('active');
-  document.getElementById('month-select').style.display = 'none';
+function setView(mode){
+  VIEW_MODE = mode;
+  ['week','month','report'].forEach(m => document.getElementById('view-btn-' + m).classList.toggle('active', m === mode));
+  const ms = document.getElementById('month-select'), ws = document.getElementById('week-select');
+  ms.style.display = mode === 'month' ? '' : 'none';
+  ws.style.display = mode === 'report' ? '' : 'none';
+  if(mode === 'month' && !ms.dataset.populated){ populateMonthSelect(); ms.dataset.populated = '1'; }
+  if(mode === 'report') populateWeekSelect();
   render();
-});
-
-document.getElementById('view-btn-month').addEventListener('click', () => {
-  VIEW_MODE = 'month';
-  document.getElementById('view-btn-month').classList.add('active');
-  document.getElementById('view-btn-week').classList.remove('active');
-  const select = document.getElementById('month-select');
-  select.style.display = '';
-  if(!select.dataset.populated){
-    populateMonthSelect();
-    select.dataset.populated = '1';
-  }
-  render();
-});
+}
+document.getElementById('view-btn-week').addEventListener('click', () => setView('week'));
+document.getElementById('view-btn-month').addEventListener('click', () => setView('month'));
+document.getElementById('view-btn-report').addEventListener('click', () => setView('report'));
+document.getElementById('week-select').addEventListener('change', e => { SELECTED_REPORT_WEEK = e.target.value; render(); });
 
 document.getElementById('month-select').addEventListener('change', (e) => {
   SELECTED_MONTH = e.target.value;
