@@ -11,7 +11,7 @@
         "weekday": 4,
         "anchor": "2026-10-22",
         "everyWeeks": 2,
-        "target": 7
+        "target": 14
       }
     ]
   },
@@ -73,7 +73,7 @@
         "weekday": 4,
         "anchor": "2026-10-15",
         "everyWeeks": 2,
-        "target": 7
+        "target": 14
       }
     ]
   },
@@ -89,7 +89,7 @@
         "weekday": 4,
         "anchor": "2026-10-15",
         "everyWeeks": 2,
-        "target": 7,
+        "target": 14,
         "flexible": true
       }
     ]
