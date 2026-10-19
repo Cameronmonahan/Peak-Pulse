@@ -1232,12 +1232,36 @@ function weekReportRows(mon){
   return rows;
 }
 
+// Finsta batches due in the report week, with what was posted, the 11pm count and the completion date.
+function weekBatchRows(mon){
+  const p = mon.split('-').map(Number), start = new Date(p[0], p[1]-1, p[2]);
+  const out = [];
+  RAW_CLIENTS.forEach(client => {
+    if(!client.finsta) return;
+    const handle = client.handle + '_finsta';
+    batchesDueInWeek(client, start).forEach(bt => {
+      const ent = (DAILY_DATA[handle] || []).find(x => x.date === localKey(bt.date));
+      const st = batchStatus(ent, bt.date, bt.rule);
+      const close = ent && (typeof ent.closeReels === 'number' || typeof ent.closePhotos === 'number') ? (ent.closeReels || 0) + (ent.closePhotos || 0) : null;
+      const mix = bt.rule.reelsTarget ? `${st.reels}/${bt.rule.reelsTarget} videos · ${st.photos}/${bt.rule.photosTarget} static` : `${st.reels} reels · ${st.photos} photos`;
+      out.push({ name:client.name, label:bt.label, due:bt.date, st, mix, close, done:(ent && ent.completedOn) || null, target:bt.rule.target, flexible:!!bt.rule.flexible });
+    });
+  });
+  return out.sort((a, b) => localKey(a.due).localeCompare(localKey(b.due)) || a.name.localeCompare(b.name));
+}
+
 function weekReportText(mon, rows){
   const n = v => (v == null ? '-' : v);
   const lines = [`Peak Pulse weekly report, ${reportWeekLabel(mon).replace(/ \(.*\)$/, '')}`,
     ['Client', 'Platform', 'Followers', 'Change', 'Posted days', 'Stories', '5-5-5 days', 'Engagement %'].join('\t')];
   rows.forEach(r => lines.push([r.name, PLATFORM_LABELS[r.platform] || r.platform, n(r.end),
     r.change == null ? '-' : (r.change > 0 ? '+' : '') + r.change, r.posted, n(r.stories), n(r.fff), r.eng == null ? '-' : r.eng.toFixed(2)].join('\t')));
+  const bs = weekBatchRows(mon);
+  if(bs.length){
+    lines.push('', 'Finsta batches due', ['Client', 'Batch', 'Due', 'Posts', 'Mix', '11pm count', 'Completed', 'Status'].join('\t'));
+    bs.forEach(b => lines.push([b.name, b.label, _prettyKey(localKey(b.due)), `${b.st.total}/${b.target}`, b.mix,
+      b.close == null ? '-' : `${b.close}/${b.target}`, b.done ? _prettyKey(b.done) : '-', b.st.text.replace(/^[✓✗]\s*/, '')].join('\t')));
+  }
   return lines.join('\n');
 }
 
@@ -1265,6 +1289,21 @@ function renderReport(){
     </tr>`;
   }).join('');
   const totalChange = rows.reduce((t, r) => t + (r.change || 0), 0);
+  const bs = weekBatchRows(mon);
+  const batchSection = bs.length ? `<div class="report-sub" style="margin:22px 0 8px;letter-spacing:.1em;text-transform:uppercase;font-size:11px">Finsta batches due this week</div>
+    <table class="report-table">
+      <thead><tr><th>Client</th><th>Batch</th><th>Due</th><th>Posts</th><th>Mix</th><th>11pm count</th><th>Completed</th><th>Status</th></tr></thead>
+      <tbody>${bs.map(b => `<tr>
+        <td class="client">${b.name}</td>
+        <td class="plat">${b.label}</td>
+        <td>${_prettyKey(localKey(b.due))}</td>
+        <td>${b.st.total} <span style="color:var(--text-dim)">/ ${b.target}${b.flexible ? ' ≈' : ''}</span></td>
+        <td class="plat">${b.mix}</td>
+        <td>${b.close == null ? dash : b.close + ' <span style="color:var(--text-dim)">/ ' + b.target + '</span>'}</td>
+        <td>${b.done ? _prettyKey(b.done) : dash}</td>
+        <td class="${b.st.cls === 'ok' ? 'up' : (b.st.cls === 'late' ? 'down' : 'dim')}">${b.st.text}</td>
+      </tr>`).join('')}</tbody>
+    </table>` : '';
   grid.innerHTML = `<div class="report">
     <div class="report-head">
       <div>
@@ -1279,7 +1318,8 @@ function renderReport(){
         <tr class="total"><td>Team total</td><td></td><td></td><td>${totalChange > 0 ? '+' : ''}${totalChange.toLocaleString()}</td><td>${sum('posted')}</td><td>${sum('stories')}</td><td>${sum('fff')}</td><td></td></tr>
       </tbody>
     </table>
-    <div class="report-note">Followers = last count logged by Sunday. Change = vs. the last count before Monday (a dash means not enough counts to compare). Posted days = days with at least one post (max 7). Stories and 5-5-5 are Instagram only. Engagement is the weekly rate logged for that week; green or red is Instagram vs. the industry benchmark.</div>
+    ${batchSection}
+    <div class="report-note">Followers = last count logged by Sunday. Change = vs. the last count before Monday (a dash means not enough counts to compare). Posted days = days with at least one post (max 7). Stories and 5-5-5 are Instagram only. Engagement is the weekly rate logged for that week; green or red is Instagram vs. the industry benchmark. Finsta batches: 11pm count = posts on the finsta when the due day ended; Completed = the first day the batch showed fully posted.</div>
   </div>`;
   document.getElementById('report-copy').addEventListener('click', e => {
     const btn = e.currentTarget;
