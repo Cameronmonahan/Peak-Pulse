@@ -969,7 +969,7 @@
       "date": "2026-10-19",
       "followers": 113,
       "posted": true,
-      "stories": 0
+      "stories": 1
     }
   ],
   "guide_n_gallop": [
@@ -1426,7 +1426,7 @@
       "date": "2026-10-19",
       "followers": 2518,
       "posted": true,
-      "stories": 1
+      "stories": 5
     }
   ],
   "peakexposuremedia": [
@@ -2523,6 +2523,11 @@
       "date": "2026-10-18",
       "reels": 4,
       "photos": 2
+    },
+    {
+      "date": "2026-10-19",
+      "reels": 8,
+      "photos": 2
     }
   ],
   "legacyflooringsd_finsta": [
@@ -2545,6 +2550,11 @@
       "date": "2026-10-18",
       "reels": 3,
       "photos": 2
+    },
+    {
+      "date": "2026-10-19",
+      "reels": 5,
+      "photos": 3
     }
   ],
   "guide_n_gallop_finsta": [
@@ -2565,6 +2575,11 @@
     },
     {
       "date": "2026-10-18",
+      "reels": 6,
+      "photos": 5
+    },
+    {
+      "date": "2026-10-19",
       "reels": 6,
       "photos": 5
     }
@@ -2589,6 +2604,11 @@
       "date": "2026-10-18",
       "reels": 5,
       "photos": 7
+    },
+    {
+      "date": "2026-10-19",
+      "reels": 5,
+      "photos": 7
     }
   ],
   "diamondstrengthandwellness_finsta": [
@@ -2604,6 +2624,11 @@
     },
     {
       "date": "2026-10-18",
+      "reels": 8,
+      "photos": 6
+    },
+    {
+      "date": "2026-10-19",
       "reels": 8,
       "photos": 6
     },
@@ -2630,6 +2655,11 @@
       "photos": 0
     },
     {
+      "date": "2026-10-19",
+      "reels": 2,
+      "photos": 0
+    },
+    {
       "date": "2026-10-22",
       "reels": 2,
       "photos": 0
@@ -2650,6 +2680,11 @@
       "date": "2026-10-18",
       "reels": 8,
       "photos": 5
+    },
+    {
+      "date": "2026-10-19",
+      "reels": 1,
+      "photos": 1
     }
   ]
 }
