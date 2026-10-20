@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T23:31:51.000Z",
+  "generatedAt": "2026-10-20T23:56:56.000Z",
   "weekStart": "2026-10-19T06:00:00.000Z",
   "weekEnd": "2026-10-25T06:00:00.000Z",
   "accounts": {
@@ -40,7 +40,8 @@
       "deltaToday": 0,
       "engagementRate": 5.22,
       "postDates": [
-        "2026-10-19T12:00:00.000Z"
+        "2026-10-19T12:00:00.000Z",
+        "2026-10-20T12:00:00.000Z"
       ]
     },
     "diamondstrengthandwellness_fb": {
@@ -51,7 +52,8 @@
       "deltaToday": 0,
       "engagementRate": 0,
       "postDates": [
-        "2026-10-19T12:00:00.000Z"
+        "2026-10-19T12:00:00.000Z",
+        "2026-10-20T12:00:00.000Z"
       ]
     },
     "paragon_custom_construction": {
@@ -81,8 +83,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd_fb",
       "platform": "facebook",
-      "followers": 484,
-      "deltaToday": 2,
+      "followers": 482,
+      "deltaToday": 0,
       "engagementRate": 0,
       "postDates": [
         "2026-10-19T12:00:00.000Z"
@@ -107,7 +109,8 @@
       "deltaToday": 0,
       "engagementRate": 4.78,
       "postDates": [
-        "2026-10-19T12:00:00.000Z"
+        "2026-10-19T12:00:00.000Z",
+        "2026-10-20T12:00:00.000Z"
       ]
     },
     "guide_n_gallop": {
