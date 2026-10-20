@@ -991,7 +991,7 @@
     },
     {
       "date": "2026-10-20",
-      "posted": false,
+      "posted": true,
       "followers": 113,
       "stories": 0
     }
@@ -2399,7 +2399,7 @@
     {
       "date": "2026-10-20",
       "posted": false,
-      "followers": 484
+      "followers": 482
     }
   ],
   "diamondstrengthandwellness": [
@@ -2477,7 +2477,7 @@
     },
     {
       "date": "2026-10-20",
-      "posted": false,
+      "posted": true,
       "followers": 138,
       "stories": 0
     }
@@ -2525,7 +2525,7 @@
     },
     {
       "date": "2026-10-20",
-      "posted": false,
+      "posted": true,
       "followers": 24
     }
   ],
