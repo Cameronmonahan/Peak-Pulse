@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T23:30:10.000Z",
+  "generatedAt": "2026-10-20T03:03:12.000Z",
   "weekStart": "2026-10-19T06:00:00.000Z",
   "weekEnd": "2026-10-25T06:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2520,
-      "deltaToday": -1,
+      "followers": 2518,
+      "deltaToday": -3,
       "engagementRate": 2.51,
       "postDates": [
         "2026-10-19T12:00:00.000Z"
@@ -18,8 +18,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17870,
-      "deltaToday": 11,
+      "followers": 17877,
+      "deltaToday": 18,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -58,8 +58,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4810,
-      "deltaToday": 15,
+      "followers": 4822,
+      "deltaToday": 27,
       "engagementRate": 0.32,
       "postDates": [
         "2026-10-19T12:00:00.000Z"
@@ -69,8 +69,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1268,
-      "deltaToday": 1,
+      "followers": 1267,
+      "deltaToday": 0,
       "engagementRate": 0.25,
       "postDates": [
         "2026-10-19T12:00:00.000Z"
@@ -91,8 +91,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10050,
-      "deltaToday": 31,
+      "followers": 10057,
+      "deltaToday": 38,
       "engagementRate": 0.86,
       "postDates": [
         "2026-10-19T12:00:00.000Z"
@@ -142,8 +142,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7761,
-      "deltaToday": 26,
+      "followers": 7764,
+      "deltaToday": 29,
       "engagementRate": 19.46,
       "postDates": [
         "2026-10-19T12:00:00.000Z"
