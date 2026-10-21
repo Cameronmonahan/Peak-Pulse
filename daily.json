@@ -2580,7 +2580,7 @@
       "date": "2026-10-20",
       "posted": false,
       "followers": 7799,
-      "stories": 1
+      "stories": 2
     }
   ],
   "ventisalesgroup_finsta": [
@@ -2608,6 +2608,11 @@
       "date": "2026-10-19",
       "reels": 8,
       "photos": 2
+    },
+    {
+      "date": "2026-10-20",
+      "reels": 4,
+      "photos": 2
     }
   ],
   "legacyflooringsd_finsta": [
@@ -2633,6 +2638,11 @@
     },
     {
       "date": "2026-10-19",
+      "reels": 5,
+      "photos": 3
+    },
+    {
+      "date": "2026-10-20",
       "reels": 5,
       "photos": 3
     }
@@ -2662,6 +2672,11 @@
       "date": "2026-10-19",
       "reels": 6,
       "photos": 5
+    },
+    {
+      "date": "2026-10-20",
+      "reels": 6,
+      "photos": 5
     }
   ],
   "louiehamner_finsta": [
@@ -2689,6 +2704,11 @@
       "date": "2026-10-19",
       "reels": 5,
       "photos": 7
+    },
+    {
+      "date": "2026-10-20",
+      "reels": 5,
+      "photos": 7
     }
   ],
   "diamondstrengthandwellness_finsta": [
@@ -2711,6 +2731,11 @@
       "date": "2026-10-19",
       "reels": 8,
       "photos": 6
+    },
+    {
+      "date": "2026-10-20",
+      "reels": 9,
+      "photos": 11
     },
     {
       "date": "2026-10-22",
@@ -2740,6 +2765,11 @@
       "photos": 0
     },
     {
+      "date": "2026-10-20",
+      "reels": 2,
+      "photos": 0
+    },
+    {
       "date": "2026-10-22",
       "reels": 2,
       "photos": 0
@@ -2763,6 +2793,11 @@
     },
     {
       "date": "2026-10-19",
+      "reels": 1,
+      "photos": 1
+    },
+    {
+      "date": "2026-10-20",
       "reels": 1,
       "photos": 1
     }
