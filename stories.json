@@ -6,7 +6,7 @@
     },
     {
       "postedAt": "2026-10-21T22:27:00Z",
-      "lastSeen": "2026-10-21T23:27:00Z"
+      "lastSeen": "2026-10-22T03:18:00Z"
     }
   ],
   "built.bykate": [
@@ -28,11 +28,11 @@
     },
     {
       "postedAt": "2026-10-21T15:50:00Z",
-      "lastSeen": "2026-10-21T23:27:00Z"
+      "lastSeen": "2026-10-22T03:18:00Z"
     },
     {
       "postedAt": "2026-10-21T21:27:00Z",
-      "lastSeen": "2026-10-21T23:27:00Z"
+      "lastSeen": "2026-10-22T03:18:00Z"
     }
   ],
   "louiehamner": [
@@ -78,17 +78,23 @@
     },
     {
       "postedAt": "2026-10-21T17:59:00Z",
-      "lastSeen": "2026-10-21T23:27:00Z"
+      "lastSeen": "2026-10-22T03:18:00Z"
     },
     {
       "postedAt": "2026-10-21T20:27:00Z",
-      "lastSeen": "2026-10-21T23:27:00Z"
+      "lastSeen": "2026-10-22T03:18:00Z"
     }
   ],
   "ventisalesgroup": [
     {
       "postedAt": "2026-10-20T00:53:00Z",
       "lastSeen": "2026-10-20T18:48:00Z"
+    }
+  ],
+  "guide_n_gallop": [
+    {
+      "postedAt": "2026-10-22T02:18:00Z",
+      "lastSeen": "2026-10-22T03:18:00Z"
     }
   ]
 }
