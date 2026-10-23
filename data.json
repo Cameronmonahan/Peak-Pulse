@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T18:53:43.000Z",
+  "generatedAt": "2026-10-23T23:04:40.000Z",
   "weekStart": "2026-10-19T06:00:00.000Z",
   "weekEnd": "2026-10-25T06:00:00.000Z",
   "accounts": {
@@ -103,7 +103,8 @@
         "2026-10-19T12:00:00.000Z",
         "2026-10-20T12:00:00.000Z",
         "2026-10-21T12:00:00.000Z",
-        "2026-10-22T12:00:00.000Z"
+        "2026-10-22T12:00:00.000Z",
+        "2026-10-23T12:00:00.000Z"
       ]
     },
     "marwooddesign": {
@@ -115,7 +116,8 @@
       "engagementRate": 0.86,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
-        "2026-10-21T12:00:00.000Z"
+        "2026-10-21T12:00:00.000Z",
+        "2026-10-23T12:00:00.000Z"
       ]
     },
     "ventisalesgroup": {
@@ -128,15 +130,16 @@
       "postDates": [
         "2026-10-19T12:00:00.000Z",
         "2026-10-20T12:00:00.000Z",
-        "2026-10-21T12:00:00.000Z"
+        "2026-10-21T12:00:00.000Z",
+        "2026-10-23T12:00:00.000Z"
       ]
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 910,
-      "deltaToday": 0,
+      "followers": 911,
+      "deltaToday": 1,
       "engagementRate": 2.82,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
@@ -169,8 +172,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7859,
-      "deltaToday": 6,
+      "followers": 7865,
+      "deltaToday": 12,
       "engagementRate": 19.46,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
