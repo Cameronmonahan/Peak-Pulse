@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T13:47:03.000Z",
+  "generatedAt": "2026-10-23T18:45:13.000Z",
   "weekStart": "2026-10-19T06:00:00.000Z",
   "weekEnd": "2026-10-25T06:00:00.000Z",
   "accounts": {
@@ -7,12 +7,13 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2517,
-      "deltaToday": 0,
+      "followers": 2518,
+      "deltaToday": 1,
       "engagementRate": 2.51,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
-        "2026-10-21T12:00:00.000Z"
+        "2026-10-21T12:00:00.000Z",
+        "2026-10-23T12:00:00.000Z"
       ]
     },
     "peakexposuremedia": {
@@ -37,14 +38,15 @@
       "name": "Diamond Strength & Wellness",
       "handle": "diamondstrengthandwellness",
       "platform": "instagram",
-      "followers": 141,
-      "deltaToday": 0,
+      "followers": 142,
+      "deltaToday": 1,
       "engagementRate": 5.22,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
         "2026-10-20T12:00:00.000Z",
         "2026-10-21T12:00:00.000Z",
-        "2026-10-22T12:00:00.000Z"
+        "2026-10-22T12:00:00.000Z",
+        "2026-10-23T12:00:00.000Z"
       ]
     },
     "diamondstrengthandwellness_fb": {
@@ -58,33 +60,36 @@
         "2026-10-19T12:00:00.000Z",
         "2026-10-20T12:00:00.000Z",
         "2026-10-21T12:00:00.000Z",
-        "2026-10-22T12:00:00.000Z"
+        "2026-10-22T12:00:00.000Z",
+        "2026-10-23T12:00:00.000Z"
       ]
     },
     "paragon_custom_construction": {
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4900,
-      "deltaToday": 1,
+      "followers": 4901,
+      "deltaToday": 2,
       "engagementRate": 0.32,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
-        "2026-10-21T12:00:00.000Z"
+        "2026-10-21T12:00:00.000Z",
+        "2026-10-23T12:00:00.000Z"
       ]
     },
     "legacyflooringsd": {
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1267,
-      "deltaToday": 0,
+      "followers": 1268,
+      "deltaToday": 1,
       "engagementRate": 0.25,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
         "2026-10-20T12:00:00.000Z",
         "2026-10-21T12:00:00.000Z",
-        "2026-10-22T12:00:00.000Z"
+        "2026-10-22T12:00:00.000Z",
+        "2026-10-23T12:00:00.000Z"
       ]
     },
     "legacyflooringsd_fb": {
@@ -135,7 +140,8 @@
       "engagementRate": 2.82,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
-        "2026-10-21T12:00:00.000Z"
+        "2026-10-21T12:00:00.000Z",
+        "2026-10-23T12:00:00.000Z"
       ]
     },
     "paragon_custom_const": {
@@ -163,12 +169,13 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7854,
-      "deltaToday": 1,
+      "followers": 7859,
+      "deltaToday": 6,
       "engagementRate": 19.46,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
-        "2026-10-21T12:00:00.000Z"
+        "2026-10-21T12:00:00.000Z",
+        "2026-10-23T12:00:00.000Z"
       ]
     }
   }
