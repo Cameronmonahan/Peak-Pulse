@@ -2863,6 +2863,11 @@
       "date": "2026-10-22",
       "reels": 4,
       "photos": 2
+    },
+    {
+      "date": "2026-10-23",
+      "reels": 4,
+      "photos": 2
     }
   ],
   "legacyflooringsd_finsta": [
@@ -2903,6 +2908,11 @@
     },
     {
       "date": "2026-10-22",
+      "reels": 4,
+      "photos": 1
+    },
+    {
+      "date": "2026-10-23",
       "reels": 4,
       "photos": 1
     }
@@ -2947,6 +2957,11 @@
       "date": "2026-10-22",
       "reels": 5,
       "photos": 2
+    },
+    {
+      "date": "2026-10-23",
+      "reels": 5,
+      "photos": 2
     }
   ],
   "louiehamner_finsta": [
@@ -2989,6 +3004,11 @@
       "date": "2026-10-22",
       "reels": 5,
       "photos": 7
+    },
+    {
+      "date": "2026-10-23",
+      "reels": 5,
+      "photos": 7
     }
   ],
   "diamondstrengthandwellness_finsta": [
@@ -3024,6 +3044,11 @@
     },
     {
       "date": "2026-10-22",
+      "reels": 2,
+      "photos": 2
+    },
+    {
+      "date": "2026-10-23",
       "reels": 2,
       "photos": 2
     }
@@ -3064,6 +3089,11 @@
       "reels": 9,
       "photos": 5,
       "completedOn": "2026-10-22"
+    },
+    {
+      "date": "2026-10-23",
+      "reels": 9,
+      "photos": 5
     }
   ],
   "paragon_custom_construction_finsta": [
@@ -3099,6 +3129,11 @@
     },
     {
       "date": "2026-10-22",
+      "reels": 1,
+      "photos": 1
+    },
+    {
+      "date": "2026-10-23",
       "reels": 1,
       "photos": 1
     }
