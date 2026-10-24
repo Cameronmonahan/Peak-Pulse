@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T13:40:50.000Z",
+  "generatedAt": "2026-10-24T18:30:32.000Z",
   "weekStart": "2026-10-19T06:00:00.000Z",
   "weekEnd": "2026-10-25T06:00:00.000Z",
   "accounts": {
@@ -38,15 +38,16 @@
       "name": "Diamond Strength & Wellness",
       "handle": "diamondstrengthandwellness",
       "platform": "instagram",
-      "followers": 142,
-      "deltaToday": 0,
+      "followers": 143,
+      "deltaToday": 1,
       "engagementRate": 5.22,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
         "2026-10-20T12:00:00.000Z",
         "2026-10-21T12:00:00.000Z",
         "2026-10-22T12:00:00.000Z",
-        "2026-10-23T12:00:00.000Z"
+        "2026-10-23T12:00:00.000Z",
+        "2026-10-24T12:00:00.000Z"
       ]
     },
     "diamondstrengthandwellness_fb": {
@@ -61,7 +62,8 @@
         "2026-10-20T12:00:00.000Z",
         "2026-10-21T12:00:00.000Z",
         "2026-10-22T12:00:00.000Z",
-        "2026-10-23T12:00:00.000Z"
+        "2026-10-23T12:00:00.000Z",
+        "2026-10-24T12:00:00.000Z"
       ]
     },
     "paragon_custom_construction": {
@@ -138,8 +140,8 @@
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 911,
-      "deltaToday": 0,
+      "followers": 910,
+      "deltaToday": -1,
       "engagementRate": 2.82,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
@@ -163,8 +165,8 @@
       "name": "The Nano Nature",
       "handle": "the.nano.nature",
       "platform": "tiktok",
-      "followers": 796,
-      "deltaToday": 1,
+      "followers": 795,
+      "deltaToday": 0,
       "engagementRate": 32.74,
       "postDates": []
     },
@@ -172,13 +174,14 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7875,
-      "deltaToday": 7,
+      "followers": 7881,
+      "deltaToday": 13,
       "engagementRate": 19.46,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
         "2026-10-21T12:00:00.000Z",
-        "2026-10-23T12:00:00.000Z"
+        "2026-10-23T12:00:00.000Z",
+        "2026-10-24T12:00:00.000Z"
       ]
     }
   }
