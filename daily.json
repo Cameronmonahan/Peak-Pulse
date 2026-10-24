@@ -255,7 +255,8 @@
     {
       "date": "2026-10-24",
       "posted": false,
-      "followers": 4902
+      "followers": 4902,
+      "stories": 0
     }
   ],
   "legacyflooringsd": [
@@ -522,7 +523,8 @@
     {
       "date": "2026-10-24",
       "posted": false,
-      "followers": 1267
+      "followers": 1267,
+      "stories": 0
     }
   ],
   "marwooddesign": [
@@ -803,7 +805,8 @@
     {
       "date": "2026-10-24",
       "posted": false,
-      "followers": 10198
+      "followers": 10198,
+      "stories": 1
     }
   ],
   "ventisalesgroup": [
@@ -1085,7 +1088,8 @@
     {
       "date": "2026-10-24",
       "posted": false,
-      "followers": 113
+      "followers": 113,
+      "stories": 0
     }
   ],
   "guide_n_gallop": [
@@ -1344,7 +1348,8 @@
     {
       "date": "2026-10-24",
       "posted": false,
-      "followers": 911
+      "followers": 911,
+      "stories": 0
     }
   ],
   "louiehamner": [
@@ -1600,7 +1605,8 @@
     {
       "date": "2026-10-24",
       "posted": false,
-      "followers": 2520
+      "followers": 2520,
+      "stories": 0
     }
   ],
   "peakexposuremedia": [
@@ -1795,7 +1801,8 @@
     {
       "date": "2026-10-24",
       "posted": false,
-      "followers": 17927
+      "followers": 17927,
+      "stories": 0
     }
   ],
   "thenanonature": [
@@ -2039,7 +2046,8 @@
     {
       "date": "2026-10-24",
       "posted": false,
-      "followers": 2004
+      "followers": 2004,
+      "stories": 0
     }
   ],
   "paragon_custom_const": [
@@ -2746,7 +2754,8 @@
     {
       "date": "2026-10-24",
       "posted": false,
-      "followers": 142
+      "followers": 142,
+      "stories": 0
     }
   ],
   "diamondstrengthandwellness_fb": [
@@ -2885,12 +2894,13 @@
       "date": "2026-10-23",
       "posted": true,
       "followers": 7868,
-      "stories": 0
+      "stories": 2
     },
     {
       "date": "2026-10-24",
       "posted": false,
-      "followers": 7875
+      "followers": 7875,
+      "stories": 0
     }
   ],
   "ventisalesgroup_finsta": [
