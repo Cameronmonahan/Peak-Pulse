@@ -261,7 +261,8 @@
     {
       "date": "2026-10-25",
       "posted": false,
-      "followers": 4904
+      "followers": 4904,
+      "stories": 0
     }
   ],
   "legacyflooringsd": [
@@ -534,7 +535,8 @@
     {
       "date": "2026-10-25",
       "posted": false,
-      "followers": 1266
+      "followers": 1266,
+      "stories": 0
     }
   ],
   "marwooddesign": [
@@ -821,7 +823,8 @@
     {
       "date": "2026-10-25",
       "posted": false,
-      "followers": 10209
+      "followers": 10209,
+      "stories": 0
     }
   ],
   "ventisalesgroup": [
@@ -1109,7 +1112,8 @@
     {
       "date": "2026-10-25",
       "posted": false,
-      "followers": 113
+      "followers": 113,
+      "stories": 0
     }
   ],
   "guide_n_gallop": [
@@ -1374,7 +1378,8 @@
     {
       "date": "2026-10-25",
       "posted": false,
-      "followers": 909
+      "followers": 909,
+      "stories": 0
     }
   ],
   "louiehamner": [
@@ -1636,7 +1641,8 @@
     {
       "date": "2026-10-25",
       "posted": true,
-      "followers": 2520
+      "followers": 2520,
+      "stories": 0
     }
   ],
   "peakexposuremedia": [
@@ -1837,7 +1843,8 @@
     {
       "date": "2026-10-25",
       "posted": false,
-      "followers": 17928
+      "followers": 17928,
+      "stories": 0
     }
   ],
   "thenanonature": [
@@ -2087,7 +2094,8 @@
     {
       "date": "2026-10-25",
       "posted": false,
-      "followers": 2002
+      "followers": 2002,
+      "stories": 0
     }
   ],
   "paragon_custom_const": [
@@ -2815,7 +2823,8 @@
     {
       "date": "2026-10-25",
       "posted": false,
-      "followers": 146
+      "followers": 146,
+      "stories": 0
     }
   ],
   "diamondstrengthandwellness_fb": [
@@ -2970,7 +2979,8 @@
     {
       "date": "2026-10-25",
       "posted": false,
-      "followers": 7917
+      "followers": 7917,
+      "stories": 3
     }
   ],
   "ventisalesgroup_finsta": [
@@ -3016,6 +3026,11 @@
     },
     {
       "date": "2026-10-23",
+      "reels": 4,
+      "photos": 2
+    },
+    {
+      "date": "2026-10-25",
       "reels": 4,
       "photos": 2
     }
@@ -3065,6 +3080,11 @@
       "date": "2026-10-23",
       "reels": 4,
       "photos": 1
+    },
+    {
+      "date": "2026-10-25",
+      "reels": 4,
+      "photos": 1
     }
   ],
   "guide_n_gallop_finsta": [
@@ -3110,6 +3130,11 @@
     },
     {
       "date": "2026-10-23",
+      "reels": 5,
+      "photos": 2
+    },
+    {
+      "date": "2026-10-25",
       "reels": 5,
       "photos": 2
     }
@@ -3159,6 +3184,11 @@
       "date": "2026-10-23",
       "reels": 5,
       "photos": 7
+    },
+    {
+      "date": "2026-10-25",
+      "reels": 5,
+      "photos": 7
     }
   ],
   "diamondstrengthandwellness_finsta": [
@@ -3199,6 +3229,11 @@
     },
     {
       "date": "2026-10-23",
+      "reels": 2,
+      "photos": 2
+    },
+    {
+      "date": "2026-10-25",
       "reels": 2,
       "photos": 2
     }
@@ -3244,6 +3279,11 @@
       "date": "2026-10-23",
       "reels": 9,
       "photos": 5
+    },
+    {
+      "date": "2026-10-25",
+      "reels": 9,
+      "photos": 5
     }
   ],
   "paragon_custom_construction_finsta": [
@@ -3284,6 +3324,11 @@
     },
     {
       "date": "2026-10-23",
+      "reels": 1,
+      "photos": 1
+    },
+    {
+      "date": "2026-10-25",
       "reels": 1,
       "photos": 1
     }
