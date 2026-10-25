@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T23:04:19.000Z",
+  "generatedAt": "2026-10-25T02:59:20.000Z",
   "weekStart": "2026-10-19T06:00:00.000Z",
   "weekEnd": "2026-10-25T06:00:00.000Z",
   "accounts": {
@@ -106,7 +106,8 @@
         "2026-10-20T12:00:00.000Z",
         "2026-10-21T12:00:00.000Z",
         "2026-10-22T12:00:00.000Z",
-        "2026-10-23T12:00:00.000Z"
+        "2026-10-23T12:00:00.000Z",
+        "2026-10-24T12:00:00.000Z"
       ]
     },
     "marwooddesign": {
@@ -174,8 +175,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7898,
-      "deltaToday": 30,
+      "followers": 7903,
+      "deltaToday": 35,
       "engagementRate": 19.46,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
