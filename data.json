@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T16:10:14.000Z",
+  "generatedAt": "2026-10-26T18:39:39.000Z",
   "weekStart": "2026-10-26T06:00:00.000Z",
   "weekEnd": "2026-11-01T06:00:00.000Z",
   "accounts": {
@@ -16,8 +16,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17934,
-      "deltaToday": 1,
+      "followers": 17935,
+      "deltaToday": 2,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -56,8 +56,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4927,
-      "deltaToday": 5,
+      "followers": 4934,
+      "deltaToday": 12,
       "engagementRate": 0.29,
       "postDates": []
     },
@@ -85,8 +85,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10239,
-      "deltaToday": 8,
+      "followers": 10240,
+      "deltaToday": 9,
       "engagementRate": 0.27,
       "postDates": []
     },
@@ -97,7 +97,9 @@
       "followers": 113,
       "deltaToday": 0,
       "engagementRate": 4.78,
-      "postDates": []
+      "postDates": [
+        "2026-10-26T12:00:00.000Z"
+      ]
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
@@ -130,8 +132,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7953,
-      "deltaToday": 16,
+      "followers": 7962,
+      "deltaToday": 25,
       "engagementRate": 1.05,
       "postDates": [
         "2026-10-26T12:00:00.000Z"
