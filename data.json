@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T03:04:33.000Z",
+  "generatedAt": "2026-10-26T03:05:46.000Z",
   "weekStart": "2026-10-19T06:00:00.000Z",
   "weekEnd": "2026-10-25T06:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2520,
-      "deltaToday": 0,
+      "followers": 2521,
+      "deltaToday": 1,
       "engagementRate": 1.2,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
@@ -21,8 +21,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17932,
-      "deltaToday": 5,
+      "followers": 17933,
+      "deltaToday": 6,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -30,8 +30,8 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 2001,
-      "deltaToday": -1,
+      "followers": 2002,
+      "deltaToday": 0,
       "engagementRate": 22.47,
       "postDates": []
     },
@@ -73,8 +73,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4920,
-      "deltaToday": 16,
+      "followers": 4922,
+      "deltaToday": 18,
       "engagementRate": 0.29,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
@@ -87,8 +87,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1264,
-      "deltaToday": -2,
+      "followers": 1266,
+      "deltaToday": 0,
       "engagementRate": 0.35,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
@@ -117,8 +117,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10232,
-      "deltaToday": 33,
+      "followers": 10231,
+      "deltaToday": 32,
       "engagementRate": 0.27,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
@@ -181,8 +181,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7938,
-      "deltaToday": 35,
+      "followers": 7937,
+      "deltaToday": 34,
       "engagementRate": 1.05,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
