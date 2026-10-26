@@ -23,6 +23,10 @@
     {
       "weekStart": "2026-10-12",
       "engagementRate": 0.32
+    },
+    {
+      "weekStart": "2026-10-19",
+      "engagementRate": 0.29
     }
   ],
   "legacyflooringsd": [
@@ -45,6 +49,10 @@
     {
       "weekStart": "2026-10-12",
       "engagementRate": 0.25
+    },
+    {
+      "weekStart": "2026-10-19",
+      "engagementRate": 0.35
     }
   ],
   "marwooddesign": [
@@ -67,6 +75,10 @@
     {
       "weekStart": "2026-10-12",
       "engagementRate": 0.86
+    },
+    {
+      "weekStart": "2026-10-19",
+      "engagementRate": 0.27
     }
   ],
   "ventisalesgroup": [
@@ -92,6 +104,10 @@
     },
     {
       "weekStart": "2026-10-12",
+      "engagementRate": 4.78
+    },
+    {
+      "weekStart": "2026-10-19",
       "engagementRate": 4.78
     }
   ],
@@ -119,6 +135,10 @@
     {
       "weekStart": "2026-10-12",
       "engagementRate": 2.82
+    },
+    {
+      "weekStart": "2026-10-19",
+      "engagementRate": 3.04
     }
   ],
   "louiehamner": [
@@ -145,6 +165,10 @@
     {
       "weekStart": "2026-10-12",
       "engagementRate": 2.51
+    },
+    {
+      "weekStart": "2026-10-19",
+      "engagementRate": 1.2
     }
   ],
   "built.bykate": [
@@ -155,6 +179,10 @@
     {
       "weekStart": "2026-10-12",
       "engagementRate": 19.46
+    },
+    {
+      "weekStart": "2026-10-19",
+      "engagementRate": 1.05
     }
   ],
   "peakexposuremedia": [
@@ -167,24 +195,40 @@
     {
       "weekStart": "2026-10-12",
       "engagementRate": 22.45
+    },
+    {
+      "weekStart": "2026-10-19",
+      "engagementRate": 22.47
     }
   ],
   "diamondstrengthandwellness": [
     {
       "weekStart": "2026-10-12",
       "engagementRate": 5.22
+    },
+    {
+      "weekStart": "2026-10-19",
+      "engagementRate": 1.74
     }
   ],
   "paragon_custom_const": [
     {
       "weekStart": "2026-10-12",
       "engagementRate": 46.22
+    },
+    {
+      "weekStart": "2026-10-19",
+      "engagementRate": 48.0
     }
   ],
   "the.nano.nature": [
     {
       "weekStart": "2026-10-12",
       "engagementRate": 32.74
+    },
+    {
+      "weekStart": "2026-10-19",
+      "engagementRate": 29.53
     }
   ],
   "legacyflooringsd_fb": [
