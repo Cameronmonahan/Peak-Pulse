@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T20:11:45.000Z",
+  "generatedAt": "2026-10-26T23:16:30.000Z",
   "weekStart": "2026-10-26T06:00:00.000Z",
   "weekEnd": "2026-11-01T06:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2519,
-      "deltaToday": -2,
+      "followers": 2520,
+      "deltaToday": -1,
       "engagementRate": 1.2,
       "postDates": []
     },
@@ -16,8 +16,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17937,
-      "deltaToday": 4,
+      "followers": 17938,
+      "deltaToday": 5,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -34,8 +34,8 @@
       "name": "Diamond Strength & Wellness",
       "handle": "diamondstrengthandwellness",
       "platform": "instagram",
-      "followers": 159,
-      "deltaToday": 9,
+      "followers": 164,
+      "deltaToday": 14,
       "engagementRate": 1.74,
       "postDates": [
         "2026-10-26T12:00:00.000Z"
@@ -56,8 +56,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4937,
-      "deltaToday": 15,
+      "followers": 4939,
+      "deltaToday": 17,
       "engagementRate": 0.29,
       "postDates": []
     },
@@ -79,14 +79,16 @@
       "followers": 482,
       "deltaToday": 0,
       "engagementRate": 0.37,
-      "postDates": []
+      "postDates": [
+        "2026-10-26T12:00:00.000Z"
+      ]
     },
     "marwooddesign": {
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10243,
-      "deltaToday": 12,
+      "followers": 10250,
+      "deltaToday": 19,
       "engagementRate": 0.27,
       "postDates": []
     },
@@ -132,8 +134,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7968,
-      "deltaToday": 31,
+      "followers": 7970,
+      "deltaToday": 33,
       "engagementRate": 1.05,
       "postDates": [
         "2026-10-26T12:00:00.000Z"
