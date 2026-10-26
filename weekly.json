@@ -186,5 +186,11 @@
       "weekStart": "2026-10-12",
       "engagementRate": 32.74
     }
+  ],
+  "legacyflooringsd_fb": [
+    {
+      "weekStart": "2026-10-19",
+      "engagementRate": 0.37
+    }
   ]
 }
