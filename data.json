@@ -1,28 +1,23 @@
 {
-  "generatedAt": "2026-10-26T03:13:06.000Z",
-  "weekStart": "2026-10-19T06:00:00.000Z",
-  "weekEnd": "2026-10-25T06:00:00.000Z",
+  "generatedAt": "2026-10-26T13:45:43.000Z",
+  "weekStart": "2026-10-26T06:00:00.000Z",
+  "weekEnd": "2026-11-01T06:00:00.000Z",
   "accounts": {
     "louiehamner": {
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2521,
-      "deltaToday": 1,
+      "followers": 2520,
+      "deltaToday": -1,
       "engagementRate": 1.2,
-      "postDates": [
-        "2026-10-19T12:00:00.000Z",
-        "2026-10-21T12:00:00.000Z",
-        "2026-10-23T12:00:00.000Z",
-        "2026-10-25T12:00:00.000Z"
-      ]
+      "postDates": []
     },
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17933,
-      "deltaToday": 6,
+      "followers": 17934,
+      "deltaToday": 1,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -30,8 +25,8 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 2002,
-      "deltaToday": 0,
+      "followers": 2000,
+      "deltaToday": -2,
       "engagementRate": 22.47,
       "postDates": []
     },
@@ -39,18 +34,10 @@
       "name": "Diamond Strength & Wellness",
       "handle": "diamondstrengthandwellness",
       "platform": "instagram",
-      "followers": 150,
-      "deltaToday": 7,
+      "followers": 153,
+      "deltaToday": 3,
       "engagementRate": 1.74,
-      "postDates": [
-        "2026-10-19T12:00:00.000Z",
-        "2026-10-20T12:00:00.000Z",
-        "2026-10-21T12:00:00.000Z",
-        "2026-10-22T12:00:00.000Z",
-        "2026-10-23T12:00:00.000Z",
-        "2026-10-24T12:00:00.000Z",
-        "2026-10-25T12:00:00.000Z"
-      ]
+      "postDates": []
     },
     "diamondstrengthandwellness_fb": {
       "name": "Diamond Strength & Wellness",
@@ -59,29 +46,16 @@
       "followers": 24,
       "deltaToday": 0,
       "engagementRate": 0,
-      "postDates": [
-        "2026-10-19T12:00:00.000Z",
-        "2026-10-20T12:00:00.000Z",
-        "2026-10-21T12:00:00.000Z",
-        "2026-10-22T12:00:00.000Z",
-        "2026-10-23T12:00:00.000Z",
-        "2026-10-24T12:00:00.000Z",
-        "2026-10-25T12:00:00.000Z"
-      ]
+      "postDates": []
     },
     "paragon_custom_construction": {
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4922,
-      "deltaToday": 18,
+      "followers": 4930,
+      "deltaToday": 8,
       "engagementRate": 0.29,
-      "postDates": [
-        "2026-10-19T12:00:00.000Z",
-        "2026-10-21T12:00:00.000Z",
-        "2026-10-23T12:00:00.000Z",
-        "2026-10-25T12:00:00.000Z"
-      ]
+      "postDates": []
     },
     "legacyflooringsd": {
       "name": "Legacy Flooring",
@@ -90,13 +64,7 @@
       "followers": 1266,
       "deltaToday": 0,
       "engagementRate": 0.35,
-      "postDates": [
-        "2026-10-19T12:00:00.000Z",
-        "2026-10-20T12:00:00.000Z",
-        "2026-10-21T12:00:00.000Z",
-        "2026-10-22T12:00:00.000Z",
-        "2026-10-23T12:00:00.000Z"
-      ]
+      "postDates": []
     },
     "legacyflooringsd_fb": {
       "name": "Legacy Flooring",
@@ -105,27 +73,16 @@
       "followers": 482,
       "deltaToday": 0,
       "engagementRate": 0.37,
-      "postDates": [
-        "2026-10-19T12:00:00.000Z",
-        "2026-10-20T12:00:00.000Z",
-        "2026-10-21T12:00:00.000Z",
-        "2026-10-22T12:00:00.000Z",
-        "2026-10-23T12:00:00.000Z"
-      ]
+      "postDates": []
     },
     "marwooddesign": {
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10231,
-      "deltaToday": 32,
+      "followers": 10237,
+      "deltaToday": 6,
       "engagementRate": 0.27,
-      "postDates": [
-        "2026-10-19T12:00:00.000Z",
-        "2026-10-21T12:00:00.000Z",
-        "2026-10-23T12:00:00.000Z",
-        "2026-10-25T12:00:00.000Z"
-      ]
+      "postDates": []
     },
     "ventisalesgroup": {
       "name": "Venti Sales Group",
@@ -134,13 +91,7 @@
       "followers": 113,
       "deltaToday": 0,
       "engagementRate": 4.78,
-      "postDates": [
-        "2026-10-19T12:00:00.000Z",
-        "2026-10-20T12:00:00.000Z",
-        "2026-10-21T12:00:00.000Z",
-        "2026-10-23T12:00:00.000Z",
-        "2026-10-25T12:00:00.000Z"
-      ]
+      "postDates": []
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
@@ -149,12 +100,7 @@
       "followers": 909,
       "deltaToday": 0,
       "engagementRate": 3.04,
-      "postDates": [
-        "2026-10-19T12:00:00.000Z",
-        "2026-10-21T12:00:00.000Z",
-        "2026-10-23T12:00:00.000Z",
-        "2026-10-25T12:00:00.000Z"
-      ]
+      "postDates": []
     },
     "paragon_custom_const": {
       "name": "Paragon Custom Homes",
@@ -163,17 +109,14 @@
       "followers": 45,
       "deltaToday": 0,
       "engagementRate": 48.0,
-      "postDates": [
-        "2026-10-20T12:00:00.000Z",
-        "2026-10-22T12:00:00.000Z"
-      ]
+      "postDates": []
     },
     "the.nano.nature": {
       "name": "The Nano Nature",
       "handle": "the.nano.nature",
       "platform": "tiktok",
-      "followers": 795,
-      "deltaToday": 0,
+      "followers": 796,
+      "deltaToday": 1,
       "engagementRate": 29.53,
       "postDates": []
     },
@@ -181,15 +124,10 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7937,
-      "deltaToday": 34,
+      "followers": 7952,
+      "deltaToday": 15,
       "engagementRate": 1.05,
-      "postDates": [
-        "2026-10-19T12:00:00.000Z",
-        "2026-10-21T12:00:00.000Z",
-        "2026-10-23T12:00:00.000Z",
-        "2026-10-24T12:00:00.000Z"
-      ]
+      "postDates": []
     }
   }
 }
