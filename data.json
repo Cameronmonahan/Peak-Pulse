@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T13:45:43.000Z",
+  "generatedAt": "2026-10-26T16:10:14.000Z",
   "weekStart": "2026-10-26T06:00:00.000Z",
   "weekEnd": "2026-11-01T06:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2520,
-      "deltaToday": -1,
+      "followers": 2519,
+      "deltaToday": -2,
       "engagementRate": 1.2,
       "postDates": []
     },
@@ -34,10 +34,12 @@
       "name": "Diamond Strength & Wellness",
       "handle": "diamondstrengthandwellness",
       "platform": "instagram",
-      "followers": 153,
-      "deltaToday": 3,
+      "followers": 155,
+      "deltaToday": 5,
       "engagementRate": 1.74,
-      "postDates": []
+      "postDates": [
+        "2026-10-26T12:00:00.000Z"
+      ]
     },
     "diamondstrengthandwellness_fb": {
       "name": "Diamond Strength & Wellness",
@@ -46,14 +48,16 @@
       "followers": 24,
       "deltaToday": 0,
       "engagementRate": 0,
-      "postDates": []
+      "postDates": [
+        "2026-10-26T12:00:00.000Z"
+      ]
     },
     "paragon_custom_construction": {
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4930,
-      "deltaToday": 8,
+      "followers": 4927,
+      "deltaToday": 5,
       "engagementRate": 0.29,
       "postDates": []
     },
@@ -61,10 +65,12 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1266,
-      "deltaToday": 0,
+      "followers": 1264,
+      "deltaToday": -2,
       "engagementRate": 0.35,
-      "postDates": []
+      "postDates": [
+        "2026-10-26T12:00:00.000Z"
+      ]
     },
     "legacyflooringsd_fb": {
       "name": "Legacy Flooring",
@@ -79,8 +85,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10237,
-      "deltaToday": 6,
+      "followers": 10239,
+      "deltaToday": 8,
       "engagementRate": 0.27,
       "postDates": []
     },
@@ -97,8 +103,8 @@
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 909,
-      "deltaToday": 0,
+      "followers": 908,
+      "deltaToday": -1,
       "engagementRate": 3.04,
       "postDates": []
     },
@@ -124,10 +130,12 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7952,
-      "deltaToday": 15,
+      "followers": 7953,
+      "deltaToday": 16,
       "engagementRate": 1.05,
-      "postDates": []
+      "postDates": [
+        "2026-10-26T12:00:00.000Z"
+      ]
     }
   }
 }
