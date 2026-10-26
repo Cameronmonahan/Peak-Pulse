@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T23:07:02.000Z",
+  "generatedAt": "2026-10-26T02:30:34.000Z",
   "weekStart": "2026-10-19T06:00:00.000Z",
   "weekEnd": "2026-10-25T06:00:00.000Z",
   "accounts": {
@@ -102,9 +102,9 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd_fb",
       "platform": "facebook",
-      "followers": 482,
-      "deltaToday": 0,
-      "engagementRate": 0,
+      "followers": 483,
+      "deltaToday": 1,
+      "engagementRate": 0.37,
       "postDates": [
         "2026-10-19T12:00:00.000Z",
         "2026-10-20T12:00:00.000Z",
