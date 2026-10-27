@@ -273,7 +273,7 @@
     {
       "date": "2026-10-27",
       "posted": true,
-      "followers": 4969,
+      "followers": 4971,
       "stories": 0
     }
   ],
@@ -859,7 +859,7 @@
     {
       "date": "2026-10-27",
       "posted": true,
-      "followers": 10281,
+      "followers": 10288,
       "stories": 0
     }
   ],
@@ -1437,7 +1437,7 @@
     },
     {
       "date": "2026-10-27",
-      "posted": false,
+      "posted": true,
       "followers": 908,
       "stories": 1
     }
@@ -1714,7 +1714,7 @@
       "date": "2026-10-27",
       "posted": true,
       "followers": 2517,
-      "stories": 0
+      "stories": 1
     }
   ],
   "peakexposuremedia": [
@@ -2190,7 +2190,7 @@
     {
       "date": "2026-10-27",
       "posted": false,
-      "followers": 2002,
+      "followers": 2001,
       "stories": 0
     }
   ],
@@ -2839,7 +2839,7 @@
     },
     {
       "date": "2026-10-27",
-      "posted": false,
+      "posted": true,
       "followers": 482
     }
   ],
@@ -2961,7 +2961,7 @@
     {
       "date": "2026-10-27",
       "posted": true,
-      "followers": 176,
+      "followers": 177,
       "stories": 0
     }
   ],
@@ -3139,7 +3139,7 @@
     {
       "date": "2026-10-27",
       "posted": false,
-      "followers": 7980,
+      "followers": 7977,
       "stories": 2
     }
   ],
