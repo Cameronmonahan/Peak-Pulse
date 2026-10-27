@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T18:26:40.000Z",
+  "generatedAt": "2026-10-27T20:10:31.000Z",
   "weekStart": "2026-10-26T06:00:00.000Z",
   "weekEnd": "2026-11-01T06:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2518,
-      "deltaToday": -2,
+      "followers": 2517,
+      "deltaToday": -3,
       "engagementRate": 1.2,
       "postDates": [
         "2026-10-27T12:00:00.000Z"
@@ -36,8 +36,8 @@
       "name": "Diamond Strength & Wellness",
       "handle": "diamondstrengthandwellness",
       "platform": "instagram",
-      "followers": 175,
-      "deltaToday": 11,
+      "followers": 176,
+      "deltaToday": 12,
       "engagementRate": 1.74,
       "postDates": [
         "2026-10-26T12:00:00.000Z",
@@ -60,8 +60,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4968,
-      "deltaToday": 29,
+      "followers": 4969,
+      "deltaToday": 30,
       "engagementRate": 0.29,
       "postDates": [
         "2026-10-27T12:00:00.000Z"
@@ -94,10 +94,12 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10280,
-      "deltaToday": 30,
+      "followers": 10281,
+      "deltaToday": 31,
       "engagementRate": 0.27,
-      "postDates": []
+      "postDates": [
+        "2026-10-27T12:00:00.000Z"
+      ]
     },
     "ventisalesgroup": {
       "name": "Venti Sales Group",
