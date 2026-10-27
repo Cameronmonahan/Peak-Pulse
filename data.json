@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T13:44:55.000Z",
+  "generatedAt": "2026-10-27T17:28:00.000Z",
   "weekStart": "2026-10-26T06:00:00.000Z",
   "weekEnd": "2026-11-01T06:00:00.000Z",
   "accounts": {
@@ -10,7 +10,9 @@
       "followers": 2518,
       "deltaToday": -2,
       "engagementRate": 1.2,
-      "postDates": []
+      "postDates": [
+        "2026-10-27T12:00:00.000Z"
+      ]
     },
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
@@ -25,8 +27,8 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 2000,
-      "deltaToday": 0,
+      "followers": 2002,
+      "deltaToday": 2,
       "engagementRate": 22.47,
       "postDates": []
     },
@@ -34,11 +36,12 @@
       "name": "Diamond Strength & Wellness",
       "handle": "diamondstrengthandwellness",
       "platform": "instagram",
-      "followers": 171,
-      "deltaToday": 7,
+      "followers": 175,
+      "deltaToday": 11,
       "engagementRate": 1.74,
       "postDates": [
-        "2026-10-26T12:00:00.000Z"
+        "2026-10-26T12:00:00.000Z",
+        "2026-10-27T12:00:00.000Z"
       ]
     },
     "diamondstrengthandwellness_fb": {
@@ -49,15 +52,16 @@
       "deltaToday": 0,
       "engagementRate": 0,
       "postDates": [
-        "2026-10-26T12:00:00.000Z"
+        "2026-10-26T12:00:00.000Z",
+        "2026-10-27T12:00:00.000Z"
       ]
     },
     "paragon_custom_construction": {
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 4960,
-      "deltaToday": 21,
+      "followers": 4967,
+      "deltaToday": 28,
       "engagementRate": 0.29,
       "postDates": []
     },
@@ -65,11 +69,12 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1264,
-      "deltaToday": 0,
+      "followers": 1265,
+      "deltaToday": 1,
       "engagementRate": 0.35,
       "postDates": [
-        "2026-10-26T12:00:00.000Z"
+        "2026-10-26T12:00:00.000Z",
+        "2026-10-27T12:00:00.000Z"
       ]
     },
     "legacyflooringsd_fb": {
@@ -87,8 +92,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10271,
-      "deltaToday": 21,
+      "followers": 10277,
+      "deltaToday": 27,
       "engagementRate": 0.27,
       "postDates": []
     },
@@ -134,8 +139,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 7974,
-      "deltaToday": 4,
+      "followers": 7978,
+      "deltaToday": 8,
       "engagementRate": 1.05,
       "postDates": [
         "2026-10-26T12:00:00.000Z"
