@@ -279,7 +279,7 @@
     {
       "date": "2026-10-28",
       "posted": false,
-      "followers": 4983,
+      "followers": 4986,
       "stories": 0
     }
   ],
@@ -877,8 +877,8 @@
     {
       "date": "2026-10-28",
       "posted": false,
-      "followers": 10318,
-      "stories": 0
+      "followers": 10321,
+      "stories": 1
     }
   ],
   "ventisalesgroup": [
@@ -2902,7 +2902,7 @@
     },
     {
       "date": "2026-10-28",
-      "posted": false,
+      "posted": true,
       "followers": 482
     }
   ],
@@ -3030,7 +3030,7 @@
     {
       "date": "2026-10-28",
       "posted": true,
-      "followers": 181,
+      "followers": 182,
       "stories": 0
     }
   ],
@@ -3219,7 +3219,7 @@
     {
       "date": "2026-10-28",
       "posted": false,
-      "followers": 8000,
+      "followers": 8001,
       "stories": 2
     }
   ],
