@@ -279,7 +279,7 @@
     {
       "date": "2026-10-28",
       "posted": false,
-      "followers": 4979,
+      "followers": 4983,
       "stories": 0
     }
   ],
@@ -570,7 +570,7 @@
     },
     {
       "date": "2026-10-28",
-      "posted": false,
+      "posted": true,
       "followers": 1265,
       "stories": 0
     }
@@ -877,7 +877,7 @@
     {
       "date": "2026-10-28",
       "posted": false,
-      "followers": 10313,
+      "followers": 10318,
       "stories": 0
     }
   ],
@@ -1183,7 +1183,7 @@
     },
     {
       "date": "2026-10-28",
-      "posted": false,
+      "posted": true,
       "followers": 113,
       "stories": 0
     }
@@ -1467,9 +1467,9 @@
     },
     {
       "date": "2026-10-28",
-      "posted": false,
+      "posted": true,
       "followers": 907,
-      "stories": 0
+      "stories": 1
     }
   ],
   "louiehamner": [
@@ -1750,7 +1750,7 @@
       "date": "2026-10-28",
       "posted": false,
       "followers": 2519,
-      "stories": 0
+      "stories": 2
     }
   ],
   "peakexposuremedia": [
@@ -1969,7 +1969,7 @@
     {
       "date": "2026-10-28",
       "posted": false,
-      "followers": 17950,
+      "followers": 17952,
       "stories": 0
     }
   ],
@@ -2816,7 +2816,7 @@
     {
       "date": "2026-10-28",
       "posted": false,
-      "followers": 797
+      "followers": 798
     }
   ],
   "legacyflooringsd_fb": [
@@ -3029,8 +3029,8 @@
     },
     {
       "date": "2026-10-28",
-      "posted": false,
-      "followers": 179,
+      "posted": true,
+      "followers": 181,
       "stories": 0
     }
   ],
@@ -3117,7 +3117,7 @@
     },
     {
       "date": "2026-10-28",
-      "posted": false,
+      "posted": true,
       "followers": 24
     }
   ],
@@ -3219,8 +3219,8 @@
     {
       "date": "2026-10-28",
       "posted": false,
-      "followers": 7997,
-      "stories": 0
+      "followers": 8000,
+      "stories": 2
     }
   ],
   "ventisalesgroup_finsta": [
