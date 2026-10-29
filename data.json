@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T13:30:27.000Z",
+  "generatedAt": "2026-10-29T16:43:08.000Z",
   "weekStart": "2026-10-26T06:00:00.000Z",
   "weekEnd": "2026-11-01T06:00:00.000Z",
   "accounts": {
@@ -20,8 +20,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17956,
-      "deltaToday": 3,
+      "followers": 17958,
+      "deltaToday": 5,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -38,13 +38,14 @@
       "name": "Diamond Strength & Wellness",
       "handle": "diamondstrengthandwellness",
       "platform": "instagram",
-      "followers": 183,
-      "deltaToday": 1,
+      "followers": 185,
+      "deltaToday": 3,
       "engagementRate": 1.74,
       "postDates": [
         "2026-10-26T12:00:00.000Z",
         "2026-10-27T12:00:00.000Z",
-        "2026-10-28T12:00:00.000Z"
+        "2026-10-28T12:00:00.000Z",
+        "2026-10-29T12:00:00.000Z"
       ]
     },
     "diamondstrengthandwellness_fb": {
@@ -57,18 +58,20 @@
       "postDates": [
         "2026-10-26T12:00:00.000Z",
         "2026-10-27T12:00:00.000Z",
-        "2026-10-28T12:00:00.000Z"
+        "2026-10-28T12:00:00.000Z",
+        "2026-10-29T12:00:00.000Z"
       ]
     },
     "paragon_custom_construction": {
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5000,
-      "deltaToday": 9,
+      "followers": 5002,
+      "deltaToday": 11,
       "engagementRate": 0.29,
       "postDates": [
-        "2026-10-27T12:00:00.000Z"
+        "2026-10-27T12:00:00.000Z",
+        "2026-10-29T12:00:00.000Z"
       ]
     },
     "legacyflooringsd": {
@@ -81,7 +84,8 @@
       "postDates": [
         "2026-10-26T12:00:00.000Z",
         "2026-10-27T12:00:00.000Z",
-        "2026-10-28T12:00:00.000Z"
+        "2026-10-28T12:00:00.000Z",
+        "2026-10-29T12:00:00.000Z"
       ]
     },
     "legacyflooringsd_fb": {
@@ -101,11 +105,12 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10340,
-      "deltaToday": 14,
+      "followers": 10346,
+      "deltaToday": 20,
       "engagementRate": 0.27,
       "postDates": [
-        "2026-10-27T12:00:00.000Z"
+        "2026-10-27T12:00:00.000Z",
+        "2026-10-29T12:00:00.000Z"
       ]
     },
     "ventisalesgroup": {
@@ -155,8 +160,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8014,
-      "deltaToday": 11,
+      "followers": 8019,
+      "deltaToday": 16,
       "engagementRate": 1.05,
       "postDates": [
         "2026-10-26T12:00:00.000Z",
