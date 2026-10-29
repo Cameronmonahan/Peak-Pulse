@@ -281,6 +281,12 @@
       "posted": false,
       "followers": 4991,
       "stories": 0
+    },
+    {
+      "date": "2026-10-29",
+      "posted": false,
+      "followers": 5000,
+      "stories": 0
     }
   ],
   "legacyflooringsd": [
@@ -571,6 +577,12 @@
     {
       "date": "2026-10-28",
       "posted": true,
+      "followers": 1265,
+      "stories": 0
+    },
+    {
+      "date": "2026-10-29",
+      "posted": false,
       "followers": 1265,
       "stories": 0
     }
@@ -879,6 +891,12 @@
       "posted": false,
       "followers": 10326,
       "stories": 1
+    },
+    {
+      "date": "2026-10-29",
+      "posted": false,
+      "followers": 10340,
+      "stories": 0
     }
   ],
   "ventisalesgroup": [
@@ -1186,6 +1204,12 @@
       "posted": true,
       "followers": 113,
       "stories": 0
+    },
+    {
+      "date": "2026-10-29",
+      "posted": false,
+      "followers": 113,
+      "stories": 0
     }
   ],
   "guide_n_gallop": [
@@ -1470,6 +1494,12 @@
       "posted": true,
       "followers": 907,
       "stories": 1
+    },
+    {
+      "date": "2026-10-29",
+      "posted": false,
+      "followers": 908,
+      "stories": 0
     }
   ],
   "louiehamner": [
@@ -1751,6 +1781,12 @@
       "posted": true,
       "followers": 2520,
       "stories": 2
+    },
+    {
+      "date": "2026-10-29",
+      "posted": true,
+      "followers": 2520,
+      "stories": 0
     }
   ],
   "peakexposuremedia": [
@@ -1970,6 +2006,12 @@
       "date": "2026-10-28",
       "posted": false,
       "followers": 17953,
+      "stories": 0
+    },
+    {
+      "date": "2026-10-29",
+      "posted": false,
+      "followers": 17956,
       "stories": 0
     }
   ],
@@ -2237,6 +2279,12 @@
     },
     {
       "date": "2026-10-28",
+      "posted": false,
+      "followers": 2002,
+      "stories": 0
+    },
+    {
+      "date": "2026-10-29",
       "posted": false,
       "followers": 2002,
       "stories": 0
@@ -2537,6 +2585,11 @@
       "date": "2026-10-28",
       "posted": false,
       "followers": 45
+    },
+    {
+      "date": "2026-10-29",
+      "posted": false,
+      "followers": 45
     }
   ],
   "the.nano.nature": [
@@ -2817,6 +2870,11 @@
       "date": "2026-10-28",
       "posted": false,
       "followers": 798
+    },
+    {
+      "date": "2026-10-29",
+      "posted": false,
+      "followers": 799
     }
   ],
   "legacyflooringsd_fb": [
@@ -2904,6 +2962,11 @@
       "date": "2026-10-28",
       "posted": true,
       "followers": 482
+    },
+    {
+      "date": "2026-10-29",
+      "posted": false,
+      "followers": 481
     }
   ],
   "diamondstrengthandwellness": [
@@ -3032,6 +3095,12 @@
       "posted": true,
       "followers": 182,
       "stories": 0
+    },
+    {
+      "date": "2026-10-29",
+      "posted": false,
+      "followers": 183,
+      "stories": 0
     }
   ],
   "diamondstrengthandwellness_fb": [
@@ -3118,6 +3187,11 @@
     {
       "date": "2026-10-28",
       "posted": true,
+      "followers": 24
+    },
+    {
+      "date": "2026-10-29",
+      "posted": false,
       "followers": 24
     }
   ],
@@ -3220,7 +3294,13 @@
       "date": "2026-10-28",
       "posted": true,
       "followers": 8003,
-      "stories": 2
+      "stories": 4
+    },
+    {
+      "date": "2026-10-29",
+      "posted": false,
+      "followers": 8014,
+      "stories": 0
     }
   ],
   "ventisalesgroup_finsta": [
