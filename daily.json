@@ -1748,7 +1748,7 @@
     },
     {
       "date": "2026-10-28",
-      "posted": false,
+      "posted": true,
       "followers": 2520,
       "stories": 2
     }
@@ -3218,7 +3218,7 @@
     },
     {
       "date": "2026-10-28",
-      "posted": false,
+      "posted": true,
       "followers": 8003,
       "stories": 2
     }
