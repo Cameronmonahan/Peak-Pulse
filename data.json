@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T13:48:33.000Z",
+  "generatedAt": "2026-10-30T16:10:18.000Z",
   "weekStart": "2026-10-26T06:00:00.000Z",
   "weekEnd": "2026-11-01T06:00:00.000Z",
   "accounts": {
@@ -7,21 +7,22 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2520,
-      "deltaToday": 0,
+      "followers": 2519,
+      "deltaToday": -1,
       "engagementRate": 1.2,
       "postDates": [
         "2026-10-27T12:00:00.000Z",
         "2026-10-28T12:00:00.000Z",
-        "2026-10-29T12:00:00.000Z"
+        "2026-10-29T12:00:00.000Z",
+        "2026-10-30T12:00:00.000Z"
       ]
     },
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17957,
-      "deltaToday": -2,
+      "followers": 17959,
+      "deltaToday": 0,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -29,8 +30,8 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 2002,
-      "deltaToday": 0,
+      "followers": 2003,
+      "deltaToday": 1,
       "engagementRate": 22.47,
       "postDates": []
     },
@@ -106,8 +107,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10367,
-      "deltaToday": 6,
+      "followers": 10368,
+      "deltaToday": 7,
       "engagementRate": 0.27,
       "postDates": [
         "2026-10-27T12:00:00.000Z",
@@ -162,8 +163,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8033,
-      "deltaToday": 5,
+      "followers": 8035,
+      "deltaToday": 7,
       "engagementRate": 1.05,
       "postDates": [
         "2026-10-26T12:00:00.000Z",
