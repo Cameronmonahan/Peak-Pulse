@@ -285,7 +285,7 @@
     {
       "date": "2026-10-29",
       "posted": true,
-      "followers": 5010,
+      "followers": 5013,
       "stories": 0
     }
   ],
@@ -895,7 +895,7 @@
     {
       "date": "2026-10-29",
       "posted": true,
-      "followers": 10357,
+      "followers": 10361,
       "stories": 0
     }
   ],
@@ -3299,7 +3299,7 @@
     {
       "date": "2026-10-29",
       "posted": true,
-      "followers": 8022,
+      "followers": 8028,
       "stories": 3
     }
   ],
@@ -3356,6 +3356,11 @@
     },
     {
       "date": "2026-10-27",
+      "reels": 7,
+      "photos": 2
+    },
+    {
+      "date": "2026-10-29",
       "reels": 7,
       "photos": 2
     }
@@ -3415,6 +3420,11 @@
       "date": "2026-10-27",
       "reels": 4,
       "photos": 1
+    },
+    {
+      "date": "2026-10-29",
+      "reels": 6,
+      "photos": 4
     }
   ],
   "guide_n_gallop_finsta": [
@@ -3472,6 +3482,12 @@
       "date": "2026-10-27",
       "reels": 5,
       "photos": 2
+    },
+    {
+      "date": "2026-10-29",
+      "reels": 5,
+      "photos": 2,
+      "completedOn": "2026-10-29"
     }
   ],
   "louiehamner_finsta": [
@@ -3529,6 +3545,12 @@
       "date": "2026-10-27",
       "reels": 5,
       "photos": 7
+    },
+    {
+      "date": "2026-10-29",
+      "reels": 3,
+      "photos": 5,
+      "completedOn": "2026-10-29"
     }
   ],
   "diamondstrengthandwellness_finsta": [
@@ -3579,6 +3601,11 @@
     },
     {
       "date": "2026-10-27",
+      "reels": 2,
+      "photos": 2
+    },
+    {
+      "date": "2026-10-29",
       "reels": 2,
       "photos": 2
     }
@@ -3634,6 +3661,11 @@
       "date": "2026-10-27",
       "reels": 9,
       "photos": 5
+    },
+    {
+      "date": "2026-10-29",
+      "reels": 9,
+      "photos": 5
     }
   ],
   "paragon_custom_construction_finsta": [
@@ -3684,6 +3716,11 @@
     },
     {
       "date": "2026-10-27",
+      "reels": 1,
+      "photos": 1
+    },
+    {
+      "date": "2026-10-29",
       "reels": 1,
       "photos": 1
     }
