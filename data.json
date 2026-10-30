@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T03:12:13.000Z",
+  "generatedAt": "2026-10-30T13:48:33.000Z",
   "weekStart": "2026-10-26T06:00:00.000Z",
   "weekEnd": "2026-11-01T06:00:00.000Z",
   "accounts": {
@@ -20,8 +20,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17959,
-      "deltaToday": 6,
+      "followers": 17957,
+      "deltaToday": -2,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -38,8 +38,8 @@
       "name": "Diamond Strength & Wellness",
       "handle": "diamondstrengthandwellness",
       "platform": "instagram",
-      "followers": 186,
-      "deltaToday": 4,
+      "followers": 187,
+      "deltaToday": 1,
       "engagementRate": 1.74,
       "postDates": [
         "2026-10-26T12:00:00.000Z",
@@ -66,8 +66,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5013,
-      "deltaToday": 22,
+      "followers": 5011,
+      "deltaToday": -2,
       "engagementRate": 0.29,
       "postDates": [
         "2026-10-27T12:00:00.000Z",
@@ -78,8 +78,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1265,
-      "deltaToday": 0,
+      "followers": 1264,
+      "deltaToday": -1,
       "engagementRate": 0.35,
       "postDates": [
         "2026-10-26T12:00:00.000Z",
@@ -93,7 +93,7 @@
       "handle": "legacyflooringsd_fb",
       "platform": "facebook",
       "followers": 481,
-      "deltaToday": -1,
+      "deltaToday": 0,
       "engagementRate": 0.37,
       "postDates": [
         "2026-10-26T12:00:00.000Z",
@@ -106,8 +106,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10361,
-      "deltaToday": 35,
+      "followers": 10367,
+      "deltaToday": 6,
       "engagementRate": 0.27,
       "postDates": [
         "2026-10-27T12:00:00.000Z",
@@ -153,8 +153,8 @@
       "name": "The Nano Nature",
       "handle": "the.nano.nature",
       "platform": "tiktok",
-      "followers": 797,
-      "deltaToday": -1,
+      "followers": 798,
+      "deltaToday": 1,
       "engagementRate": 29.53,
       "postDates": []
     },
@@ -162,8 +162,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8028,
-      "deltaToday": 25,
+      "followers": 8033,
+      "deltaToday": 5,
       "engagementRate": 1.05,
       "postDates": [
         "2026-10-26T12:00:00.000Z",
