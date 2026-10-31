@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T16:07:53.000Z",
+  "generatedAt": "2026-10-31T19:31:19.000Z",
   "weekStart": "2026-10-26T06:00:00.000Z",
   "weekEnd": "2026-11-01T06:00:00.000Z",
   "accounts": {
@@ -14,7 +14,8 @@
         "2026-10-27T12:00:00.000Z",
         "2026-10-28T12:00:00.000Z",
         "2026-10-29T12:00:00.000Z",
-        "2026-10-30T12:00:00.000Z"
+        "2026-10-30T12:00:00.000Z",
+        "2026-10-31T12:00:00.000Z"
       ]
     },
     "peakexposuremedia": {
@@ -69,8 +70,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5011,
-      "deltaToday": -1,
+      "followers": 5012,
+      "deltaToday": 0,
       "engagementRate": 0.29,
       "postDates": [
         "2026-10-27T12:00:00.000Z",
@@ -170,14 +171,15 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8054,
-      "deltaToday": 9,
+      "followers": 8055,
+      "deltaToday": 10,
       "engagementRate": 1.05,
       "postDates": [
         "2026-10-26T12:00:00.000Z",
         "2026-10-28T12:00:00.000Z",
         "2026-10-29T12:00:00.000Z",
-        "2026-10-30T12:00:00.000Z"
+        "2026-10-30T12:00:00.000Z",
+        "2026-10-31T12:00:00.000Z"
       ]
     }
   }
