@@ -1557,7 +1557,7 @@
     },
     {
       "date": "2026-10-31",
-      "posted": false,
+      "posted": true,
       "followers": 906,
       "stories": 0
     }
@@ -3236,7 +3236,7 @@
     },
     {
       "date": "2026-10-31",
-      "posted": false,
+      "posted": true,
       "followers": 188,
       "stories": 0
     }
@@ -3339,7 +3339,7 @@
     },
     {
       "date": "2026-10-31",
-      "posted": false,
+      "posted": true,
       "followers": 24
     }
   ],
@@ -3459,7 +3459,7 @@
     {
       "date": "2026-10-31",
       "posted": true,
-      "followers": 8057,
+      "followers": 8061,
       "stories": 2
     }
   ],
