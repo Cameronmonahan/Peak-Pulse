@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T00:47:01.000Z",
+  "generatedAt": "2026-10-31T03:13:36.000Z",
   "weekStart": "2026-10-26T06:00:00.000Z",
   "weekEnd": "2026-11-01T06:00:00.000Z",
   "accounts": {
@@ -168,8 +168,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8044,
-      "deltaToday": 16,
+      "followers": 8045,
+      "deltaToday": 17,
       "engagementRate": 1.05,
       "postDates": [
         "2026-10-26T12:00:00.000Z",
