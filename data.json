@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T17:10:57.000Z",
+  "generatedAt": "2026-11-02T19:32:31.000Z",
   "weekStart": "2026-11-02T07:00:00.000Z",
   "weekEnd": "2026-11-08T07:00:00.000Z",
   "accounts": {
@@ -10,14 +10,16 @@
       "followers": 2518,
       "deltaToday": 1,
       "engagementRate": 0.73,
-      "postDates": []
+      "postDates": [
+        "2026-11-02T12:00:00.000Z"
+      ]
     },
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17958,
-      "deltaToday": 0,
+      "followers": 17957,
+      "deltaToday": -1,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -25,8 +27,8 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 2002,
-      "deltaToday": 0,
+      "followers": 2001,
+      "deltaToday": -1,
       "engagementRate": 22.47,
       "postDates": []
     },
@@ -84,7 +86,9 @@
       "followers": 10363,
       "deltaToday": -2,
       "engagementRate": 0.27,
-      "postDates": []
+      "postDates": [
+        "2026-11-02T12:00:00.000Z"
+      ]
     },
     "ventisalesgroup": {
       "name": "Venti Sales Group",
@@ -128,8 +132,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8084,
-      "deltaToday": 4,
+      "followers": 8086,
+      "deltaToday": 6,
       "engagementRate": 1.05,
       "postDates": []
     }
