@@ -27,6 +27,10 @@
     {
       "weekStart": "2026-10-19",
       "engagementRate": 0.29
+    },
+    {
+      "weekStart": "2026-10-26",
+      "engagementRate": 0.46
     }
   ],
   "legacyflooringsd": [
@@ -169,6 +173,10 @@
     {
       "weekStart": "2026-10-19",
       "engagementRate": 1.2
+    },
+    {
+      "weekStart": "2026-10-26",
+      "engagementRate": 0.73
     }
   ],
   "built.bykate": [
@@ -209,6 +217,10 @@
     {
       "weekStart": "2026-10-19",
       "engagementRate": 1.74
+    },
+    {
+      "weekStart": "2026-10-26",
+      "engagementRate": 7.72
     }
   ],
   "paragon_custom_const": [
@@ -219,6 +231,10 @@
     {
       "weekStart": "2026-10-19",
       "engagementRate": 48.0
+    },
+    {
+      "weekStart": "2026-10-26",
+      "engagementRate": 48.44
     }
   ],
   "the.nano.nature": [
@@ -229,6 +245,10 @@
     {
       "weekStart": "2026-10-19",
       "engagementRate": 29.53
+    },
+    {
+      "weekStart": "2026-10-26",
+      "engagementRate": 29.44
     }
   ],
   "legacyflooringsd_fb": [
