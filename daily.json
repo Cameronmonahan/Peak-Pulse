@@ -1892,7 +1892,7 @@
     },
     {
       "date": "2026-11-01",
-      "posted": false,
+      "posted": true,
       "followers": 2517,
       "stories": 0
     }
@@ -3538,7 +3538,7 @@
     },
     {
       "date": "2026-11-01",
-      "posted": false,
+      "posted": true,
       "followers": 8080,
       "stories": 1
     }
