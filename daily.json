@@ -964,7 +964,7 @@
     },
     {
       "date": "2026-11-02",
-      "posted": false,
+      "posted": true,
       "followers": 10363
     }
   ],
@@ -1923,7 +1923,7 @@
     },
     {
       "date": "2026-11-02",
-      "posted": false,
+      "posted": true,
       "followers": 2518
     }
   ],
@@ -2173,7 +2173,7 @@
     {
       "date": "2026-11-02",
       "posted": false,
-      "followers": 17958
+      "followers": 17957
     }
   ],
   "thenanonature": [
@@ -2471,7 +2471,7 @@
     {
       "date": "2026-11-02",
       "posted": false,
-      "followers": 2002
+      "followers": 2001
     }
   ],
   "paragon_custom_const": [
@@ -3610,7 +3610,7 @@
     {
       "date": "2026-11-02",
       "posted": false,
-      "followers": 8084
+      "followers": 8086
     }
   ],
   "ventisalesgroup_finsta": [
