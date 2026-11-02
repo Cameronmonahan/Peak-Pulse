@@ -308,7 +308,7 @@
     },
     {
       "date": "2026-11-02",
-      "posted": false,
+      "posted": true,
       "followers": 5012
     }
   ],
@@ -1613,7 +1613,7 @@
     },
     {
       "date": "2026-11-02",
-      "posted": false,
+      "posted": true,
       "followers": 904
     }
   ],
@@ -1924,7 +1924,7 @@
     {
       "date": "2026-11-02",
       "posted": false,
-      "followers": 2516
+      "followers": 2518
     }
   ],
   "peakexposuremedia": [
