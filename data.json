@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T00:09:49.000Z",
+  "generatedAt": "2026-11-02T03:59:43.000Z",
   "weekStart": "2026-10-26T06:00:00.000Z",
   "weekEnd": "2026-11-01T06:00:00.000Z",
   "accounts": {
@@ -9,7 +9,7 @@
       "platform": "instagram",
       "followers": 2517,
       "deltaToday": -2,
-      "engagementRate": 1.2,
+      "engagementRate": 0.73,
       "postDates": [
         "2026-10-27T12:00:00.000Z",
         "2026-10-28T12:00:00.000Z",
@@ -42,7 +42,7 @@
       "platform": "instagram",
       "followers": 189,
       "deltaToday": 1,
-      "engagementRate": 1.74,
+      "engagementRate": 7.72,
       "postDates": [
         "2026-10-26T12:00:00.000Z",
         "2026-10-27T12:00:00.000Z",
@@ -72,9 +72,9 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5012,
-      "deltaToday": 0,
-      "engagementRate": 0.29,
+      "followers": 5013,
+      "deltaToday": 1,
+      "engagementRate": 0.46,
       "postDates": [
         "2026-10-27T12:00:00.000Z",
         "2026-10-29T12:00:00.000Z",
@@ -159,7 +159,7 @@
       "platform": "tiktok",
       "followers": 45,
       "deltaToday": 0,
-      "engagementRate": 48.0,
+      "engagementRate": 48.44,
       "postDates": []
     },
     "the.nano.nature": {
@@ -168,7 +168,7 @@
       "platform": "tiktok",
       "followers": 799,
       "deltaToday": 1,
-      "engagementRate": 29.53,
+      "engagementRate": 29.44,
       "postDates": []
     },
     "built.bykate": {
