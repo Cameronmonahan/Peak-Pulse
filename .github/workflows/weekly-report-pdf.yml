@@ -31,13 +31,23 @@ jobs:
             python3 scripts/weekly_pdf.py
           fi
 
+      - name: Build the email files
+        run: |
+          rm -rf reports/email && mkdir -p reports/email
+          if [ -n "${{ github.event.inputs.week }}" ]; then
+            python3 scripts/weekly_email.py --week "${{ github.event.inputs.week }}" --out reports/email
+          else
+            python3 scripts/weekly_email.py --out reports/email
+          fi
+          python3 -c "import re;p='reports/email/report.html';h=open(p,encoding='utf-8').read();open(p,'w',encoding='utf-8').write(re.sub(r'>\\s+<','><',h))"
+
       - name: Save it to the repo
         run: |
           git config user.name "peak-pulse-bot"
           git config user.email "peak-pulse-bot@users.noreply.github.com"
-          git add reports/*.pdf
+          git add reports/*.pdf reports/email
           if git diff --cached --quiet; then echo "Nothing new to commit"; exit 0; fi
-          git commit -m "Add weekly report PDF [bot]"
+          git commit -m "Add weekly report PDF and email files [bot]"
           for i in 1 2 3 4 5; do
             git pull --rebase origin main && git push origin HEAD:main && exit 0
             sleep 5
