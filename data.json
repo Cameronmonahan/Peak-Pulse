@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T05:40:12.000Z",
+  "generatedAt": "2026-11-03T14:42:07.000Z",
   "weekStart": "2026-11-02T07:00:00.000Z",
   "weekEnd": "2026-11-08T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2520,
-      "deltaToday": 3,
+      "followers": 2521,
+      "deltaToday": 1,
       "engagementRate": 0.73,
       "postDates": [
         "2026-11-02T12:00:00.000Z"
@@ -18,8 +18,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17956,
-      "deltaToday": -2,
+      "followers": 17957,
+      "deltaToday": 1,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -27,8 +27,8 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 2001,
-      "deltaToday": 0,
+      "followers": 1999,
+      "deltaToday": -2,
       "engagementRate": 22.42,
       "postDates": []
     },
@@ -36,8 +36,8 @@
       "name": "Diamond Strength & Wellness",
       "handle": "diamondstrengthandwellness",
       "platform": "instagram",
-      "followers": 189,
-      "deltaToday": 0,
+      "followers": 190,
+      "deltaToday": 1,
       "engagementRate": 7.72,
       "postDates": []
     },
@@ -54,7 +54,7 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5014,
+      "followers": 5015,
       "deltaToday": 1,
       "engagementRate": 0.46,
       "postDates": [
@@ -65,8 +65,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1261,
-      "deltaToday": 0,
+      "followers": 1260,
+      "deltaToday": -1,
       "engagementRate": 0.29,
       "postDates": [
         "2026-11-02T12:00:00.000Z"
@@ -136,8 +136,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8102,
-      "deltaToday": 10,
+      "followers": 8113,
+      "deltaToday": 11,
       "engagementRate": 0.57,
       "postDates": [
         "2026-11-02T12:00:00.000Z"
