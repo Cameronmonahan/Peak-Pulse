@@ -965,7 +965,7 @@
     {
       "date": "2026-11-02",
       "posted": true,
-      "followers": 10363
+      "followers": 10362
     }
   ],
   "ventisalesgroup": [
@@ -1924,7 +1924,7 @@
     {
       "date": "2026-11-02",
       "posted": true,
-      "followers": 2518
+      "followers": 2519
     }
   ],
   "peakexposuremedia": [
@@ -3609,8 +3609,8 @@
     },
     {
       "date": "2026-11-02",
-      "posted": false,
-      "followers": 8086
+      "posted": true,
+      "followers": 8088
     }
   ],
   "ventisalesgroup_finsta": [
