@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T00:06:54.000Z",
+  "generatedAt": "2026-11-03T01:52:45.000Z",
   "weekStart": "2026-11-02T07:00:00.000Z",
   "weekEnd": "2026-11-08T07:00:00.000Z",
   "accounts": {
@@ -68,7 +68,9 @@
       "followers": 1261,
       "deltaToday": -1,
       "engagementRate": 0.35,
-      "postDates": []
+      "postDates": [
+        "2026-11-02T12:00:00.000Z"
+      ]
     },
     "legacyflooringsd_fb": {
       "name": "Legacy Flooring",
@@ -97,7 +99,9 @@
       "followers": 113,
       "deltaToday": 0,
       "engagementRate": 4.78,
-      "postDates": []
+      "postDates": [
+        "2026-11-02T12:00:00.000Z"
+      ]
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
@@ -132,8 +136,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8088,
-      "deltaToday": 8,
+      "followers": 8092,
+      "deltaToday": 12,
       "engagementRate": 1.05,
       "postDates": [
         "2026-11-02T12:00:00.000Z"
