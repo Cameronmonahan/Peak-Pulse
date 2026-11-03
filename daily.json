@@ -309,7 +309,8 @@
     {
       "date": "2026-11-02",
       "posted": true,
-      "followers": 5012
+      "followers": 5012,
+      "stories": 0
     }
   ],
   "legacyflooringsd": [
@@ -629,8 +630,9 @@
     },
     {
       "date": "2026-11-02",
-      "posted": false,
-      "followers": 1261
+      "posted": true,
+      "followers": 1261,
+      "stories": 0
     }
   ],
   "marwooddesign": [
@@ -965,7 +967,8 @@
     {
       "date": "2026-11-02",
       "posted": true,
-      "followers": 10362
+      "followers": 10362,
+      "stories": 1
     }
   ],
   "ventisalesgroup": [
@@ -1300,8 +1303,9 @@
     },
     {
       "date": "2026-11-02",
-      "posted": false,
-      "followers": 113
+      "posted": true,
+      "followers": 113,
+      "stories": 0
     }
   ],
   "guide_n_gallop": [
@@ -1614,7 +1618,8 @@
     {
       "date": "2026-11-02",
       "posted": true,
-      "followers": 904
+      "followers": 904,
+      "stories": 0
     }
   ],
   "louiehamner": [
@@ -1919,12 +1924,13 @@
       "date": "2026-11-01",
       "posted": true,
       "followers": 2517,
-      "stories": 0
+      "stories": 2
     },
     {
       "date": "2026-11-02",
       "posted": true,
-      "followers": 2519
+      "followers": 2519,
+      "stories": 2
     }
   ],
   "peakexposuremedia": [
@@ -2173,7 +2179,8 @@
     {
       "date": "2026-11-02",
       "posted": false,
-      "followers": 17957
+      "followers": 17957,
+      "stories": 0
     }
   ],
   "thenanonature": [
@@ -2471,7 +2478,8 @@
     {
       "date": "2026-11-02",
       "posted": false,
-      "followers": 2001
+      "followers": 2001,
+      "stories": 0
     }
   ],
   "paragon_custom_const": [
@@ -3367,7 +3375,8 @@
     {
       "date": "2026-11-02",
       "posted": false,
-      "followers": 189
+      "followers": 189,
+      "stories": 0
     }
   ],
   "diamondstrengthandwellness_fb": [
@@ -3605,12 +3614,13 @@
       "date": "2026-11-01",
       "posted": true,
       "followers": 8080,
-      "stories": 1
+      "stories": 4
     },
     {
       "date": "2026-11-02",
       "posted": true,
-      "followers": 8088
+      "followers": 8092,
+      "stories": 4
     }
   ],
   "ventisalesgroup_finsta": [
