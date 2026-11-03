@@ -57,6 +57,10 @@
     {
       "weekStart": "2026-10-19",
       "engagementRate": 0.35
+    },
+    {
+      "weekStart": "2026-10-26",
+      "engagementRate": 0.29
     }
   ],
   "marwooddesign": [
@@ -83,6 +87,10 @@
     {
       "weekStart": "2026-10-19",
       "engagementRate": 0.27
+    },
+    {
+      "weekStart": "2026-10-26",
+      "engagementRate": 0.32
     }
   ],
   "ventisalesgroup": [
@@ -113,6 +121,10 @@
     {
       "weekStart": "2026-10-19",
       "engagementRate": 4.78
+    },
+    {
+      "weekStart": "2026-10-26",
+      "engagementRate": 4.65
     }
   ],
   "guide_n_gallop": [
@@ -143,6 +155,10 @@
     {
       "weekStart": "2026-10-19",
       "engagementRate": 3.04
+    },
+    {
+      "weekStart": "2026-10-26",
+      "engagementRate": 2.96
     }
   ],
   "louiehamner": [
@@ -191,6 +207,10 @@
     {
       "weekStart": "2026-10-19",
       "engagementRate": 1.05
+    },
+    {
+      "weekStart": "2026-10-26",
+      "engagementRate": 0.57
     }
   ],
   "peakexposuremedia": [
