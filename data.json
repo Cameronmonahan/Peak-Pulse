@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T00:28:40.000Z",
+  "generatedAt": "2026-11-04T14:33:45.000Z",
   "weekStart": "2026-11-02T07:00:00.000Z",
   "weekEnd": "2026-11-08T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2522,
-      "deltaToday": 2,
+      "followers": 2523,
+      "deltaToday": 1,
       "engagementRate": 0.73,
       "postDates": [
         "2026-11-02T12:00:00.000Z"
@@ -28,7 +28,7 @@
       "handle": "thenanonature",
       "platform": "instagram",
       "followers": 1999,
-      "deltaToday": -2,
+      "deltaToday": 0,
       "engagementRate": 22.42,
       "postDates": []
     },
@@ -37,7 +37,7 @@
       "handle": "diamondstrengthandwellness",
       "platform": "instagram",
       "followers": 193,
-      "deltaToday": 4,
+      "deltaToday": 0,
       "engagementRate": 7.72,
       "postDates": []
     },
@@ -54,8 +54,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5016,
-      "deltaToday": 2,
+      "followers": 5014,
+      "deltaToday": -2,
       "engagementRate": 0.46,
       "postDates": [
         "2026-11-02T12:00:00.000Z"
@@ -65,8 +65,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1260,
-      "deltaToday": -1,
+      "followers": 1262,
+      "deltaToday": 2,
       "engagementRate": 0.29,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
@@ -86,7 +86,7 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10361,
+      "followers": 10360,
       "deltaToday": -1,
       "engagementRate": 0.32,
       "postDates": [
@@ -141,8 +141,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8126,
-      "deltaToday": 24,
+      "followers": 8133,
+      "deltaToday": 7,
       "engagementRate": 0.57,
       "postDates": [
         "2026-11-02T12:00:00.000Z"
