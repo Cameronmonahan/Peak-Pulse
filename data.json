@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T22:37:38.000Z",
+  "generatedAt": "2026-11-04T00:28:40.000Z",
   "weekStart": "2026-11-02T07:00:00.000Z",
   "weekEnd": "2026-11-08T07:00:00.000Z",
   "accounts": {
@@ -102,7 +102,8 @@
       "deltaToday": 0,
       "engagementRate": 4.65,
       "postDates": [
-        "2026-11-02T12:00:00.000Z"
+        "2026-11-02T12:00:00.000Z",
+        "2026-11-03T12:00:00.000Z"
       ]
     },
     "guide_n_gallop": {
@@ -140,8 +141,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8121,
-      "deltaToday": 19,
+      "followers": 8126,
+      "deltaToday": 24,
       "engagementRate": 0.57,
       "postDates": [
         "2026-11-02T12:00:00.000Z"
