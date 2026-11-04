@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T19:37:07.000Z",
+  "generatedAt": "2026-11-04T21:04:57.000Z",
   "weekStart": "2026-11-02T07:00:00.000Z",
   "weekEnd": "2026-11-08T07:00:00.000Z",
   "accounts": {
@@ -11,7 +11,8 @@
       "deltaToday": 3,
       "engagementRate": 0.73,
       "postDates": [
-        "2026-11-02T12:00:00.000Z"
+        "2026-11-02T12:00:00.000Z",
+        "2026-11-04T12:00:00.000Z"
       ]
     },
     "peakexposuremedia": {
@@ -87,8 +88,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10363,
-      "deltaToday": 2,
+      "followers": 10364,
+      "deltaToday": 3,
       "engagementRate": 0.32,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
@@ -144,8 +145,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8130,
-      "deltaToday": 4,
+      "followers": 8133,
+      "deltaToday": 7,
       "engagementRate": 0.57,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
