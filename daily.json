@@ -1003,7 +1003,7 @@
     {
       "date": "2026-11-04",
       "posted": true,
-      "followers": 10363,
+      "followers": 10364,
       "stories": 0
     }
   ],
@@ -2000,7 +2000,7 @@
     },
     {
       "date": "2026-11-04",
-      "posted": false,
+      "posted": true,
       "followers": 2525,
       "stories": 0
     }
@@ -3779,7 +3779,7 @@
     {
       "date": "2026-11-04",
       "posted": true,
-      "followers": 8130,
+      "followers": 8133,
       "stories": 1
     }
   ],
