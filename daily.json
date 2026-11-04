@@ -320,8 +320,8 @@
     },
     {
       "date": "2026-11-04",
-      "posted": false,
-      "followers": 5014,
+      "posted": true,
+      "followers": 5015,
       "stories": 0
     }
   ],
@@ -1002,8 +1002,8 @@
     },
     {
       "date": "2026-11-04",
-      "posted": false,
-      "followers": 10360,
+      "posted": true,
+      "followers": 10363,
       "stories": 0
     }
   ],
@@ -1677,9 +1677,9 @@
     },
     {
       "date": "2026-11-04",
-      "posted": false,
-      "followers": 904,
-      "stories": 0
+      "posted": true,
+      "followers": 905,
+      "stories": 1
     }
   ],
   "louiehamner": [
@@ -2001,7 +2001,7 @@
     {
       "date": "2026-11-04",
       "posted": false,
-      "followers": 2523,
+      "followers": 2525,
       "stories": 0
     }
   ],
@@ -2263,7 +2263,7 @@
     {
       "date": "2026-11-04",
       "posted": false,
-      "followers": 17956,
+      "followers": 17954,
       "stories": 0
     }
   ],
@@ -2574,7 +2574,7 @@
     {
       "date": "2026-11-04",
       "posted": false,
-      "followers": 1999,
+      "followers": 1998,
       "stories": 0
     }
   ],
@@ -2907,7 +2907,7 @@
     {
       "date": "2026-11-04",
       "posted": false,
-      "followers": 45
+      "followers": 46
     }
   ],
   "the.nano.nature": [
@@ -3222,7 +3222,7 @@
     {
       "date": "2026-11-04",
       "posted": false,
-      "followers": 799
+      "followers": 800
     }
   ],
   "legacyflooringsd_fb": [
@@ -3513,7 +3513,7 @@
     {
       "date": "2026-11-04",
       "posted": false,
-      "followers": 193,
+      "followers": 194,
       "stories": 0
     }
   ],
@@ -3778,9 +3778,9 @@
     },
     {
       "date": "2026-11-04",
-      "posted": false,
-      "followers": 8133,
-      "stories": 0
+      "posted": true,
+      "followers": 8130,
+      "stories": 1
     }
   ],
   "ventisalesgroup_finsta": [
