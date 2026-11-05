@@ -327,7 +327,7 @@
     {
       "date": "2026-11-05",
       "posted": false,
-      "followers": 5027,
+      "followers": 5029,
       "stories": 0
     }
   ],
@@ -1021,7 +1021,7 @@
     {
       "date": "2026-11-05",
       "posted": false,
-      "followers": 10383,
+      "followers": 10385,
       "stories": 0
     }
   ],
@@ -2032,13 +2032,13 @@
       "date": "2026-11-04",
       "posted": true,
       "followers": 2525,
-      "stories": 3
+      "stories": 4
     },
     {
       "date": "2026-11-05",
       "posted": false,
-      "followers": 2524,
-      "stories": 0
+      "followers": 2525,
+      "stories": 1
     }
   ],
   "peakexposuremedia": [
@@ -2622,7 +2622,7 @@
     {
       "date": "2026-11-05",
       "posted": false,
-      "followers": 1998,
+      "followers": 1997,
       "stories": 0
     }
   ],
@@ -3854,12 +3854,12 @@
       "date": "2026-11-04",
       "posted": true,
       "followers": 8138,
-      "stories": 1
+      "stories": 4
     },
     {
       "date": "2026-11-05",
       "posted": false,
-      "followers": 8145,
+      "followers": 8151,
       "stories": 0
     }
   ],
