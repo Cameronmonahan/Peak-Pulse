@@ -169,8 +169,8 @@
     padding:8px 14px; border-radius:8px; border:1px solid var(--line);
     background:var(--surface); color:var(--text); font-size:13px; font-family:'Montserrat';
   }
-  .month-metric-row{ display:flex; gap:10px; }
-  .month-metric{ flex:1; background:var(--surface-2); border:1px solid var(--line); border-radius:10px; padding:12px; }
+  .month-metric-row{ display:flex; flex-wrap:wrap; gap:10px; }
+  .month-metric{ flex:1 1 110px; min-width:0; background:var(--surface-2); border:1px solid var(--line); border-radius:10px; padding:12px; }
   .month-metric .mm-label{ font-size:9.5px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-dim); margin-bottom:5px; }
   .month-metric .mm-value{ font-family:'Bebas Neue'; font-size:22px; color:var(--text); }
   .month-metric .mm-value.gold{ color:var(--gold-bright); }
@@ -179,12 +179,13 @@
   main{ padding:10px clamp(20px,3vw,48px) 40px; }
   .grid{
     display:grid;
-    grid-template-columns:repeat(4, 1fr);
+    grid-template-columns:repeat(4, minmax(0,1fr));
     gap:18px;
   }
-  @media (max-width:1400px){ .grid{ grid-template-columns:repeat(3,1fr); } }
-  @media (max-width:1000px){ .grid{ grid-template-columns:repeat(2,1fr); } }
-  @media (max-width:620px){ .grid{ grid-template-columns:1fr; } }
+  .grid > .card{ min-width:0; }
+  @media (max-width:1400px){ .grid{ grid-template-columns:repeat(3,minmax(0,1fr)); } }
+  @media (max-width:1000px){ .grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+  @media (max-width:620px){ .grid{ grid-template-columns:minmax(0,1fr); } }
 
   @media (max-width:760px){
     header{
@@ -270,6 +271,7 @@
   }
   .platform-badge svg{ width:12px; height:12px; display:block; }
 
+  .status-select{ margin-top:6px; background:var(--surface-2); color:var(--text-dim); border:1px solid var(--line); border-radius:8px; font:inherit; font-size:11px; padding:3px 6px; }
   .platform-tabs{ display:flex; gap:6px; flex-shrink:0; }
   .platform-tab{
     width:32px; height:32px; border-radius:9px;
@@ -1339,6 +1341,63 @@ function renderReport(){
   });
 }
 
+/* ---- Active / Past client toggle on each card ----
+   Saves "archived" in clients.json through the GitHub API. Needs the same GitHub token as the entry form;
+   it is asked for once per page visit and never stored. */
+const CLIENTS_REPO = 'Cameronmonahan/Peak-Pulse';
+let GH_TOKEN = '';
+const b64u = s => btoa(unescape(encodeURIComponent(s)));
+async function setClientArchived(handle, archived){
+  if(!GH_TOKEN){
+    GH_TOKEN = (prompt('To move a client between Active and Past, paste your GitHub token (the same one the entry form uses). It is not saved.') || '').trim();
+    if(!GH_TOKEN) return false;
+  }
+  const url = `https://api.github.com/repos/${CLIENTS_REPO}/contents/clients.json`;
+  const hdr = { 'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github+json' };
+  for(let attempt = 0; attempt < 3; attempt++){
+    const r = await fetch(url + '?ref=main&t=' + Date.now(), { headers: hdr });
+    if(r.status === 401 || r.status === 403 || r.status === 404){ GH_TOKEN = ''; throw new Error('GitHub rejected that token (or it cannot write to this repo).'); }
+    if(!r.ok) throw new Error('Could not read clients.json (' + r.status + ')');
+    const meta = await r.json();
+    const list = JSON.parse(decodeURIComponent(escape(atob(meta.content.replace(/\n/g, '')))));
+    const c = list.find(x => x.handle === handle);
+    if(!c) throw new Error('Client not found in clients.json');
+    if(archived) c.archived = true; else delete c.archived;
+    const put = await fetch(url, { method: 'PUT', headers: Object.assign({ 'Content-Type': 'application/json' }, hdr),
+      body: JSON.stringify({ message: `${c.name}: ${archived ? 'move to Past Clients' : 'move back to Active'} [dashboard]`,
+        content: b64u(JSON.stringify(list, null, 2) + '\n'), sha: meta.sha, branch: 'main' }) });
+    if(put.ok) return true;
+    if(put.status !== 409 && put.status !== 422) throw new Error('Save failed (' + put.status + ')');
+    // someone (the bot) committed in between: re-read and retry
+  }
+  throw new Error('Save kept conflicting, try again in a moment.');
+}
+function addStatusSelects(){
+  document.querySelectorAll('#grid .card[data-client-handle]').forEach(card => {
+    const handle = card.dataset.clientHandle;
+    const client = RAW_CLIENTS.find(c => c.handle === handle);
+    const nameEl = card.querySelector('.client-name');
+    if(!client || !nameEl || card.querySelector('.status-select')) return;
+    const sel = document.createElement('select');
+    sel.className = 'status-select';
+    sel.title = 'Move between Active and Past clients';
+    sel.innerHTML = '<option value="active">Active</option><option value="past">Past client</option>';
+    sel.value = client.archived ? 'past' : 'active';
+    sel.addEventListener('click', e => e.stopPropagation());
+    sel.addEventListener('change', async () => {
+      const toPast = sel.value === 'past';
+      sel.disabled = true;
+      try{
+        const ok = await setClientArchived(handle, toPast);
+        if(ok){ client.archived = toPast; render(); return; }
+      }catch(err){ alert(err.message); }
+      sel.value = client.archived ? 'past' : 'active';
+      sel.disabled = false;
+    });
+    nameEl.insertAdjacentElement('afterend', sel);
+  });
+}
+
 function render(){
   if(VIEW_MODE === 'report'){
     renderReport();
@@ -1349,6 +1408,7 @@ function render(){
   } else {
     renderWeek();
   }
+  if(VIEW_MODE !== 'report') addStatusSelects();
 }
 
 /* ---------------- CLOCK ---------------- */
