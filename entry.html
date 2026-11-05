@@ -236,7 +236,7 @@ const MAX_WEEKLY_ENTRIES = 60;
 // from clients.json. A client with a tiktokHandle gets two entries.
 function buildAccountsList(clients){
   const list = [];
-  clients.forEach(c => {
+  clients.filter(c => !c.archived).forEach(c => {
     list.push({ name:c.name, handle:c.handle, platform:'instagram' });
     if(c.tiktokHandle && !c.tiktokHandle.startsWith('REPLACE_')){
       list.push({ name:c.name, handle:c.tiktokHandle, platform:'tiktok' });

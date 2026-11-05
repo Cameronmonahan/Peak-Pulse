@@ -138,7 +138,7 @@ def signed(v):
 
 def collect(root, mon):
     """All the numbers for one Monday-Sunday week (shared by the email and the PDF)."""
-    clients = load(root, "clients.json")
+    clients = [c for c in load(root, "clients.json") if not c.get("archived")]
     daily, weekly = load(root, "daily.json"), load(root, "weekly.json")
     sun = (date.fromisoformat(mon) + timedelta(days=6)).isoformat()
     d0, d1 = date.fromisoformat(mon), date.fromisoformat(sun)
