@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T21:04:57.000Z",
+  "generatedAt": "2026-11-05T00:08:17.000Z",
   "weekStart": "2026-11-02T07:00:00.000Z",
   "weekEnd": "2026-11-08T07:00:00.000Z",
   "accounts": {
@@ -19,8 +19,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17954,
-      "deltaToday": -2,
+      "followers": 17955,
+      "deltaToday": -1,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -55,8 +55,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5015,
-      "deltaToday": -1,
+      "followers": 5018,
+      "deltaToday": 2,
       "engagementRate": 0.46,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
@@ -88,8 +88,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10364,
-      "deltaToday": 3,
+      "followers": 10370,
+      "deltaToday": 9,
       "engagementRate": 0.32,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
@@ -101,12 +101,13 @@
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
       "platform": "instagram",
-      "followers": 113,
-      "deltaToday": 0,
+      "followers": 114,
+      "deltaToday": 1,
       "engagementRate": 4.65,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
-        "2026-11-03T12:00:00.000Z"
+        "2026-11-03T12:00:00.000Z",
+        "2026-11-04T12:00:00.000Z"
       ]
     },
     "guide_n_gallop": {
@@ -145,8 +146,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8133,
-      "deltaToday": 7,
+      "followers": 8138,
+      "deltaToday": 12,
       "engagementRate": 0.57,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
