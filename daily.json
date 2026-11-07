@@ -333,8 +333,8 @@
     {
       "date": "2026-11-06",
       "posted": true,
-      "followers": 5051,
-      "stories": 0
+      "followers": 5053,
+      "stories": 1
     }
   ],
   "legacyflooringsd": [
@@ -1039,8 +1039,8 @@
     {
       "date": "2026-11-06",
       "posted": true,
-      "followers": 10393,
-      "stories": 1
+      "followers": 10394,
+      "stories": 3
     }
   ],
   "ventisalesgroup": [
@@ -2073,7 +2073,7 @@
     {
       "date": "2026-11-06",
       "posted": true,
-      "followers": 2545,
+      "followers": 2548,
       "stories": 4
     }
   ],
@@ -3469,7 +3469,7 @@
     },
     {
       "date": "2026-11-06",
-      "posted": false,
+      "posted": true,
       "followers": 481
     }
   ],
@@ -3939,7 +3939,7 @@
     {
       "date": "2026-11-06",
       "posted": true,
-      "followers": 8162,
+      "followers": 8164,
       "stories": 1
     }
   ],
