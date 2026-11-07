@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T20:18:12.000Z",
+  "generatedAt": "2026-11-07T21:13:41.000Z",
   "weekStart": "2026-11-02T07:00:00.000Z",
   "weekEnd": "2026-11-08T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2586,
-      "deltaToday": 31,
+      "followers": 2590,
+      "deltaToday": 35,
       "engagementRate": 0.73,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
@@ -56,8 +56,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5064,
-      "deltaToday": 8,
+      "followers": 5066,
+      "deltaToday": 10,
       "engagementRate": 0.46,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
@@ -95,15 +95,16 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10402,
-      "deltaToday": 5,
+      "followers": 10403,
+      "deltaToday": 6,
       "engagementRate": 0.32,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
         "2026-11-03T12:00:00.000Z",
         "2026-11-04T12:00:00.000Z",
         "2026-11-05T12:00:00.000Z",
-        "2026-11-06T12:00:00.000Z"
+        "2026-11-06T12:00:00.000Z",
+        "2026-11-07T12:00:00.000Z"
       ]
     },
     "ventisalesgroup": {
