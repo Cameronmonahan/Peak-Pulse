@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T14:44:57.000Z",
+  "generatedAt": "2026-11-08T17:06:32.000Z",
   "weekStart": "2026-11-02T07:00:00.000Z",
   "weekEnd": "2026-11-08T07:00:00.000Z",
   "accounts": {
@@ -7,21 +7,22 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2632,
-      "deltaToday": 16,
+      "followers": 2637,
+      "deltaToday": 21,
       "engagementRate": 0.73,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
         "2026-11-04T12:00:00.000Z",
-        "2026-11-06T12:00:00.000Z"
+        "2026-11-06T12:00:00.000Z",
+        "2026-11-08T12:00:00.000Z"
       ]
     },
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17968,
-      "deltaToday": 3,
+      "followers": 17969,
+      "deltaToday": 4,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -29,8 +30,8 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 1996,
-      "deltaToday": 0,
+      "followers": 1995,
+      "deltaToday": -1,
       "engagementRate": 22.42,
       "postDates": []
     },
@@ -56,8 +57,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5074,
-      "deltaToday": 2,
+      "followers": 5075,
+      "deltaToday": 3,
       "engagementRate": 0.46,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
@@ -95,8 +96,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10411,
-      "deltaToday": 4,
+      "followers": 10415,
+      "deltaToday": 8,
       "engagementRate": 0.32,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
@@ -131,7 +132,8 @@
       "postDates": [
         "2026-11-02T12:00:00.000Z",
         "2026-11-04T12:00:00.000Z",
-        "2026-11-06T12:00:00.000Z"
+        "2026-11-06T12:00:00.000Z",
+        "2026-11-08T12:00:00.000Z"
       ]
     },
     "paragon_custom_const": {
@@ -158,15 +160,16 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8178,
-      "deltaToday": 4,
+      "followers": 8180,
+      "deltaToday": 6,
       "engagementRate": 0.57,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
         "2026-11-04T12:00:00.000Z",
         "2026-11-05T12:00:00.000Z",
         "2026-11-06T12:00:00.000Z",
-        "2026-11-07T12:00:00.000Z"
+        "2026-11-07T12:00:00.000Z",
+        "2026-11-08T12:00:00.000Z"
       ]
     }
   }
