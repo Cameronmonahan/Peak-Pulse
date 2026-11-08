@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T00:08:44.000Z",
+  "generatedAt": "2026-11-08T04:38:45.000Z",
   "weekStart": "2026-11-02T07:00:00.000Z",
   "weekEnd": "2026-11-08T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2596,
-      "deltaToday": 41,
+      "followers": 2616,
+      "deltaToday": 61,
       "engagementRate": 0.73,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
@@ -20,8 +20,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17964,
-      "deltaToday": 2,
+      "followers": 17965,
+      "deltaToday": 3,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -56,8 +56,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5071,
-      "deltaToday": 15,
+      "followers": 5072,
+      "deltaToday": 16,
       "engagementRate": 0.46,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
@@ -95,8 +95,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10405,
-      "deltaToday": 8,
+      "followers": 10407,
+      "deltaToday": 10,
       "engagementRate": 0.32,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
@@ -149,8 +149,8 @@
       "name": "The Nano Nature",
       "handle": "the.nano.nature",
       "platform": "tiktok",
-      "followers": 799,
-      "deltaToday": -1,
+      "followers": 800,
+      "deltaToday": 0,
       "engagementRate": 29.44,
       "postDates": []
     },
