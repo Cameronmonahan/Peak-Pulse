@@ -351,7 +351,7 @@
     {
       "date": "2026-11-09",
       "posted": false,
-      "followers": 5088,
+      "followers": 5089,
       "stories": 0
     }
   ],
@@ -1092,9 +1092,9 @@
     },
     {
       "date": "2026-11-09",
-      "posted": false,
+      "posted": true,
       "followers": 10418,
-      "stories": 0
+      "stories": 1
     }
   ],
   "ventisalesgroup": [
@@ -2181,8 +2181,8 @@
     {
       "date": "2026-11-09",
       "posted": false,
-      "followers": 2755,
-      "stories": 0
+      "followers": 2778,
+      "stories": 1
     }
   ],
   "peakexposuremedia": [
@@ -2473,7 +2473,7 @@
     {
       "date": "2026-11-09",
       "posted": false,
-      "followers": 17969,
+      "followers": 17970,
       "stories": 0
     }
   ],
