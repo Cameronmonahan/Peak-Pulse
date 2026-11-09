@@ -1,34 +1,29 @@
-Peak Pulse weekly report: Oct 26 – Nov 1
+Peak Pulse weekly report: Nov 2 – Nov 8
 
-Net followers +429 | Posted days 49 | Stories 46 | 5-5-5 days 0
+Net followers +415 | Posted days 37 | Stories 64 | 5-5-5 days 0
 
 FOR MONDAY'S MEETING
 - Peak Exposure Media had no Instagram posts logged this week.
 - The Nano Nature had no Instagram posts logged this week.
-- Legacy Flooring Batch 2 (Oct 29): 10 of 14 posts delivered.
-- Venti Sales Group Batch 1 (Oct 27): 9 of 10 posts delivered.
+- Marwood Premium Cabinetry Batch 1 (Nov 5): 13 of 14 posts delivered.
 
 Client | Platform | Followers | Change | Posted | Stories | 5-5-5 | Engagement
-Paragon Custom Homes | Instagram | 5,013 | +91 | 3/7 | 0 | 0/7 | 0.46%
-Paragon Custom Homes | TikTok | 45 | 0 | 0/7 | – | – | 48.44%
-Legacy Flooring | Instagram | 1,261 | -5 | 5/7 | 0 | 0/7 | 0.29%
-Legacy Flooring | Facebook | 481 | -1 | 5/7 | – | – | –
-Marwood Premium Cabinetry | Instagram | 10,362 | +131 | 4/7 | 5 | 0/7 | 0.32%
-Venti Sales Group | Instagram | 113 | 0 | 4/7 | 0 | 0/7 | 4.65%
-Guide N Gallop | Instagram | 904 | -5 | 4/7 | 3 | 0/7 | 2.96%
-Louie Hamner | Instagram | 2,517 | -4 | 6/7 | 8 | 0/7 | 0.73%
-Peak Exposure Media | Instagram | 17,958 | +25 | 0/7 | 0 | 0/7 | –
-The Nano Nature | Instagram | 2,001 | -1 | 0/7 | 0 | 0/7 | 22.42%
-The Nano Nature | TikTok | 799 | +4 | 0/7 | – | – | 29.44%
-Diamond Strength & Wellness | Instagram | 189 | +39 | 6/7 | 0 | 0/7 | 7.72%
-Diamond Strength & Wellness | Facebook | 24 | 0 | 6/7 | – | – | –
-Built by Kate | Instagram | 8,092 | +155 | 6/7 | 30 | 0/7 | 0.57%
+Paragon Custom Homes | Instagram | 5,086 | +73 | 4/7 | 1 | 0/7 | 0.32%
+Paragon Custom Homes | TikTok | 48 | +3 | 1/7 | – | – | 40.00%
+Legacy Flooring | Instagram | 1,266 | +5 | 5/7 | 0 | 0/7 | 0.52%
+Legacy Flooring | Facebook | 481 | 0 | 1/7 | – | – | –
+Marwood Premium Cabinetry | Instagram | 10,419 | +57 | 7/7 | 6 | 0/7 | 0.17%
+Venti Sales Group | Instagram | 114 | +1 | 5/7 | 0 | 0/7 | 2.81%
+Guide N Gallop | Instagram | 911 | +7 | 4/7 | 3 | 0/7 | 1.67%
+Louie Hamner | Instagram | 2,689 | +172 | 4/7 | 22 | 0/7 | 2.56%
+Peak Exposure Media | Instagram | 17,968 | +10 | 0/7 | 0 | 0/7 | –
+The Nano Nature | Instagram | 1,994 | -7 | 0/7 | 0 | 0/7 | 22.53%
+The Nano Nature | TikTok | 799 | 0 | 0/7 | – | – | 29.46%
+Built by Kate | Instagram | 8,186 | +94 | 6/7 | 32 | 0/7 | 1.05%
 
 CONTENT BATCHES DUE
-Legacy Flooring Batch 2 (Oct 29): 10/14 posts [not completed yet]
-Venti Sales Group Batch 1 (Oct 27): 9/10 posts [not completed yet]
-Guide N Gallop Batch 2 (Oct 29): 7/7 posts [completed Oct 29]
-Louie Hamner Batch 2 (Oct 29): 8/7 posts [completed Oct 29]
+Paragon Custom Homes Batch 1 (Nov 5): 8/7 posts [completed Nov 5]
+Marwood Premium Cabinetry Batch 1 (Nov 5): 13/14 posts [not completed yet]
 
-PDF report: https://cameronmonahan.github.io/Peak-Pulse/reports/peak-pulse-2026-10-26.pdf
+PDF report: https://cameronmonahan.github.io/Peak-Pulse/reports/peak-pulse-2026-11-02.pdf
 Live dashboard: https://cameronmonahan.github.io/Peak-Pulse/
