@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T17:09:23.000Z",
+  "generatedAt": "2026-11-09T20:14:27.000Z",
   "weekStart": "2026-11-09T07:00:00.000Z",
   "weekEnd": "2026-11-15T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2755,
-      "deltaToday": 66,
+      "followers": 2778,
+      "deltaToday": 89,
       "engagementRate": 2.56,
       "postDates": []
     },
@@ -16,8 +16,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17969,
-      "deltaToday": 1,
+      "followers": 17970,
+      "deltaToday": 2,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -52,8 +52,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5088,
-      "deltaToday": 2,
+      "followers": 5089,
+      "deltaToday": 3,
       "engagementRate": 0.32,
       "postDates": []
     },
@@ -82,7 +82,9 @@
       "followers": 10418,
       "deltaToday": -1,
       "engagementRate": 0.17,
-      "postDates": []
+      "postDates": [
+        "2026-11-09T12:00:00.000Z"
+      ]
     },
     "ventisalesgroup": {
       "name": "Venti Sales Group",
