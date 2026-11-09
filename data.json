@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T03:20:01.000Z",
+  "generatedAt": "2026-11-09T03:31:35.000Z",
   "weekStart": "2026-11-02T07:00:00.000Z",
   "weekEnd": "2026-11-08T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2685,
-      "deltaToday": 69,
+      "followers": 2687,
+      "deltaToday": 71,
       "engagementRate": 2.56,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
@@ -143,8 +143,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_const",
       "platform": "tiktok",
-      "followers": 47,
-      "deltaToday": 0,
+      "followers": 48,
+      "deltaToday": 1,
       "engagementRate": 40.0,
       "postDates": [
         "2026-11-03T12:00:00.000Z"
@@ -163,8 +163,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8185,
-      "deltaToday": 11,
+      "followers": 8186,
+      "deltaToday": 12,
       "engagementRate": 1.05,
       "postDates": [
         "2026-11-02T12:00:00.000Z",
