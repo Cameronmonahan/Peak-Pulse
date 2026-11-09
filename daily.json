@@ -2145,8 +2145,8 @@
     {
       "date": "2026-11-08",
       "posted": true,
-      "followers": 2685,
-      "stories": 0
+      "followers": 2687,
+      "stories": 1
     }
   ],
   "peakexposuremedia": [
@@ -3119,7 +3119,7 @@
     {
       "date": "2026-11-08",
       "posted": false,
-      "followers": 47
+      "followers": 48
     }
   ],
   "the.nano.nature": [
@@ -4099,8 +4099,8 @@
     {
       "date": "2026-11-08",
       "posted": true,
-      "followers": 8185,
-      "stories": 0
+      "followers": 8186,
+      "stories": 1
     }
   ],
   "ventisalesgroup_finsta": [
@@ -4188,6 +4188,11 @@
       "date": "2026-11-07",
       "reels": 7,
       "photos": 2
+    },
+    {
+      "date": "2026-11-08",
+      "reels": 7,
+      "photos": 2
     }
   ],
   "legacyflooringsd_finsta": [
@@ -4273,6 +4278,11 @@
     },
     {
       "date": "2026-11-07",
+      "reels": 6,
+      "photos": 4
+    },
+    {
+      "date": "2026-11-08",
       "reels": 6,
       "photos": 4
     }
@@ -4363,6 +4373,11 @@
       "date": "2026-11-07",
       "reels": 5,
       "photos": 2
+    },
+    {
+      "date": "2026-11-08",
+      "reels": 5,
+      "photos": 2
     }
   ],
   "louiehamner_finsta": [
@@ -4451,6 +4466,11 @@
       "date": "2026-11-07",
       "reels": 3,
       "photos": 2
+    },
+    {
+      "date": "2026-11-08",
+      "reels": 3,
+      "photos": 2
     }
   ],
   "diamondstrengthandwellness_finsta": [
@@ -4531,6 +4551,11 @@
     },
     {
       "date": "2026-11-07",
+      "reels": 2,
+      "photos": 2
+    },
+    {
+      "date": "2026-11-08",
       "reels": 2,
       "photos": 2
     }
@@ -4616,6 +4641,11 @@
       "date": "2026-11-07",
       "reels": 7,
       "photos": 7
+    },
+    {
+      "date": "2026-11-08",
+      "reels": 7,
+      "photos": 7
     }
   ],
   "paragon_custom_construction_finsta": [
@@ -4697,6 +4727,11 @@
     },
     {
       "date": "2026-11-07",
+      "reels": 8,
+      "photos": 4
+    },
+    {
+      "date": "2026-11-08",
       "reels": 8,
       "photos": 4
     }
