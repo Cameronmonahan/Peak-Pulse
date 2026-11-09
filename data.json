@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T20:14:27.000Z",
+  "generatedAt": "2026-11-09T21:06:41.000Z",
   "weekStart": "2026-11-09T07:00:00.000Z",
   "weekEnd": "2026-11-15T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2778,
-      "deltaToday": 89,
+      "followers": 2783,
+      "deltaToday": 94,
       "engagementRate": 2.56,
       "postDates": []
     },
@@ -16,8 +16,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17970,
-      "deltaToday": 2,
+      "followers": 17968,
+      "deltaToday": 0,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -25,8 +25,8 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 1993,
-      "deltaToday": -1,
+      "followers": 1994,
+      "deltaToday": 0,
       "engagementRate": 22.53,
       "postDates": []
     },
@@ -79,8 +79,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10418,
-      "deltaToday": -1,
+      "followers": 10415,
+      "deltaToday": -4,
       "engagementRate": 0.17,
       "postDates": [
         "2026-11-09T12:00:00.000Z"
@@ -93,14 +93,16 @@
       "followers": 114,
       "deltaToday": 0,
       "engagementRate": 2.81,
-      "postDates": []
+      "postDates": [
+        "2026-11-09T12:00:00.000Z"
+      ]
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 911,
-      "deltaToday": 0,
+      "followers": 909,
+      "deltaToday": -2,
       "engagementRate": 1.67,
       "postDates": []
     },
@@ -126,8 +128,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8184,
-      "deltaToday": -2,
+      "followers": 8181,
+      "deltaToday": -5,
       "engagementRate": 1.05,
       "postDates": [
         "2026-11-09T12:00:00.000Z"
