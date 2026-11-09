@@ -2,8 +2,10 @@ name: Weekly report PDF
 
 on:
   schedule:
-    # Mondays 11:00 UTC = 5:00am Mountain (4:00am in winter). Always before the 6:30am email.
-    - cron: "0 11 * * 1"
+    # GitHub often runs scheduled jobs hours late or skips one, so try several times early Monday
+    # (08:00-12:00 UTC = 1-5am Mountain, after Sunday ends). Extra runs are harmless: nothing is
+    # committed unless the files changed.
+    - cron: "0 8,9,10,11,12 * * 1"
   workflow_dispatch:
     inputs:
       week:
