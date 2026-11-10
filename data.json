@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T20:27:59.000Z",
+  "generatedAt": "2026-11-10T21:53:44.000Z",
   "weekStart": "2026-11-09T07:00:00.000Z",
   "weekEnd": "2026-11-15T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2896,
-      "deltaToday": 83,
+      "followers": 2905,
+      "deltaToday": 92,
       "engagementRate": 2.56,
       "postDates": [
         "2026-11-10T12:00:00.000Z"
@@ -86,8 +86,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10462,
-      "deltaToday": 31,
+      "followers": 10465,
+      "deltaToday": 34,
       "engagementRate": 0.17,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
