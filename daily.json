@@ -1110,8 +1110,8 @@
     },
     {
       "date": "2026-11-10",
-      "posted": false,
-      "followers": 10446,
+      "posted": true,
+      "followers": 10457,
       "stories": 0
     }
   ],
@@ -2212,12 +2212,12 @@
       "date": "2026-11-09",
       "posted": false,
       "followers": 2813,
-      "stories": 1
+      "stories": 2
     },
     {
       "date": "2026-11-10",
       "posted": false,
-      "followers": 2860,
+      "followers": 2871,
       "stories": 0
     }
   ],
@@ -4259,7 +4259,7 @@
     {
       "date": "2026-11-10",
       "posted": false,
-      "followers": 8179,
+      "followers": 8178,
       "stories": 0
     }
   ],
