@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T21:53:44.000Z",
+  "generatedAt": "2026-11-11T00:14:49.000Z",
   "weekStart": "2026-11-09T07:00:00.000Z",
   "weekEnd": "2026-11-15T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2905,
-      "deltaToday": 92,
+      "followers": 2929,
+      "deltaToday": 116,
       "engagementRate": 2.56,
       "postDates": [
         "2026-11-10T12:00:00.000Z"
@@ -18,8 +18,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17969,
-      "deltaToday": 1,
+      "followers": 17968,
+      "deltaToday": 0,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -54,8 +54,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5098,
-      "deltaToday": 2,
+      "followers": 5097,
+      "deltaToday": 1,
       "engagementRate": 0.32,
       "postDates": [
         "2026-11-10T12:00:00.000Z"
@@ -86,8 +86,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10465,
-      "deltaToday": 34,
+      "followers": 10473,
+      "deltaToday": 42,
       "engagementRate": 0.17,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
@@ -142,7 +142,8 @@
       "deltaToday": -4,
       "engagementRate": 1.05,
       "postDates": [
-        "2026-11-09T12:00:00.000Z"
+        "2026-11-09T12:00:00.000Z",
+        "2026-11-10T12:00:00.000Z"
       ]
     }
   }
