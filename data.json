@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T19:33:29.000Z",
+  "generatedAt": "2026-11-11T21:36:05.000Z",
   "weekStart": "2026-11-09T07:00:00.000Z",
   "weekEnd": "2026-11-15T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 3100,
-      "deltaToday": 145,
+      "followers": 3118,
+      "deltaToday": 163,
       "engagementRate": 2.56,
       "postDates": [
         "2026-11-10T12:00:00.000Z"
@@ -18,8 +18,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17969,
-      "deltaToday": 1,
+      "followers": 17968,
+      "deltaToday": 0,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -65,8 +65,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1267,
-      "deltaToday": 1,
+      "followers": 1268,
+      "deltaToday": 2,
       "engagementRate": 0.52,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
