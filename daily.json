@@ -1111,7 +1111,7 @@
     {
       "date": "2026-11-10",
       "posted": true,
-      "followers": 10473,
+      "followers": 10492,
       "stories": 0
     }
   ],
@@ -1495,7 +1495,7 @@
     },
     {
       "date": "2026-11-10",
-      "posted": false,
+      "posted": true,
       "followers": 114,
       "stories": 0
     }
@@ -2217,7 +2217,7 @@
     {
       "date": "2026-11-10",
       "posted": true,
-      "followers": 2929,
+      "followers": 2955,
       "stories": 0
     }
   ],
@@ -4259,7 +4259,7 @@
     {
       "date": "2026-11-10",
       "posted": true,
-      "followers": 8178,
+      "followers": 8181,
       "stories": 1
     }
   ],
@@ -4358,6 +4358,12 @@
       "date": "2026-11-09",
       "reels": 4,
       "photos": 1
+    },
+    {
+      "date": "2026-11-10",
+      "reels": 9,
+      "photos": 2,
+      "completedOn": "2026-11-10"
     }
   ],
   "legacyflooringsd_finsta": [
@@ -4453,6 +4459,11 @@
     },
     {
       "date": "2026-11-09",
+      "reels": 6,
+      "photos": 4
+    },
+    {
+      "date": "2026-11-10",
       "reels": 6,
       "photos": 4
     }
@@ -4553,6 +4564,11 @@
       "date": "2026-11-09",
       "reels": 5,
       "photos": 2
+    },
+    {
+      "date": "2026-11-10",
+      "reels": 5,
+      "photos": 2
     }
   ],
   "louiehamner_finsta": [
@@ -4651,6 +4667,11 @@
       "date": "2026-11-09",
       "reels": 3,
       "photos": 2
+    },
+    {
+      "date": "2026-11-10",
+      "reels": 3,
+      "photos": 2
     }
   ],
   "diamondstrengthandwellness_finsta": [
@@ -4741,6 +4762,11 @@
     },
     {
       "date": "2026-11-09",
+      "reels": 2,
+      "photos": 2
+    },
+    {
+      "date": "2026-11-10",
       "reels": 2,
       "photos": 2
     }
@@ -4836,6 +4862,11 @@
       "date": "2026-11-09",
       "reels": 7,
       "photos": 7
+    },
+    {
+      "date": "2026-11-10",
+      "reels": 7,
+      "photos": 7
     }
   ],
   "paragon_custom_construction_finsta": [
@@ -4927,6 +4958,11 @@
     },
     {
       "date": "2026-11-09",
+      "reels": 8,
+      "photos": 4
+    },
+    {
+      "date": "2026-11-10",
       "reels": 8,
       "photos": 4
     }
