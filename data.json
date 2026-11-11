@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T04:37:49.000Z",
+  "generatedAt": "2026-11-11T15:05:20.000Z",
   "weekStart": "2026-11-09T07:00:00.000Z",
   "weekEnd": "2026-11-15T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 2955,
-      "deltaToday": 142,
+      "followers": 3036,
+      "deltaToday": 81,
       "engagementRate": 2.56,
       "postDates": [
         "2026-11-10T12:00:00.000Z"
@@ -18,8 +18,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17968,
-      "deltaToday": 0,
+      "followers": 17969,
+      "deltaToday": 1,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -27,7 +27,7 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 1994,
+      "followers": 1995,
       "deltaToday": 1,
       "engagementRate": 22.53,
       "postDates": []
@@ -37,7 +37,7 @@
       "handle": "diamondstrengthandwellness",
       "platform": "instagram",
       "followers": 198,
-      "deltaToday": 1,
+      "deltaToday": 0,
       "engagementRate": 9.14,
       "postDates": []
     },
@@ -55,7 +55,7 @@
       "handle": "paragon_custom_construction",
       "platform": "instagram",
       "followers": 5097,
-      "deltaToday": 1,
+      "deltaToday": 0,
       "engagementRate": 0.32,
       "postDates": [
         "2026-11-10T12:00:00.000Z"
@@ -86,8 +86,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10492,
-      "deltaToday": 61,
+      "followers": 10507,
+      "deltaToday": 15,
       "engagementRate": 0.17,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
@@ -110,8 +110,8 @@
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 909,
-      "deltaToday": 0,
+      "followers": 911,
+      "deltaToday": 2,
       "engagementRate": 1.67,
       "postDates": [
         "2026-11-10T12:00:00.000Z"
@@ -131,7 +131,7 @@
       "handle": "the.nano.nature",
       "platform": "tiktok",
       "followers": 799,
-      "deltaToday": -2,
+      "deltaToday": 0,
       "engagementRate": 29.46,
       "postDates": []
     },
@@ -140,7 +140,7 @@
       "handle": "built.bykate",
       "platform": "instagram",
       "followers": 8181,
-      "deltaToday": -1,
+      "deltaToday": 0,
       "engagementRate": 1.05,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
