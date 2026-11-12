@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T21:36:05.000Z",
+  "generatedAt": "2026-11-12T00:34:28.000Z",
   "weekStart": "2026-11-09T07:00:00.000Z",
   "weekEnd": "2026-11-15T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 3118,
-      "deltaToday": 163,
+      "followers": 3137,
+      "deltaToday": 182,
       "engagementRate": 2.56,
       "postDates": [
         "2026-11-10T12:00:00.000Z"
@@ -54,8 +54,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5097,
-      "deltaToday": 0,
+      "followers": 5098,
+      "deltaToday": 1,
       "engagementRate": 0.32,
       "postDates": [
         "2026-11-10T12:00:00.000Z"
@@ -65,8 +65,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1268,
-      "deltaToday": 2,
+      "followers": 1270,
+      "deltaToday": 4,
       "engagementRate": 0.52,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
@@ -87,8 +87,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10522,
-      "deltaToday": 30,
+      "followers": 10528,
+      "deltaToday": 36,
       "engagementRate": 0.17,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
@@ -105,15 +105,16 @@
       "engagementRate": 2.81,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
-        "2026-11-10T12:00:00.000Z"
+        "2026-11-10T12:00:00.000Z",
+        "2026-11-11T12:00:00.000Z"
       ]
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 913,
-      "deltaToday": 4,
+      "followers": 914,
+      "deltaToday": 5,
       "engagementRate": 1.67,
       "postDates": [
         "2026-11-10T12:00:00.000Z"
