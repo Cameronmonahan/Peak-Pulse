@@ -363,7 +363,7 @@
     {
       "date": "2026-11-11",
       "posted": false,
-      "followers": 5097,
+      "followers": 5098,
       "stories": 0
     }
   ],
@@ -739,7 +739,7 @@
     {
       "date": "2026-11-11",
       "posted": true,
-      "followers": 1268,
+      "followers": 1270,
       "stories": 0
     }
   ],
@@ -1129,7 +1129,7 @@
     {
       "date": "2026-11-11",
       "posted": true,
-      "followers": 10522,
+      "followers": 10528,
       "stories": 1
     }
   ],
@@ -1519,7 +1519,7 @@
     },
     {
       "date": "2026-11-11",
-      "posted": false,
+      "posted": true,
       "followers": 114,
       "stories": 0
     }
@@ -1888,7 +1888,7 @@
     {
       "date": "2026-11-11",
       "posted": false,
-      "followers": 913,
+      "followers": 914,
       "stories": 0
     }
   ],
@@ -2253,7 +2253,7 @@
     {
       "date": "2026-11-11",
       "posted": false,
-      "followers": 3118,
+      "followers": 3137,
       "stories": 1
     }
   ],
