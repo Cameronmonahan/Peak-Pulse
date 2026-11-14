@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T17:09:15.000Z",
+  "generatedAt": "2026-11-14T19:34:52.000Z",
   "weekStart": "2026-11-09T07:00:00.000Z",
   "weekEnd": "2026-11-15T07:00:00.000Z",
   "accounts": {
@@ -7,20 +7,21 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 3432,
-      "deltaToday": 51,
+      "followers": 3459,
+      "deltaToday": 78,
       "engagementRate": 2.56,
       "postDates": [
         "2026-11-10T12:00:00.000Z",
-        "2026-11-12T12:00:00.000Z"
+        "2026-11-12T12:00:00.000Z",
+        "2026-11-14T12:00:00.000Z"
       ]
     },
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17960,
-      "deltaToday": -2,
+      "followers": 17959,
+      "deltaToday": -3,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -93,14 +94,15 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10642,
-      "deltaToday": 15,
+      "followers": 10648,
+      "deltaToday": 21,
       "engagementRate": 0.17,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
         "2026-11-10T12:00:00.000Z",
         "2026-11-11T12:00:00.000Z",
-        "2026-11-13T12:00:00.000Z"
+        "2026-11-13T12:00:00.000Z",
+        "2026-11-14T12:00:00.000Z"
       ]
     },
     "ventisalesgroup": {
@@ -152,8 +154,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8187,
-      "deltaToday": 1,
+      "followers": 8190,
+      "deltaToday": 4,
       "engagementRate": 1.05,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
