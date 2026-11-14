@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T14:37:39.000Z",
+  "generatedAt": "2026-11-14T17:09:15.000Z",
   "weekStart": "2026-11-09T07:00:00.000Z",
   "weekEnd": "2026-11-15T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 3413,
-      "deltaToday": 32,
+      "followers": 3432,
+      "deltaToday": 51,
       "engagementRate": 2.56,
       "postDates": [
         "2026-11-10T12:00:00.000Z",
@@ -67,8 +67,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1292,
-      "deltaToday": 4,
+      "followers": 1293,
+      "deltaToday": 5,
       "engagementRate": 0.52,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
@@ -93,8 +93,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10636,
-      "deltaToday": 9,
+      "followers": 10642,
+      "deltaToday": 15,
       "engagementRate": 0.17,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
@@ -143,8 +143,8 @@
       "name": "The Nano Nature",
       "handle": "the.nano.nature",
       "platform": "tiktok",
-      "followers": 803,
-      "deltaToday": 1,
+      "followers": 804,
+      "deltaToday": 2,
       "engagementRate": 29.46,
       "postDates": []
     },
@@ -152,13 +152,14 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8186,
-      "deltaToday": 0,
+      "followers": 8187,
+      "deltaToday": 1,
       "engagementRate": 1.05,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
         "2026-11-10T12:00:00.000Z",
-        "2026-11-11T12:00:00.000Z"
+        "2026-11-11T12:00:00.000Z",
+        "2026-11-14T12:00:00.000Z"
       ]
     }
   }
