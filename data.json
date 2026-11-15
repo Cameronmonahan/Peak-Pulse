@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T00:09:07.000Z",
+  "generatedAt": "2026-11-15T04:08:32.000Z",
   "weekStart": "2026-11-09T07:00:00.000Z",
   "weekEnd": "2026-11-15T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 3515,
-      "deltaToday": 134,
+      "followers": 3596,
+      "deltaToday": 215,
       "engagementRate": 2.56,
       "postDates": [
         "2026-11-10T12:00:00.000Z",
@@ -146,8 +146,8 @@
       "name": "The Nano Nature",
       "handle": "the.nano.nature",
       "platform": "tiktok",
-      "followers": 803,
-      "deltaToday": 1,
+      "followers": 802,
+      "deltaToday": 0,
       "engagementRate": 29.46,
       "postDates": []
     },
@@ -155,8 +155,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8190,
-      "deltaToday": 4,
+      "followers": 8191,
+      "deltaToday": 5,
       "engagementRate": 1.05,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
