@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T17:06:33.000Z",
+  "generatedAt": "2026-11-15T19:37:32.000Z",
   "weekStart": "2026-11-09T07:00:00.000Z",
   "weekEnd": "2026-11-15T07:00:00.000Z",
   "accounts": {
@@ -7,21 +7,22 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 3679,
-      "deltaToday": 83,
+      "followers": 3709,
+      "deltaToday": 113,
       "engagementRate": 2.56,
       "postDates": [
         "2026-11-10T12:00:00.000Z",
         "2026-11-12T12:00:00.000Z",
-        "2026-11-14T12:00:00.000Z"
+        "2026-11-14T12:00:00.000Z",
+        "2026-11-15T12:00:00.000Z"
       ]
     },
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17960,
-      "deltaToday": 2,
+      "followers": 17961,
+      "deltaToday": 3,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -69,8 +70,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1299,
-      "deltaToday": 5,
+      "followers": 1301,
+      "deltaToday": 7,
       "engagementRate": 0.52,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
@@ -103,7 +104,8 @@
         "2026-11-10T12:00:00.000Z",
         "2026-11-11T12:00:00.000Z",
         "2026-11-13T12:00:00.000Z",
-        "2026-11-14T12:00:00.000Z"
+        "2026-11-14T12:00:00.000Z",
+        "2026-11-15T12:00:00.000Z"
       ]
     },
     "ventisalesgroup": {
