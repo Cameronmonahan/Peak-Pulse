@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T00:18:57.000Z",
+  "generatedAt": "2026-11-16T03:18:10.000Z",
   "weekStart": "2026-11-09T07:00:00.000Z",
   "weekEnd": "2026-11-15T07:00:00.000Z",
   "accounts": {
@@ -7,9 +7,9 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 3746,
-      "deltaToday": 150,
-      "engagementRate": 2.56,
+      "followers": 3771,
+      "deltaToday": 175,
+      "engagementRate": 1.1,
       "postDates": [
         "2026-11-10T12:00:00.000Z",
         "2026-11-12T12:00:00.000Z",
@@ -32,7 +32,7 @@
       "platform": "instagram",
       "followers": 1991,
       "deltaToday": 0,
-      "engagementRate": 22.53,
+      "engagementRate": 22.55,
       "postDates": []
     },
     "diamondstrengthandwellness": {
@@ -41,7 +41,7 @@
       "platform": "instagram",
       "followers": 198,
       "deltaToday": -1,
-      "engagementRate": 9.14,
+      "engagementRate": 9.7,
       "postDates": []
     },
     "diamondstrengthandwellness_fb": {
@@ -59,7 +59,7 @@
       "platform": "instagram",
       "followers": 5095,
       "deltaToday": -3,
-      "engagementRate": 0.32,
+      "engagementRate": 0.3,
       "postDates": [
         "2026-11-10T12:00:00.000Z",
         "2026-11-12T12:00:00.000Z",
@@ -72,7 +72,7 @@
       "platform": "instagram",
       "followers": 1303,
       "deltaToday": 9,
-      "engagementRate": 0.52,
+      "engagementRate": 0.43,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
         "2026-11-10T12:00:00.000Z",
@@ -98,7 +98,7 @@
       "platform": "instagram",
       "followers": 10648,
       "deltaToday": -2,
-      "engagementRate": 0.17,
+      "engagementRate": 0.19,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
         "2026-11-10T12:00:00.000Z",
@@ -114,7 +114,7 @@
       "platform": "instagram",
       "followers": 115,
       "deltaToday": 1,
-      "engagementRate": 2.81,
+      "engagementRate": 3.3,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
         "2026-11-10T12:00:00.000Z",
@@ -129,7 +129,7 @@
       "platform": "instagram",
       "followers": 914,
       "deltaToday": 0,
-      "engagementRate": 1.67,
+      "engagementRate": 2.43,
       "postDates": [
         "2026-11-10T12:00:00.000Z",
         "2026-11-12T12:00:00.000Z",
@@ -142,7 +142,7 @@
       "platform": "tiktok",
       "followers": 48,
       "deltaToday": 0,
-      "engagementRate": 40.0,
+      "engagementRate": 41.25,
       "postDates": []
     },
     "the.nano.nature": {
@@ -151,7 +151,7 @@
       "platform": "tiktok",
       "followers": 802,
       "deltaToday": 0,
-      "engagementRate": 29.46,
+      "engagementRate": 29.38,
       "postDates": []
     },
     "built.bykate": {
@@ -160,7 +160,7 @@
       "platform": "instagram",
       "followers": 8190,
       "deltaToday": -1,
-      "engagementRate": 1.05,
+      "engagementRate": 0.66,
       "postDates": [
         "2026-11-09T12:00:00.000Z",
         "2026-11-10T12:00:00.000Z",
