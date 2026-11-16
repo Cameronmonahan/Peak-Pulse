@@ -35,6 +35,10 @@
     {
       "weekStart": "2026-11-02",
       "engagementRate": 0.32
+    },
+    {
+      "weekStart": "2026-11-09",
+      "engagementRate": 0.3
     }
   ],
   "legacyflooringsd": [
@@ -69,6 +73,10 @@
     {
       "weekStart": "2026-11-02",
       "engagementRate": 0.52
+    },
+    {
+      "weekStart": "2026-11-09",
+      "engagementRate": 0.43
     }
   ],
   "marwooddesign": [
@@ -103,6 +111,10 @@
     {
       "weekStart": "2026-11-02",
       "engagementRate": 0.17
+    },
+    {
+      "weekStart": "2026-11-09",
+      "engagementRate": 0.19
     }
   ],
   "ventisalesgroup": [
@@ -141,6 +153,10 @@
     {
       "weekStart": "2026-11-02",
       "engagementRate": 2.81
+    },
+    {
+      "weekStart": "2026-11-09",
+      "engagementRate": 3.3
     }
   ],
   "guide_n_gallop": [
@@ -179,6 +195,10 @@
     {
       "weekStart": "2026-11-02",
       "engagementRate": 1.67
+    },
+    {
+      "weekStart": "2026-11-09",
+      "engagementRate": 2.43
     }
   ],
   "louiehamner": [
@@ -217,6 +237,10 @@
     {
       "weekStart": "2026-11-02",
       "engagementRate": 2.56
+    },
+    {
+      "weekStart": "2026-11-09",
+      "engagementRate": 1.1
     }
   ],
   "built.bykate": [
@@ -239,6 +263,10 @@
     {
       "weekStart": "2026-11-02",
       "engagementRate": 1.05
+    },
+    {
+      "weekStart": "2026-11-09",
+      "engagementRate": 0.66
     }
   ],
   "peakexposuremedia": [
@@ -263,6 +291,10 @@
     {
       "weekStart": "2026-11-02",
       "engagementRate": 22.53
+    },
+    {
+      "weekStart": "2026-11-09",
+      "engagementRate": 22.55
     }
   ],
   "diamondstrengthandwellness": [
@@ -281,6 +313,10 @@
     {
       "weekStart": "2026-11-02",
       "engagementRate": 9.14
+    },
+    {
+      "weekStart": "2026-11-09",
+      "engagementRate": 9.7
     }
   ],
   "paragon_custom_const": [
@@ -299,6 +335,10 @@
     {
       "weekStart": "2026-11-02",
       "engagementRate": 40.0
+    },
+    {
+      "weekStart": "2026-11-09",
+      "engagementRate": 41.25
     }
   ],
   "the.nano.nature": [
@@ -317,6 +357,10 @@
     {
       "weekStart": "2026-11-02",
       "engagementRate": 29.46
+    },
+    {
+      "weekStart": "2026-11-09",
+      "engagementRate": 29.38
     }
   ],
   "legacyflooringsd_fb": [
