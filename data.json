@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T14:37:00.000Z",
+  "generatedAt": "2026-11-16T17:40:19.000Z",
   "weekStart": "2026-11-16T07:00:00.000Z",
   "weekEnd": "2026-11-22T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 3825,
-      "deltaToday": 50,
+      "followers": 3847,
+      "deltaToday": 72,
       "engagementRate": 1.1,
       "postDates": []
     },
@@ -16,8 +16,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17961,
-      "deltaToday": 0,
+      "followers": 17958,
+      "deltaToday": -3,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -34,8 +34,8 @@
       "name": "Diamond Strength & Wellness",
       "handle": "diamondstrengthandwellness",
       "platform": "instagram",
-      "followers": 198,
-      "deltaToday": 0,
+      "followers": 199,
+      "deltaToday": 1,
       "engagementRate": 9.7,
       "postDates": []
     },
@@ -73,14 +73,16 @@
       "followers": 481,
       "deltaToday": 0,
       "engagementRate": 0.37,
-      "postDates": []
+      "postDates": [
+        "2026-11-16T12:00:00.000Z"
+      ]
     },
     "marwooddesign": {
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10649,
-      "deltaToday": 1,
+      "followers": 10643,
+      "deltaToday": -5,
       "engagementRate": 0.19,
       "postDates": []
     },
@@ -124,8 +126,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8191,
-      "deltaToday": 0,
+      "followers": 8192,
+      "deltaToday": 1,
       "engagementRate": 0.66,
       "postDates": []
     }
