@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T17:40:19.000Z",
+  "generatedAt": "2026-11-16T20:16:13.000Z",
   "weekStart": "2026-11-16T07:00:00.000Z",
   "weekEnd": "2026-11-22T07:00:00.000Z",
   "accounts": {
@@ -7,10 +7,12 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 3847,
-      "deltaToday": 72,
+      "followers": 3872,
+      "deltaToday": 97,
       "engagementRate": 1.1,
-      "postDates": []
+      "postDates": [
+        "2026-11-16T12:00:00.000Z"
+      ]
     },
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
@@ -64,7 +66,9 @@
       "followers": 1303,
       "deltaToday": 0,
       "engagementRate": 0.43,
-      "postDates": []
+      "postDates": [
+        "2026-11-16T12:00:00.000Z"
+      ]
     },
     "legacyflooringsd_fb": {
       "name": "Legacy Flooring",
@@ -81,17 +85,19 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10643,
-      "deltaToday": -5,
+      "followers": 10644,
+      "deltaToday": -4,
       "engagementRate": 0.19,
-      "postDates": []
+      "postDates": [
+        "2026-11-16T12:00:00.000Z"
+      ]
     },
     "ventisalesgroup": {
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
       "platform": "instagram",
-      "followers": 115,
-      "deltaToday": 0,
+      "followers": 116,
+      "deltaToday": 1,
       "engagementRate": 3.3,
       "postDates": []
     },
@@ -102,7 +108,9 @@
       "followers": 914,
       "deltaToday": 0,
       "engagementRate": 2.43,
-      "postDates": []
+      "postDates": [
+        "2026-11-16T12:00:00.000Z"
+      ]
     },
     "paragon_custom_const": {
       "name": "Paragon Custom Homes",
@@ -126,10 +134,12 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8192,
-      "deltaToday": 1,
+      "followers": 8191,
+      "deltaToday": 0,
       "engagementRate": 0.66,
-      "postDates": []
+      "postDates": [
+        "2026-11-16T12:00:00.000Z"
+      ]
     }
   }
 }
