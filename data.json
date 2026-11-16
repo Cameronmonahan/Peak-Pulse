@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T21:39:46.000Z",
+  "generatedAt": "2026-11-16T00:18:57.000Z",
   "weekStart": "2026-11-09T07:00:00.000Z",
   "weekEnd": "2026-11-15T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 3721,
-      "deltaToday": 125,
+      "followers": 3746,
+      "deltaToday": 150,
       "engagementRate": 2.56,
       "postDates": [
         "2026-11-10T12:00:00.000Z",
