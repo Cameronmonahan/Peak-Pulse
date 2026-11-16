@@ -1219,7 +1219,7 @@
     {
       "date": "2026-11-16",
       "posted": false,
-      "followers": 10649,
+      "followers": 10643,
       "stories": 0
     }
   ],
@@ -2433,7 +2433,7 @@
     {
       "date": "2026-11-16",
       "posted": false,
-      "followers": 3825,
+      "followers": 3847,
       "stories": 0
     }
   ],
@@ -2767,7 +2767,7 @@
     {
       "date": "2026-11-16",
       "posted": false,
-      "followers": 17961,
+      "followers": 17958,
       "stories": 0
     }
   ],
@@ -4099,7 +4099,7 @@
     },
     {
       "date": "2026-11-16",
-      "posted": false,
+      "posted": true,
       "followers": 481
     }
   ],
@@ -4341,7 +4341,7 @@
     {
       "date": "2026-11-16",
       "posted": false,
-      "followers": 198,
+      "followers": 199,
       "stories": 0
     }
   ],
@@ -4739,8 +4739,8 @@
     {
       "date": "2026-11-16",
       "posted": false,
-      "followers": 8191,
-      "stories": 0
+      "followers": 8192,
+      "stories": 1
     }
   ],
   "ventisalesgroup_finsta": [
