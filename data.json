@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T21:09:03.000Z",
+  "generatedAt": "2026-11-17T00:12:39.000Z",
   "weekStart": "2026-11-16T07:00:00.000Z",
   "weekEnd": "2026-11-22T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 3879,
-      "deltaToday": 104,
+      "followers": 3899,
+      "deltaToday": 124,
       "engagementRate": 1.1,
       "postDates": [
         "2026-11-16T12:00:00.000Z"
@@ -101,14 +101,16 @@
       "followers": 116,
       "deltaToday": 1,
       "engagementRate": 3.3,
-      "postDates": []
+      "postDates": [
+        "2026-11-16T12:00:00.000Z"
+      ]
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 914,
-      "deltaToday": 0,
+      "followers": 915,
+      "deltaToday": 1,
       "engagementRate": 2.43,
       "postDates": [
         "2026-11-16T12:00:00.000Z"
