@@ -1639,7 +1639,7 @@
     },
     {
       "date": "2026-11-16",
-      "posted": false,
+      "posted": true,
       "followers": 116,
       "stories": 0
     }
@@ -2038,8 +2038,8 @@
     {
       "date": "2026-11-16",
       "posted": true,
-      "followers": 914,
-      "stories": 1
+      "followers": 915,
+      "stories": 3
     }
   ],
   "louiehamner": [
@@ -2433,7 +2433,7 @@
     {
       "date": "2026-11-16",
       "posted": true,
-      "followers": 3879,
+      "followers": 3899,
       "stories": 0
     }
   ],
