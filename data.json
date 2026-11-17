@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T14:41:02.000Z",
+  "generatedAt": "2026-11-17T17:14:54.000Z",
   "weekStart": "2026-11-16T07:00:00.000Z",
   "weekEnd": "2026-11-22T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 3980,
-      "deltaToday": 52,
+      "followers": 4000,
+      "deltaToday": 72,
       "engagementRate": 1.1,
       "postDates": [
         "2026-11-16T12:00:00.000Z"
@@ -54,8 +54,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5097,
-      "deltaToday": 0,
+      "followers": 5098,
+      "deltaToday": 1,
       "engagementRate": 0.3,
       "postDates": [
         "2026-11-16T12:00:00.000Z"
@@ -65,8 +65,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1303,
-      "deltaToday": 0,
+      "followers": 1302,
+      "deltaToday": -1,
       "engagementRate": 0.43,
       "postDates": [
         "2026-11-16T12:00:00.000Z"
@@ -91,15 +91,16 @@
       "deltaToday": 1,
       "engagementRate": 0.19,
       "postDates": [
-        "2026-11-16T12:00:00.000Z"
+        "2026-11-16T12:00:00.000Z",
+        "2026-11-17T12:00:00.000Z"
       ]
     },
     "ventisalesgroup": {
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
       "platform": "instagram",
-      "followers": 116,
-      "deltaToday": 0,
+      "followers": 117,
+      "deltaToday": 1,
       "engagementRate": 3.3,
       "postDates": [
         "2026-11-16T12:00:00.000Z"
@@ -129,8 +130,8 @@
       "name": "The Nano Nature",
       "handle": "the.nano.nature",
       "platform": "tiktok",
-      "followers": 801,
-      "deltaToday": 0,
+      "followers": 800,
+      "deltaToday": -1,
       "engagementRate": 29.38,
       "postDates": []
     },
@@ -138,8 +139,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8193,
-      "deltaToday": 3,
+      "followers": 8191,
+      "deltaToday": 1,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-16T12:00:00.000Z"
