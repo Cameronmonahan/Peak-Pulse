@@ -810,7 +810,7 @@
     },
     {
       "date": "2026-11-17",
-      "posted": false,
+      "posted": true,
       "followers": 1302,
       "stories": 0
     }
@@ -2469,7 +2469,7 @@
     {
       "date": "2026-11-17",
       "posted": false,
-      "followers": 4021,
+      "followers": 4033,
       "stories": 0
     }
   ],
@@ -4820,7 +4820,7 @@
       "date": "2026-11-17",
       "posted": true,
       "followers": 8192,
-      "stories": 0
+      "stories": 2
     }
   ],
   "ventisalesgroup_finsta": [
