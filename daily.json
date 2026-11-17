@@ -2433,7 +2433,7 @@
     {
       "date": "2026-11-16",
       "posted": true,
-      "followers": 3899,
+      "followers": 3928,
       "stories": 0
     }
   ],
@@ -4341,7 +4341,7 @@
     {
       "date": "2026-11-16",
       "posted": false,
-      "followers": 199,
+      "followers": 198,
       "stories": 0
     }
   ],
@@ -4739,7 +4739,7 @@
     {
       "date": "2026-11-16",
       "posted": true,
-      "followers": 8192,
+      "followers": 8190,
       "stories": 2
     }
   ],
@@ -4869,6 +4869,11 @@
       "date": "2026-11-15",
       "reels": 9,
       "photos": 2
+    },
+    {
+      "date": "2026-11-16",
+      "reels": 9,
+      "photos": 2
     }
   ],
   "legacyflooringsd_finsta": [
@@ -4994,6 +4999,11 @@
     },
     {
       "date": "2026-11-15",
+      "reels": 5,
+      "photos": 5
+    },
+    {
+      "date": "2026-11-16",
       "reels": 5,
       "photos": 5
     }
@@ -5124,6 +5134,11 @@
       "date": "2026-11-15",
       "reels": 6,
       "photos": 6
+    },
+    {
+      "date": "2026-11-16",
+      "reels": 6,
+      "photos": 6
     }
   ],
   "louiehamner_finsta": [
@@ -5252,6 +5267,11 @@
       "date": "2026-11-15",
       "reels": 3,
       "photos": 2
+    },
+    {
+      "date": "2026-11-16",
+      "reels": 3,
+      "photos": 2
     }
   ],
   "diamondstrengthandwellness_finsta": [
@@ -5372,6 +5392,11 @@
     },
     {
       "date": "2026-11-15",
+      "reels": 2,
+      "photos": 2
+    },
+    {
+      "date": "2026-11-16",
       "reels": 2,
       "photos": 2
     }
@@ -5497,6 +5522,11 @@
       "date": "2026-11-15",
       "reels": 7,
       "photos": 7
+    },
+    {
+      "date": "2026-11-16",
+      "reels": 5,
+      "photos": 1
     }
   ],
   "paragon_custom_construction_finsta": [
@@ -5618,6 +5648,11 @@
     },
     {
       "date": "2026-11-15",
+      "reels": 8,
+      "photos": 4
+    },
+    {
+      "date": "2026-11-16",
       "reels": 8,
       "photos": 4
     }
