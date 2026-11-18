@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T21:07:53.000Z",
+  "generatedAt": "2026-11-18T00:10:04.000Z",
   "weekStart": "2026-11-16T07:00:00.000Z",
   "weekEnd": "2026-11-22T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4033,
-      "deltaToday": 105,
+      "followers": 4052,
+      "deltaToday": 124,
       "engagementRate": 1.1,
       "postDates": [
         "2026-11-16T12:00:00.000Z"
@@ -54,8 +54,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5098,
-      "deltaToday": 1,
+      "followers": 5097,
+      "deltaToday": 0,
       "engagementRate": 0.3,
       "postDates": [
         "2026-11-16T12:00:00.000Z"
@@ -65,8 +65,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1302,
-      "deltaToday": -1,
+      "followers": 1301,
+      "deltaToday": -2,
       "engagementRate": 0.43,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -141,8 +141,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8192,
-      "deltaToday": 2,
+      "followers": 8194,
+      "deltaToday": 4,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
