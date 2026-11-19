@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T17:34:34.000Z",
+  "generatedAt": "2026-11-19T20:20:00.000Z",
   "weekStart": "2026-11-16T07:00:00.000Z",
   "weekEnd": "2026-11-22T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4214,
-      "deltaToday": 52,
+      "followers": 4226,
+      "deltaToday": 64,
       "engagementRate": 1.1,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -73,7 +73,8 @@
       "postDates": [
         "2026-11-16T12:00:00.000Z",
         "2026-11-17T12:00:00.000Z",
-        "2026-11-18T12:00:00.000Z"
+        "2026-11-18T12:00:00.000Z",
+        "2026-11-19T12:00:00.000Z"
       ]
     },
     "legacyflooringsd_fb": {
@@ -86,7 +87,8 @@
       "postDates": [
         "2026-11-16T12:00:00.000Z",
         "2026-11-17T12:00:00.000Z",
-        "2026-11-18T12:00:00.000Z"
+        "2026-11-18T12:00:00.000Z",
+        "2026-11-19T12:00:00.000Z"
       ]
     },
     "marwooddesign": {
@@ -99,7 +101,8 @@
       "postDates": [
         "2026-11-16T12:00:00.000Z",
         "2026-11-17T12:00:00.000Z",
-        "2026-11-18T12:00:00.000Z"
+        "2026-11-18T12:00:00.000Z",
+        "2026-11-19T12:00:00.000Z"
       ]
     },
     "ventisalesgroup": {
@@ -111,7 +114,8 @@
       "engagementRate": 3.3,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
-        "2026-11-17T12:00:00.000Z"
+        "2026-11-17T12:00:00.000Z",
+        "2026-11-19T12:00:00.000Z"
       ]
     },
     "guide_n_gallop": {
@@ -148,8 +152,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8198,
-      "deltaToday": -2,
+      "followers": 8206,
+      "deltaToday": 6,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
