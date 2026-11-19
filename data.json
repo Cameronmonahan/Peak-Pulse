@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T21:38:59.000Z",
+  "generatedAt": "2026-11-19T00:30:24.000Z",
   "weekStart": "2026-11-16T07:00:00.000Z",
   "weekEnd": "2026-11-22T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4111,
-      "deltaToday": 42,
+      "followers": 4126,
+      "deltaToday": 57,
       "engagementRate": 1.1,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -19,8 +19,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17956,
-      "deltaToday": -1,
+      "followers": 17955,
+      "deltaToday": -2,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -118,8 +118,8 @@
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 916,
-      "deltaToday": 0,
+      "followers": 917,
+      "deltaToday": 1,
       "engagementRate": 2.43,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
