@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T20:20:00.000Z",
+  "generatedAt": "2026-11-19T21:47:20.000Z",
   "weekStart": "2026-11-16T07:00:00.000Z",
   "weekEnd": "2026-11-22T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4226,
-      "deltaToday": 64,
+      "followers": 4234,
+      "deltaToday": 72,
       "engagementRate": 1.1,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -152,8 +152,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8206,
-      "deltaToday": 6,
+      "followers": 8208,
+      "deltaToday": 8,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
