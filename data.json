@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T19:36:24.000Z",
+  "generatedAt": "2026-11-20T21:09:36.000Z",
   "weekStart": "2026-11-16T07:00:00.000Z",
   "weekEnd": "2026-11-22T07:00:00.000Z",
   "accounts": {
@@ -7,20 +7,21 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4303,
-      "deltaToday": 46,
+      "followers": 4305,
+      "deltaToday": 48,
       "engagementRate": 1.1,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
-        "2026-11-18T12:00:00.000Z"
+        "2026-11-18T12:00:00.000Z",
+        "2026-11-20T12:00:00.000Z"
       ]
     },
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17947,
-      "deltaToday": -5,
+      "followers": 17946,
+      "deltaToday": -6,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -55,8 +56,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5096,
-      "deltaToday": 0,
+      "followers": 5097,
+      "deltaToday": 1,
       "engagementRate": 0.3,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -119,15 +120,16 @@
       "postDates": [
         "2026-11-16T12:00:00.000Z",
         "2026-11-17T12:00:00.000Z",
-        "2026-11-19T12:00:00.000Z"
+        "2026-11-19T12:00:00.000Z",
+        "2026-11-20T12:00:00.000Z"
       ]
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 922,
-      "deltaToday": 1,
+      "followers": 923,
+      "deltaToday": 2,
       "engagementRate": 2.43,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -157,8 +159,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8457,
-      "deltaToday": 233,
+      "followers": 8498,
+      "deltaToday": 274,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
