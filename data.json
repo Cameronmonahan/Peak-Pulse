@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T04:29:13.000Z",
+  "generatedAt": "2026-11-20T14:35:31.000Z",
   "weekStart": "2026-11-16T07:00:00.000Z",
   "weekEnd": "2026-11-22T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4257,
-      "deltaToday": 95,
+      "followers": 4285,
+      "deltaToday": 28,
       "engagementRate": 1.1,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -19,8 +19,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17952,
-      "deltaToday": -3,
+      "followers": 17947,
+      "deltaToday": -5,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -28,8 +28,8 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 1986,
-      "deltaToday": -2,
+      "followers": 1985,
+      "deltaToday": -1,
       "engagementRate": 22.55,
       "postDates": []
     },
@@ -55,8 +55,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5096,
-      "deltaToday": 0,
+      "followers": 5097,
+      "deltaToday": 1,
       "engagementRate": 0.3,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -67,8 +67,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1302,
-      "deltaToday": 1,
+      "followers": 1300,
+      "deltaToday": -2,
       "engagementRate": 0.43,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -95,8 +95,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10649,
-      "deltaToday": 1,
+      "followers": 10646,
+      "deltaToday": -3,
       "engagementRate": 0.19,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -109,8 +109,8 @@
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
       "platform": "instagram",
-      "followers": 117,
-      "deltaToday": 0,
+      "followers": 118,
+      "deltaToday": 1,
       "engagementRate": 3.3,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -123,7 +123,7 @@
       "handle": "guide_n_gallop",
       "platform": "instagram",
       "followers": 921,
-      "deltaToday": 2,
+      "deltaToday": 0,
       "engagementRate": 2.43,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -152,8 +152,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8224,
-      "deltaToday": 24,
+      "followers": 8333,
+      "deltaToday": 109,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
