@@ -1,14 +1,6 @@
 {
   "built.bykate": [
     {
-      "postedAt": "2026-11-17T20:35:00Z",
-      "lastSeen": "2026-11-18T19:47:00Z"
-    },
-    {
-      "postedAt": "2026-11-17T20:39:00Z",
-      "lastSeen": "2026-11-18T19:47:00Z"
-    },
-    {
       "postedAt": "2026-11-17T22:09:00Z",
       "lastSeen": "2026-11-18T21:38:00Z"
     },
@@ -70,7 +62,7 @@
     },
     {
       "postedAt": "2026-11-20T18:37:00Z",
-      "lastSeen": "2026-11-20T19:37:00Z"
+      "lastSeen": "2026-11-20T21:10:00Z"
     }
   ],
   "louiehamner": [
@@ -114,13 +106,13 @@
   "guide_n_gallop": [
     {
       "postedAt": "2026-11-20T17:03:00Z",
-      "lastSeen": "2026-11-20T19:37:00Z"
+      "lastSeen": "2026-11-20T21:10:00Z"
     }
   ],
   "marwooddesign": [
     {
       "postedAt": "2026-11-20T17:37:00Z",
-      "lastSeen": "2026-11-20T19:37:00Z"
+      "lastSeen": "2026-11-20T21:10:00Z"
     }
   ]
 }
