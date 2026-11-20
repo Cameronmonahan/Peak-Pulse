@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T14:35:31.000Z",
+  "generatedAt": "2026-11-20T17:07:46.000Z",
   "weekStart": "2026-11-16T07:00:00.000Z",
   "weekEnd": "2026-11-22T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4285,
-      "deltaToday": 28,
+      "followers": 4296,
+      "deltaToday": 39,
       "engagementRate": 1.1,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -55,12 +55,13 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5097,
-      "deltaToday": 1,
+      "followers": 5096,
+      "deltaToday": 0,
       "engagementRate": 0.3,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
-        "2026-11-18T12:00:00.000Z"
+        "2026-11-18T12:00:00.000Z",
+        "2026-11-20T12:00:00.000Z"
       ]
     },
     "legacyflooringsd": {
@@ -95,8 +96,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10646,
-      "deltaToday": -3,
+      "followers": 10645,
+      "deltaToday": -4,
       "engagementRate": 0.19,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -122,12 +123,13 @@
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 921,
-      "deltaToday": 0,
+      "followers": 922,
+      "deltaToday": 1,
       "engagementRate": 2.43,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
-        "2026-11-18T12:00:00.000Z"
+        "2026-11-18T12:00:00.000Z",
+        "2026-11-20T12:00:00.000Z"
       ]
     },
     "paragon_custom_const": {
@@ -152,13 +154,14 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8333,
-      "deltaToday": 109,
+      "followers": 8392,
+      "deltaToday": 168,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
         "2026-11-17T12:00:00.000Z",
-        "2026-11-19T12:00:00.000Z"
+        "2026-11-19T12:00:00.000Z",
+        "2026-11-20T12:00:00.000Z"
       ]
     }
   }
