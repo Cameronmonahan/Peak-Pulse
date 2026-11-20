@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T21:47:20.000Z",
+  "generatedAt": "2026-11-20T01:01:21.000Z",
   "weekStart": "2026-11-16T07:00:00.000Z",
   "weekEnd": "2026-11-22T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4234,
-      "deltaToday": 72,
+      "followers": 4242,
+      "deltaToday": 80,
       "engagementRate": 1.1,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -19,8 +19,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17955,
-      "deltaToday": 0,
+      "followers": 17953,
+      "deltaToday": -2,
       "engagementRate": 1.9,
       "postDates": []
     },
@@ -95,8 +95,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10648,
-      "deltaToday": 0,
+      "followers": 10647,
+      "deltaToday": -1,
       "engagementRate": 0.19,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -122,8 +122,8 @@
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 919,
-      "deltaToday": 0,
+      "followers": 920,
+      "deltaToday": 1,
       "engagementRate": 2.43,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
