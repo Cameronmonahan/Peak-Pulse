@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T21:09:36.000Z",
+  "generatedAt": "2026-11-21T00:07:36.000Z",
   "weekStart": "2026-11-16T07:00:00.000Z",
   "weekEnd": "2026-11-22T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4305,
-      "deltaToday": 48,
+      "followers": 4319,
+      "deltaToday": 62,
       "engagementRate": 1.1,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -29,8 +29,8 @@
       "name": "The Nano Nature",
       "handle": "thenanonature",
       "platform": "instagram",
-      "followers": 1985,
-      "deltaToday": -1,
+      "followers": 1984,
+      "deltaToday": -2,
       "engagementRate": 22.55,
       "postDates": []
     },
@@ -56,8 +56,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5097,
-      "deltaToday": 1,
+      "followers": 5098,
+      "deltaToday": 2,
       "engagementRate": 0.3,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -99,8 +99,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10645,
-      "deltaToday": -4,
+      "followers": 10644,
+      "deltaToday": -5,
       "engagementRate": 0.19,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -128,8 +128,8 @@
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 923,
-      "deltaToday": 2,
+      "followers": 924,
+      "deltaToday": 3,
       "engagementRate": 2.43,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -159,8 +159,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8498,
-      "deltaToday": 274,
+      "followers": 8568,
+      "deltaToday": 344,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
