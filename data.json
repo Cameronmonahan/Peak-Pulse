@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T00:07:36.000Z",
+  "generatedAt": "2026-11-21T04:46:38.000Z",
   "weekStart": "2026-11-16T07:00:00.000Z",
   "weekEnd": "2026-11-22T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4319,
-      "deltaToday": 62,
+      "followers": 4331,
+      "deltaToday": 74,
       "engagementRate": 1.1,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -56,8 +56,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5098,
-      "deltaToday": 2,
+      "followers": 5099,
+      "deltaToday": 3,
       "engagementRate": 0.3,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -114,8 +114,8 @@
       "name": "Venti Sales Group",
       "handle": "ventisalesgroup",
       "platform": "instagram",
-      "followers": 118,
-      "deltaToday": 1,
+      "followers": 119,
+      "deltaToday": 2,
       "engagementRate": 3.3,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -128,8 +128,8 @@
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 924,
-      "deltaToday": 3,
+      "followers": 925,
+      "deltaToday": 4,
       "engagementRate": 2.43,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
@@ -150,8 +150,8 @@
       "name": "The Nano Nature",
       "handle": "the.nano.nature",
       "platform": "tiktok",
-      "followers": 801,
-      "deltaToday": 0,
+      "followers": 800,
+      "deltaToday": -1,
       "engagementRate": 29.38,
       "postDates": []
     },
@@ -159,8 +159,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 8568,
-      "deltaToday": 344,
+      "followers": 8659,
+      "deltaToday": 435,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
