@@ -423,7 +423,7 @@
     {
       "date": "2026-11-21",
       "posted": false,
-      "followers": 5100,
+      "followers": 5096,
       "stories": 0
     }
   ],
@@ -859,7 +859,7 @@
     {
       "date": "2026-11-21",
       "posted": false,
-      "followers": 1300,
+      "followers": 1299,
       "stories": 0
     }
   ],
@@ -1309,7 +1309,7 @@
     {
       "date": "2026-11-21",
       "posted": false,
-      "followers": 10644,
+      "followers": 10638,
       "stories": 0
     }
   ],
@@ -2188,8 +2188,8 @@
     {
       "date": "2026-11-21",
       "posted": false,
-      "followers": 925,
-      "stories": 0
+      "followers": 923,
+      "stories": 2
     }
   ],
   "louiehamner": [
@@ -2613,8 +2613,8 @@
     {
       "date": "2026-11-21",
       "posted": false,
-      "followers": 4358,
-      "stories": 0
+      "followers": 4378,
+      "stories": 1
     }
   ],
   "peakexposuremedia": [
@@ -4414,7 +4414,7 @@
     },
     {
       "date": "2026-11-21",
-      "posted": false,
+      "posted": true,
       "followers": 481
     }
   ],
@@ -5139,8 +5139,8 @@
     {
       "date": "2026-11-21",
       "posted": false,
-      "followers": 8736,
-      "stories": 0
+      "followers": 8772,
+      "stories": 1
     }
   ],
   "ventisalesgroup_finsta": [
