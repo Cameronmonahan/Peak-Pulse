@@ -859,7 +859,7 @@
     {
       "date": "2026-11-21",
       "posted": false,
-      "followers": 1299,
+      "followers": 1300,
       "stories": 0
     }
   ],
@@ -2613,8 +2613,8 @@
     {
       "date": "2026-11-21",
       "posted": false,
-      "followers": 4407,
-      "stories": 2
+      "followers": 4432,
+      "stories": 3
     }
   ],
   "peakexposuremedia": [
@@ -2977,7 +2977,7 @@
     {
       "date": "2026-11-21",
       "posted": false,
-      "followers": 17920,
+      "followers": 17919,
       "stories": 0
     }
   ],
@@ -5138,9 +5138,9 @@
     },
     {
       "date": "2026-11-21",
-      "posted": false,
-      "followers": 8807,
-      "stories": 1
+      "posted": true,
+      "followers": 8845,
+      "stories": 3
     }
   ],
   "ventisalesgroup_finsta": [
@@ -5294,6 +5294,11 @@
       "date": "2026-11-20",
       "reels": 9,
       "photos": 2
+    },
+    {
+      "date": "2026-11-21",
+      "reels": 9,
+      "photos": 2
     }
   ],
   "legacyflooringsd_finsta": [
@@ -5444,6 +5449,11 @@
     },
     {
       "date": "2026-11-20",
+      "reels": 5,
+      "photos": 5
+    },
+    {
+      "date": "2026-11-21",
       "reels": 5,
       "photos": 5
     }
@@ -5599,6 +5609,11 @@
       "date": "2026-11-20",
       "reels": 6,
       "photos": 6
+    },
+    {
+      "date": "2026-11-21",
+      "reels": 6,
+      "photos": 6
     }
   ],
   "louiehamner_finsta": [
@@ -5752,6 +5767,11 @@
       "date": "2026-11-20",
       "reels": 4,
       "photos": 4
+    },
+    {
+      "date": "2026-11-21",
+      "reels": 4,
+      "photos": 4
     }
   ],
   "diamondstrengthandwellness_finsta": [
@@ -5897,6 +5917,11 @@
     },
     {
       "date": "2026-11-20",
+      "reels": 2,
+      "photos": 2
+    },
+    {
+      "date": "2026-11-21",
       "reels": 2,
       "photos": 2
     }
@@ -6047,6 +6072,11 @@
       "date": "2026-11-20",
       "reels": 5,
       "photos": 7
+    },
+    {
+      "date": "2026-11-21",
+      "reels": 5,
+      "photos": 7
     }
   ],
   "paragon_custom_construction_finsta": [
@@ -6194,6 +6224,11 @@
     },
     {
       "date": "2026-11-20",
+      "reels": 5,
+      "photos": 3
+    },
+    {
+      "date": "2026-11-21",
       "reels": 5,
       "photos": 3
     }
