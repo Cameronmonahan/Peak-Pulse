@@ -429,7 +429,7 @@
     {
       "date": "2026-11-22",
       "posted": true,
-      "followers": 5097,
+      "followers": 5096,
       "stories": 0
     }
   ],
@@ -1327,7 +1327,7 @@
     {
       "date": "2026-11-22",
       "posted": true,
-      "followers": 10636,
+      "followers": 10635,
       "stories": 0
     }
   ],
@@ -2649,7 +2649,7 @@
     {
       "date": "2026-11-22",
       "posted": true,
-      "followers": 4502,
+      "followers": 4508,
       "stories": 0
     }
   ],
@@ -4478,7 +4478,7 @@
     {
       "date": "2026-11-22",
       "posted": true,
-      "followers": 481
+      "followers": 482
     }
   ],
   "diamondstrengthandwellness": [
@@ -5219,7 +5219,7 @@
     {
       "date": "2026-11-22",
       "posted": true,
-      "followers": 9096,
+      "followers": 9146,
       "stories": 2
     }
   ],
@@ -5379,6 +5379,11 @@
       "date": "2026-11-21",
       "reels": 9,
       "photos": 2
+    },
+    {
+      "date": "2026-11-22",
+      "reels": 9,
+      "photos": 2
     }
   ],
   "legacyflooringsd_finsta": [
@@ -5534,6 +5539,11 @@
     },
     {
       "date": "2026-11-21",
+      "reels": 5,
+      "photos": 5
+    },
+    {
+      "date": "2026-11-22",
       "reels": 5,
       "photos": 5
     }
@@ -5694,6 +5704,11 @@
       "date": "2026-11-21",
       "reels": 6,
       "photos": 6
+    },
+    {
+      "date": "2026-11-22",
+      "reels": 6,
+      "photos": 6
     }
   ],
   "louiehamner_finsta": [
@@ -5852,6 +5867,11 @@
       "date": "2026-11-21",
       "reels": 4,
       "photos": 4
+    },
+    {
+      "date": "2026-11-22",
+      "reels": 4,
+      "photos": 4
     }
   ],
   "diamondstrengthandwellness_finsta": [
@@ -6002,6 +6022,11 @@
     },
     {
       "date": "2026-11-21",
+      "reels": 2,
+      "photos": 2
+    },
+    {
+      "date": "2026-11-22",
       "reels": 2,
       "photos": 2
     }
@@ -6157,6 +6182,11 @@
       "date": "2026-11-21",
       "reels": 5,
       "photos": 7
+    },
+    {
+      "date": "2026-11-22",
+      "reels": 5,
+      "photos": 7
     }
   ],
   "paragon_custom_construction_finsta": [
@@ -6309,6 +6339,11 @@
     },
     {
       "date": "2026-11-21",
+      "reels": 5,
+      "photos": 3
+    },
+    {
+      "date": "2026-11-22",
       "reels": 5,
       "photos": 3
     }
