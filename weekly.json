@@ -39,6 +39,10 @@
     {
       "weekStart": "2026-11-09",
       "engagementRate": 0.3
+    },
+    {
+      "weekStart": "2026-11-16",
+      "engagementRate": 0.31
     }
   ],
   "legacyflooringsd": [
@@ -77,6 +81,10 @@
     {
       "weekStart": "2026-11-09",
       "engagementRate": 0.43
+    },
+    {
+      "weekStart": "2026-11-16",
+      "engagementRate": 0.28
     }
   ],
   "marwooddesign": [
@@ -115,6 +123,10 @@
     {
       "weekStart": "2026-11-09",
       "engagementRate": 0.19
+    },
+    {
+      "weekStart": "2026-11-16",
+      "engagementRate": 0.12
     }
   ],
   "ventisalesgroup": [
@@ -157,6 +169,10 @@
     {
       "weekStart": "2026-11-09",
       "engagementRate": 3.3
+    },
+    {
+      "weekStart": "2026-11-16",
+      "engagementRate": 3.87
     }
   ],
   "guide_n_gallop": [
@@ -199,6 +215,10 @@
     {
       "weekStart": "2026-11-09",
       "engagementRate": 2.43
+    },
+    {
+      "weekStart": "2026-11-16",
+      "engagementRate": 3.16
     }
   ],
   "louiehamner": [
@@ -241,6 +261,10 @@
     {
       "weekStart": "2026-11-09",
       "engagementRate": 1.1
+    },
+    {
+      "weekStart": "2026-11-16",
+      "engagementRate": 0.67
     }
   ],
   "built.bykate": [
@@ -295,6 +319,10 @@
     {
       "weekStart": "2026-11-09",
       "engagementRate": 22.55
+    },
+    {
+      "weekStart": "2026-11-16",
+      "engagementRate": 22.63
     }
   ],
   "diamondstrengthandwellness": [
@@ -317,6 +345,10 @@
     {
       "weekStart": "2026-11-09",
       "engagementRate": 9.7
+    },
+    {
+      "weekStart": "2026-11-16",
+      "engagementRate": 9.75
     }
   ],
   "paragon_custom_const": [
@@ -338,6 +370,10 @@
     },
     {
       "weekStart": "2026-11-09",
+      "engagementRate": 41.25
+    },
+    {
+      "weekStart": "2026-11-16",
       "engagementRate": 41.25
     }
   ],
@@ -361,6 +397,10 @@
     {
       "weekStart": "2026-11-09",
       "engagementRate": 29.38
+    },
+    {
+      "weekStart": "2026-11-16",
+      "engagementRate": 29.51
     }
   ],
   "legacyflooringsd_fb": [
