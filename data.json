@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T20:12:56.000Z",
+  "generatedAt": "2026-11-23T21:06:32.000Z",
   "weekStart": "2026-11-23T07:00:00.000Z",
   "weekEnd": "2026-11-29T07:00:00.000Z",
   "accounts": {
@@ -16,8 +16,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17917,
-      "deltaToday": 4,
+      "followers": 17920,
+      "deltaToday": 7,
       "engagementRate": 1.9,
       "postDates": [
         "2026-11-23T12:00:00.000Z"
@@ -36,8 +36,8 @@
       "name": "Diamond Strength & Wellness",
       "handle": "diamondstrengthandwellness",
       "platform": "instagram",
-      "followers": 197,
-      "deltaToday": 0,
+      "followers": 198,
+      "deltaToday": 1,
       "engagementRate": 9.75,
       "postDates": []
     },
@@ -99,7 +99,9 @@
       "followers": 119,
       "deltaToday": 0,
       "engagementRate": 3.87,
-      "postDates": []
+      "postDates": [
+        "2026-11-23T12:00:00.000Z"
+      ]
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
@@ -132,8 +134,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 9238,
-      "deltaToday": 92,
+      "followers": 9245,
+      "deltaToday": 99,
       "engagementRate": 0.66,
       "postDates": []
     }
