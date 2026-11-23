@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T17:06:41.000Z",
+  "generatedAt": "2026-11-23T20:12:56.000Z",
   "weekStart": "2026-11-23T07:00:00.000Z",
   "weekEnd": "2026-11-29T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4511,
-      "deltaToday": 3,
+      "followers": 4513,
+      "deltaToday": 5,
       "engagementRate": 0.67,
       "postDates": []
     },
@@ -16,8 +16,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17915,
-      "deltaToday": 2,
+      "followers": 17917,
+      "deltaToday": 4,
       "engagementRate": 1.9,
       "postDates": [
         "2026-11-23T12:00:00.000Z"
@@ -66,7 +66,9 @@
       "followers": 1299,
       "deltaToday": 0,
       "engagementRate": 0.28,
-      "postDates": []
+      "postDates": [
+        "2026-11-23T12:00:00.000Z"
+      ]
     },
     "legacyflooringsd_fb": {
       "name": "Legacy Flooring",
@@ -75,16 +77,20 @@
       "followers": 482,
       "deltaToday": 0,
       "engagementRate": 0.37,
-      "postDates": []
+      "postDates": [
+        "2026-11-23T12:00:00.000Z"
+      ]
     },
     "marwooddesign": {
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10633,
-      "deltaToday": -2,
+      "followers": 10634,
+      "deltaToday": -1,
       "engagementRate": 0.12,
-      "postDates": []
+      "postDates": [
+        "2026-11-23T12:00:00.000Z"
+      ]
     },
     "ventisalesgroup": {
       "name": "Venti Sales Group",
@@ -126,8 +132,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 9212,
-      "deltaToday": 66,
+      "followers": 9238,
+      "deltaToday": 92,
       "engagementRate": 0.66,
       "postDates": []
     }
