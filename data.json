@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T00:08:51.000Z",
+  "generatedAt": "2026-11-23T03:45:24.000Z",
   "weekStart": "2026-11-16T07:00:00.000Z",
   "weekEnd": "2026-11-22T07:00:00.000Z",
   "accounts": {
@@ -7,9 +7,9 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4493,
-      "deltaToday": 61,
-      "engagementRate": 1.1,
+      "followers": 4502,
+      "deltaToday": 70,
+      "engagementRate": 0.67,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
         "2026-11-18T12:00:00.000Z",
@@ -32,7 +32,7 @@
       "platform": "instagram",
       "followers": 1983,
       "deltaToday": 0,
-      "engagementRate": 22.55,
+      "engagementRate": 22.63,
       "postDates": []
     },
     "diamondstrengthandwellness": {
@@ -41,7 +41,7 @@
       "platform": "instagram",
       "followers": 197,
       "deltaToday": 0,
-      "engagementRate": 9.7,
+      "engagementRate": 9.75,
       "postDates": []
     },
     "diamondstrengthandwellness_fb": {
@@ -59,7 +59,7 @@
       "platform": "instagram",
       "followers": 5097,
       "deltaToday": 1,
-      "engagementRate": 0.3,
+      "engagementRate": 0.31,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
         "2026-11-18T12:00:00.000Z",
@@ -73,7 +73,7 @@
       "platform": "instagram",
       "followers": 1299,
       "deltaToday": -1,
-      "engagementRate": 0.43,
+      "engagementRate": 0.28,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
         "2026-11-17T12:00:00.000Z",
@@ -105,7 +105,7 @@
       "platform": "instagram",
       "followers": 10636,
       "deltaToday": -2,
-      "engagementRate": 0.19,
+      "engagementRate": 0.12,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
         "2026-11-17T12:00:00.000Z",
@@ -122,7 +122,7 @@
       "platform": "instagram",
       "followers": 119,
       "deltaToday": 0,
-      "engagementRate": 3.3,
+      "engagementRate": 3.87,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
         "2026-11-17T12:00:00.000Z",
@@ -137,7 +137,7 @@
       "platform": "instagram",
       "followers": 924,
       "deltaToday": 1,
-      "engagementRate": 2.43,
+      "engagementRate": 3.16,
       "postDates": [
         "2026-11-16T12:00:00.000Z",
         "2026-11-18T12:00:00.000Z",
@@ -160,7 +160,7 @@
       "platform": "tiktok",
       "followers": 801,
       "deltaToday": 1,
-      "engagementRate": 29.38,
+      "engagementRate": 29.51,
       "postDates": []
     },
     "built.bykate": {
