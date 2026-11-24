@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T21:06:32.000Z",
+  "generatedAt": "2026-11-24T00:13:10.000Z",
   "weekStart": "2026-11-23T07:00:00.000Z",
   "weekEnd": "2026-11-29T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4513,
-      "deltaToday": 5,
+      "followers": 4515,
+      "deltaToday": 7,
       "engagementRate": 0.67,
       "postDates": []
     },
@@ -16,8 +16,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17920,
-      "deltaToday": 7,
+      "followers": 17921,
+      "deltaToday": 8,
       "engagementRate": 1.9,
       "postDates": [
         "2026-11-23T12:00:00.000Z"
@@ -134,8 +134,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 9245,
-      "deltaToday": 99,
+      "followers": 9269,
+      "deltaToday": 123,
       "engagementRate": 0.66,
       "postDates": []
     }
