@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T00:13:10.000Z",
+  "generatedAt": "2026-11-24T04:14:40.000Z",
   "weekStart": "2026-11-23T07:00:00.000Z",
   "weekEnd": "2026-11-29T07:00:00.000Z",
   "accounts": {
@@ -16,8 +16,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17921,
-      "deltaToday": 8,
+      "followers": 17922,
+      "deltaToday": 9,
       "engagementRate": 1.9,
       "postDates": [
         "2026-11-23T12:00:00.000Z"
@@ -63,8 +63,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1299,
-      "deltaToday": 0,
+      "followers": 1301,
+      "deltaToday": 2,
       "engagementRate": 0.28,
       "postDates": [
         "2026-11-23T12:00:00.000Z"
@@ -134,8 +134,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 9269,
-      "deltaToday": 123,
+      "followers": 9301,
+      "deltaToday": 155,
       "engagementRate": 0.66,
       "postDates": []
     }
