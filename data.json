@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T15:16:37.000Z",
+  "generatedAt": "2026-11-24T17:36:26.000Z",
   "weekStart": "2026-11-23T07:00:00.000Z",
   "weekEnd": "2026-11-29T07:00:00.000Z",
   "accounts": {
@@ -7,17 +7,19 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4516,
-      "deltaToday": 1,
+      "followers": 4518,
+      "deltaToday": 3,
       "engagementRate": 0.67,
-      "postDates": []
+      "postDates": [
+        "2026-11-24T12:00:00.000Z"
+      ]
     },
     "peakexposuremedia": {
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17922,
-      "deltaToday": 0,
+      "followers": 17900,
+      "deltaToday": -22,
       "engagementRate": 1.9,
       "postDates": [
         "2026-11-23T12:00:00.000Z"
@@ -67,7 +69,8 @@
       "deltaToday": 1,
       "engagementRate": 0.28,
       "postDates": [
-        "2026-11-23T12:00:00.000Z"
+        "2026-11-23T12:00:00.000Z",
+        "2026-11-24T12:00:00.000Z"
       ]
     },
     "legacyflooringsd_fb": {
@@ -89,7 +92,8 @@
       "deltaToday": -2,
       "engagementRate": 0.12,
       "postDates": [
-        "2026-11-23T12:00:00.000Z"
+        "2026-11-23T12:00:00.000Z",
+        "2026-11-24T12:00:00.000Z"
       ]
     },
     "ventisalesgroup": {
@@ -134,8 +138,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 9365,
-      "deltaToday": 0,
+      "followers": 9384,
+      "deltaToday": 19,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-23T12:00:00.000Z"
