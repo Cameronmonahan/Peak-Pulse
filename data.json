@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T01:08:25.000Z",
+  "generatedAt": "2026-11-25T04:57:36.000Z",
   "weekStart": "2026-11-23T07:00:00.000Z",
   "weekEnd": "2026-11-29T07:00:00.000Z",
   "accounts": {
@@ -91,8 +91,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10632,
-      "deltaToday": -2,
+      "followers": 10631,
+      "deltaToday": -3,
       "engagementRate": 0.12,
       "postDates": [
         "2026-11-23T12:00:00.000Z",
@@ -107,15 +107,16 @@
       "deltaToday": 0,
       "engagementRate": 3.87,
       "postDates": [
-        "2026-11-23T12:00:00.000Z"
+        "2026-11-23T12:00:00.000Z",
+        "2026-11-24T12:00:00.000Z"
       ]
     },
     "guide_n_gallop": {
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 925,
-      "deltaToday": 0,
+      "followers": 926,
+      "deltaToday": 1,
       "engagementRate": 3.16,
       "postDates": [
         "2026-11-24T12:00:00.000Z"
@@ -143,8 +144,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 9429,
-      "deltaToday": 64,
+      "followers": 9445,
+      "deltaToday": 80,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-23T12:00:00.000Z"
