@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T14:39:34.000Z",
+  "generatedAt": "2026-11-25T17:35:22.000Z",
   "weekStart": "2026-11-23T07:00:00.000Z",
   "weekEnd": "2026-11-29T07:00:00.000Z",
   "accounts": {
@@ -115,8 +115,8 @@
       "name": "Guide N Gallop",
       "handle": "guide_n_gallop",
       "platform": "instagram",
-      "followers": 926,
-      "deltaToday": 0,
+      "followers": 927,
+      "deltaToday": 1,
       "engagementRate": 3.16,
       "postDates": [
         "2026-11-24T12:00:00.000Z"
@@ -135,8 +135,8 @@
       "name": "The Nano Nature",
       "handle": "the.nano.nature",
       "platform": "tiktok",
-      "followers": 800,
-      "deltaToday": 0,
+      "followers": 801,
+      "deltaToday": 1,
       "engagementRate": 29.51,
       "postDates": []
     },
@@ -144,8 +144,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 9481,
-      "deltaToday": 36,
+      "followers": 9496,
+      "deltaToday": 51,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-23T12:00:00.000Z"
