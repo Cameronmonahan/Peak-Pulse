@@ -906,7 +906,7 @@
     },
     {
       "date": "2026-11-25",
-      "posted": false,
+      "posted": true,
       "followers": 1303,
       "stories": 0
     }
@@ -1380,7 +1380,7 @@
     },
     {
       "date": "2026-11-25",
-      "posted": false,
+      "posted": true,
       "followers": 10632,
       "stories": 0
     }
@@ -1855,7 +1855,7 @@
     },
     {
       "date": "2026-11-25",
-      "posted": false,
+      "posted": true,
       "followers": 119,
       "stories": 0
     }
@@ -2757,7 +2757,7 @@
     {
       "date": "2026-11-25",
       "posted": false,
-      "followers": 4517,
+      "followers": 4518,
       "stories": 0
     }
   ],
@@ -3145,7 +3145,7 @@
     {
       "date": "2026-11-25",
       "posted": false,
-      "followers": 17895,
+      "followers": 17896,
       "stories": 0
     }
   ],
@@ -5459,7 +5459,7 @@
     {
       "date": "2026-11-25",
       "posted": true,
-      "followers": 9511,
+      "followers": 9521,
       "stories": 3
     }
   ],
