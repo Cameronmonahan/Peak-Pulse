@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T17:19:19.000Z",
+  "generatedAt": "2026-11-26T20:18:35.000Z",
   "weekStart": "2026-11-23T07:00:00.000Z",
   "weekEnd": "2026-11-29T07:00:00.000Z",
   "accounts": {
@@ -19,8 +19,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17896,
-      "deltaToday": 0,
+      "followers": 17895,
+      "deltaToday": -1,
       "engagementRate": 1.9,
       "postDates": [
         "2026-11-23T12:00:00.000Z"
@@ -61,7 +61,8 @@
       "deltaToday": 0,
       "engagementRate": 0.31,
       "postDates": [
-        "2026-11-24T12:00:00.000Z"
+        "2026-11-24T12:00:00.000Z",
+        "2026-11-26T12:00:00.000Z"
       ]
     },
     "legacyflooringsd": {
@@ -88,7 +89,8 @@
       "postDates": [
         "2026-11-23T12:00:00.000Z",
         "2026-11-24T12:00:00.000Z",
-        "2026-11-25T12:00:00.000Z"
+        "2026-11-25T12:00:00.000Z",
+        "2026-11-26T12:00:00.000Z"
       ]
     },
     "marwooddesign": {
@@ -101,7 +103,8 @@
       "postDates": [
         "2026-11-23T12:00:00.000Z",
         "2026-11-24T12:00:00.000Z",
-        "2026-11-25T12:00:00.000Z"
+        "2026-11-25T12:00:00.000Z",
+        "2026-11-26T12:00:00.000Z"
       ]
     },
     "ventisalesgroup": {
@@ -125,7 +128,8 @@
       "deltaToday": 0,
       "engagementRate": 3.16,
       "postDates": [
-        "2026-11-24T12:00:00.000Z"
+        "2026-11-24T12:00:00.000Z",
+        "2026-11-26T12:00:00.000Z"
       ]
     },
     "paragon_custom_const": {
@@ -150,12 +154,13 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 9643,
-      "deltaToday": 63,
+      "followers": 9660,
+      "deltaToday": 80,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-23T12:00:00.000Z",
-        "2026-11-25T12:00:00.000Z"
+        "2026-11-25T12:00:00.000Z",
+        "2026-11-26T12:00:00.000Z"
       ]
     }
   }
