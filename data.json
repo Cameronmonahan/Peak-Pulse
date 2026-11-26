@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T00:34:50.000Z",
+  "generatedAt": "2026-11-26T04:48:00.000Z",
   "weekStart": "2026-11-23T07:00:00.000Z",
   "weekEnd": "2026-11-29T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4519,
-      "deltaToday": -2,
+      "followers": 4521,
+      "deltaToday": 0,
       "engagementRate": 0.67,
       "postDates": [
         "2026-11-24T12:00:00.000Z"
@@ -56,8 +56,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5095,
-      "deltaToday": -3,
+      "followers": 5096,
+      "deltaToday": -2,
       "engagementRate": 0.31,
       "postDates": [
         "2026-11-24T12:00:00.000Z"
@@ -93,8 +93,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10631,
-      "deltaToday": 0,
+      "followers": 10630,
+      "deltaToday": -1,
       "engagementRate": 0.12,
       "postDates": [
         "2026-11-23T12:00:00.000Z",
@@ -148,8 +148,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 9549,
-      "deltaToday": 104,
+      "followers": 9580,
+      "deltaToday": 135,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-23T12:00:00.000Z",
