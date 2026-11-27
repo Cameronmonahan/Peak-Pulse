@@ -1903,7 +1903,7 @@
     },
     {
       "date": "2026-11-27",
-      "posted": false,
+      "posted": true,
       "followers": 119,
       "stories": 0
     }
@@ -2829,7 +2829,7 @@
     {
       "date": "2026-11-27",
       "posted": false,
-      "followers": 4515,
+      "followers": 4516,
       "stories": 0
     }
   ],
@@ -3229,7 +3229,7 @@
     {
       "date": "2026-11-27",
       "posted": false,
-      "followers": 17901,
+      "followers": 17903,
       "stories": 0
     }
   ],
@@ -4556,7 +4556,7 @@
     {
       "date": "2026-11-27",
       "posted": false,
-      "followers": 801
+      "followers": 802
     }
   ],
   "legacyflooringsd_fb": [
@@ -5619,8 +5619,8 @@
     {
       "date": "2026-11-27",
       "posted": false,
-      "followers": 9710,
-      "stories": 0
+      "followers": 9714,
+      "stories": 3
     }
   ],
   "ventisalesgroup_finsta": [
