@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T21:37:21.000Z",
+  "generatedAt": "2026-11-27T00:38:03.000Z",
   "weekStart": "2026-11-23T07:00:00.000Z",
   "weekEnd": "2026-11-29T07:00:00.000Z",
   "accounts": {
@@ -19,8 +19,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17895,
-      "deltaToday": -1,
+      "followers": 17894,
+      "deltaToday": -2,
       "engagementRate": 1.9,
       "postDates": [
         "2026-11-23T12:00:00.000Z"
@@ -154,8 +154,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 9666,
-      "deltaToday": 86,
+      "followers": 9682,
+      "deltaToday": 102,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-23T12:00:00.000Z",
