@@ -930,7 +930,7 @@
     },
     {
       "date": "2026-11-27",
-      "posted": false,
+      "posted": true,
       "followers": 1303,
       "stories": 0
     }
@@ -1417,7 +1417,7 @@
     {
       "date": "2026-11-27",
       "posted": true,
-      "followers": 10631,
+      "followers": 10632,
       "stories": 0
     }
   ],
@@ -2830,7 +2830,7 @@
       "date": "2026-11-27",
       "posted": false,
       "followers": 4517,
-      "stories": 0
+      "stories": 1
     }
   ],
   "peakexposuremedia": [
@@ -5619,7 +5619,7 @@
     {
       "date": "2026-11-27",
       "posted": false,
-      "followers": 9727,
+      "followers": 9731,
       "stories": 3
     }
   ],
