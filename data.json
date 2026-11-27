@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T17:10:19.000Z",
+  "generatedAt": "2026-11-27T19:54:53.000Z",
   "weekStart": "2026-11-23T07:00:00.000Z",
   "weekEnd": "2026-11-29T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4516,
-      "deltaToday": 0,
+      "followers": 4517,
+      "deltaToday": 1,
       "engagementRate": 0.67,
       "postDates": [
         "2026-11-24T12:00:00.000Z",
@@ -57,8 +57,8 @@
       "name": "Paragon Custom Homes",
       "handle": "paragon_custom_construction",
       "platform": "instagram",
-      "followers": 5096,
-      "deltaToday": 1,
+      "followers": 5095,
+      "deltaToday": 0,
       "engagementRate": 0.31,
       "postDates": [
         "2026-11-24T12:00:00.000Z",
@@ -69,8 +69,8 @@
       "name": "Legacy Flooring",
       "handle": "legacyflooringsd",
       "platform": "instagram",
-      "followers": 1302,
-      "deltaToday": -2,
+      "followers": 1303,
+      "deltaToday": -1,
       "engagementRate": 0.28,
       "postDates": [
         "2026-11-23T12:00:00.000Z",
@@ -90,7 +90,8 @@
         "2026-11-23T12:00:00.000Z",
         "2026-11-24T12:00:00.000Z",
         "2026-11-25T12:00:00.000Z",
-        "2026-11-26T12:00:00.000Z"
+        "2026-11-26T12:00:00.000Z",
+        "2026-11-27T12:00:00.000Z"
       ]
     },
     "marwooddesign": {
@@ -104,7 +105,8 @@
         "2026-11-23T12:00:00.000Z",
         "2026-11-24T12:00:00.000Z",
         "2026-11-25T12:00:00.000Z",
-        "2026-11-26T12:00:00.000Z"
+        "2026-11-26T12:00:00.000Z",
+        "2026-11-27T12:00:00.000Z"
       ]
     },
     "ventisalesgroup": {
@@ -155,8 +157,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 9714,
-      "deltaToday": 20,
+      "followers": 9727,
+      "deltaToday": 33,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-23T12:00:00.000Z",
