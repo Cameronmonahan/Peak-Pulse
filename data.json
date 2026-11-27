@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T19:54:53.000Z",
+  "generatedAt": "2026-11-27T21:08:16.000Z",
   "weekStart": "2026-11-23T07:00:00.000Z",
   "weekEnd": "2026-11-29T07:00:00.000Z",
   "accounts": {
@@ -76,7 +76,8 @@
         "2026-11-23T12:00:00.000Z",
         "2026-11-24T12:00:00.000Z",
         "2026-11-25T12:00:00.000Z",
-        "2026-11-26T12:00:00.000Z"
+        "2026-11-26T12:00:00.000Z",
+        "2026-11-27T12:00:00.000Z"
       ]
     },
     "legacyflooringsd_fb": {
@@ -98,8 +99,8 @@
       "name": "Marwood Premium Cabinetry",
       "handle": "marwooddesign",
       "platform": "instagram",
-      "followers": 10631,
-      "deltaToday": -2,
+      "followers": 10632,
+      "deltaToday": -1,
       "engagementRate": 0.12,
       "postDates": [
         "2026-11-23T12:00:00.000Z",
@@ -157,8 +158,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 9727,
-      "deltaToday": 33,
+      "followers": 9731,
+      "deltaToday": 37,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-23T12:00:00.000Z",
