@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T15:27:28.000Z",
+  "generatedAt": "2026-11-27T17:10:19.000Z",
   "weekStart": "2026-11-23T07:00:00.000Z",
   "weekEnd": "2026-11-29T07:00:00.000Z",
   "accounts": {
@@ -7,8 +7,8 @@
       "name": "Louie Hamner",
       "handle": "louiehamner",
       "platform": "instagram",
-      "followers": 4515,
-      "deltaToday": -1,
+      "followers": 4516,
+      "deltaToday": 0,
       "engagementRate": 0.67,
       "postDates": [
         "2026-11-24T12:00:00.000Z",
@@ -19,8 +19,8 @@
       "name": "Peak Exposure Media",
       "handle": "peakexposuremedia",
       "platform": "instagram",
-      "followers": 17901,
-      "deltaToday": 4,
+      "followers": 17903,
+      "deltaToday": 6,
       "engagementRate": 1.9,
       "postDates": [
         "2026-11-23T12:00:00.000Z"
@@ -117,7 +117,8 @@
       "postDates": [
         "2026-11-23T12:00:00.000Z",
         "2026-11-24T12:00:00.000Z",
-        "2026-11-25T12:00:00.000Z"
+        "2026-11-25T12:00:00.000Z",
+        "2026-11-27T12:00:00.000Z"
       ]
     },
     "guide_n_gallop": {
@@ -145,8 +146,8 @@
       "name": "The Nano Nature",
       "handle": "the.nano.nature",
       "platform": "tiktok",
-      "followers": 801,
-      "deltaToday": 0,
+      "followers": 802,
+      "deltaToday": 1,
       "engagementRate": 29.51,
       "postDates": []
     },
@@ -154,8 +155,8 @@
       "name": "Built by Kate",
       "handle": "built.bykate",
       "platform": "instagram",
-      "followers": 9710,
-      "deltaToday": 16,
+      "followers": 9714,
+      "deltaToday": 20,
       "engagementRate": 0.66,
       "postDates": [
         "2026-11-23T12:00:00.000Z",
